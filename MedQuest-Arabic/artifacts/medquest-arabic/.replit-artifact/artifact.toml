@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "MedQuest Arabic"
+description = "A mobile-friendly medical exam preparation app with separate Palestinian Internship and Medical Specialty Entrance tracks, English MCQs, difficulty levels, and immediate explanations."
+version = "1.0.0"
+id = "artifacts/medquest-arabic"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21536
+
+[services.development]
+run = "pnpm --filter @workspace/medquest-arabic run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/medquest-arabic", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/medquest-arabic/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21536"
+BASE_PATH = "/"

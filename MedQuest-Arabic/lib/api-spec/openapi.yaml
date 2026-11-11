@@ -1,0 +1,934 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: question-bank
+    description: Exam tracks and medically sourced question-bank management
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /exam-tracks:
+    get:
+      operationId: listExamTracks
+      tags: [question-bank]
+      summary: List the independent exam tracks
+      responses:
+        "200":
+          description: Exam tracks
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExamTrackList"
+  /questions:
+    get:
+      operationId: listStudentQuestions
+      tags: [question-bank]
+      summary: List approved questions without exposing answers
+      parameters:
+        - name: examTrackId
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - palestinian-internship
+              - palestinian-specialty-entrance
+        - name: difficulty
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/QuestionDifficulty"
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+      responses:
+        "200":
+          description: Only approved questions with verified sources
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudentQuestionList"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+  /admin/sources:
+    get:
+      operationId: listQuestionSources
+      tags: [question-bank]
+      summary: List question sources
+      security:
+        - ClerkSession: []
+      responses:
+        "200":
+          description: Question sources
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionSourceList"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+    post:
+      operationId: createQuestionSource
+      tags: [question-bank]
+      summary: Add an unverified source
+      security:
+        - ClerkSession: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionSourceInput"
+      responses:
+        "201":
+          description: Unverified source created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionSource"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/sources/{sourceId}:
+    patch:
+      operationId: updateQuestionSource
+      tags: [question-bank]
+      summary: Update source details and require re-verification
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: sourceId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionSourceUpdate"
+      responses:
+        "200":
+          description: Updated source
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionSource"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/sources/{sourceId}/verification:
+    post:
+      operationId: reviewQuestionSource
+      tags: [question-bank]
+      summary: Verify or reject a source citation
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: sourceId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionSourceVerificationInput"
+      responses:
+        "200":
+          description: Reviewed source
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionSource"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/questions:
+    get:
+      operationId: listQuestions
+      tags: [question-bank]
+      summary: List questions for bank review
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: examTrackId
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - palestinian-internship
+              - palestinian-specialty-entrance
+        - name: status
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/QuestionStatus"
+        - name: difficulty
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/QuestionDifficulty"
+      responses:
+        "200":
+          description: Questions with their source references
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionList"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+    post:
+      operationId: createQuestion
+      tags: [question-bank]
+      summary: Create a draft question with source references
+      security:
+        - ClerkSession: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionInput"
+      responses:
+        "201":
+          description: Draft question
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/questions/{questionId}:
+    get:
+      operationId: getQuestion
+      tags: [question-bank]
+      summary: Get a question and its source references
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: questionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Question
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+    patch:
+      operationId: updateQuestion
+      tags: [question-bank]
+      summary: Update a question and return it to draft
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: questionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionUpdate"
+      responses:
+        "200":
+          description: Updated draft question
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/questions/{questionId}/reviews:
+    get:
+      operationId: listQuestionReviews
+      tags: [question-bank]
+      summary: List the review history for a question
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: questionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Review history
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionReviewList"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+    post:
+      operationId: reviewQuestion
+      tags: [question-bank]
+      summary: Record a human review decision
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: questionId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionReviewInput"
+      responses:
+        "201":
+          description: Recorded review
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionReview"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          description: Approval is blocked until a cited source is verified
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+  /admin/audit-logs:
+    get:
+      operationId: listQuestionBankAuditLogs
+      tags: [question-bank]
+      summary: List question-bank audit events
+      security:
+        - ClerkSession: []
+      parameters:
+        - name: entityType
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/QuestionBankAuditEntityType"
+        - name: entityId
+          in: query
+          required: false
+          schema:
+            type: string
+            format: uuid
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+      responses:
+        "200":
+          description: Audit events
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionBankAuditLogList"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "503":
+          $ref: "#/components/responses/AdminAccessNotConfigured"
+components:
+  securitySchemes:
+    ClerkSession:
+      type: apiKey
+      in: cookie
+      name: __session
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    ExamTrack:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        nameArabic:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required: [id, name, nameArabic, createdAt, updatedAt]
+    ExamTrackList:
+      type: array
+      items:
+        $ref: "#/components/schemas/ExamTrack"
+    QuestionDifficulty:
+      type: string
+      enum: [basic, intermediate, advanced]
+    QuestionStatus:
+      type: string
+      enum: [draft, approved, rejected]
+    QuestionReviewDecision:
+      type: string
+      enum: [approved, needs_changes, rejected]
+    SourceVerificationStatus:
+      type: string
+      enum: [unverified, verified, rejected]
+    QuestionOption:
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 1
+        text:
+          type: string
+          minLength: 1
+      required: [id, text]
+    QuestionSource:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        citation:
+          type: string
+        author:
+          type: [string, "null"]
+        edition:
+          type: [string, "null"]
+        publisher:
+          type: [string, "null"]
+        publicationYear:
+          type: [integer, "null"]
+        url:
+          type: [string, "null"]
+        verificationStatus:
+          $ref: "#/components/schemas/SourceVerificationStatus"
+        verifiedBy:
+          type: [string, "null"]
+        verifiedAt:
+          type: [string, "null"]
+          format: date-time
+        createdBy:
+          type: string
+        updatedBy:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - title
+        - citation
+        - author
+        - edition
+        - publisher
+        - publicationYear
+        - url
+        - verificationStatus
+        - verifiedBy
+        - verifiedAt
+        - createdBy
+        - updatedBy
+        - createdAt
+        - updatedAt
+    QuestionSourceInput:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+        citation:
+          type: string
+          minLength: 1
+        author:
+          type: [string, "null"]
+        edition:
+          type: [string, "null"]
+        publisher:
+          type: [string, "null"]
+        publicationYear:
+          type: [integer, "null"]
+          minimum: 0
+        url:
+          type: [string, "null"]
+      required: [title, citation]
+    QuestionSourceUpdate:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+        citation:
+          type: string
+          minLength: 1
+        author:
+          type: [string, "null"]
+        edition:
+          type: [string, "null"]
+        publisher:
+          type: [string, "null"]
+        publicationYear:
+          type: [integer, "null"]
+          minimum: 0
+        url:
+          type: [string, "null"]
+    QuestionSourceVerificationInput:
+      type: object
+      properties:
+        verificationStatus:
+          type: string
+          enum: [verified, rejected]
+      required: [verificationStatus]
+    QuestionSourceList:
+      type: array
+      items:
+        $ref: "#/components/schemas/QuestionSource"
+    QuestionCitation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        citation:
+          type: string
+        author:
+          type: [string, "null"]
+        publicationYear:
+          type: [integer, "null"]
+        url:
+          type: [string, "null"]
+      required: [id, title, citation, author, publicationYear, url]
+    StudentQuestion:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        examTrackId:
+          type: string
+        stem:
+          type: string
+        options:
+          type: array
+          minItems: 2
+          items:
+            $ref: "#/components/schemas/QuestionOption"
+        difficulty:
+          $ref: "#/components/schemas/QuestionDifficulty"
+        topic:
+          type: string
+        sources:
+          type: array
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/QuestionCitation"
+      required:
+        - id
+        - examTrackId
+        - stem
+        - options
+        - difficulty
+        - topic
+        - sources
+    StudentQuestionList:
+      type: array
+      items:
+        $ref: "#/components/schemas/StudentQuestion"
+    Question:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        examTrackId:
+          type: string
+        stem:
+          type: string
+        options:
+          type: array
+          minItems: 2
+          items:
+            $ref: "#/components/schemas/QuestionOption"
+        correctOptionId:
+          type: string
+        difficulty:
+          $ref: "#/components/schemas/QuestionDifficulty"
+        topic:
+          type: string
+        explanationBasic:
+          type: string
+        explanationAdvanced:
+          type: string
+        sourceIds:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            format: uuid
+        status:
+          $ref: "#/components/schemas/QuestionStatus"
+        revision:
+          type: integer
+          minimum: 1
+        createdBy:
+          type: string
+        updatedBy:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - examTrackId
+        - stem
+        - options
+        - correctOptionId
+        - difficulty
+        - topic
+        - explanationBasic
+        - explanationAdvanced
+        - sourceIds
+        - status
+        - revision
+        - createdBy
+        - updatedBy
+        - createdAt
+        - updatedAt
+    QuestionList:
+      type: array
+      items:
+        $ref: "#/components/schemas/Question"
+    QuestionInput:
+      type: object
+      properties:
+        examTrackId:
+          type: string
+          enum:
+            - palestinian-internship
+            - palestinian-specialty-entrance
+        stem:
+          type: string
+          minLength: 1
+        options:
+          type: array
+          minItems: 2
+          items:
+            $ref: "#/components/schemas/QuestionOption"
+        correctOptionId:
+          type: string
+          minLength: 1
+        difficulty:
+          $ref: "#/components/schemas/QuestionDifficulty"
+        topic:
+          type: string
+          minLength: 1
+        explanationBasic:
+          type: string
+          minLength: 1
+        explanationAdvanced:
+          type: string
+          minLength: 1
+        sourceIds:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            type: string
+            format: uuid
+      required:
+        - examTrackId
+        - stem
+        - options
+        - correctOptionId
+        - difficulty
+        - topic
+        - explanationBasic
+        - explanationAdvanced
+        - sourceIds
+    QuestionUpdate:
+      type: object
+      properties:
+        examTrackId:
+          type: string
+          enum:
+            - palestinian-internship
+            - palestinian-specialty-entrance
+        stem:
+          type: string
+          minLength: 1
+        options:
+          type: array
+          minItems: 2
+          items:
+            $ref: "#/components/schemas/QuestionOption"
+        correctOptionId:
+          type: string
+          minLength: 1
+        difficulty:
+          $ref: "#/components/schemas/QuestionDifficulty"
+        topic:
+          type: string
+          minLength: 1
+        explanationBasic:
+          type: string
+          minLength: 1
+        explanationAdvanced:
+          type: string
+          minLength: 1
+        sourceIds:
+          type: array
+          minItems: 1
+          uniqueItems: true
+          items:
+            type: string
+            format: uuid
+    QuestionReview:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        questionId:
+          type: string
+          format: uuid
+        revision:
+          type: integer
+        reviewerUserId:
+          type: string
+        decision:
+          $ref: "#/components/schemas/QuestionReviewDecision"
+        notes:
+          type: [string, "null"]
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - questionId
+        - revision
+        - reviewerUserId
+        - decision
+        - notes
+        - createdAt
+    QuestionReviewList:
+      type: array
+      items:
+        $ref: "#/components/schemas/QuestionReview"
+    QuestionReviewInput:
+      type: object
+      properties:
+        decision:
+          $ref: "#/components/schemas/QuestionReviewDecision"
+        notes:
+          type: [string, "null"]
+      required: [decision]
+    QuestionBankAuditEntityType:
+      type: string
+      enum: [question, source]
+    QuestionBankAuditAction:
+      type: string
+      enum:
+        - created
+        - updated
+        - approved
+        - rejected
+        - changes_requested
+        - verified
+        - source_rejected
+        - approval_revoked
+    QuestionBankAuditLog:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        entityType:
+          $ref: "#/components/schemas/QuestionBankAuditEntityType"
+        entityId:
+          type: string
+          format: uuid
+        action:
+          $ref: "#/components/schemas/QuestionBankAuditAction"
+        actorUserId:
+          type: string
+        revision:
+          type: [integer, "null"]
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - entityType
+        - entityId
+        - action
+        - actorUserId
+        - revision
+        - createdAt
+    QuestionBankAuditLogList:
+      type: array
+      items:
+        $ref: "#/components/schemas/QuestionBankAuditLog"
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Unauthorized:
+      description: Sign-in required
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Forbidden:
+      description: Admin access required
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    AdminAccessNotConfigured:
+      description: Question-bank admin allowlist is not configured
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+
