@@ -1,0 +1,70 @@
+name: Build MedQuest Arabic APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: MedQuest-Arabic/pnpm-lock.yaml
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android packages
+        run: sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+
+      - name: Install dependencies
+        working-directory: MedQuest-Arabic
+        run: pnpm install --frozen-lockfile
+
+      - name: Build web app
+        working-directory: MedQuest-Arabic
+        env:
+          PORT: 5000
+          BASE_PATH: ./
+        run: pnpm --filter @workspace/medquest-arabic build
+
+      - name: Sync Capacitor
+        working-directory: MedQuest-Arabic/artifacts/medquest-arabic
+        run: pnpm exec cap sync android
+
+      - name: Build APK
+        working-directory: MedQuest-Arabic/artifacts/medquest-arabic/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MedQuest-Arabic-APK
+          path: MedQuest-Arabic/artifacts/medquest-arabic/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
