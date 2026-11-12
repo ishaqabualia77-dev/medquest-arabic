@@ -287,7 +287,7 @@ function Router() {
   return <ErrorBoundary><Switch><Route path="/" component={AppHome}/><Route component={NotFound}/></Switch></ErrorBoundary>;
 }
 function App() {
-  return <TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/,'')}><Router/></WouterRouter><Toaster/></TooltipProvider>;
+  return <TooltipProvider><WouterRouter><Router/></WouterRouter><Toaster/></TooltipProvider>;
 }
 
 export default App;
