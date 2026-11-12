@@ -16,6 +16,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+(function () {
+  function show(title, detail) {
+    var box = document.getElementById("__mq_error");
+    if (!box) {
+      box = document.createElement("pre");
+      box.id = "__mq_error";
+      box.style.cssText = "position:fixed;z-index:999999;inset:10px;padding:18px;background:#fff0f0;color:#900;border:2px solid #c00;white-space:pre-wrap;overflow:auto;font:14px monospace;direction:ltr";
+      (document.body || document.documentElement).appendChild(box);
+    }
+    box.textContent = title + "\n\n" + detail;
+  }
+  window.addEventListener("error", function (e) {
+    show("JAVASCRIPT / RESOURCE ERROR", (e.message || "Unknown error") + "\n" + (e.filename || "") + ":" + e.lineno);
+  });
+  window.addEventListener("unhandledrejection", function (e) {
+    var r = e.reason;
+    show("UNHANDLED PROMISE ERROR", r && (r.stack || r.message) || String(r));
+  });
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      var root = document.getElementById("root");
+      if (root && !root.children.length && !document.getElementById("__mq_error")) {
+        show("APP DID NOT RENDER", "JavaScript loaded, but the app did not render.");
+      }
+    }, 8000);
+  });
+})();
+</script>
   </head>
   <body>
     <div id="root"></div>
