@@ -38,8 +38,17 @@
   window.addEventListener("load", function () {
     setTimeout(function () {
       var root = document.getElementById("root");
-      if (root && !root.children.length && !document.getElementById("__mq_error")) {
-        show("APP DID NOT RENDER", "JavaScript loaded, but the app did not render.");
+      if (!document.getElementById("__mq_error")) {
+        var scripts = Array.from(document.scripts).map(function (x) {
+          return x.type + " | " + x.src;
+        }).join("\n");
+        show("MEDQUEST STARTUP REPORT",
+          "URL: " + location.href +
+          "\nRoot exists: " + !!root +
+          "\nRoot children: " + (root ? root.children.length : "N/A") +
+          "\nRoot HTML length: " + (root ? root.innerHTML.length : "N/A") +
+          "\nScripts:\n" + scripts
+        );
       }
     }, 8000);
   });
