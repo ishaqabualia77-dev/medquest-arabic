@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { ClerkProvider, SignIn, useUser } from '@clerk/react';
 import {
   Activity, ArrowLeft, ArrowUpRight, Award, BookOpen,
   Check, CheckCircle2, ChevronLeft, CircleHelp, ClipboardList, Clock3,
@@ -10,6 +11,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import Admin from './Admin';
 
 type TrackId = 'internship' | 'specialty';
 type Difficulty = 'Basic' | 'Intermediate' | 'Advanced';
@@ -283,11 +285,53 @@ function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQ
   </section>;
 }
 
-function Router() {
-  return <ErrorBoundary><Switch><Route path="/" component={AppHome}/><Route component={NotFound}/></Switch></ErrorBoundary>;
+
+function AdminAccess() {
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  if (!isLoaded) return <div className="empty-state">جاري التحقق من الحساب...</div>;
+
+  if (!isSignedIn) {
+    return <section className="page-heading">
+      <h1 className="page-title">دخول المشرفين</h1>
+      <p className="page-description">سجّل الدخول بحساب المشرف للمتابعة.</p>
+      <SignIn />
+    </section>;
+  }
+
+  if (user.publicMetadata.role !== 'admin') {
+    return <div className="empty-state">
+      <strong>غير مصرح لك بالدخول</strong>
+      هذا القسم مخصص للمشرفين فقط.
+    </div>;
+  }
+
+  return <Admin questions={[...internshipQuestions, ...specialtyQuestions]} />;
 }
+
+function Router() {
+  return <ErrorBoundary>
+    <Switch>
+      <Route path="/" component={AppHome} />
+      <Route path="/admin" component={AdminAccess} />
+      <Route component={NotFound} />
+    </Switch>
+  </ErrorBoundary>;
+}
+
 function App() {
-  return <TooltipProvider><WouterRouter><Router/></WouterRouter><Toaster/></TooltipProvider>;
+  const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+  if (!clerkKey) return <div className="empty-state">إعداد تسجيل الدخول غير مكتمل.</div>;
+
+  return <ClerkProvider publishableKey={clerkKey}>
+    <TooltipProvider>
+      <WouterRouter>
+        <Router />
+      </WouterRouter>
+      <Toaster />
+    </TooltipProvider>
+  </ClerkProvider>;
 }
 
 export default App;
