@@ -55,6 +55,9 @@ jobs:
         working-directory: artifacts/medquest-arabic/android
         run: ./gradlew assembleDebug
 
+      - name: Verify Clerk key inside APK
+        working-directory: artifacts/medquest-arabic/android
+        run: APK=app/build/outputs/apk/debug/app-debug.apk; JS=$(unzip -p $APK assets/public/index.html | grep -oE 'assets/[A-Za-z0-9._-]+\.js' | head -n 1); echo APK-JS=$JS; test -n $JS && unzip -p $APK assets/public/$JS | grep -q pk_test_
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
