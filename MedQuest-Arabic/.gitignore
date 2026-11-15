@@ -53,3 +53,13 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# MedQuest environment files
+artifacts/medquest-arabic/.env
+artifacts/medquest-arabic/.env.*
+!artifacts/medquest-arabic/.env.example
+
+# MedQuest environment files
+artifacts/medquest-arabic/.env
+artifacts/medquest-arabic/.env.*
+!artifacts/medquest-arabic/.env.example
