@@ -286,6 +286,24 @@ function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQ
 }
 
 
+function DoctorAccess() {
+  const { isLoaded, isSignedIn } = useUser();
+
+  if (!isLoaded) {
+    return <div className="empty-state">جاري التحقق من الحساب...</div>;
+  }
+
+  if (!isSignedIn) {
+    return <section className="page-heading">
+      <h1 className="page-title">دخول الأطباء</h1>
+      <p className="page-description">سجّل الدخول أو أنشئ حسابًا جديدًا للمتابعة.</p>
+      <SignIn withSignUp={true} />
+    </section>;
+  }
+
+  return <AppHome />;
+}
+
 function AdminAccess() {
   const { isLoaded, isSignedIn, user } = useUser();
 
@@ -312,7 +330,7 @@ function AdminAccess() {
 function Router() {
   return <ErrorBoundary>
     <Switch>
-      <Route path="/" component={AppHome} />
+      <Route path="/" component={DoctorAccess} />
       <Route path="/admin" component={AdminAccess} />
       <Route component={NotFound} />
     </Switch>
