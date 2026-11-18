@@ -38,6 +38,18 @@ jobs:
         working-directory: MedQuest-Arabic
         run: pnpm install --frozen-lockfile
 
+      - name: Check Clerk key
+        working-directory: MedQuest-Arabic/artifacts/medquest-arabic
+        env:
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
+        run: |
+          if [ -n "$VITE_CLERK_PUBLISHABLE_KEY" ]; then
+            echo "Clerk key is present"
+          else
+            echo "Clerk key is MISSING"
+            exit 1
+          fi
+
       - name: Build web app
         working-directory: MedQuest-Arabic/artifacts/medquest-arabic
         env:
