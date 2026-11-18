@@ -152,7 +152,7 @@ function AppHome() {
         <header className="topbar">
           <div className="mobile-brand"><div className="brand-mark"><Stethoscope size={16}/></div>MedQuest</div>
           <div className="crumb"><span>مساحة الدراسة</span><ChevronLeft size={13}/><strong>{screen==='dashboard'?'لوحة الدراسة':screen==='bank'?'بنك الأسئلة':screen==='exam'?'امتحان تجريبي':'التدريب'}</strong></div>
-          <div className="top-actions"><span className="today">{new Intl.DateTimeFormat('ar-PS',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><div className="profile" aria-label="ملف الطالب">ط</div></div>
+          <div className="top-actions"><span className="today">{new Intl.DateTimeFormat('ar-PS',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><div className="profile" aria-label="ملف الطبيب">ط</div></div>
         </header>
         <div className="content">
           {screen==='dashboard'&&<Dashboard track={track} chooseTrack={chooseTrack} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} />}
