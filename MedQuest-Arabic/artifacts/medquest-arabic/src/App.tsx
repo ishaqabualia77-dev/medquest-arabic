@@ -297,7 +297,7 @@ function DoctorAccess() {
     return <section className="page-heading">
       <h1 className="page-title">دخول الأطباء</h1>
       <p className="page-description">سجّل الدخول أو أنشئ حسابًا جديدًا للمتابعة.</p>
-      <SignIn withSignUp={true} />
+      <SignIn withSignUp={true} appearance={{ elements: { socialButtonsBlock: "hidden", dividerRow: "hidden" } }} />
     </section>;
   }
 
@@ -313,7 +313,7 @@ function AdminAccess() {
     return <section className="page-heading">
       <h1 className="page-title">دخول المشرفين</h1>
       <p className="page-description">سجّل الدخول بحساب المشرف للمتابعة.</p>
-      <SignIn />
+      <SignIn appearance={{ elements: { socialButtonsBlock: "hidden", dividerRow: "hidden" } }} />
     </section>;
   }
 
