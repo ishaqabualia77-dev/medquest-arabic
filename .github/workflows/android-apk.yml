@@ -41,7 +41,7 @@ jobs:
       - name: Check Clerk key
         working-directory: MedQuest-Arabic/artifacts/medquest-arabic
         env:
-          VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ secrets.VITE_CLERK_PUBLISHABLE_KEY }}
         run: |
           if [ -n "$VITE_CLERK_PUBLISHABLE_KEY" ]; then
             echo "Clerk key is present"
@@ -55,7 +55,7 @@ jobs:
         env:
           PORT: 5000
           BASE_PATH: /
-          VITE_CLERK_PUBLISHABLE_KEY: ${{ vars.VITE_CLERK_PUBLISHABLE_KEY }}
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ secrets.VITE_CLERK_PUBLISHABLE_KEY }}
         run: pnpm build
 
       - name: Sync Capacitor
