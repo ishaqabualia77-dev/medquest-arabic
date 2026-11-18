@@ -658,3 +658,21 @@ button { cursor: pointer; }
 .admin-footer{text-align:center;color:#9aa39b;font-size:10px;padding:18px}
 @media(max-width:900px){.admin-main{padding:22px 18px}.admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-sidebar{width:205px}}
 @media(max-width:650px){.admin-shell{display:block}.admin-sidebar{width:auto;padding:12px;display:block}.admin-brand{padding:4px 7px 12px}.admin-caption,.admin-sidebar-bottom{display:none}.admin-nav{width:auto;display:inline-flex;padding:10px 9px;margin:2px;font-size:10px}.admin-main{padding:17px 13px}.admin-topbar h1{font-size:20px}.admin-welcome{padding:19px}.admin-welcome h2{font-size:18px}.admin-stats{gap:8px}.admin-stat{padding:12px}.admin-stat strong{font-size:21px}.admin-panel{padding:15px}.admin-form{grid-template-columns:1fr}.admin-filters{flex-direction:column}.admin-filters select{width:100%}.admin-actions{grid-template-columns:1fr}.admin-panel-head{align-items:flex-start;flex-wrap:wrap}}
+
+/* Center authentication screens */
+.auth-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.auth-page .cl-rootBox {
+  width: 100%;
+  max-width: 400px;
+}

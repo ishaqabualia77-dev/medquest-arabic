@@ -294,10 +294,10 @@ function DoctorAccess() {
   }
 
   if (!isSignedIn) {
-    return <section className="page-heading">
+    return <section className="page-heading auth-page">
       <h1 className="page-title">دخول الأطباء</h1>
       <p className="page-description">سجّل الدخول أو أنشئ حسابًا جديدًا للمتابعة.</p>
-      <SignIn withSignUp={true} appearance={{ elements: { socialButtonsBlock: "hidden", dividerRow: "hidden" } }} />
+      <SignIn withSignUp={true} appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
     </section>;
   }
 
@@ -310,10 +310,10 @@ function AdminAccess() {
   if (!isLoaded) return <div className="empty-state">جاري التحقق من الحساب...</div>;
 
   if (!isSignedIn) {
-    return <section className="page-heading">
+    return <section className="page-heading auth-page">
       <h1 className="page-title">دخول المشرفين</h1>
       <p className="page-description">سجّل الدخول بحساب المشرف للمتابعة.</p>
-      <SignIn appearance={{ elements: { socialButtonsBlock: "hidden", dividerRow: "hidden" } }} />
+      <SignIn appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
     </section>;
   }
 
