@@ -13,6 +13,14 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Admin from './Admin';
 
+const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+function resolveApiUrl(path: string): string {
+  const normalizedPath = path.startsWith("/") ? path : "/" + path;
+  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
+}
+
+
+
 type TrackId = 'internship' | 'specialty';
 type Difficulty = 'Basic' | 'Intermediate' | 'Advanced';
 type Question = {
@@ -87,11 +95,6 @@ const readProgress = (): Progress => {
 };
 const todayKey = () => new Date().toLocaleDateString('en-CA');
 const difficultyArabic: Record<Difficulty,string> = { Basic:'أساسي', Intermediate:'متوسط', Advanced:'متقدم' };
-const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
-function resolveApiUrl(path: string): string {
-  const normalizedPath = path.startsWith("/") ? path : "/" + path;
-  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
-}
 
 const optionLetters = ['A','B','C','D'];
 
