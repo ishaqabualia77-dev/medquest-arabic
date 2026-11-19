@@ -5,3 +5,5 @@ export * from "./questions";
 export * from "./question-source-links";
 export * from "./question-reviews";
 export * from "./question-bank-audit-logs";
+
+export * from "./doctor-access-requests";

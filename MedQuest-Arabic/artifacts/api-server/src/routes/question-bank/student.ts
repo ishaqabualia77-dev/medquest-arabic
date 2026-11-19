@@ -1,4 +1,5 @@
 import { Router, type IRouter } from "express";
+import { requireApprovedDoctor } from "../../middlewares/requireApprovedDoctor";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import {
   ListStudentQuestionsQueryParams,
@@ -13,7 +14,7 @@ import {
 
 const router: IRouter = Router();
 
-router.get("/questions", async (req, res): Promise<void> => {
+router.get("/questions", requireApprovedDoctor, async (req, res): Promise<void> => {
   const parsed = ListStudentQuestionsQueryParams.safeParse(req.query);
   if (!parsed.success) {
     res.status(400).json({ error: parsed.error.message });

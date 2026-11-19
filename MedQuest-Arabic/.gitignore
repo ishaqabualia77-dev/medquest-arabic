@@ -64,3 +64,4 @@ artifacts/medquest-arabic/.env
 artifacts/medquest-arabic/.env.*
 !artifacts/medquest-arabic/.env.example
 .neon
+artifacts/api-server/.env

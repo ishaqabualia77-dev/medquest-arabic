@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ClerkProvider, SignIn, useUser } from '@clerk/react';
+import { ClerkProvider, SignIn, useAuth, useUser } from '@clerk/react';
 import {
   Activity, ArrowLeft, ArrowUpRight, Award, BookOpen,
   Check, CheckCircle2, ChevronLeft, CircleHelp, ClipboardList, Clock3,
@@ -89,7 +89,39 @@ const todayKey = () => new Date().toLocaleDateString('en-CA');
 const difficultyArabic: Record<Difficulty,string> = { Basic:'أساسي', Intermediate:'متوسط', Advanced:'متقدم' };
 const optionLetters = ['A','B','C','D'];
 
+type ApiStudentQuestion = {
+  id: string;
+  examTrackId: string;
+  stem: string;
+  options: Array<{ id?: string; text?: string } | string>;
+  difficulty: 'Basic' | 'Intermediate' | 'Advanced';
+  topic: string;
+  explanationBasic?: string | null;
+  explanationAdvanced?: string | null;
+  correctOptionId?: string | null;
+};
+
+type ApiExamTrack = {
+  id: string;
+  name?: string;
+  slug?: string;
+  description?: string | null;
+};
+
+function mapApiDifficulty(d: unknown): Question['difficulty'] {
+  const s = String(d || '').toLowerCase();
+  if (s === 'intermediate' || s === 'medium') return 'Intermediate';
+  if (s === 'advanced' || s === 'hard') return 'Advanced';
+  return 'Basic';
+}
+
+function resolveTrackKey(rawTrack: unknown): TrackId {
+  const s = String(rawTrack || '').toLowerCase();
+  return s.includes('spec') || s.includes('اختصاص') ? 'specialty' : 'internship';
+}
+
 function AppHome() {
+  const { getToken } = useAuth();
   const [screen,setScreen] = useState<'dashboard'|'bank'|'practice'|'exam'>('dashboard');
   const [track,setTrack] = useState<TrackId>(() => localStorage.getItem('medquest-arabic-track')==='specialty'?'specialty':'internship');
   const [progress,setProgress] = useState<Progress>(readProgress);
@@ -98,14 +130,88 @@ function AppHome() {
   const [questionIndex,setQuestionIndex] = useState(0);
   const [selectedAnswer,setSelectedAnswer] = useState<number|null>(null);
   const [examRun,setExamRun] = useState(0);
+  const [apiTracks, setApiTracks] = useState<ApiExamTrack[]>([]);
+  const [apiQuestions, setApiQuestions] = useState<Record<TrackId, Question[]> | null>(null);
 
   useEffect(()=>{localStorage.setItem(STORAGE_KEY,JSON.stringify(progress));},[progress]);
   useEffect(()=>{localStorage.setItem('medquest-arabic-track',track);},[track]);
-  const trackQuestions = questionsByTrack[track];
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const token = await getToken();
+        const headers: Record<string, string> = token ? { Authorization: 'Bearer ' + token } : {};
+        const [tRes, qRes] = await Promise.all([
+          fetch('/api/question-bank/exam-tracks', { headers }),
+          fetch('/api/question-bank/questions?limit=100', { headers }),
+        ]);
+        if (!active) return;
+        if (tRes.ok) {
+          const tData = await tRes.json();
+          if (Array.isArray(tData)) setApiTracks(tData);
+        }
+        if (qRes.ok) {
+          const qData = await qRes.json();
+          const list: ApiStudentQuestion[] = Array.isArray(qData)
+            ? qData
+            : Array.isArray(qData?.questions)
+              ? qData.questions
+              : [];
+          if (list.length > 0) {
+            const grouped: Record<TrackId, Question[]> = {
+              internship: [],
+              specialty: [],
+            };
+            for (const row of list) {
+              const tKey = resolveTrackKey(row.examTrackId);
+              const rawOpts = Array.isArray(row.options) ? row.options : [];
+              const optTexts = rawOpts.map((o) =>
+                typeof o === 'string' ? o : String(o?.text ?? '')
+              );
+              const ansIdx = Math.max(
+                0,
+                rawOpts.findIndex((o) =>
+                  typeof o === 'object' && o !== null && row.correctOptionId
+                    ? o.id === row.correctOptionId
+                    : false
+                )
+              );
+              grouped[tKey].push({
+                id: String(row.id),
+                specialty: row.topic || 'General Medicine',
+                difficulty: mapApiDifficulty(row.difficulty),
+                question: row.stem || '',
+                options: optTexts.length >= 2 ? optTexts : ['Option A', 'Option B', 'Option C', 'Option D'],
+                answer: ansIdx,
+                explanation: row.explanationBasic || row.explanationAdvanced || 'Clinical explanation available in study review.',
+              });
+            }
+            setApiQuestions({
+              internship: grouped.internship.length > 0 ? grouped.internship : questionsByTrack.internship,
+              specialty: grouped.specialty.length > 0 ? grouped.specialty : questionsByTrack.specialty,
+            });
+          }
+        }
+      } catch {
+        // Keep local fallback seamlessly if offline or empty
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, [getToken]);
+
+  const activeQuestionsByTrack = apiQuestions ?? questionsByTrack;
+  const trackQuestions = activeQuestionsByTrack[track];
   const visibleQuestions = useMemo(()=>trackQuestions.filter(q=>(difficulty==='All'||q.difficulty===difficulty)&&(category==='All'||q.specialty===category)),[trackQuestions,difficulty,category]);
   const currentQuestion = trackQuestions[questionIndex];
   const practiceDone = questionIndex >= trackQuestions.length;
-  const currentTrack = trackInfo[track];
+  const matchedApiTrack = apiTracks.find((t) => resolveTrackKey(t.slug || t.id) === track);
+  const currentTrack = {
+    ...trackInfo[track],
+    ...(matchedApiTrack?.name ? { name: matchedApiTrack.name } : {}),
+  };
 
   const chooseTrack = (value:TrackId) => {
     if (value===track) return;
@@ -155,10 +261,10 @@ function AppHome() {
           <div className="top-actions"><span className="today">{new Intl.DateTimeFormat('ar-PS',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><div className="profile" aria-label="ملف الطبيب">ط</div></div>
         </header>
         <div className="content">
-          {screen==='dashboard'&&<Dashboard track={track} chooseTrack={chooseTrack} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} />}
+          {screen==='dashboard'&&<Dashboard track={track} chooseTrack={chooseTrack} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length}} trackTitleOverride={currentTrack.name} />}
           {screen==='bank'&&<QuestionBank track={track} chooseTrack={chooseTrack} questions={visibleQuestions} total={trackQuestions.length} difficulty={difficulty} setDifficulty={setDifficulty} category={category} setCategory={setCategory} startPractice={startPractice} />}
           {screen==='exam'&&<ExamSimulation key={`${track}-${examRun}`} track={track} questions={trackQuestions} onTrackChange={chooseTrack} onFinish={recordExam} />}
-          {screen==='practice'&&<Practice track={track} chooseTrack={chooseTrack} question={currentQuestion} index={questionIndex} total={trackQuestions.length} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} done={practiceDone} reset={resetStudy} progress={progress} />}
+          {screen==='practice'&&<Practice track={track} chooseTrack={chooseTrack} question={currentQuestion} index={questionIndex} total={trackQuestions.length} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} done={practiceDone} reset={resetStudy} progress={progress} totalTrackQuestions={trackQuestions.length} />}
           <footer className="practice-strip">
             <div className="practice-copy"><div className="practice-icon"><ShieldCheck size={18}/></div><div><p className="practice-title">تعلّم بثقة، خطوة بخطوة</p><p className="practice-text">محتوى تدريبي تعليمي، وليس بديلاً عن المشورة الطبية.</p></div></div>
             <button className="btn-primary" onClick={startPractice} data-testid="button-footer-practice">تدريب سريع <ArrowLeft size={14}/></button>
@@ -179,7 +285,6 @@ function AppHome() {
     </div>
   </div>;
 }
-
 function ExamSimulation({track,questions,onTrackChange,onFinish}:{track:TrackId;questions:Question[];onTrackChange:(id:TrackId)=>void;onFinish:(items:Question[],answers:Record<string,number>)=>void}) {
   const [count,setCount]=useState(10); const [started,setStarted]=useState(false); const [index,setIndex]=useState(0); const [answers,setAnswers]=useState<Record<string,number>>({}); const [seconds,setSeconds]=useState(0); const [finished,setFinished]=useState(false);
   const examQuestions=useMemo(()=>questions.slice(0,Math.min(count,questions.length)),[questions,count]);
@@ -192,11 +297,12 @@ function ExamSimulation({track,questions,onTrackChange,onFinish}:{track:TrackId;
   const q=examQuestions[index];return <section><div className="page-heading"><div><div className="eyebrow">{trackInfo[track].name}</div><h1 className="page-title">امتحان تجريبي</h1><p className="page-description">السؤال {index+1} من {examQuestions.length}</p></div><div className="meta-chip" style={{fontSize:18,fontWeight:800,color:seconds<60?'#b43d32':'#176b55'}}><Clock3 size={17}/> {fmt(seconds)}</div></div><div className="practice-card"><div className="practice-progress"><i style={{width:`${(index+1)/examQuestions.length*100}%`}}/></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((option,i)=><button key={i} className={`option${answers[q.id]===i?' correct':''}`} onClick={()=>setAnswers(p=>({...p,[q.id]:i}))}><span className="option-key">{optionLetters[i]}</span><span>{option}</span></button>)}</div><div className="practice-actions"><button className="text-button" disabled={index===0} onClick={()=>setIndex(v=>v-1)}>السابق</button>{index<examQuestions.length-1?<button className="btn-primary" onClick={()=>setIndex(v=>v+1)}>التالي <ArrowLeft size={14}/></button>:<button className="btn-primary" onClick={()=>setFinished(true)}>تسليم الامتحان <Check size={14}/></button>}</div><p className="panel-hint" style={{marginTop:12}}>تمت الإجابة عن {Object.keys(answers).length} من {examQuestions.length} سؤالاً. لا يمكن رؤية الإجابات الصحيحة قبل التسليم.</p></div></section>;
 }
 
-function Dashboard({track,chooseTrack,progress,startPractice,openBank}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void}) {
+function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
-  const completion=Math.round(answered/questionsByTrack[track].length*100);
-  const info=trackInfo[track];
+  const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length};
+  const completion=Math.round(answered/Math.max(1,counts[track])*100);
+  const info={...trackInfo[track],...(trackTitleOverride?{name:trackTitleOverride}:{})};
   return <section aria-label="لوحة الدراسة">
     <div className="eyebrow">رفيقك في طريق التخصص</div>
     <h1 className="welcome">أهلاً بك، <span>طبيب المستقبل</span></h1>
@@ -205,7 +311,7 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank}:{track:Tr
       <div className="hero-card">
         <div className="hero-top"><span className="hero-label">مسارك الدراسي الآن</span><span className="hero-pill">دراسة مركّزة</span></div>
         <div><h2 className="hero-title">{info.name}</h2><p className="hero-desc" dir="ltr" style={{textAlign:'right'}}>{info.english} · {info.description}</p></div>
-        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {questionsByTrack[track].length} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button></div>
+        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {counts[track]} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button></div>
       </div>
       <div className="streak-card">
         <div className="streak-head"><span>إيقاعك هذا الأسبوع</span><span className="streak-symbol"><Zap size={16}/></span></div>
@@ -217,7 +323,7 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank}:{track:Tr
     <div className="section-head"><div><h2 className="section-title">اختر مسارك</h2><p className="section-sub">لكل امتحان بنك أسئلة وملخص دراسة مستقل.</p></div><button className="quiet-link" onClick={openBank} data-testid="link-view-bank">تصفّح الأسئلة <ArrowLeft size={12}/></button></div>
     <div className="track-grid">
       {(Object.keys(trackInfo) as TrackId[]).map(id=><button key={id} className={`track-card ${track===id?'selected':''}`} onClick={()=>chooseTrack(id)} data-testid={`track-${id}`}>
-        <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{questionsByTrack[id].length} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
+        <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id]} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
     </div>
 
     <div className="below-grid">
@@ -228,7 +334,7 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank}:{track:Tr
       </div>
       <div className="panel progress-panel">
         <div className="blueprint-head"><div><h3 className="panel-title">تقدّمك في هذا المسار</h3><p className="panel-hint">إجاباتك محفوظة على هذا الجهاز</p></div><Award size={18} color="#98754f"/></div>
-        <div className="progress-number">{answered}<span style={{fontSize:14,color:'#87928a',fontWeight:500}}> / {questionsByTrack[track].length}</span></div><div className="progress-caption">سؤال تمت مراجعته</div>
+        <div className="progress-number">{answered}<span style={{fontSize:14,color:'#87928a',fontWeight:500}}> / {counts[track]}</span></div><div className="progress-caption">سؤال تمت مراجعته</div>
         <div className="progress-line"><i style={{width:`${completion}%`}}/></div><div className="progress-detail"><span>الإجابات الصحيحة</span><span>{correct} من {answered}</span></div>
       </div>
     </div>
@@ -251,8 +357,9 @@ function QuestionBank({track,chooseTrack,questions,total,difficulty,setDifficult
   </section>;
 }
 
-function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQuestion,nextQuestion,done,reset,progress}:{track:TrackId;chooseTrack:(id:TrackId)=>void;question:Question|undefined;index:number;total:number;selectedAnswer:number|null;answerQuestion:(n:number)=>void;nextQuestion:()=>void;done:boolean;reset:()=>void;progress:Progress}) {
+function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQuestion,nextQuestion,done,reset,progress,totalTrackQuestions}:{track:TrackId;chooseTrack:(id:TrackId)=>void;question:Question|undefined;index:number;total:number;selectedAnswer:number|null;answerQuestion:(n:number)=>void;nextQuestion:()=>void;done:boolean;reset:()=>void;progress:Progress;totalTrackQuestions?:number}) {
   const trackQuestions=questionsByTrack[track];
+  const displayTotal=totalTrackQuestions??trackQuestions.length;
   const current=question;
   return <section>
     <div className="page-heading"><div><div className="eyebrow">تدريب تفاعلي</div><h1 className="page-title">سؤال واحد في كل مرة</h1><p className="page-description">اختر إجابة لترى التفسير السريري مباشرة.</p></div><div className="select-wrap"><select className="filter-select" aria-label="المسار التدريبي" value={track} onChange={e=>chooseTrack(e.target.value as TrackId)} data-testid="practice-select-track"><option value="internship">امتحان الامتياز</option><option value="specialty">دخول الاختصاص</option></select></div></div>
@@ -277,7 +384,7 @@ function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQ
         </>}
       </div>
       <aside className="practice-aside">
-        <div className="aside-card"><h3 className="aside-title">مسارك الحالي</h3><div className="aside-track">{trackInfo[track].name}<br/><span dir="ltr" style={{display:'block',textAlign:'right',fontSize:10,marginTop:3}}>{trackInfo[track].english}</span></div><div className="aside-stat"><span>عدد الأسئلة</span><strong>{trackQuestions.length}</strong></div><div className="aside-stat"><span>تمت مراجعتها</span><strong>{progress.answered[track].length}</strong></div></div>
+        <div className="aside-card"><h3 className="aside-title">مسارك الحالي</h3><div className="aside-track">{trackInfo[track].name}<br/><span dir="ltr" style={{display:'block',textAlign:'right',fontSize:10,marginTop:3}}>{trackInfo[track].english}</span></div><div className="aside-stat"><span>عدد الأسئلة</span><strong>{displayTotal}</strong></div><div className="aside-stat"><span>تمت مراجعتها</span><strong>{progress.answered[track].length}</strong></div></div>
         <div className="aside-card"><h3 className="aside-title" style={{display:'flex',alignItems:'center',gap:7}}><Activity size={15}/> تذكير</h3><p className="aside-note">اقرأ الحالة كاملة، ثم فكّر في الخطوة الأهم قبل اختيار الإجابة. التفسير يظهر فوراً بعد الاختيار.</p></div>
         <div className="aside-card"><h3 className="aside-title" style={{display:'flex',alignItems:'center',gap:7}}><Clock3 size={15}/> نمط المراجعة</h3><p className="aside-note">لا يوجد مؤقّت. خذ وقتك لفهم المنطق السريري وراء كل إجابة.</p></div>
       </aside>
@@ -286,8 +393,86 @@ function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQ
 }
 
 
+type DoctorAccessStatus = "not_requested" | "pending" | "approved" | "rejected";
+type DoctorAccessRecord = {
+  id?: string;
+  status: DoctorAccessStatus;
+  reviewNote?: string | null;
+  email?: string;
+  fullName?: string | null;
+};
+
 function DoctorAccess() {
   const { isLoaded, isSignedIn } = useUser();
+  const { getToken, signOut } = useAuth();
+  const [accessState, setAccessState] = useState<{
+    loading: boolean;
+    submitting: boolean;
+    record: DoctorAccessRecord | null;
+    error: string | null;
+  }>({ loading: true, submitting: false, record: null, error: null });
+
+  const loadAccessStatus = async () => {
+    setAccessState((prev) => ({ ...prev, loading: true, error: null }));
+    try {
+      const token = await getToken();
+      const res = await fetch("/api/doctor-access/me", {
+        headers: token ? { Authorization: "Bearer " + token } : {},
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "تعذر التحقق من حالة الاعتماد.");
+      }
+      const data = (await res.json()) as DoctorAccessRecord;
+      setAccessState({ loading: false, submitting: false, record: data, error: null });
+    } catch (err) {
+      setAccessState({
+        loading: false,
+        submitting: false,
+        record: null,
+        error: err instanceof Error ? err.message : "تعذر التحقق من حالة الاعتماد.",
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (!isLoaded) return;
+    if (!isSignedIn) {
+      setAccessState({ loading: false, submitting: false, record: null, error: null });
+      return;
+    }
+    void loadAccessStatus();
+  }, [isLoaded, isSignedIn]);
+
+  const submitAccessRequest = async () => {
+    setAccessState((prev) => ({ ...prev, submitting: true, error: null }));
+    try {
+      const token = await getToken();
+      const res = await fetch("/api/doctor-access/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(token ? { Authorization: "Bearer " + token } : {}),
+        },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || "تعذر إرسال طلب الاعتماد.");
+      }
+      setAccessState({
+        loading: false,
+        submitting: false,
+        record: data as DoctorAccessRecord,
+        error: null,
+      });
+    } catch (err) {
+      setAccessState((prev) => ({
+        ...prev,
+        submitting: false,
+        error: err instanceof Error ? err.message : "تعذر إرسال طلب الاعتماد.",
+      }));
+    }
+  };
 
   if (!isLoaded) {
     return <div className="empty-state">جاري التحقق من الحساب...</div>;
@@ -301,11 +486,114 @@ function DoctorAccess() {
     </section>;
   }
 
-  return <AppHome />;
+  if (accessState.loading) {
+    return <div className="empty-state">جاري التحقق من حالة اعتماد الطبيب...</div>;
+  }
+
+  const status = accessState.record?.status ?? "not_requested";
+  if (status === "approved") {
+    return <AppHome />;
+  }
+
+  return <section className="page-heading auth-page" dir="rtl">
+    <h1 className="page-title">اعتماد حساب الطبيب</h1>
+    <p className="page-description">
+      {status === "pending" && "طلب اعتمادك قيد المراجعة حاليًا من قِبل الإدارة."}
+      {status === "rejected" && "تم رفض طلب الاعتماد السابق. يمكنك مراجعة الملاحظة وإعادة التقديم."}
+      {status === "not_requested" && "حسابك مسجّل، ويتطلب تقديم طلب اعتماد للوصول إلى بنك الأسئلة والمسارات."}
+    </p>
+    {accessState.record?.reviewNote && (
+      <div className="empty-state">
+        <strong>ملاحظة المراجعة</strong>
+        {accessState.record.reviewNote}
+      </div>
+    )}
+    {accessState.error && (
+      <div className="empty-state">
+        <strong>تنبيه</strong>
+        {accessState.error}
+      </div>
+    )}
+    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "16px" }}>
+      {(status === "not_requested" || status === "rejected") && (
+        <button
+          type="button"
+          className="btn-primary"
+          disabled={accessState.submitting}
+          onClick={() => void submitAccessRequest()}
+        >
+          {accessState.submitting
+            ? "جاري الإرسال..."
+            : status === "rejected"
+              ? "إعادة تقديم طلب الاعتماد"
+              : "تقديم طلب اعتماد"}
+        </button>
+      )}
+      <button
+        type="button"
+        className="btn-secondary"
+        onClick={() => void loadAccessStatus()}
+      >
+        تحديث الحالة
+      </button>
+      <button
+        type="button"
+        className="btn-secondary"
+        onClick={() => void signOut()}
+      >
+        تسجيل الخروج
+      </button>
+    </div>
+  </section>;
 }
 
 function AdminAccess() {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const { isLoaded, isSignedIn } = useUser();
+  const { getToken, signOut } = useAuth();
+  const [adminState, setAdminState] = useState<{
+    loading: boolean;
+    authorized: boolean;
+    error: string | null;
+  }>({ loading: true, authorized: false, error: null });
+
+  useEffect(() => {
+    let active = true;
+    const checkAdmin = async () => {
+      if (!isLoaded) return;
+      if (!isSignedIn) {
+        if (active) setAdminState({ loading: false, authorized: false, error: null });
+        return;
+      }
+      setAdminState({ loading: true, authorized: false, error: null });
+      try {
+        const token = await getToken();
+        const res = await fetch("/api/doctor-access/admin/requests", {
+          headers: token ? { Authorization: "Bearer " + token } : {},
+        });
+        if (!active) return;
+        if (res.status === 403 || res.status === 401) {
+          setAdminState({ loading: false, authorized: false, error: null });
+          return;
+        }
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));
+          throw new Error(data.error || "تعذر التحقق من صلاحيات المشرف.");
+        }
+        setAdminState({ loading: false, authorized: true, error: null });
+      } catch (err) {
+        if (!active) return;
+        setAdminState({
+          loading: false,
+          authorized: false,
+          error: err instanceof Error ? err.message : "تعذر التحقق من صلاحيات المشرف.",
+        });
+      }
+    };
+    void checkAdmin();
+    return () => {
+      active = false;
+    };
+  }, [isLoaded, isSignedIn, getToken]);
 
   if (!isLoaded) return <div className="empty-state">جاري التحقق من الحساب...</div>;
 
@@ -317,10 +605,26 @@ function AdminAccess() {
     </section>;
   }
 
-  if (user.publicMetadata.role !== 'admin') {
+  if (adminState.loading) {
+    return <div className="empty-state">جاري التحقق من صلاحيات المشرف...</div>;
+  }
+
+  if (adminState.error) {
+    return <div className="empty-state">
+      <strong>تعذر التحقق</strong>
+      {adminState.error}
+    </div>;
+  }
+
+  if (!adminState.authorized) {
     return <div className="empty-state">
       <strong>غير مصرح لك بالدخول</strong>
       هذا القسم مخصص للمشرفين فقط.
+      <div style={{ marginTop: "12px" }}>
+        <button type="button" className="btn-secondary" onClick={() => void signOut()}>
+          تسجيل الخروج
+        </button>
+      </div>
     </div>;
   }
 
