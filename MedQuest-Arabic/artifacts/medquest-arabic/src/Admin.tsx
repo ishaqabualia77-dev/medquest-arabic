@@ -567,7 +567,7 @@ export default function Admin({ questions }: Props) {
               </div>
               <div className="admin-stat">
                 <Activity />
-                <span>دخول الاختصاص</span>
+                <span>التصنيفي الفلسطيني (الجراحي واللاجراحي)</span>
                 <strong>{items.filter((q) => q.track === 'specialty').length}</strong>
               </div>
               <div className="admin-stat">
@@ -746,14 +746,14 @@ export default function Admin({ questions }: Props) {
               >
                 <option value="all">كل المسارات</option>
                 <option value="internship">الامتياز الفلسطيني</option>
-                <option value="specialty">دخول الاختصاص</option>
+                <option value="specialty">التصنيفي الفلسطيني (الجراحي واللاجراحي)</option>
               </select>
             </div>
             <div className="admin-question-list">
               {filtered.map((q, i) => (
                 <article className="admin-question" key={q.id}>
                   <div className="admin-question-meta">
-                    <span>{q.track === 'internship' ? 'الامتياز' : 'دخول الاختصاص'}</span>
+                    <span>{q.track === 'internship' ? 'الامتياز' : 'التصنيفي الفلسطيني (الجراحي واللاجراحي)'}</span>
                     <span>{q.specialty}</span>
                     <span>{q.difficulty}</span>
                   </div>
@@ -789,7 +789,7 @@ export default function Admin({ questions }: Props) {
                   onChange={(e) => setForm((p) => ({ ...p, track: e.target.value }))}
                 >
                   <option value="internship">امتحان الامتياز الفلسطيني</option>
-                  <option value="specialty">دخول الاختصاص</option>
+                  <option value="specialty">التصنيفي الفلسطيني (الجراحي واللاجراحي)</option>
                 </select>
               </label>
               {tracks.length > 0 && (

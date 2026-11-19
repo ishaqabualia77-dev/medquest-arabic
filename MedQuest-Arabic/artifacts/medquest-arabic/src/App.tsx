@@ -68,7 +68,7 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
     ],
   },
   specialty: {
-    name:'امتحان دخول الاختصاص', english:'Medical Specialty Entrance', description:'مراجعة مركّزة للمعارف السريرية قبل امتحان الاختصاص', symbol:'02',
+    name:'التصنيفي الفلسطيني', english:'Palestinian Classification (Surgical & Non-Surgical)', description:'يشمل المسار الجراحي والمسار اللاجراحي لامتحان التصنيفي الفلسطيني', symbol:'02',
     blueprint:[
       {category:'القلب والأوعية',share:24},{category:'الأعصاب والكلى',share:25},{category:'الغدد الصماء',share:24},{category:'الصدرية والعدوى',share:27},
     ],
@@ -133,6 +133,7 @@ function AppHome() {
   const { getToken } = useAuth();
   const [screen,setScreen] = useState<'dashboard'|'bank'|'practice'|'exam'>('dashboard');
   const [track,setTrack] = useState<TrackId>(() => localStorage.getItem('medquest-arabic-track')==='specialty'?'specialty':'internship');
+  const [subTrack,setSubTrack] = useState<'all'|'surgical'|'non-surgical'>('all');
   const [progress,setProgress] = useState<Progress>(readProgress);
   const [difficulty,setDifficulty] = useState('All');
   const [category,setCategory] = useState('All');
@@ -212,7 +213,13 @@ function AppHome() {
   }, [getToken]);
 
   const activeQuestionsByTrack = apiQuestions ?? questionsByTrack;
-  const trackQuestions = activeQuestionsByTrack[track];
+  const baseTrackQuestions = activeQuestionsByTrack[track];
+  const trackQuestions = track === 'specialty' && subTrack !== 'all'
+    ? baseTrackQuestions.filter((q) => {
+        const isSurg = /surg|cholecyst|aortic|vasospasm/i.test(q.specialty + ' ' + q.question);
+        return subTrack === 'surgical' ? isSurg : !isSurg;
+      })
+    : baseTrackQuestions;
   const visibleQuestions = useMemo(()=>trackQuestions.filter(q=>(difficulty==='All'||q.difficulty===difficulty)&&(category==='All'||q.specialty===category)),[trackQuestions,difficulty,category]);
   const currentQuestion = trackQuestions[questionIndex];
   const practiceDone = questionIndex >= trackQuestions.length;
@@ -259,7 +266,7 @@ function AppHome() {
           <button className={`nav-item ${screen==='practice'?'active':''}`} onClick={()=>setPage('practice')} data-testid="nav-practice"><span className="nav-icon"><Target size={17}/></span>ابدأ التدريب</button>
           <button className={`nav-item ${screen==='exam'?'active':''}`} onClick={()=>setPage('exam')} data-testid="nav-exam"><span className="nav-icon"><Timer size={17}/></span>امتحان تجريبي</button>
         </nav>
-        <div className="side-track"><div className="side-caption">المسار الحالي</div><div className="track-mini"><span className="track-dot"/><span>{currentTrack.name}</span></div></div>
+        <div className="side-track"><div className="side-caption">المسار الحالي</div><div className="track-mini"><span className="track-dot"/><span>{currentTrack.name}{track==='specialty'&&subTrack!=='all'?` · ${subTrack==='surgical'?'المسار الجراحي':'المسار اللاجراحي'}`:''}</span></div>{track==='specialty'&&<div style={{display:'flex',gap:6,marginTop:8,flexWrap:'wrap'}}><button type="button" className={`chip-btn ${subTrack==='all'?'active':''}`} onClick={()=>setSubTrack('all')}>الكل</button><button type="button" className={`chip-btn ${subTrack==='surgical'?'active':''}`} onClick={()=>setSubTrack('surgical')}>المسار الجراحي</button><button type="button" className={`chip-btn ${subTrack==='non-surgical'?'active':''}`} onClick={()=>setSubTrack('non-surgical')}>المسار اللاجراحي</button></div>}</div>
         <div className="side-bottom">خطوة ثابتة اليوم،<br/>تُحدث فرقاً في الغد.</div>
       </aside>
 
@@ -301,7 +308,7 @@ function ExamSimulation({track,questions,onTrackChange,onFinish}:{track:TrackId;
   useEffect(()=>{if(finished&&started)onFinish(examQuestions,answers);},[finished]);
   const score=examQuestions.filter(q=>answers[q.id]===q.answer).length;
   const fmt=(n:number)=>`${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`;
-  if(!started)return <section><div className="page-heading"><div><div className="eyebrow">محاكاة الامتحان</div><h1 className="page-title">امتحان تجريبي مؤقّت</h1><p className="page-description">اختبر نفسك دون إظهار الإجابات أو الشرح حتى تسليم الامتحان.</p></div><Timer size={25}/></div><div className="panel" style={{maxWidth:650}}><h3 className="panel-title">إعداد الامتحان</h3><p className="panel-hint">اختر المسار وعدد الأسئلة. الوقت 72 ثانية لكل سؤال.</p><div className="select-wrap" style={{margin:'15px 0'}}><select className="filter-select" value={track} onChange={e=>onTrackChange(e.target.value as TrackId)}><option value="internship">امتحان الامتياز الفلسطيني</option><option value="specialty">امتحان دخول الاختصاص</option></select></div><div className="select-wrap" style={{marginBottom:16}}><select className="filter-select" value={count} onChange={e=>setCount(Number(e.target.value))}><option value={10}>10 أسئلة · 12 دقيقة</option><option value={20}>20 سؤالاً · 24 دقيقة</option><option value={40}>40 سؤالاً · 48 دقيقة</option></select></div><p className="panel-hint">المتاح حالياً في هذا المسار: {questions.length} سؤالاً. سيُستخدم العدد المتاح إذا كان أقل من اختيارك.</p><button className="btn-primary" style={{marginTop:15}} onClick={()=>{setSeconds(Math.min(count,questions.length)*72);setStarted(true);}}>ابدأ الامتحان <ArrowLeft size={14}/></button></div></section>;
+  if(!started)return <section><div className="page-heading"><div><div className="eyebrow">محاكاة الامتحان</div><h1 className="page-title">امتحان تجريبي مؤقّت</h1><p className="page-description">اختبر نفسك دون إظهار الإجابات أو الشرح حتى تسليم الامتحان.</p></div><Timer size={25}/></div><div className="panel" style={{maxWidth:650}}><h3 className="panel-title">إعداد الامتحان</h3><p className="panel-hint">اختر المسار وعدد الأسئلة. الوقت 72 ثانية لكل سؤال.</p><div className="select-wrap" style={{margin:'15px 0'}}><select className="filter-select" value={track} onChange={e=>onTrackChange(e.target.value as TrackId)}><option value="internship">امتحان الامتياز الفلسطيني</option><option value="specialty">التصنيفي الفلسطيني (الجراحي واللاجراحي)</option></select></div><div className="select-wrap" style={{marginBottom:16}}><select className="filter-select" value={count} onChange={e=>setCount(Number(e.target.value))}><option value={10}>10 أسئلة · 12 دقيقة</option><option value={20}>20 سؤالاً · 24 دقيقة</option><option value={40}>40 سؤالاً · 48 دقيقة</option></select></div><p className="panel-hint">المتاح حالياً في هذا المسار: {questions.length} سؤالاً. سيُستخدم العدد المتاح إذا كان أقل من اختيارك.</p><button className="btn-primary" style={{marginTop:15}} onClick={()=>{setSeconds(Math.min(count,questions.length)*72);setStarted(true);}}>ابدأ الامتحان <ArrowLeft size={14}/></button></div></section>;
   if(finished)return <section><div className="panel" style={{maxWidth:720,margin:'30px auto',textAlign:'center'}}><div className="finish-mark"><Award size={28}/></div><div className="eyebrow">نتيجة المحاكاة</div><h1 className="page-title">{score} / {examQuestions.length}</h1><p className="page-description">النسبة: {examQuestions.length?Math.round(score/examQuestions.length*100):0}% · أجبت عن {Object.keys(answers).length} من {examQuestions.length} سؤالاً</p><div className="progress-line"><i style={{width:`${examQuestions.length?score/examQuestions.length*100:0}%`}}/></div><div style={{textAlign:'right',marginTop:22}}><h3 className="panel-title">مراجعة الإجابات</h3>{examQuestions.map((q,i)=><div key={q.id} style={{padding:'12px 0',borderTop:'1px solid #e8ece8'}}><b>{i+1}. {q.question}</b><p className="panel-hint">إجابتك: {answers[q.id]===undefined?'لم تجب':optionLetters[answers[q.id]]} · الصحيحة: {optionLetters[q.answer]}</p><p className="panel-hint" style={{lineHeight:1.8}}>{q.explanation}</p></div>)}</div><button className="btn-primary" style={{marginTop:18}} onClick={()=>{setStarted(false);setFinished(false);setAnswers({});setIndex(0);}}>امتحان جديد <RotateCcw size={14}/></button></div></section>;
   const q=examQuestions[index];return <section><div className="page-heading"><div><div className="eyebrow">{trackInfo[track].name}</div><h1 className="page-title">امتحان تجريبي</h1><p className="page-description">السؤال {index+1} من {examQuestions.length}</p></div><div className="meta-chip" style={{fontSize:18,fontWeight:800,color:seconds<60?'#b43d32':'#176b55'}}><Clock3 size={17}/> {fmt(seconds)}</div></div><div className="practice-card"><div className="practice-progress"><i style={{width:`${(index+1)/examQuestions.length*100}%`}}/></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((option,i)=><button key={i} className={`option${answers[q.id]===i?' correct':''}`} onClick={()=>setAnswers(p=>({...p,[q.id]:i}))}><span className="option-key">{optionLetters[i]}</span><span>{option}</span></button>)}</div><div className="practice-actions"><button className="text-button" disabled={index===0} onClick={()=>setIndex(v=>v-1)}>السابق</button>{index<examQuestions.length-1?<button className="btn-primary" onClick={()=>setIndex(v=>v+1)}>التالي <ArrowLeft size={14}/></button>:<button className="btn-primary" onClick={()=>setFinished(true)}>تسليم الامتحان <Check size={14}/></button>}</div><p className="panel-hint" style={{marginTop:12}}>تمت الإجابة عن {Object.keys(answers).length} من {examQuestions.length} سؤالاً. لا يمكن رؤية الإجابات الصحيحة قبل التسليم.</p></div></section>;
 }
@@ -355,7 +362,7 @@ function QuestionBank({track,chooseTrack,questions,total,difficulty,setDifficult
     <div className="page-heading"><div><div className="eyebrow">مراجعة على طريقتك</div><h1 className="page-title">بنك الأسئلة</h1><p className="page-description">أسئلة سريرية باللغة الإنجليزية، مع شرح يساعدك على تثبيت الفكرة.</p></div><button className="btn-primary" onClick={startPractice} data-testid="button-bank-practice">ابدأ التدريب <ArrowLeft size={14}/></button></div>
     <div className="filter-bar">
       <span className="filter-label"><ClipboardList size={15}/> تصفية الأسئلة</span>
-      <div className="select-wrap"><select className="filter-select" aria-label="المسار" value={track} onChange={e=>chooseTrack(e.target.value as TrackId)} data-testid="select-track"><option value="internship">امتحان الامتياز</option><option value="specialty">دخول الاختصاص</option></select></div>
+      <div className="select-wrap"><select className="filter-select" aria-label="المسار" value={track} onChange={e=>chooseTrack(e.target.value as TrackId)} data-testid="select-track"><option value="internship">امتحان الامتياز</option><option value="specialty">التصنيفي الفلسطيني</option></select></div>
       <div className="select-wrap"><select className="filter-select" aria-label="مستوى الصعوبة" value={difficulty} onChange={e=>setDifficulty(e.target.value)} data-testid="select-difficulty"><option value="All">كل المستويات</option><option value="Basic">أساسي · Basic</option><option value="Intermediate">متوسط · Intermediate</option><option value="Advanced">متقدم · Advanced</option></select></div>
       <div className="select-wrap"><select className="filter-select" aria-label="الفئة" value={category} onChange={e=>setCategory(e.target.value)} data-testid="select-category"><option value="All">كل الفئات</option>{categoriesByTrack[track].map(c=><option key={c} value={c}>{c}</option>)}</select></div>
       <span className="result-count">{questions.length} من {total} سؤال</span>
@@ -371,7 +378,7 @@ function Practice({track,chooseTrack,question,index,total,selectedAnswer,answerQ
   const displayTotal=totalTrackQuestions??trackQuestions.length;
   const current=question;
   return <section>
-    <div className="page-heading"><div><div className="eyebrow">تدريب تفاعلي</div><h1 className="page-title">سؤال واحد في كل مرة</h1><p className="page-description">اختر إجابة لترى التفسير السريري مباشرة.</p></div><div className="select-wrap"><select className="filter-select" aria-label="المسار التدريبي" value={track} onChange={e=>chooseTrack(e.target.value as TrackId)} data-testid="practice-select-track"><option value="internship">امتحان الامتياز</option><option value="specialty">دخول الاختصاص</option></select></div></div>
+    <div className="page-heading"><div><div className="eyebrow">تدريب تفاعلي</div><h1 className="page-title">سؤال واحد في كل مرة</h1><p className="page-description">اختر إجابة لترى التفسير السريري مباشرة.</p></div><div className="select-wrap"><select className="filter-select" aria-label="المسار التدريبي" value={track} onChange={e=>chooseTrack(e.target.value as TrackId)} data-testid="practice-select-track"><option value="internship">امتحان الامتياز</option><option value="specialty">التصنيفي الفلسطيني</option></select></div></div>
     <div className="practice-layout">
       <div className="practice-card">
         {done?<div className="finish-card"><div className="finish-mark"><CheckCircle2 size={28}/></div><h2>أكملت هذه الجولة</h2><p>مراجعة رائعة. خذ لحظة لتثبيت ما تعلمته، ثم ابدأ من جديد متى شئت.</p><button className="btn-primary" style={{margin:'0 auto'}} onClick={reset} data-testid="button-restart-practice"><RotateCcw size={14}/> ابدأ جولة جديدة</button></div>:current&&<>
@@ -488,9 +495,31 @@ function DoctorAccess() {
   }
 
   if (!isSignedIn) {
-    return <section className="page-heading auth-page">
-      <h1 className="page-title">دخول الأطباء</h1>
-      <p className="page-description">سجّل الدخول أو أنشئ حسابًا جديدًا للمتابعة.</p>
+    return <section className="page-heading auth-page" dir="rtl">
+      <h1 className="page-title">دخول الأطباء · التصنيفي الفلسطيني</h1>
+      <p className="page-description">جرّب أسئلة مجانية فوراً قبل تسجيل الدخول، أو سجّل الدخول لفتح كامل بنك الأسئلة وحفظ تقدّمك.</p>
+      <div className="panel" style={{ maxWidth: 680, width: "100%", marginBottom: 20, textAlign: "right" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
+          <strong>أسئلة تجريبية مجانية (التصنيفي الفلسطيني: الجراحي واللاجراحي)</strong>
+          <span className="hero-pill">معاينة مجانية</span>
+        </div>
+        {specialtyQuestions.slice(0, 2).map((q, idx) => (
+          <div key={q.id} style={{ padding: "12px 0", borderTop: "1px solid #e2e8f0" }}>
+            <div style={{ fontSize: 12, color: "#0d9488", fontWeight: 700, marginBottom: 4 }}>
+              {idx === 0 ? "المسار اللاجراحي · " : "المسار الجراحي / السريري · "}{q.specialty}
+            </div>
+            <p style={{ fontWeight: 700, margin: "0 0 8px" }}>{q.question}</p>
+            <div style={{ display: "grid", gap: 6 }}>
+              {q.options.map((opt, i) => (
+                <div key={i} style={{ padding: "6px 10px", borderRadius: 8, background: i === q.answer ? "#ecfdf5" : "#f8fafc", border: i === q.answer ? "1px solid #10b981" : "1px solid #e2e8f0", fontSize: 14 }}>
+                  <strong>{optionLetters[i]}.</strong> {opt} {i === q.answer ? "✓" : ""}
+                </div>
+              ))}
+            </div>
+            <p className="panel-hint" style={{ marginTop: 8, lineHeight: 1.7 }}>{q.explanation}</p>
+          </div>
+        ))}
+      </div>
       <SignIn withSignUp={true} appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
     </section>;
   }
