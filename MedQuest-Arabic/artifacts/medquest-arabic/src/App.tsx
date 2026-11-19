@@ -421,6 +421,7 @@ type DoctorAccessRecord = {
 function DoctorAccess() {
   const { isLoaded, isSignedIn } = useUser();
   const { getToken, signOut } = useAuth();
+  const [previewAnswers, setPreviewAnswers] = useState<Record<string, number>>({});
   const [accessState, setAccessState] = useState<{
     loading: boolean;
     submitting: boolean;
@@ -503,22 +504,60 @@ function DoctorAccess() {
           <strong>أسئلة تجريبية مجانية (التصنيفي الفلسطيني: الجراحي واللاجراحي)</strong>
           <span className="hero-pill">معاينة مجانية</span>
         </div>
-        {specialtyQuestions.slice(0, 2).map((q, idx) => (
-          <div key={q.id} style={{ padding: "12px 0", borderTop: "1px solid #e2e8f0" }}>
-            <div style={{ fontSize: 12, color: "#0d9488", fontWeight: 700, marginBottom: 4 }}>
-              {idx === 0 ? "المسار اللاجراحي · " : "المسار الجراحي / السريري · "}{q.specialty}
-            </div>
-            <p style={{ fontWeight: 700, margin: "0 0 8px" }}>{q.question}</p>
-            <div style={{ display: "grid", gap: 6 }}>
-              {q.options.map((opt, i) => (
-                <div key={i} style={{ padding: "6px 10px", borderRadius: 8, background: i === q.answer ? "#ecfdf5" : "#f8fafc", border: i === q.answer ? "1px solid #10b981" : "1px solid #e2e8f0", fontSize: 14 }}>
-                  <strong>{optionLetters[i]}.</strong> {opt} {i === q.answer ? "✓" : ""}
+        {specialtyQuestions.slice(0, 4).map((q, idx) => {
+          const picked = previewAnswers[q.id];
+          const answered = picked !== undefined;
+          const isCorrect = picked === q.answer;
+          return (
+            <div key={q.id} style={{ padding: "14px 0", borderTop: "1px solid #e2e8f0" }}>
+              <div style={{ fontSize: 12, color: "#0d9488", fontWeight: 700, marginBottom: 4 }}>
+                {idx % 2 === 0 ? "المسار اللاجراحي · " : "المسار الجراحي / السريري · "}{q.specialty} · {difficultyArabic[q.difficulty]}
+              </div>
+              <p style={{ fontWeight: 700, margin: "0 0 10px" }}>{idx + 1}. {q.question}</p>
+              <div style={{ display: "grid", gap: 6 }}>
+                {q.options.map((opt, i) => {
+                  const isPicked = picked === i;
+                  const isRightOption = i === q.answer;
+                  const bg = !answered ? "#f8fafc" : isRightOption ? "#ecfdf5" : isPicked ? "#fef2f2" : "#f8fafc";
+                  const border = !answered ? "1px solid #cbd5e1" : isRightOption ? "1px solid #10b981" : isPicked ? "1px solid #ef4444" : "1px solid #e2e8f0";
+                  return (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setPreviewAnswers((prev) => ({ ...prev, [q.id]: i }))}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        width: "100%",
+                        textAlign: "right",
+                        padding: "8px 12px",
+                        borderRadius: 8,
+                        background: bg,
+                        border,
+                        cursor: "pointer",
+                        fontSize: 14,
+                      }}
+                    >
+                      <strong>{optionLetters[i]}.</strong>
+                      <span style={{ flex: 1 }}>{opt}</span>
+                      {answered && isRightOption && <span>✓</span>}
+                      {answered && isPicked && !isRightOption && <span>✕</span>}
+                    </button>
+                  );
+                })}
+              </div>
+              {answered && (
+                <div style={{ marginTop: 10, padding: 10, borderRadius: 8, background: isCorrect ? "#f0fdf4" : "#fffbeb", border: isCorrect ? "1px solid #86efac" : "1px solid #fde68a" }}>
+                  <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 4 }}>
+                    {isCorrect ? "إجابة صحيحة!" : `إجابتك غير صحيحة — الإجابة الصحيحة هي ${optionLetters[q.answer]}`}
+                  </div>
+                  <p className="panel-hint" style={{ margin: 0, lineHeight: 1.7 }}>{q.explanation}</p>
                 </div>
-              ))}
+              )}
             </div>
-            <p className="panel-hint" style={{ marginTop: 8, lineHeight: 1.7 }}>{q.explanation}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <SignIn withSignUp={true} appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
     </section>;
