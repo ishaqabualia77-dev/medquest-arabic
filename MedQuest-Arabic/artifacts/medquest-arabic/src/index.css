@@ -676,3 +676,81 @@ button { cursor: pointer; }
   width: 100%;
   max-width: 400px;
 }
+
+/* === Centered & Styled Auth Page === */
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(13, 148, 136, 0.14), transparent 42%),
+    radial-gradient(circle at 82% 82%, rgba(37, 99, 235, 0.12), transparent 45%),
+    linear-gradient(160deg, #f8fafc 0%, #eef6f7 55%, #f1f5f9 100%);
+}
+
+.auth-page .page-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.auth-page .page-description {
+  margin: 0 0 22px;
+  font-size: 0.98rem;
+  color: #475569;
+  max-width: 440px;
+}
+
+.auth-page .cl-rootBox,
+.auth-page .cl-cardBox,
+.auth-page .cl-card {
+  margin: 0 auto !important;
+  max-width: 430px !important;
+  width: 100% !important;
+  border-radius: 22px !important;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(13, 148, 136, 0.14) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(10px);
+}
+
+.auth-page input[type="email"],
+.auth-page input[name="identifier"],
+.auth-page .cl-formFieldInput {
+  border-radius: 12px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  background-color: #f8fafc !important;
+  padding: 11px 14px !important;
+  font-size: 0.98rem !important;
+  color: #0f172a !important;
+  transition: all 0.2s ease !important;
+}
+
+.auth-page input[type="email"]:focus,
+.auth-page input[name="identifier"]:focus,
+.auth-page .cl-formFieldInput:focus {
+  outline: none !important;
+  background-color: #ffffff !important;
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.16) !important;
+}
+
+.auth-page .cl-formButtonPrimary {
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 20px -8px rgba(13, 148, 136, 0.45) !important;
+  transition: transform 0.15s ease, filter 0.2s ease !important;
+}
+
+.auth-page .cl-formButtonPrimary:hover {
+  filter: brightness(1.05) !important;
+  transform: translateY(-1px) !important;
+}
