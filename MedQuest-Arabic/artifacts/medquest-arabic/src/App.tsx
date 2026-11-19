@@ -13,10 +13,39 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Admin from './Admin';
 
-const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+const RAW_WEB_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+const RAW_ANDROID_API_BASE = (import.meta.env.VITE_ANDROID_API_URL || "").replace(/\/+$/, "");
+const IS_CAPACITOR_NATIVE = typeof window !== "undefined" && Boolean((window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.());
+const EFFECTIVE_API_BASE = IS_CAPACITOR_NATIVE
+  ? (RAW_ANDROID_API_BASE || (/^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(RAW_WEB_API_BASE) ? "" : RAW_WEB_API_BASE))
+  : RAW_WEB_API_BASE;
+
 function resolveApiUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : "/" + path;
-  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
+  return EFFECTIVE_API_BASE ? EFFECTIVE_API_BASE + normalizedPath : normalizedPath;
+}
+
+async function parseApiJson<T>(res: Response, fallbackError: string): Promise<T> {
+  const rawText = await res.text();
+  const trimmed = rawText.trim();
+  if (!trimmed) {
+    if (!res.ok) throw new Error(fallbackError);
+    return {} as T;
+  }
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html") || trimmed.startsWith("<HTML")) {
+    throw new Error("تعذر الوصول إلى خادم الاعتماد حالياً (تم استلام صفحة ويب بدل استجابة الخادم). تأكد من الاتصال بالإنترنت وإعداد رابط الخادم.");
+  }
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(trimmed);
+  } catch {
+    throw new Error(fallbackError);
+  }
+  if (!res.ok) {
+    const errObj = parsed as { error?: string; message?: string };
+    throw new Error(errObj?.error || errObj?.message || fallbackError);
+  }
+  return parsed as T;
 }
 
 
@@ -436,11 +465,7 @@ function DoctorAccess() {
       const res = await fetch(resolveApiUrl("/api/doctor-access/me"), {
         headers: token ? { Authorization: "Bearer " + token } : {},
       });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || "تعذر التحقق من حالة الاعتماد.");
-      }
-      const data = (await res.json()) as DoctorAccessRecord;
+      const data = await parseApiJson<DoctorAccessRecord>(res, "تعذر التحقق من حالة الاعتماد.");
       setAccessState({ loading: false, submitting: false, record: data, error: null });
     } catch (err) {
       setAccessState({
@@ -472,10 +497,7 @@ function DoctorAccess() {
           ...(token ? { Authorization: "Bearer " + token } : {}),
         },
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || "تعذر إرسال طلب الاعتماد.");
-      }
+      const data = await parseApiJson<DoctorAccessRecord>(res, "تعذر إرسال طلب الاعتماد.");
       setAccessState({
         loading: false,
         submitting: false,
@@ -501,7 +523,7 @@ function DoctorAccess() {
       <p className="page-description">جرّب أسئلة مجانية فوراً قبل تسجيل الدخول، أو سجّل الدخول لفتح كامل بنك الأسئلة وحفظ تقدّمك.</p>
       <div className="panel" style={{ maxWidth: 680, width: "100%", marginBottom: 20, textAlign: "right" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
-          <strong>أسئلة تجريبية مجانية (التصنيفي الفلسطيني: الجراحي واللاجراحي)</strong>
+          <strong>أسئلة تجريبية مجانية</strong>
           <span className="hero-pill">معاينة مجانية</span>
         </div>
         {specialtyQuestions.slice(0, 4).map((q, idx) => {
@@ -513,8 +535,8 @@ function DoctorAccess() {
               <div style={{ fontSize: 12, color: "#0d9488", fontWeight: 700, marginBottom: 4 }}>
                 {idx % 2 === 0 ? "المسار اللاجراحي · " : "المسار الجراحي / السريري · "}{q.specialty} · {difficultyArabic[q.difficulty]}
               </div>
-              <p style={{ fontWeight: 700, margin: "0 0 10px" }}>{idx + 1}. {q.question}</p>
-              <div style={{ display: "grid", gap: 6 }}>
+              <p dir="ltr" style={{ fontWeight: 700, margin: "0 0 10px", textAlign: "left" }}>{idx + 1}. {q.question}</p>
+              <div dir="ltr" style={{ display: "grid", gap: 6 }}>
                 {q.options.map((opt, i) => {
                   const isPicked = picked === i;
                   const isRightOption = i === q.answer;
@@ -530,7 +552,7 @@ function DoctorAccess() {
                         alignItems: "center",
                         gap: 8,
                         width: "100%",
-                        textAlign: "right",
+                        textAlign: "left",
                         padding: "8px 12px",
                         borderRadius: 8,
                         background: bg,
