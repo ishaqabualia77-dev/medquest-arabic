@@ -6,10 +6,39 @@ import {
   XCircle, RefreshCw, Stethoscope
 } from 'lucide-react';
 
-const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+const RAW_WEB_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+const RAW_ANDROID_API_BASE = (import.meta.env.VITE_ANDROID_API_URL || "").replace(/\/+$/, "");
+const IS_CAPACITOR_NATIVE = typeof window !== "undefined" && Boolean((window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.());
+const EFFECTIVE_API_BASE = IS_CAPACITOR_NATIVE
+  ? (RAW_ANDROID_API_BASE || (/^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(RAW_WEB_API_BASE) ? "" : RAW_WEB_API_BASE))
+  : RAW_WEB_API_BASE;
+
 function resolveApiUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : "/" + path;
-  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
+  return EFFECTIVE_API_BASE ? EFFECTIVE_API_BASE + normalizedPath : normalizedPath;
+}
+
+async function safeJson<T>(res: Response, fallbackError = "تعذر قراءة استجابة الخادم بصيغة JSON."): Promise<T> {
+  const rawText = await res.text();
+  const trimmed = rawText.trim();
+  if (!trimmed) {
+    if (!res.ok) throw new Error(fallbackError);
+    return {} as T;
+  }
+  if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html") || trimmed.startsWith("<HTML")) {
+    throw new Error("تعذر الاتصال بخادم لوحة الإدارة (تم استلام صفحة HTML بدل JSON). تأكد من إعداد رابط الخادم للنسخة أو الاتصال بالشبكة.");
+  }
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(trimmed);
+  } catch {
+    throw new Error(fallbackError);
+  }
+  if (!res.ok) {
+    const errObj = parsed as { error?: string; message?: string };
+    throw new Error(errObj?.error || errObj?.message || fallbackError);
+  }
+  return parsed as T;
 }
 
 
@@ -132,14 +161,14 @@ export default function Admin({ questions }: Props) {
       ]);
 
       if (reqRes.ok) {
-        const reqData = await reqRes.json();
+        const reqData = await safeJson<unknown>(reqRes);
         if (Array.isArray(reqData)) {
           setRequests(reqData as DoctorRequestItem[]);
         }
       }
 
       if (tRes.ok) {
-        const tData = await tRes.json();
+        const tData = await safeJson<unknown>(tRes);
         const tList: ExamTrackRow[] = Array.isArray(tData)
           ? tData
           : Array.isArray(tData?.tracks)
@@ -155,7 +184,7 @@ export default function Admin({ questions }: Props) {
       }
 
       if (sRes.ok) {
-        const sData = await sRes.json();
+        const sData = await safeJson<unknown>(sRes);
         const sList: SourceRow[] = Array.isArray(sData)
           ? sData
           : Array.isArray(sData?.sources)
@@ -171,7 +200,7 @@ export default function Admin({ questions }: Props) {
       }
 
       if (qRes.ok) {
-        const qData = await qRes.json();
+        const qData = await safeJson<unknown>(qRes);
         const rows: ApiQuestionRow[] = Array.isArray(qData)
           ? qData
           : Array.isArray(qData?.questions)
@@ -352,7 +381,7 @@ export default function Admin({ questions }: Props) {
           sourceIds: selectedSourceIds,
         }),
       });
-      const data = await res.json().catch(() => ({}));
+      const data = await safeJson<Record<string, unknown>>(res).catch(() => ({}));
       if (!res.ok) {
         throw new Error(data.error || 'تعذر حفظ السؤال في قاعدة البيانات.');
       }
@@ -421,7 +450,7 @@ export default function Admin({ questions }: Props) {
           nameArabic: trackForm.nameArabic.trim(),
         }),
       });
-      const data = await res.json().catch(() => ({}));
+      const data = await safeJson<Record<string, unknown>>(res).catch(() => ({}));
       if (!res.ok) {
         throw new Error(data.error || 'تعذر إضافة المسار الجديد.');
       }
