@@ -6,6 +6,13 @@ import {
   XCircle, RefreshCw, Stethoscope
 } from 'lucide-react';
 
+const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+function resolveApiUrl(path: string): string {
+  const normalizedPath = path.startsWith("/") ? path : "/" + path;
+  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
+}
+
+
 type Question = {
   id: string;
   specialty: string;
@@ -43,6 +50,7 @@ type ApiQuestionRow = {
 type ExamTrackRow = {
   id: string | number;
   name?: string | null;
+  nameArabic?: string | null;
   slug?: string | null;
 };
 
@@ -62,7 +70,7 @@ function normalizeDifficulty(raw?: string | null): Question['difficulty'] {
 
 export default function Admin({ questions }: Props) {
   const { getToken } = useAuth();
-  const [page, setPage] = useState<'overview' | 'questions' | 'add' | 'requests'>('overview');
+  const [page, setPage] = useState<'overview' | 'questions' | 'add' | 'requests' | 'tracks'>('overview');
   const [search, setSearch] = useState('');
   const [track, setTrack] = useState<'all' | 'internship' | 'specialty'>('all');
 
@@ -79,6 +87,12 @@ export default function Admin({ questions }: Props) {
 
   const [loadingData, setLoadingData] = useState(false);
   const [submittingQuestion, setSubmittingQuestion] = useState(false);
+  const [submittingTrack, setSubmittingTrack] = useState(false);
+  const [trackForm, setTrackForm] = useState({
+    id: '',
+    name: '',
+    nameArabic: '',
+  });
   const [reviewingId, setReviewingId] = useState<string | null>(null);
   const [bannerError, setBannerError] = useState<string | null>(null);
   const [bannerSuccess, setBannerSuccess] = useState<string | null>(null);
@@ -226,40 +240,61 @@ export default function Admin({ questions }: Props) {
     setReviewingId(id);
     setBannerError(null);
     setBannerSuccess(null);
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
     try {
       const headers = await authHeaders();
-      const res = await fetch(resolveApiUrl('/api/doctor-access/admin/requests/') + encodeURIComponent(id) + '/review', {
+      const targetUrl = resolveApiUrl('/api/doctor-access/admin/requests/') + encodeURIComponent(id) + '/review';
+      const res = await fetch(targetUrl, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
           ...headers,
         },
+        signal: controller.signal,
         body: JSON.stringify({
           status: nextStatus,
-          reviewNote: reviewNotes[id] ?? '',
+          reviewNote: (reviewNotes[id] ?? '').trim(),
         }),
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || 'تعذر تحديث حالة الطلب.');
+      const rawText = await res.text();
+      let data: { error?: string; reviewNote?: string | null } = {};
+      try {
+        data = rawText ? JSON.parse(rawText) : {};
+      } catch {
+        throw new Error(`استجابة غير متوقعة من الخادم (${res.status}).`);
       }
+      if (!res.ok) {
+        throw new Error(data.error || `تعذر تحديث حالة الطلب (${res.status}).`);
+      }
+      const savedNote = data.reviewNote ?? ((reviewNotes[id] ?? '').trim() || null);
       setRequests((prev) =>
         prev.map((item) =>
           item.id === id
             ? {
                 ...item,
                 status: nextStatus,
-                reviewNote: data.reviewNote ?? reviewNotes[id] ?? null,
+                reviewNote: savedNote,
               }
             : item
         )
       );
+      setReviewNotes((prev) => {
+        const next = { ...prev };
+        delete next[id];
+        return next;
+      });
       setBannerSuccess(
         nextStatus === 'approved' ? 'تم اعتماد حساب الطبيب بنجاح.' : 'تم رفض طلب الطبيب.'
       );
     } catch (err) {
-      setBannerError(err instanceof Error ? err.message : 'تعذر مراجعة الطلب.');
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        setBannerError('انتهت مهلة الاتصال بالخادم أثناء مراجعة الطلب.');
+      } else {
+        setBannerError(err instanceof Error ? err.message : 'تعذر مراجعة الطلب.');
+      }
     } finally {
+      clearTimeout(timer);
       setReviewingId(null);
     }
   };
@@ -364,11 +399,48 @@ export default function Admin({ questions }: Props) {
     }
   };
 
+  const addTrack = async () => {
+    setBannerError(null);
+    setBannerSuccess(null);
+    if (!trackForm.nameArabic.trim() || !trackForm.name.trim()) {
+      setBannerError('يرجى إدخال اسم المسار بالعربية والإنجليزية.');
+      return;
+    }
+    setSubmittingTrack(true);
+    try {
+      const headers = await authHeaders();
+      const res = await fetch(resolveApiUrl('/api/question-bank/exam-tracks'), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...headers,
+        },
+        body: JSON.stringify({
+          id: trackForm.id.trim() || undefined,
+          name: trackForm.name.trim(),
+          nameArabic: trackForm.nameArabic.trim(),
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || 'تعذر إضافة المسار الجديد.');
+      }
+      setTracks((prev) => [...prev, data as ExamTrackRow]);
+      setTrackForm({ id: '', name: '', nameArabic: '' });
+      setBannerSuccess('تمت إضافة المسار الجديد بنجاح.');
+    } catch (err) {
+      setBannerError(err instanceof Error ? err.message : 'حدث خطأ أثناء إضافة المسار.');
+    } finally {
+      setSubmittingTrack(false);
+    }
+  };
+
   const nav = [
     { id: 'overview', label: 'لوحة التحكم', icon: LayoutDashboard },
     { id: 'questions', label: 'إدارة الأسئلة', icon: BookOpen },
     { id: 'add', label: 'إضافة سؤال', icon: Plus },
     { id: 'requests', label: 'طلبات الأطباء', icon: Users },
+    { id: 'tracks', label: 'إضافة مسارات', icon: ClipboardList },
   ] as const;
 
   const field = (
@@ -589,6 +661,61 @@ export default function Admin({ questions }: Props) {
               {requests.length === 0 && (
                 <p className="admin-empty">لا توجد طلبات اعتماد مسجلة حالياً.</p>
               )}
+            </div>
+          </section>
+        )}
+
+        {page === 'tracks' && (
+          <section className="admin-panel">
+            <div className="admin-panel-head">
+              <div>
+                <h3>إدارة وإضافة المسارات</h3>
+                <p>أضف مسار امتحان جديد واستعرض المسارات الحالية ({tracks.length})</p>
+              </div>
+            </div>
+            <div className="admin-form" style={{ display: 'grid', gap: '12px', marginBottom: '20px' }}>
+              <label className="admin-field">
+                <span>اسم المسار بالعربية *</span>
+                <input
+                  value={trackForm.nameArabic}
+                  onChange={(e) => setTrackForm((p) => ({ ...p, nameArabic: e.target.value }))}
+                  placeholder="مثال: الباطنة العامة"
+                />
+              </label>
+              <label className="admin-field">
+                <span>اسم المسار بالإنجليزية *</span>
+                <input
+                  value={trackForm.name}
+                  onChange={(e) => setTrackForm((p) => ({ ...p, name: e.target.value }))}
+                  placeholder="Example: Internal Medicine"
+                />
+              </label>
+              <label className="admin-field">
+                <span>معرّف المسار (اختياري - يُولّد تلقائياً)</span>
+                <input
+                  value={trackForm.id}
+                  onChange={(e) => setTrackForm((p) => ({ ...p, id: e.target.value }))}
+                  placeholder="example: internal-medicine"
+                />
+              </label>
+              <button
+                type="button"
+                className="admin-primary"
+                disabled={submittingTrack}
+                onClick={() => void addTrack()}
+              >
+                {submittingTrack ? 'جاري الحفظ...' : 'إضافة المسار'}
+              </button>
+            </div>
+            <div style={{ display: 'grid', gap: '10px' }}>
+              {tracks.map((t) => (
+                <article key={String(t.id)} className="admin-card" style={{ padding: '12px' }}>
+                  <strong>{t.nameArabic || t.name || String(t.id)}</strong>
+                  <div style={{ fontSize: '12px', opacity: 0.75 }}>
+                    {t.name || '-'} • ID: {String(t.id)}
+                  </div>
+                </article>
+              ))}
             </div>
           </section>
         )}
