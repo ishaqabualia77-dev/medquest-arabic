@@ -6,7 +6,7 @@ import {
   GraduationCap, HeartPulse, Layers3, RotateCcw, ShieldCheck, Sparkles,
   Stethoscope, Target, X, Zap, Timer,
 } from 'lucide-react';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -87,6 +87,12 @@ const readProgress = (): Progress => {
 };
 const todayKey = () => new Date().toLocaleDateString('en-CA');
 const difficultyArabic: Record<Difficulty,string> = { Basic:'أساسي', Intermediate:'متوسط', Advanced:'متقدم' };
+const RAW_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+function resolveApiUrl(path: string): string {
+  const normalizedPath = path.startsWith("/") ? path : "/" + path;
+  return RAW_API_BASE ? RAW_API_BASE + normalizedPath : normalizedPath;
+}
+
 const optionLetters = ['A','B','C','D'];
 
 type ApiStudentQuestion = {
@@ -143,8 +149,8 @@ function AppHome() {
         const token = await getToken();
         const headers: Record<string, string> = token ? { Authorization: 'Bearer ' + token } : {};
         const [tRes, qRes] = await Promise.all([
-          fetch('/api/question-bank/exam-tracks', { headers }),
-          fetch('/api/question-bank/questions?limit=100', { headers }),
+          fetch(resolveApiUrl('/api/question-bank/exam-tracks'), { headers }),
+          fetch(resolveApiUrl('/api/question-bank/questions?limit=100'), { headers }),
         ]);
         if (!active) return;
         if (tRes.ok) {
@@ -416,7 +422,7 @@ function DoctorAccess() {
     setAccessState((prev) => ({ ...prev, loading: true, error: null }));
     try {
       const token = await getToken();
-      const res = await fetch("/api/doctor-access/me", {
+      const res = await fetch(resolveApiUrl("/api/doctor-access/me"), {
         headers: token ? { Authorization: "Bearer " + token } : {},
       });
       if (!res.ok) {
@@ -448,7 +454,7 @@ function DoctorAccess() {
     setAccessState((prev) => ({ ...prev, submitting: true, error: null }));
     try {
       const token = await getToken();
-      const res = await fetch("/api/doctor-access/request", {
+      const res = await fetch(resolveApiUrl("/api/doctor-access/request"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -567,7 +573,7 @@ function AdminAccess() {
       setAdminState({ loading: true, authorized: false, error: null });
       try {
         const token = await getToken();
-        const res = await fetch("/api/doctor-access/admin/requests", {
+        const res = await fetch(resolveApiUrl("/api/doctor-access/admin/requests"), {
           headers: token ? { Authorization: "Bearer " + token } : {},
         });
         if (!active) return;
@@ -631,13 +637,54 @@ function AdminAccess() {
   return <Admin questions={[...internshipQuestions, ...specialtyQuestions]} />;
 }
 
+function AdminNavBar() {
+  const [location, setLocation] = useLocation();
+  const isAdminPage = location.startsWith("/admin");
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 12,
+        padding: "10px 16px",
+        borderBottom: "1px solid rgba(148, 163, 184, 0.25)",
+        background: "rgba(15, 23, 42, 0.03)",
+        direction: "rtl",
+      }}
+    >
+      <span style={{ fontSize: 13, fontWeight: 700 }}>
+        {isAdminPage ? "لوحة إدارة المشرفين" : "بوابة الأطباء والاختبارات"}
+      </span>
+      <button
+        type="button"
+        onClick={() => setLocation(isAdminPage ? "/" : "/admin")}
+        style={{
+          padding: "6px 12px",
+          borderRadius: 8,
+          border: "1px solid currentColor",
+          fontSize: 13,
+          fontWeight: 700,
+          cursor: "pointer",
+          background: "transparent",
+        }}
+      >
+        {isAdminPage ? "العودة للواجهة الرئيسية (/)" : "بوابة المشرفين (/admin)"}
+      </button>
+    </div>
+  );
+}
+
 function Router() {
   return <ErrorBoundary>
-    <Switch>
+    <>
+      <AdminNavBar />
+      <Switch>
       <Route path="/" component={DoctorAccess} />
       <Route path="/admin" component={AdminAccess} />
       <Route component={NotFound} />
     </Switch>
+    </>
   </ErrorBoundary>;
 }
 

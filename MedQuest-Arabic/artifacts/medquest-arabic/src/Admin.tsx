@@ -111,10 +111,10 @@ export default function Admin({ questions }: Props) {
       const headers = await authHeaders();
 
       const [reqRes, qRes, tRes, sRes] = await Promise.all([
-        fetch('/api/doctor-access/admin/requests', { headers }),
-        fetch('/api/question-bank/questions', { headers }),
-        fetch('/api/question-bank/exam-tracks', { headers }),
-        fetch('/api/question-bank/sources', { headers }),
+        fetch(resolveApiUrl('/api/doctor-access/admin/requests'), { headers }),
+        fetch(resolveApiUrl('/api/question-bank/questions'), { headers }),
+        fetch(resolveApiUrl('/api/question-bank/exam-tracks'), { headers }),
+        fetch(resolveApiUrl('/api/question-bank/sources'), { headers }),
       ]);
 
       if (reqRes.ok) {
@@ -228,7 +228,7 @@ export default function Admin({ questions }: Props) {
     setBannerSuccess(null);
     try {
       const headers = await authHeaders();
-      const res = await fetch('/api/doctor-access/admin/requests/' + encodeURIComponent(id) + '/review', {
+      const res = await fetch(resolveApiUrl('/api/doctor-access/admin/requests/') + encodeURIComponent(id) + '/review', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -294,7 +294,7 @@ export default function Admin({ questions }: Props) {
     setSubmittingQuestion(true);
     try {
       const headers = await authHeaders();
-      const res = await fetch('/api/question-bank/questions', {
+      const res = await fetch(resolveApiUrl('/api/question-bank/questions'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
