@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useRef, useCallback } from "react";
 import { ClerkProvider, SignIn, useAuth, useUser } from '@clerk/react';
 import {
   Activity, ArrowLeft, ArrowUpRight, Award, BookOpen,
