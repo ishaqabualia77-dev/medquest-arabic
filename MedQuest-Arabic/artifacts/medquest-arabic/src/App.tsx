@@ -335,6 +335,14 @@ function AppHome() {
     </div>
   </div>;
 }
+type ClassificationSubTrack = "all"|"surgical"|"non-surgical";
+function matchesClassificationSubTrack(q: Question, sub: ClassificationSubTrack): boolean {
+  if (sub === "all") return true;
+  const sp = String(q.specialty || "").toLowerCase();
+  const isSurg = /surg|ortho|ent|ophth|urol|neurosurg|gyne|obstet/i.test(sp);
+  return sub === "surgical" ? isSurg : !isSurg;
+}
+
 function ExamSimulation({track,subTrack,setSubTrack,questions,onTrackChange,onFinish}:{track:TrackId;subTrack:ClassificationSubTrack;setSubTrack:(v:ClassificationSubTrack)=>void;questions:Question[];onTrackChange:(id:TrackId)=>void;onFinish:(items:Question[],answers:Record<string,number>)=>void}) {
   const [count,setCount]=useState(10); const [started,setStarted]=useState(false); const [index,setIndex]=useState(0); const [answers,setAnswers]=useState<Record<string,number>>({}); const [seconds,setSeconds]=useState(0); const [finished,setFinished]=useState(false);
   const filteredPool=useMemo(()=>track==='specialty'?questions.filter(q=>matchesClassificationSubTrack(q,subTrack)):questions,[questions,track,subTrack]);
@@ -525,7 +533,7 @@ function DoctorAccess() {
 
   if (!isSignedIn) {
     return <section className="page-heading auth-page" dir="rtl">
-      <h1 className="page-title">دخول الأطباء · التصنيفي الفلسطيني</h1>
+      <div style={{display:"flex",alignItems:"center",gap:8,fontSize:18,color:"#285347"}}><Stethoscope size={20}/><span>🩺</span><span>💊</span><span>📋</span></div>
       <p className="page-description">جرّب أسئلة مجانية فوراً قبل تسجيل الدخول، أو سجّل الدخول لفتح كامل بنك الأسئلة وحفظ تقدّمك.</p>
       <div className="panel" style={{ maxWidth: 680, width: "100%", marginBottom: 20, textAlign: "right" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
@@ -539,7 +547,7 @@ function DoctorAccess() {
           return (
             <div key={q.id} style={{ padding: "14px 0", borderTop: "1px solid #e2e8f0" }}>
               <div style={{ fontSize: 12, color: "#0d9488", fontWeight: 700, marginBottom: 4 }}>
-                {idx % 2 === 0 ? "المسار اللاجراحي · " : "المسار الجراحي / السريري · "}{q.specialty} · {difficultyArabic[q.difficulty]}
+                
               </div>
               <p dir="ltr" style={{ fontWeight: 700, margin: "0 0 10px", textAlign: "left" }}>{idx + 1}. {q.question}</p>
               <div dir="ltr" style={{ display: "grid", gap: 6 }}>
