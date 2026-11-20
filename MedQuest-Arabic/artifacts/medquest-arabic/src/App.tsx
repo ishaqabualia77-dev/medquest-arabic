@@ -345,6 +345,7 @@ function AppHome() {
   </div>;
 }
 
+const difficultyLabels: Record<string, string> = typeof difficultyArabic !== "undefined" ? difficultyArabic : { Basic: "أساسي", Intermediate: "متوسط", Advanced: "متقدم" };
 function PracticeModeView(props: any) {
   const {
     track, chooseTrack, subTrack, setSubTrack, questions, index,
