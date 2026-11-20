@@ -311,10 +311,19 @@ function AppHome() {
           <div className="top-actions"><span className="today">{new Intl.DateTimeFormat('ar-PS',{weekday:'long',day:'numeric',month:'long'}).format(new Date())}</span><div style={{position:"relative"}}><button type="button" className="profile" onClick={()=>setShowMenu(v=>!v)}>ط</button>{showMenu&&<div style={{position:"absolute",top:40,left:0,background:"#fff",border:"1px solid #d9e2dc",borderRadius:10,padding:6,zIndex:90,minWidth:150}}><button type="button" style={{display:"block",width:"100%",padding:6,border:"none",background:"none",textAlign:"right"}} onClick={()=>{setShowMenu(false);alert("المسار: "+currentTrack.name+" | المجاب: "+progress.answered[track].length);}}>حسابي</button><button type="button" style={{display:"block",width:"100%",padding:6,border:"none",background:"none",textAlign:"right"}} onClick={()=>{setShowMenu(false);alert("إعدادات الحساب والجلسة");}}>الإعدادات</button><button type="button" style={{display:"block",width:"100%",padding:6,border:"none",background:"none",textAlign:"right",color:"#b43d32"}} onClick={()=>{setShowMenu(false);if(confirm("تأكيد تسجيل الخروج؟"))void signOut();}}>تسجيل الخروج</button></div>}</div></div>
         </header>
         <div className="content">
-          {screen==='dashboard'&&<><Dashboard track={track} chooseTrack={chooseTrack} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length}} trackTitleOverride={currentTrack.name} />{track==='specialty'&&<div style={{display:"flex",gap:8,marginTop:10}}><button type="button" className="btn-primary" onClick={()=>{setSubTrack('surgical');setScreen('exam');}}>🩺 جراحي</button><button type="button" className="btn-secondary" onClick={()=>{setSubTrack('non-surgical');setScreen('exam');}}>📋 غير جراحي</button></div>}</>}
+          {screen==='dashboard'&&<>
+  <Dashboard track={track} chooseTrack={(id)=>{chooseTrack(id);if(id==='specialty'){setSubTrack('all');}}} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length}} trackTitleOverride={currentTrack.name} />
+  {track==='specialty'&&<div style={{display:"flex",gap:10,marginTop:14,flexWrap:"wrap"}}>
+    <button type="button" className="btn-primary" data-testid="button-specialty-surgical" onClick={()=>{setSubTrack('surgical');setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>امتحان الجراحي</button>
+    <button type="button" className="btn-secondary" data-testid="button-specialty-nonsurgical" onClick={()=>{setSubTrack('non-surgical');setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>امتحان اللاجراحي</button>
+  </div>}
+</>}
           {screen==='bank'&&<QuestionBank track={track} chooseTrack={chooseTrack} questions={visibleQuestions} total={trackQuestions.length} difficulty={difficulty} setDifficulty={setDifficulty} category={category} setCategory={setCategory} startPractice={startPractice} />}
           {screen==='exam'&&<ExamSimulation key={`${track}-${examRun}-${subTrack}`} track={track} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} onTrackChange={chooseTrack} onFinish={recordExam} />}
-          {screen==='practice'&&<Practice track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} index={questionIndex} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={resetStudy} progress={progress} />}
+
+
+
+          {screen==='practice'&&<PracticeModeView key={track + "-" + subTrack + "-" + trackQuestions.length} track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} index={questionIndex} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={resetStudy} progress={progress} recordExam={recordExam} />}
           <footer className="practice-strip">
             <div className="practice-copy"><div className="practice-icon"><ShieldCheck size={18}/></div><div><p className="practice-title">تعلّم بثقة، خطوة بخطوة</p><p className="practice-text">محتوى تدريبي تعليمي، وليس بديلاً عن المشورة الطبية.</p></div></div>
             <button className="btn-primary" onClick={startPractice} data-testid="button-footer-practice">تدريب سريع <ArrowLeft size={14}/></button>
@@ -335,6 +344,37 @@ function AppHome() {
     </div>
   </div>;
 }
+
+function PracticeModeView(props: any) {
+  const {
+    track, chooseTrack, subTrack, setSubTrack, questions, index,
+    selectedAnswer, answerQuestion, nextQuestion, reset, progress, recordExam
+  } = props;
+  const [mode, setMode] = useState<"study" | "exam">("study");
+  const [examAnswers, setExamAnswers] = useState<Record<string, number>>({});
+  const [secondsLeft, setSecondsLeft] = useState<number>(Math.max(1, questions.length) * 72);
+  const [examSubmitted, setExamSubmitted] = useState<boolean>(false);
+  const recordedRef = useRef<boolean>(false);
+  const fmt = (sec: number) => { const n = Math.max(0, sec); return String(Math.floor(n / 60)).padStart(2, "0") + ":" + String(n % 60).padStart(2, "0"); };
+  const resetExam = useCallback(() => { setExamAnswers({}); setSecondsLeft(Math.max(1, questions.length) * 72); setExamSubmitted(false); recordedRef.current = false; reset(); }, [questions.length, reset]);
+  const switchMode = (m: "study" | "exam") => { setMode(m); setExamSubmitted(false); recordedRef.current = false; if (m === "exam") { setExamAnswers({}); setSecondsLeft(Math.max(1, questions.length) * 72); } reset(); };
+  useEffect(() => { if (mode !== "exam" || examSubmitted || questions.length === 0) return; const t = window.setInterval(() => setSecondsLeft((v) => { if (v <= 1) { window.clearInterval(t); setExamSubmitted(true); return 0; } return v - 1; }), 1000); return () => window.clearInterval(t); }, [mode, examSubmitted, questions.length]);
+  useEffect(() => { if (mode === "exam" && examSubmitted && !recordedRef.current) { recordedRef.current = true; recordExam(questions, examAnswers); } }, [mode, examSubmitted, recordExam, questions, examAnswers]);
+  const bar = <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10, marginBottom: 14, padding: "10px 14px", borderRadius: 12, background: "#f8faf9", border: "1px solid #dfe7e2" }}><div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}><span style={{ fontSize: 13, fontWeight: 700 }}>أسلوب عرض الأسئلة:</span><button type="button" className={mode === "study" ? "btn-primary" : "btn-secondary"} onClick={() => switchMode("study")}>أسلوب الدراسة</button><button type="button" className={mode === "exam" ? "btn-primary" : "btn-secondary"} onClick={() => switchMode("exam")}>أسلوب الامتحان</button></div>{mode === "exam" && <div className="meta-chip" style={{ fontSize: 15, fontWeight: 800, color: secondsLeft < 60 ? "#b43d32" : "#176b55" }}><Clock3 size={16} /><span>الوقت المتبقي: {fmt(secondsLeft)}</span></div>}</div>;
+  if (mode === "study") return <div>{bar}<Practice track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={questions} index={index} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={reset} progress={progress} /></div>;
+  const totalQ = questions.length;
+  const finished = examSubmitted || index >= totalQ;
+  const q = questions[index];
+  const chosen = q ? examAnswers[q.id] ?? null : null;
+  const score = questions.filter((item) => examAnswers[item.id] === item.answer).length;
+  const answeredCount = questions.filter((item) => examAnswers[item.id] !== undefined).length;
+  const pct = totalQ ? Math.round((score / totalQ) * 100) : 0;
+  if (!totalQ) return <div>{bar}<div className="empty-state"><strong>لا توجد أسئلة متاحة حالياً</strong></div></div>;
+  if (finished) return <div>{bar}<section><div className="panel" style={{ maxWidth: 740, margin: "16px auto", textAlign: "center" }}><div className="finish-mark"><Award size={28} /></div><div className="eyebrow">علامة الامتحان</div><h1 className="page-title">{score} / {totalQ}</h1><p className="page-description">علامتك: {pct}% · أجبت عن {answeredCount} من {totalQ} سؤالاً</p><div className="progress-line"><i style={{ width: pct + "%" }} /></div><div style={{ textAlign: "right", marginTop: 22 }}><h3 className="panel-title">مراجعة الأسئلة والشرح</h3>{questions.map((item, i) => { const pAns = examAnswers[item.id]; const ok = pAns === item.answer; return <div key={item.id} style={{ padding: "12px 0", borderTop: "1px solid #e8ece8" }}><b>{i + 1}. {item.question}</b><p className="panel-hint" style={{ color: ok ? "#176b55" : "#b43d32", fontWeight: 700 }}>{pAns === undefined ? "لم تُجب · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer] : ok ? "صحيحة: " + optionLetters[pAns] + ". " + item.options[pAns] : "إجابتك: " + optionLetters[pAns] + " · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer]}</p><p className="panel-hint" style={{ lineHeight: 1.8 }}>{item.explanation}</p></div>; })}</div><div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 18, flexWrap: "wrap" }}><button type="button" className="btn-primary" onClick={resetExam}><RotateCcw size={14} /> إعادة الامتحان</button><button type="button" className="btn-secondary" onClick={() => switchMode("study")}>أسلوب الدراسة</button></div></div></section></div>;
+  return <div>{bar}<section><div className="page-heading"><div><div className="eyebrow">أسلوب الامتحان · {trackInfo[track].name}</div><h1 className="page-title">امتحان بوقت محدّد مع الشرح</h1><p className="page-description">السؤال {index + 1} من {totalQ}</p></div><button type="button" className="btn-secondary" onClick={() => setExamSubmitted(true)}>إنهاء وعرض العلامة</button></div><div className="practice-card"><div className="practice-topline"><span className="question-counter">QUESTION {String(index + 1).padStart(2, "0")} / {String(totalQ).padStart(2, "0")}</span><span className={"meta-chip level-" + q.difficulty.toLowerCase()}>{difficultyLabels[q.difficulty]} · {q.difficulty}</span></div><div className="practice-progress"><i style={{ width: ((index + (chosen !== null ? 1 : 0)) / totalQ) * 100 + "%" }} /></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((opt, idx) => { const isC = idx === q.answer; const isP = idx === chosen; const st = chosen === null ? "" : isC ? " correct" : isP ? " incorrect" : " reveal"; return <button key={opt} type="button" className={"option" + st} onClick={() => { if (chosen === null) setExamAnswers((prev) => ({ ...prev, [q.id]: idx })); }} disabled={chosen !== null}><span className="option-key">{optionLetters[idx]}</span><span>{opt}</span>{chosen !== null && isC && <Check size={16} style={{ marginLeft: "auto" }} />}</button>; })}</div>{chosen !== null && <div className={"feedback " + (chosen === q.answer ? "" : "wrong")} role="status"><div className="feedback-head">{chosen === q.answer ? "إجابة صحيحة — أحسنت" : "ليست الإجابة الصحيحة"}</div><div className="feedback-answer">Correct answer: {optionLetters[q.answer]}. {q.options[q.answer]}</div><p className="feedback-copy">{q.explanation}</p><div className="feedback-label"><Sparkles size={13} /> التفسير السريري</div></div>}<div className="practice-actions"><button type="button" className="text-button" onClick={resetExam}><RotateCcw size={13} /> إعادة من البداية</button><button type="button" className="btn-primary" onClick={() => { if (index >= totalQ - 1) setExamSubmitted(true); else nextQuestion(); }}>{index === totalQ - 1 ? "إنهاء وعرض العلامة" : "السؤال التالي"} <ArrowLeft size={14} /></button></div></div></section></div>;
+}
+
+
 type ClassificationSubTrack = "all"|"surgical"|"non-surgical";
 function matchesClassificationSubTrack(q: Question, sub: ClassificationSubTrack): boolean {
   if (sub === "all") return true;
@@ -745,55 +785,73 @@ function AdminAccess() {
   return <Admin questions={[...internshipQuestions, ...specialtyQuestions]} />;
 }
 
-function AdminNavBar() {
+function PortalsFooterBar() {
   const [location, setLocation] = useLocation();
   const isAdminPage = location.startsWith("/admin");
+  const btnStyle: React.CSSProperties = {
+    flex: 1,
+    padding: "9px 12px",
+    borderRadius: 10,
+    fontSize: 13,
+    fontWeight: 700,
+    cursor: "pointer",
+  };
   return (
-    <div
+    <nav
+      aria-label="تبديل البوابات"
+      dir="rtl"
       style={{
+        position: "sticky",
+        bottom: 0,
+        zIndex: 30,
         display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: 12,
-        padding: "10px 16px",
-        borderBottom: "1px solid rgba(148, 163, 184, 0.25)",
-        background: "rgba(15, 23, 42, 0.03)",
-        direction: "rtl",
+        gap: 10,
+        padding: "10px 14px",
+        borderTop: "1px solid rgba(148, 163, 184, 0.25)",
+        background: "rgba(255, 255, 255, 0.96)",
       }}
     >
-      <span style={{ fontSize: 13, fontWeight: 700 }}>
-        {isAdminPage ? "لوحة إدارة المشرفين" : "بوابة الأطباء والاختبارات"}
-      </span>
       <button
         type="button"
-        onClick={() => setLocation(isAdminPage ? "/" : "/admin")}
+        onClick={() => setLocation("/")}
         style={{
-          padding: "6px 12px",
-          borderRadius: 8,
-          border: "1px solid currentColor",
-          fontSize: 13,
-          fontWeight: 700,
-          cursor: "pointer",
-          background: "transparent",
+          ...btnStyle,
+          border: !isAdminPage ? "1px solid #0f766e" : "1px solid rgba(148, 163, 184, 0.35)",
+          background: !isAdminPage ? "#0f766e" : "transparent",
+          color: !isAdminPage ? "#ffffff" : "#334155",
         }}
       >
-        {isAdminPage ? "العودة للواجهة الرئيسية (/)" : "بوابة المشرفين (/admin)"}
+        بوابة الأطباء
       </button>
-    </div>
+      <button
+        type="button"
+        onClick={() => setLocation("/admin")}
+        style={{
+          ...btnStyle,
+          border: isAdminPage ? "1px solid #0f766e" : "1px solid rgba(148, 163, 184, 0.35)",
+          background: isAdminPage ? "#0f766e" : "transparent",
+          color: isAdminPage ? "#ffffff" : "#334155",
+        }}
+      >
+        بوابة المشرفين
+      </button>
+    </nav>
   );
 }
 
 function Router() {
-  return <ErrorBoundary>
-    <>
-      <AdminNavBar />
-      <Switch>
-      <Route path="/" component={DoctorAccess} />
-      <Route path="/admin" component={AdminAccess} />
-      <Route component={NotFound} />
-    </Switch>
-    </>
-  </ErrorBoundary>;
+  return (
+    <ErrorBoundary>
+      <>
+        <Switch>
+          <Route path="/" component={DoctorAccess} />
+          <Route path="/admin" component={AdminAccess} />
+          <Route component={NotFound} />
+        </Switch>
+        <PortalsFooterBar />
+      </>
+    </ErrorBoundary>
+  );
 }
 
 function App() {
