@@ -564,7 +564,7 @@ export default function Admin({ questions }: Props) {
             </button>
             <div className="admin-avatar">A</div>
           </div>
-        </header>
+        <button type="button" className="btn-secondary" onClick={()=>{if(confirm("تأكيد تسجيل الخروج؟"))location.reload();}}>تسجيل الخروج</button></header>
 
         {bannerError && (
           <div className="admin-notice">
