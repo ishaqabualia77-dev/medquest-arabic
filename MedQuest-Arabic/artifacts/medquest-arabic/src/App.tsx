@@ -13,18 +13,17 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import Admin from './Admin';
 
+const DEFAULT_RENDER_API_BASE = "https://medquest-arabic.onrender.com";
 const RAW_WEB_API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 const RAW_ANDROID_API_BASE = (import.meta.env.VITE_ANDROID_API_URL || "").replace(/\/+$/, "");
-const IS_LOCAL_WEB_ORIGIN = typeof window !== "undefined" && /^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(window.location.origin);
-const IS_CAPACITOR_NATIVE = typeof window !== "undefined" && (
+const IS_CAPACITOR_ORIGIN = typeof window !== "undefined" && (
   Boolean((window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.()) ||
   window.location.protocol === "capacitor:" ||
-  (IS_LOCAL_WEB_ORIGIN && Boolean(RAW_ANDROID_API_BASE))
+  /^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(window.location.origin)
 );
-const EFFECTIVE_API_BASE = IS_CAPACITOR_NATIVE
-  ? (RAW_ANDROID_API_BASE || (/^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(RAW_WEB_API_BASE) ? "" : RAW_WEB_API_BASE))
+const EFFECTIVE_API_BASE = IS_CAPACITOR_ORIGIN
+  ? (RAW_ANDROID_API_BASE || (/^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/i.test(RAW_WEB_API_BASE) ? "" : RAW_WEB_API_BASE) || DEFAULT_RENDER_API_BASE)
   : RAW_WEB_API_BASE;
-
 function resolveApiUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : "/" + path;
   return EFFECTIVE_API_BASE ? EFFECTIVE_API_BASE + normalizedPath : normalizedPath;
