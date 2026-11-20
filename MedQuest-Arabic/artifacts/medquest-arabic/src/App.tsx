@@ -38,7 +38,7 @@ async function parseApiJson<T>(res: Response, fallbackError: string): Promise<T>
     return {} as T;
   }
   if (trimmed.startsWith("<!DOCTYPE") || trimmed.startsWith("<html") || trimmed.startsWith("<HTML")) {
-    throw new Error("تعذر الوصول إلى خادم الاعتماد حالياً (تم استلام صفحة ويب بدل استجابة الخادم). تأكد من الاتصال بالإنترنت وإعداد رابط الخادم.");
+    throw new Error(`تعذر الوصول إلى خادم الاعتماد حالياً (تم استلام صفحة ويب HTML بدل JSON من: ${res.url || "unknown"} | status: ${res.status}).`);
   }
   let parsed: unknown;
   try {
