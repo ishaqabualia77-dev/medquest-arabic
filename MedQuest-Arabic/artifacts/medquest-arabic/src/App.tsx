@@ -707,6 +707,13 @@ function DoctorAccess() {
 function AdminAccess() {
   const { isLoaded, isSignedIn } = useUser();
   const { getToken, signOut } = useAuth();
+  
+  const [signInStalled, setSignInStalled] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setSignInStalled(true), 2500);
+    return () => clearTimeout(t);
+  }, []);
+
   const [adminState, setAdminState] = useState<{
     loading: boolean;
     authorized: boolean;
@@ -737,7 +744,24 @@ function AdminAccess() {
     return <section className="page-heading auth-page">
       <h1 className="page-title">دخول المشرفين</h1>
       <p className="page-description">سجّل الدخول بحساب المشرف للمتابعة.</p>
-      <SignIn appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
+      <>
+        <SignIn appearance={{ elements: { socialButtonsIconButton: { display: "none" }, socialButtonsBlockButton: { display: "none" }, dividerRow: { display: "none" } } }} />
+        {signInStalled && (
+          <div className="panel" style={{ maxWidth: 420, width: "100%", marginTop: 14, textAlign: "center" }}>
+            <p className="panel-hint" style={{ marginBottom: 10 }}>
+              تأخر تحميل نموذج دخول المشرفين. جرّب التحديث أو تحقق من إعدادات Clerk:
+            </p>
+            <button
+              type="button"
+              className="btn-secondary"
+              style={{ width: "100%", justifyContent: "center" }}
+              onClick={() => window.location.reload()}
+            >
+              إعادة تحميل الصفحة
+            </button>
+          </div>
+        )}
+      </>
     </section>;
   }
 
