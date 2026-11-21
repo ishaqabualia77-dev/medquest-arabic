@@ -569,7 +569,9 @@ function DoctorAccess() {
     }
   };
 
-  if (!isLoaded) {
+  const [waited, setWaited] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setWaited(true), 2500); return () => clearTimeout(t); }, []);
+  if (!isLoaded && !waited) {
     return <div className="empty-state">جاري التحقق من الحساب...</div>;
   }
 
@@ -727,7 +729,9 @@ function AdminAccess() {
     };
   }, [isLoaded, isSignedIn, getToken]);
 
-  if (!isLoaded) return <div className="empty-state">جاري التحقق من الحساب...</div>;
+  const [adminWaited, setAdminWaited] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setAdminWaited(true), 2500); return () => clearTimeout(t); }, []);
+  if (!isLoaded && !adminWaited) return <div className="empty-state">جاري التحقق من الحساب...</div>;
 
   if (!isSignedIn) {
     return <section className="page-heading auth-page">
