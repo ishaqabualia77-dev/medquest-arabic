@@ -901,8 +901,175 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
   );
 }
 
+
+function AiStudyAssistant({ trackName, onClose }: { trackName: string; onClose: () => void }) {
+  const [mode, setMode] = useState<"explain" | "generate" | "drug">("explain");
+  const [promptInput, setPromptInput] = useState("");
+  const [output, setOutput] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const buildLocalFallback = (currentMode: "explain" | "generate" | "drug", text: string) => {
+    const clean = text.trim();
+    if (currentMode === "generate") {
+      return [
+        `سؤال تدريبي مقترح (${trackName}):`,
+        "مريض يراجع بقصة سريرية تتطلب تحديد الخطوة التشخيصية أو العلاجية الأولى بدقة.",
+        "أ) إجراء استقصاء أولي سريع وتقييم العلامات الحيوية والمنذرات الخطرة.",
+        "ب) تأجيل التقييم لحين ظهور نتائج متأخرة دون تدخل فوري.",
+        "ج) البدء بعلاج غير موجه دون استبعاد الحالات الإسعافية.",
+        "د) الاكتفاء بالملاحظة المنزلية دون متابعة.",
+        "الإجابة الصحيحة: (أ) — البدء بالخطوة المنهجية الآمنة وتقييم الخطورة أولاً هو الأساس في الامتحانات السريرية."
+      ].join("\n");
+    }
+    if (currentMode === "drug") {
+      return [
+        `ملخص مراجعة دوائية (${clean || "دواء عام"}):`,
+        "• تحقق من الاستطباب الدقيق، الجرعة حسب العمر/الوزن أو التصفية الكلوية، وطريق الإعطاء.",
+        "• راجع موانع الاستعمال، التداخلات الدوائية، والآثار الجانبية المهمة قبل التطبيق.",
+        "• ملاحظة: أداة تعليمية للمراجعة الطبية ولا تغني عن البروتوكولات المعتمدة أو التحقق السريري."
+      ].join("\n");
+    }
+    return [
+      `تحليل وشرح تعليمي (${trackName}):`,
+      clean
+        ? `النقطة المدخلة: "${clean}"`
+        : "لم يتم إدخال نص محدد؛ إليك منهجية الإجابة السريعة:",
+      "1. حدّد المعطيات المحورية في السؤال (العمر، المدة، الأعراض المرافقة، أو القيم المخبرية).",
+      "2. اربط المعطيات بالآلية المرضية أو الخطوة الأولى الأكثر أماناً وكفاءة.",
+      "3. استبعد الخيارات التي تخالف الأولوية السريرية أو تفتقر لمبرر مباشر.",
+      "• تنبيه: شرح تعليمي للمساعدة في الدراسة والمراجعة."
+    ].join("\n");
+  };
+
+  const handleRunAi = async () => {
+    setLoading(true);
+    setOutput("");
+    try {
+      const res = await fetch("/api/ai/study", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode,
+          track: trackName,
+          prompt: promptInput.trim()
+        })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && typeof data.reply === "string" && data.reply.trim()) {
+          setOutput(data.reply.trim());
+          setLoading(false);
+          return;
+        }
+      }
+    } catch {
+      // Fallback to built-in study helper when /api/ai/study is not configured yet
+    }
+    setOutput(buildLocalFallback(mode, promptInput));
+    setLoading(false);
+  };
+
+  return (
+    <div className="panel" style={{ marginTop: 14 }} data-testid="ai-study-assistant-section">
+      <div className="blueprint-head" style={{ marginBottom: 12 }}>
+        <div>
+          <h3 className="panel-title">مساعد الذكاء الاصطناعي · AI Study Assistant</h3>
+          <p className="panel-hint">شرح الحالات والأسئلة، توليد أسئلة تدريبية، ومراجعة دوائية سريعة لمسار {trackName}.</p>
+        </div>
+        <button type="button" className="btn-secondary" style={{ padding: "6px 12px", fontSize: 12.5 }} onClick={onClose}>
+          إغلاق المساعد
+        </button>
+      </div>
+
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+        <button
+          type="button"
+          className={mode === "explain" ? "btn-primary" : "btn-secondary"}
+          style={{ padding: "7px 12px", fontSize: 12.5 }}
+          onClick={() => setMode("explain")}
+        >
+          شرح سؤال / حالة
+        </button>
+        <button
+          type="button"
+          className={mode === "generate" ? "btn-primary" : "btn-secondary"}
+          style={{ padding: "7px 12px", fontSize: 12.5 }}
+          onClick={() => setMode("generate")}
+        >
+          توليد سؤال تدريبي
+        </button>
+        <button
+          type="button"
+          className={mode === "drug" ? "btn-primary" : "btn-secondary"}
+          style={{ padding: "7px 12px", fontSize: 12.5 }}
+          onClick={() => setMode("drug")}
+        >
+          مراجعة دواء سريع
+        </button>
+      </div>
+
+      <textarea
+        rows={3}
+        value={promptInput}
+        onChange={(e) => setPromptInput(e.target.value)}
+        placeholder={
+          mode === "explain"
+            ? "اكتب فكرة السؤال أو الحالة السريرية أو موضوعاً تريد شرحه..."
+            : mode === "generate"
+            ? "اكتب التخصص أو الموضوع لتوليد سؤال تدريبي (مثال: Cardiology / Pediatrics / Step 1)..."
+            : "اكتب اسم الدواء أو سؤالك الدوائي السريع..."
+        }
+        aria-label="إدخال مساعد الذكاء الاصطناعي"
+        style={{
+          width: "100%",
+          padding: "10px 12px",
+          borderRadius: 10,
+          border: "1px solid #d5dfd9",
+          fontSize: 13.5,
+          marginBottom: 10,
+          resize: "vertical"
+        }}
+      />
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+        <span className="panel-hint" style={{ fontSize: 12 }}>
+          لأغراض المراجعة التعليمية فقط؛ يُرجى التحقق من المصادر الطبية المعتمدة.
+        </span>
+        <button
+          type="button"
+          className="btn-primary"
+          disabled={loading}
+          onClick={handleRunAi}
+          data-testid="button-run-ai-assistant"
+        >
+          {loading ? "جاري التحليل..." : "تشغيل المساعد الذكي"}
+        </button>
+      </div>
+
+      {output && (
+        <div
+          style={{
+            marginTop: 12,
+            padding: 12,
+            borderRadius: 10,
+            background: "#f6f9f7",
+            border: "1px solid #dce6e0",
+            whiteSpace: "pre-line",
+            lineHeight: 1.75,
+            fontSize: 13.5
+          }}
+          data-testid="ai-assistant-output"
+        >
+          {output}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
   const [medicationsOpen, setMedicationsOpen] = useState(false);
+  const [aiOpen, setAiOpen] = useState(false);
   const [calculatorOpen, setCalculatorOpen] = useState(false);
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
@@ -969,6 +1136,27 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
         </button>
         {calculatorOpen && <DoseCalculatorSection onClose={() => setCalculatorOpen(false)} />}
       </div>
+    </div>
+
+    
+    <div style={{ marginTop: 12 }}>
+      <button
+        type="button"
+        className={aiOpen ? "btn-primary" : "btn-secondary"}
+        data-testid="button-ai-assistant"
+        onClick={() => setAiOpen((v) => !v)}
+        style={{ width: "100%", justifyContent: "space-between", padding: "12px 16px" }}
+      >
+        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700 }}>
+          <Sparkles size={17} />
+          <span>الذكاء الاصطناعي · AI Study Assistant</span>
+          <span style={{ fontSize: 12, opacity: 0.8 }}>(شرح وتوليد أسئلة)</span>
+        </span>
+        <span style={{ fontSize: 12.5 }}>
+          {aiOpen ? "إخفاء المساعد" : "فتح المساعد"}
+        </span>
+      </button>
+      {aiOpen && <AiStudyAssistant trackName={info.name} onClose={() => setAiOpen(false)} />}
     </div>
 
     <div className="below-grid">
