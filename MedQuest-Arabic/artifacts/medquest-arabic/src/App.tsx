@@ -260,7 +260,12 @@ function AppHome() {
     };
   }, [getToken]);
 
-  const activeQuestionsByTrack = apiQuestions ?? questionsByTrack;
+  const mergeUniqueQuestions = (primary: Question[], secondary: Question[]): Question[] => { const seen = new Set<string>(); const out: Question[] = []; for (const item of [...primary, ...secondary]) { if (!seen.has(item.id)) { seen.add(item.id); out.push(item); } } return out; };
+
+  const activeQuestionsByTrack: Record<TrackId, Question[]> = {
+    internship: mergeUniqueQuestions(apiQuestions?.internship ?? [], questionsByTrack.internship),
+    specialty: mergeUniqueQuestions(apiQuestions?.specialty ?? [], questionsByTrack.specialty),
+  };
   const baseTrackQuestions = activeQuestionsByTrack[track];
   const trackQuestions = track === 'specialty'
     ? baseTrackQuestions.filter((q) => {
