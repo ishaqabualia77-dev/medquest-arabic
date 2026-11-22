@@ -1,0 +1,258 @@
+[
+  {
+    "id": "g-endo-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with fatigue, weight gain, cold intolerance, constipation, dry skin, and bradycardia. Laboratory testing shows elevated serum TSH with low free T4. Which diagnosis and first-line therapy are indicated?",
+    "options": [
+      "Primary hypothyroidism; levothyroxine replacement therapy",
+      "Primary hyperthyroidism; methimazole therapy",
+      "Adrenal crisis; desmopressin alone",
+      "Acromegaly; oral metformin monotherapy"
+    ],
+    "answer": 0,
+    "explanation": "Elevated TSH with low free T4 indicates primary hypothyroidism, treated with daily levothyroxine titrated to clinical and laboratory targets."
+  },
+  {
+    "id": "g-endo-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with heat intolerance, weight loss despite increased appetite, palpitations, tremor, and anxiety, with suppressed serum TSH and elevated free T4 and/or free T3. Which hormone pattern defines primary hyperthyroidism?",
+    "options": [
+      "Low/suppressed TSH with elevated free T4 and/or free T3",
+      "Elevated TSH with low free T4",
+      "Low TSH with low free T4 and low free T3 (central hypothyroidism)",
+      "Normal TSH with normal free T4"
+    ],
+    "answer": 0,
+    "explanation": "In primary hyperthyroidism, excess thyroid hormone exerts negative feedback on the pituitary, resulting in suppressed TSH and elevated free T4 and/or free T3."
+  },
+  {
+    "id": "g-endo-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "hard",
+    "question": "A patient with type 1 diabetes mellitus presents with nausea, vomiting, diffuse abdominal pain, deep rapid breathing (Kussmaul respirations), fruity breath odor, blood glucose 460 mg/dL, arterial pH 7.18, low serum bicarbonate (10 mEq/L), elevated anion gap, and positive serum/urine ketones. What is the diagnosis?",
+    "options": [
+      "Diabetic ketoacidosis (DKA)",
+      "Hyperosmolar hyperglycemic state (HHS) with severe ketosis/acidosis absent",
+      "Primary aldosteronism",
+      "Acute gouty arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Hyperglycemia, high-anion-gap metabolic acidosis (low pH and low bicarbonate), and ketonemia/ketonuria define diabetic ketoacidosis, managed with isotonic fluids, insulin infusion, and electrolyte (especially potassium) replacement."
+  },
+  {
+    "id": "g-endo-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "hard",
+    "question": "An older adult with type 2 diabetes presents with profound dehydration, lethargy/obtundation, serum glucose 880 mg/dL, effective serum osmolality 345 mOsm/kg, arterial pH 7.36, bicarbonate 21 mEq/L, and minimal or absent ketones. Which hyperglycemic emergency is most consistent?",
+    "options": [
+      "Hyperosmolar hyperglycemic state (HHS)",
+      "Diabetic ketoacidosis (DKA)",
+      "Addisonian crisis with hypoglycemia",
+      "Pheochromocytoma crisis"
+    ],
+    "answer": 0,
+    "explanation": "Marked hyperglycemia, severe hyperosmolality, and profound dehydration with preserved pH/bicarbonate and minimal ketosis characterize HHS, requiring aggressive fluid resuscitation before/alongside insulin and careful electrolyte monitoring."
+  },
+  {
+    "id": "g-endo-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus, atherosclerotic cardiovascular disease, and chronic kidney disease (eGFR 42 mL/min/1.73 m2, albuminuria) has HbA1c 7.9% on metformin. Which additional glucose-lowering medication class provides proven cardiovascular and renal protection in this clinical profile?",
+    "options": [
+      "An SGLT2 inhibitor (or GLP-1 receptor agonist where indicated per guidelines)",
+      "Sulfonylurea monotherapy alone without addressing cardiorenal risk",
+      "Oral ketoconazole",
+      "High-dose daily thiazide diuretic for glycemic control"
+    ],
+    "answer": 0,
+    "explanation": "In type 2 diabetes with established ASCVD and/or CKD, agents with proven cardiovascular and kidney benefit—such as SGLT2 inhibitors and/or GLP-1 receptor agonists—are prioritized per current guidelines."
+  },
+  {
+    "id": "g-endo-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with central obesity, moon facies, dorsocervical fat pad ('buffalo hump'), violaceous striae, proximal muscle weakness, hypertension, and hyperglycemia. Initial screening shows elevated 24-hour urinary free cortisol and/or failure of serum cortisol to suppress after an overnight 1 mg dexamethasone suppression test. What is this syndrome?",
+    "options": [
+      "Cushing syndrome",
+      "Addison disease",
+      "Diabetes insipidus",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Chronic glucocorticoid excess produces Cushing syndrome, with initial screening tests including late-night salivary cortisol, 24-hour urinary free cortisol, or overnight 1 mg dexamethasone suppression testing."
+  },
+  {
+    "id": "g-endo-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "hard",
+    "question": "A patient taking chronic daily prednisone for several months stops taking it abruptly and presents with hypotension, hyponatremia, hyperkalemia, fatigue, nausea, and vomiting. Which immediate treatment is required when adrenal insufficiency/crisis is suspected?",
+    "options": [
+      "Immediate intravenous hydrocortisone (along with IV isotonic fluid resuscitation and dextrose if hypoglycemic) without delaying treatment for diagnostic tests",
+      "Oral metoprolol",
+      "Subcutaneous insulin without fluids or steroids",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Suspected acute adrenal crisis is a medical emergency requiring prompt IV hydrocortisone and isotonic volume resuscitation without waiting for confirmatory lab results."
+  },
+  {
+    "id": "g-endo-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient has asymptomatic hypercalcemia (serum calcium 10.9 mg/dL) with an elevated intact parathyroid hormone (PTH) level and low-normal serum phosphorus. Which diagnosis is most likely?",
+    "options": [
+      "Primary hyperparathyroidism",
+      "Hypoparathyroidism",
+      "Vitamin D deficiency rickets/osteomalacia",
+      "Syndrome of inappropriate antidiuretic hormone (SIADH)"
+    ],
+    "answer": 0,
+    "explanation": "Elevated or inappropriately normal PTH in the presence of hypercalcemia (typically with low/low-normal phosphate) is classic for primary hyperparathyroidism."
+  },
+  {
+    "id": "g-endo-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with episodic spells of severe throbbing headache, diaphoresis, palpitations, and paroxysmal severe hypertension. Plasma free metanephrines or 24-hour urinary metanephrines/catecholamines are elevated. Which catecholamine-secreting tumor is suspected?",
+    "options": [
+      "Pheochromocytoma",
+      "Insulinoma",
+      "Prolactinoma",
+      "Simple thyroid cyst"
+    ],
+    "answer": 0,
+    "explanation": "Episodic headaches, sweating, and tachycardia/hypertension with elevated metanephrines point to pheochromocytoma; alpha-adrenergic blockade is initiated prior to beta-blockade or surgery."
+  },
+  {
+    "id": "g-endo-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with enlargement of the hands, feet, and facial features (supraorbital prominence, prognathism, macroglossia), oily skin, joint pain, and sleep apnea, with elevated serum insulin-like growth factor-1 (IGF-1). What is the diagnosis?",
+    "options": [
+      "Acromegaly (growth hormone excess)",
+      "Primary hypothyroidism",
+      "Addison disease",
+      "Diabetes insipidus"
+    ],
+    "answer": 0,
+    "explanation": "Chronic excess growth hormone after epiphyseal closure causes acromegaly; screening relies on serum IGF-1, and confirmation typically uses an oral glucose tolerance test showing lack of GH suppression."
+  },
+  {
+    "id": "g-endo-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with a history of total thyroidectomy or neck surgery develops perioral numbness, tingling in the fingertips, carpopedal spasm (Trousseau sign), and facial twitching on tapping the facial nerve (Chvostek sign), with low serum calcium and low PTH. What is the cause?",
+    "options": [
+      "Hypoparathyroidism leading to hypocalcemia and neuromuscular excitability",
+      "Hypercalcemic crisis from excess parathyroid hormone",
+      "Primary aldosteronism",
+      "Cushing syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Injury or removal of parathyroid tissue during neck surgery can cause hypoparathyroidism, hypocalcemia, and tetany/neuromuscular irritability (Chvostek and Trousseau signs)."
+  },
+  {
+    "id": "g-endo-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A premenopausal woman presents with oligomenorrhea/amenorrhea, galactorrhea, and visual field deficits (bitemporal hemianopsia) in some cases, with markedly elevated serum prolactin after excluding pregnancy and medications. Which pituitary condition is most likely?",
+    "options": [
+      "Prolactinoma (lactotroph adenoma)",
+      "Insulinoma",
+      "Pheochromocytoma",
+      "Simple calcium oxalate stone"
+    ],
+    "answer": 0,
+    "explanation": "Elevated prolactin causing hypogonadotropic menstrual irregularity and galactorrhea is commonly due to a prolactinoma (or medications/stalk effect); dopamine agonists (such as cabergoline) are first-line for most prolactinomas."
+  },
+  {
+    "id": "g-endo-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "easy",
+    "question": "Which laboratory test reflects average blood glucose control over approximately the preceding 2 to 3 months in patients with diabetes mellitus?",
+    "options": [
+      "Glycated hemoglobin (HbA1c)",
+      "Serum amylase",
+      "24-hour urine VMA",
+      "Serum ceruloplasmin"
+    ],
+    "answer": 0,
+    "explanation": "HbA1c reflects chronic average glycemia over roughly the past 8–12 weeks (the lifespan of circulating red blood cells), though conditions affecting RBC turnover can influence interpretation."
+  },
+  {
+    "id": "g-endo-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with Graves disease has diffuse goiter, ophthalmopathy (exophthalmos/lid lag), and pretibial myxedema, with suppressed TSH and elevated free T4/T3. Which antithyroid medication or definitive option is commonly used?",
+    "options": [
+      "Antithyroid drug therapy (such as methimazole, or propylthiouracil in first-trimester pregnancy/specific settings), radioactive iodine ablation, or thyroidectomy",
+      "Oral levothyroxine monotherapy as definitive antithyroid suppression without treating hyperthyroidism",
+      "Daily high-dose oral vitamin D alone",
+      "Routine antibiotic therapy"
+    ],
+    "answer": 0,
+    "explanation": "Graves hyperthyroidism is treated with antithyroid medications (methimazole generally preferred outside first trimester of pregnancy), radioactive iodine, or surgery, often with beta-blockers early for symptom relief."
+  },
+  {
+    "id": "g-endo-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with a tender, painful thyroid gland following a viral upper respiratory infection, fever, neck pain radiating to the jaw/ear, transient hyperthyroidism with low radioiodine uptake, and elevated ESR/CRP. What is the diagnosis?",
+    "options": [
+      "Subacute (de Quervain) granulomatous thyroiditis",
+      "Medullary thyroid carcinoma",
+      "Primary aldosteronism",
+      "Addison disease"
+    ],
+    "answer": 0,
+    "explanation": "Subacute thyroiditis typically follows a viral illness with a tender thyroid, pain radiating to the ear/jaw, elevated ESR, and a triphasic thyroid course (transient thyrotoxicosis from hormone release, followed by hypothyroidism and usually recovery)."
+  },
+  {
+    "id": "g-endo-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A young woman presents with irregular menses (oligomenorrhea), hirsutism, acne, and polycystic ovaries on ultrasound after excluding other causes of androgen excess and menstrual irregularity. Which endocrine condition is most likely?",
+    "options": [
+      "Polycystic ovary syndrome (PCOS)",
+      "Primary hyperparathyroidism",
+      "Diabetes insipidus",
+      "Simple iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "PCOS is characterized by ovulatory dysfunction/irregular cycles, clinical or biochemical hyperandrogenism, and/or polycystic ovarian morphology after excluding mimicking disorders (such as non-classic CAH, hyperprolactinemia, or thyroid disease)."
+  }
+]

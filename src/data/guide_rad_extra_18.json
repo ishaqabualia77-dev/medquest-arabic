@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-rad-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden pleuritic chest pain and shortness of breath. A portable anteroposterior (AP) chest radiograph shows a radiolucent area along the right lateral chest wall with absent lung markings peripherally, a visible visceral pleural line, and collapse of the right lung without mediastinal shift. What is the diagnosis?",
+    "options": [
+      "Pneumothorax (simple/non-tension)",
+      "Pleural effusion with meniscus sign",
+      "Lobar consolidation with air bronchograms",
+      "Pericardial tamponade"
+    ],
+    "answer": 0,
+    "explanation": "A visceral pleural line with absent peripheral lung markings (radiolucency) outside the lung margin indicates pneumothorax; upright/expiratory views or thoracic ultrasound can further assist when needed, while any tension signs require immediate decompression rather than waiting for imaging."
+  },
+  {
+    "id": "g-rad-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "An upright chest radiograph demonstrates blunting of the left costophrenic angle and a homogeneous dependent opacity curving upward laterally ('meniscus sign'), with tracheal/mediastinal shift to the right if the collection is large. Which pleural abnormality is most likely?",
+    "options": [
+      "Pleural effusion",
+      "Simple pneumothorax",
+      "Subdiaphragmatic free air under the right hemidiaphragm",
+      "Normal post-inspiratory lung expansion"
+    ],
+    "answer": 0,
+    "explanation": "Blunting of the costophrenic angle and dependent homogeneous opacity (meniscus on upright PA/AP films) are classic for pleural effusion; decubitus radiography or bedside ultrasound can confirm free-flowing fluid and guide thoracentesis."
+  },
+  {
+    "id": "g-rad-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "hard",
+    "question": "A patient presents with acute severe epigastric/abdominal pain after sudden onset or recent abdominal surgery, and an upright chest radiograph (or lateral decubitus film) shows a crescentic collection of gas beneath the right hemidiaphragm. What does pneumoperitoneum typically indicate?",
+    "options": [
+      "Free intraperitoneal air—commonly from hollow viscus perforation (such as a perforated peptic ulcer) or recent abdominal surgery/peritoneal dialysis—requiring urgent surgical evaluation when perforation is suspected",
+      "Simple constipation in the sigmoid colon",
+      "Normal gastric fundal gas bubble only",
+      "Benign renal cyst"
+    ],
+    "answer": 0,
+    "explanation": "Subdiaphragmatic free air on an upright chest film indicates pneumoperitoneum, most urgently raising concern for gastrointestinal perforation (such as perforated peptic ulcer) in an acute abdomen."
+  },
+  {
+    "id": "g-rad-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, productive cough, and right-sided pleuritic chest pain. Chest radiograph shows a wedge-shaped or lobar homogeneous opacity in the right lower lobe with dark branching linear lucencies representing air-filled bronchi within consolidated alveoli. What are these dark branching lines called?",
+    "options": [
+      "Air bronchograms (characteristic of alveolar/parenchymal consolidation such as bacterial pneumonia)",
+      "Kerley B lines",
+      "Cannonball metastases",
+      "Rigler sign"
+    ],
+    "answer": 0,
+    "explanation": "Air bronchograms occur when fluid, pus, or exudate replaces alveolar air while larger conducting bronchi remain patent and air-filled, appearing as radiolucent branching tubes within consolidated lung tissue."
+  },
+  {
+    "id": "g-rad-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with acute decompensated heart failure presents with orthopnea and dyspnea. Chest radiograph shows cardiomegaly, cephalization of pulmonary vessels, peribronchial cuffing, bilateral perihilar ('bat-wing') opacities, and short horizontal lines perpendicular to the lateral pleural surface at the lung bases. What are those short horizontal basal lines?",
+    "options": [
+      "Kerley B lines (reflecting interlobular septal edema/thickening from elevated pulmonary venous pressure)",
+      "Air bronchograms",
+      "Chilaiditi sign",
+      "Osteophytes"
+    ],
+    "answer": 0,
+    "explanation": "Kerley B lines are short (1–2 cm), horizontal non-branching lines at the lung periphery/bases touching the pleural surface, classically seen with interstitial edema in congestive heart failure or lymphatic engorgement."
+  },
+  {
+    "id": "g-rad-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "hard",
+    "question": "In acute ischemic stroke evaluation, why is a non-contrast computed tomography (NCCT) scan of the head obtained immediately as the initial neuroimaging test?",
+    "options": [
+      "To rapidly rule out intracranial hemorrhage (which appears hyperdense/bright on NCCT) and exclude major mimics/large established infarction before deciding on reperfusion therapy such as IV thrombolysis or thrombectomy",
+      "To diagnose iron-deficiency anemia",
+      "Because non-contrast CT cannot detect acute blood",
+      "To replace neurological examination completely"
+    ],
+    "answer": 0,
+    "explanation": "Acute blood appears bright (hyperdense) on non-contrast head CT; ruling out hemorrhage quickly is essential before giving thrombolytics or antithrombotics in suspected acute stroke."
+  },
+  {
+    "id": "g-rad-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient sustains blunt head trauma and briefly loses consciousness, has a 'lucid interval' of alertness for an hour, and then rapidly deteriorates into lethargy and right-sided pupillary dilation. Head CT shows a hyperdense, biconvex (lens-shaped) extra-axial collection that does not cross cranial sutures. What is the diagnosis?",
+    "options": [
+      "Epidural hematoma (classically arterial, often middle meningeal artery laceration associated with temporal bone fracture)",
+      "Chronic subdural hematoma",
+      "Normal pressure hydrocephalus",
+      "Subarachnoid cyst"
+    ],
+    "answer": 0,
+    "explanation": "An epidural hematoma typically has a lenticular/biconvex shape limited by cranial suture attachments where pericranium inserts tightly, and can expand rapidly from arterial bleeding, requiring urgent neurosurgical evaluation."
+  },
+  {
+    "id": "g-rad-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with right upper quadrant pain after fatty meals, fever, and Murphy sign. Right upper quadrant abdominal ultrasonography is ordered first-line. Which sonographic findings support acute cholecystitis?",
+    "options": [
+      "Gallstones (often impacted in the gallbladder neck/cystic duct), gallbladder wall thickening (> 3–4 mm), pericholecystic fluid, and a sonographic Murphy sign (maximal tenderness when the ultrasound probe presses directly over the gallbladder)",
+      "Absent gallbladder with normal liver and bile ducts",
+      "Bilateral staghorn renal calculi",
+      "Normal pancreas with no gallbladder abnormalities"
+    ],
+    "answer": 0,
+    "explanation": "Right upper quadrant ultrasound is the imaging modality of choice for suspected acute cholecystitis because it is rapid, radiation-free, and detects gallstones, wall thickening, pericholecystic fluid, and sonographic Murphy sign (with HIDA/cholescintigraphy used if equivocal)."
+  },
+  {
+    "id": "g-rad-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with known or suspected deep vein thrombosis (DVT) of the lower extremity undergoes venous duplex ultrasonography. What is the primary diagnostic criterion for acute DVT on compression ultrasound?",
+    "options": [
+      "Non-compressibility (or incomplete compressibility) of a deep vein lumen when gentle transducer pressure is applied (often accompanied by intraluminal echogenic thrombus or absent/altered Doppler flow)",
+      "Normal complete vein collapse with zero pressure",
+      "Increased air bubbles inside the femoral artery",
+      "Thickening of the Achilles tendon"
+    ],
+    "answer": 0,
+    "explanation": "A normal patent vein collapses completely under gentle probe compression; failure of the deep vein to compress fully is the hallmark sonographic sign of acute DVT."
+  },
+  {
+    "id": "g-rad-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A pregnant patient at 14 weeks gestation presents with severe right flank pain and hematuria from suspected ureteral stone. Why is renal/bladder ultrasonography preferred over non-contrast CT as the initial imaging modality in this patient?",
+    "options": [
+      "Ultrasound avoids ionizing radiation to the developing fetus while evaluating for hydronephrosis and proximal/distal ureteral dilation/stones (with low-dose CT or MRI reserved only if clinically necessary and ultrasound is inconclusive)",
+      "Because ultrasound is more sensitive than CT for tiny 1 mm ureteral stones in every case",
+      "Because ionizing radiation is beneficial during organogenesis",
+      "Because stones never cause hydronephrosis"
+    ],
+    "answer": 0,
+    "explanation": "Following ALARA ('As Low As Reasonably Achievable') and pregnancy radiation safety principles, ultrasound is first-line in pregnancy to assess hydronephrosis/stones without fetal radiation exposure."
+  },
+  {
+    "id": "g-rad-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "Which imaging modality provides superior soft-tissue contrast and spatial resolution for evaluating intervertebral disc herniation, spinal cord compression, nerve root impingement, ligamentous injury, and bone marrow pathology in suspected cauda equina syndrome or myelopathy?",
+    "options": [
+      "Magnetic resonance imaging (MRI) without/with contrast as clinically indicated",
+      "Plain standing anteroposterior lumbar radiograph alone",
+      "Electrocardiogram (ECG)",
+      "Peak expiratory flow meter"
+    ],
+    "answer": 0,
+    "explanation": "MRI is the modality of choice for evaluating the spinal cord, cauda equina, epidural space, intervertebral discs, and soft tissues due to high soft-tissue contrast without ionizing radiation."
+  },
+  {
+    "id": "g-rad-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with severe contrast allergy history or advanced chronic kidney disease (e.g., low eGFR) is scheduled for an imaging study that typically uses iodinated intravenous contrast. What is a key pre-imaging consideration?",
+    "options": [
+      "Verify whether iodinated contrast is strictly needed or if a non-contrast/alternative modality (such as ultrasound or MRI) answers the clinical question, and follow institutional protocols for prior severe contrast reactions and renal risk assessment",
+      "Inject iodinated contrast automatically without checking clinical necessity or allergy history",
+      "Skip informed consent and history taking",
+      "Treat contrast allergy with oral antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "Selecting the safest modality that answers the clinical question, reviewing prior contrast reaction severity (using appropriate premedication protocols per institutional guidelines when indicated for prior allergic-like reactions), and assessing renal risk are standard radiology safety practices."
+  },
+  {
+    "id": "g-rad-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe right lower quadrant abdominal pain, fever, and leukocytosis. Abdominal CT with intravenous (and/or rectal/oral as indicated) contrast shows a dilated (> 6 mm), fluid-filled appendix with wall enhancement and surrounding periappendiceal fat stranding ('dirty fat'). What is the diagnosis?",
+    "options": [
+      "Acute appendicitis",
+      "Simple hiatal hernia",
+      "Normal mesenteric lymph nodes",
+      "Polycystic kidney disease"
+    ],
+    "answer": 0,
+    "explanation": "A dilated appendix (> 6 mm), wall thickening/enhancement, appendicolith, and periappendiceal inflammatory fat stranding on CT (or graded-compression ultrasound, especially in children/pregnant patients) support acute appendicitis."
+  },
+  {
+    "id": "g-rad-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A 62-year-old patient with a 35-pack-year smoking history has an incidental solitary pulmonary nodule measuring 1.4 cm in the right upper lobe on chest CT. Why is comparing with prior chest imaging and assessing nodule size, morphology/spiculation, and patient risk factors important?",
+    "options": [
+      "Stability in size over >= 2 years for a solid nodule strongly favors benignity, whereas growth, larger size, spiculated margins, or higher clinical risk increases malignancy probability and guides surveillance intervals, PET/CT, or biopsy",
+      "All solitary pulmonary nodules are automatically harmless and need no follow-up",
+      "Every nodule requires immediate pneumonectomy without evaluation",
+      "Smoking history has no relationship to lung nodules"
+    ],
+    "answer": 0,
+    "explanation": "Evaluating solitary pulmonary nodules relies on size, attenuation (solid vs. subsolid/ground-glass), margin characteristics, comparison with prior scans for growth rate, and patient risk factors using evidence-based nodule guidelines (such as Fleischner criteria)."
+  },
+  {
+    "id": "g-rad-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of severe headache, nausea, and vomiting, and non-contrast head CT shows increased attenuation (hyperdensity) filling the basal cisterns and Sylvian fissures. Which diagnosis is strongly suggested?",
+    "options": [
+      "Subarachnoid hemorrhage (SAH)",
+      "Simple tension-type headache",
+      "Normal pressure hydrocephalus",
+      "Chronic otitis media"
+    ],
+    "answer": 0,
+    "explanation": "Acute subarachnoid blood appears hyperdense within the subarachnoid spaces and basal cisterns on non-contrast head CT; if CT is negative within/after 6 hours and suspicion remains high, lumbar puncture or CT angiography is pursued per protocol."
+  },
+  {
+    "id": "g-rad-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "Which imaging modality is preferred as the initial test to evaluate suspected acute ischemic stroke in terms of high sensitivity for early cytotoxic edema and small infarcts (including brainstem/posterior fossa strokes) once hemorrhage is excluded by CT or when MRI is rapidly available?",
+    "options": [
+      "Diffusion-weighted imaging (DWI) on brain MRI (showing restricted diffusion / bright signal within minutes to hours of ischemic injury)",
+      "Plain skull X-ray",
+      "Abdominal ultrasound",
+      "Dual-energy X-ray absorptiometry (DEXA) scan"
+    ],
+    "answer": 0,
+    "explanation": "MRI with diffusion-weighted imaging (DWI) detects acute ischemic changes much earlier and with higher sensitivity—especially in small or posterior circulation strokes—than non-contrast CT."
+  },
+  {
+    "id": "g-rad-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with mechanical low back pain without 'red flag' symptoms (such as progressive neurologic deficit, cauda equina signs, fever/infection risk, trauma, or cancer history). Why is routine immediate plain lumbar spine radiography or MRI generally discouraged in uncomplicated acute low back pain?",
+    "options": [
+      "Most acute uncomplicated low back pain improves with conservative care, and early routine imaging rarely changes management while exposing patients to radiation or incidental findings that do not correlate with symptoms",
+      "Because plain X-rays cure back pain immediately",
+      "Because red flags never occur in back pain",
+      "Because MRI is cheaper than rest"
+    ],
+    "answer": 0,
+    "explanation": "In the absence of red-flag symptoms or persistent severe radiculopathy/stenosis after conservative management, routine early imaging adds low value and can lead to unnecessary interventions."
+  },
+  {
+    "id": "g-rad-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute left lower quadrant abdominal pain, fever, and leukocytosis. Contrast-enhanced CT of the abdomen/pelvis shows sigmoid colon wall thickening, diverticula, and surrounding pericolic fat stranding without free perforation or large abscess. What is the diagnosis?",
+    "options": [
+      "Acute uncomplicated sigmoid diverticulitis",
+      "Gallstone ileus",
+      "Polycystic ovary syndrome",
+      "Acute pancreatitis with normal colon"
+    ],
+    "answer": 0,
+    "explanation": "CT of the abdomen/pelvis with contrast is the imaging test of choice for suspected acute diverticulitis, confirming colonic diverticula, wall thickening, and pericolic inflammation while identifying complications like abscess or perforation."
+  }
+]

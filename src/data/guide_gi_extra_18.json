@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-gi-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with epigastric burning pain relieved transiently by antacids or food, and upper endoscopy shows a duodenal ulcer. Testing for which organism is essential in peptic ulcer disease so eradication therapy can be given when positive?",
+    "options": [
+      "Helicobacter pylori",
+      "Clostridium difficile",
+      "Giardia lamblia",
+      "Strongyloides stercoralis"
+    ],
+    "answer": 0,
+    "explanation": "Helicobacter pylori infection is a major cause of peptic ulcer disease (alongside NSAID use), and eradicating H. pylori markedly reduces ulcer recurrence."
+  },
+  {
+    "id": "g-gi-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with chronic diarrhea, steatorrhea, abdominal bloating, and iron-deficiency anemia has positive tissue transglutaminase IgA antibodies (tTG-IgA) and duodenal biopsy showing villous atrophy and intraepithelial lymphocytosis. What is the diagnosis?",
+    "options": [
+      "Celiac disease",
+      "Acute appendicitis",
+      "Achalasia",
+      "Pyloric stenosis"
+    ],
+    "answer": 0,
+    "explanation": "Positive celiac serology (such as tTG-IgA) with characteristic duodenal villous atrophy and clinical improvement on a gluten-free diet confirms celiac disease."
+  },
+  {
+    "id": "g-gi-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with bloody diarrhea, crampy lower abdominal pain, and tenesmus. Colonoscopy shows continuous mucosal inflammation starting in the rectum and extending proximally without skip lesions or transmural granulomas. Which condition is most consistent?",
+    "options": [
+      "Ulcerative colitis",
+      "Acute cholecystitis",
+      "Sliding hiatal hernia without esophagitis",
+      "Irritable bowel syndrome with constipation"
+    ],
+    "answer": 0,
+    "explanation": "Ulcerative colitis causes continuous superficial mucosal inflammation beginning at the rectum and extending proximally to a variable extent, typically presenting with bloody diarrhea."
+  },
+  {
+    "id": "g-gi-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with chronic non-bloody diarrhea, right lower quadrant abdominal pain, weight loss, and perianal fistulas. Colonoscopy reveals skip lesions, cobblestoning, and transmural inflammation with non-caseating granulomas on biopsy. Which condition is most likely?",
+    "options": [
+      "Crohn disease",
+      "Acute viral pharyngitis",
+      "Primary biliary cholangitis without bowel disease",
+      "Bipolar II disorder"
+    ],
+    "answer": 0,
+    "explanation": "Crohn disease can affect any part of the GI tract from mouth to anus with skip areas, transmural inflammation, strictures, fistulas, and non-caseating granulomas."
+  },
+  {
+    "id": "g-gi-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "hard",
+    "question": "A patient with cirrhosis and ascites presents with fever, abdominal pain, and tenderness. Diagnostic paracentesis shows ascitic fluid polymorphonuclear (PMN) leukocyte count >= 250 cells/mm3 with a single organism on culture. What is the diagnosis?",
+    "options": [
+      "Spontaneous bacterial peritonitis (SBP)",
+      "Simple umbilical hernia",
+      "Uncomplicated gastroesophageal reflux",
+      "Chronic constipation"
+    ],
+    "answer": 0,
+    "explanation": "An ascitic fluid absolute PMN count >= 250 cells/mm3 (without an intra-abdominal surgical source of infection) diagnoses spontaneous bacterial peritonitis and requires prompt empiric IV antibiotics (plus albumin in high-risk patients)."
+  },
+  {
+    "id": "g-gi-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden severe epigastric pain radiating straight through to the back, nausea, and vomiting, with serum lipase elevated more than three times the upper limit of normal. What is the most likely diagnosis?",
+    "options": [
+      "Acute pancreatitis",
+      "Acute migraine",
+      "Contact dermatitis",
+      "Plantar fasciitis"
+    ],
+    "answer": 0,
+    "explanation": "Acute pancreatitis is typically diagnosed when at least two of three criteria are met: characteristic upper abdominal pain, serum lipase or amylase >= 3x upper limit of normal, and characteristic imaging findings."
+  },
+  {
+    "id": "g-gi-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A middle-aged woman presents with fatigue, pruritus, jaundice, and elevated alkaline phosphatase, with antimitochondrial antibodies (AMA) strongly positive. Which chronic cholestatic liver disease is most likely?",
+    "options": [
+      "Primary biliary cholangitis (PBC)",
+      "Acute viral hepatitis A alone without cholestasis",
+      "Wilson disease with Kayser-Fleischer rings as sole feature",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Primary biliary cholangitis classically affects middle-aged women with fatigue, pruritus, cholestatic liver enzymes (elevated alkaline phosphatase), and positive antimitochondrial antibodies (AMA)."
+  },
+  {
+    "id": "g-gi-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A young adult presents with liver disease (elevated transaminases or acute/chronic hepatitis), neuropsychiatric symptoms (tremor, dystonia, behavioral changes), and brownish-green corneal rings (Kayser-Fleischer rings), with low serum ceruloplasmin. What is the diagnosis?",
+    "options": [
+      "Wilson disease (hepatolenticular copper accumulation)",
+      "Hereditary hemochromatosis",
+      "Acute appendicitis",
+      "Celiac sprue"
+    ],
+    "answer": 0,
+    "explanation": "Wilson disease results from impaired biliary copper excretion (ATP7B mutation), causing copper accumulation in the liver, brain, and cornea (Kayser-Fleischer rings), typically with low ceruloplasmin."
+  },
+  {
+    "id": "g-gi-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with cirrhosis and esophageal varices presents with large-volume hematemesis and melena. After initial airway/hemodynamic resuscitation, which combination of therapies is used emergently for suspected acute variceal bleeding?",
+    "options": [
+      "Vasoactive drug therapy (such as octreotide or terlipressin), empiric short-course antibiotic prophylaxis, and urgent endoscopic band ligation (EBL)",
+      "Oral ibuprofen and discharge home",
+      "High-dose oral iron during active bleeding",
+      "Discontinuing all IV fluids in a hypotensive bleeding patient"
+    ],
+    "answer": 0,
+    "explanation": "Acute variceal hemorrhage is managed with resuscitation, vasoactive medications (octreotide/terlipressin), prophylactic antibiotics, and endoscopic therapy (typically band ligation)."
+  },
+  {
+    "id": "g-gi-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "easy",
+    "question": "A patient reports heartburn and acid regurgitation occurring three times per week after meals and when lying down, without alarm features such as dysphagia, weight loss, or GI bleeding. Which initial empiric therapy is commonly used for uncomplicated GERD?",
+    "options": [
+      "Lifestyle measures (weight management if overweight, avoiding late meals/trigger foods, elevating head of bed) plus a trial of a proton pump inhibitor (PPI)",
+      "Immediate emergency surgery without medical trial",
+      "Long-term daily oral warfarin",
+      "Antibiotics for 14 days"
+    ],
+    "answer": 0,
+    "explanation": "Uncomplicated gastroesophageal reflux disease without alarm symptoms is typically treated initially with lifestyle modifications and an empiric trial of a proton pump inhibitor."
+  },
+  {
+    "id": "g-gi-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with progressive dysphagia to both solids and liquids from onset, regurgitation of undigested food, and chest discomfort. Barium esophagram shows a 'bird's beak' narrowing of the lower esophageal sphincter with absent peristalsis. What is the diagnosis?",
+    "options": [
+      "Achalasia",
+      "Acute cholecystitis",
+      "Inguinal hernia",
+      "Peptic stricture from NSAIDs alone"
+    ],
+    "answer": 0,
+    "explanation": "Dysphagia to both solids and liquids, regurgitation of unspoiled food, absent esophageal peristalsis, and incomplete lower esophageal sphincter relaxation ('bird's beak' on esophagram) are classic for achalasia."
+  },
+  {
+    "id": "g-gi-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient develops watery diarrhea and abdominal cramping 10 days after completing a course of clindamycin or broad-spectrum antibiotics. Stool testing is positive for Clostridioides difficile toxin/NAAT. Which oral agent is preferred first-line for non-fulminant C. difficile infection?",
+    "options": [
+      "Oral fidaxomicin or oral vancomycin",
+      "Oral metronidazole as preferred first-line over vancomycin/fidaxomicin in all severe cases",
+      "Continuing the inciting broad-spectrum antibiotic indefinitely",
+      "Routine antimotility agents alone without antibiotic therapy"
+    ],
+    "answer": 0,
+    "explanation": "Oral fidaxomicin or oral vancomycin is preferred first-line for initial C. difficile infection (and stop unnecessary offending antibiotics whenever possible)."
+  },
+  {
+    "id": "g-gi-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with painless jaundice, a palpable non-tender gallbladder (Courvoisier sign), dark urine, pale stools, and unintentional weight loss. Which serious hepatobiliary/pancreatic condition should be evaluated urgently?",
+    "options": [
+      "Malignant biliary obstruction (such as pancreatic head adenocarcinoma or cholangiocarcinoma)",
+      "Simple seasonal allergic rhinitis",
+      "Acute gout of the great toe",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Painless obstructive jaundice with weight loss and a palpable gallbladder raises strong suspicion for distal malignant biliary obstruction (such as pancreatic head mass) requiring cross-sectional imaging and GI/surgical evaluation."
+  },
+  {
+    "id": "g-gi-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with ulcerative colitis has a long-standing history of pancolitis (8+ years) and is now in clinical remission. Why is periodic surveillance colonoscopy recommended in long-standing extensive IBD?",
+    "options": [
+      "To screen for dysplasia and colorectal cancer, whose risk increases with disease duration and extent",
+      "Because IBD heals all colonic polyps permanently after 1 year",
+      "To measure serum amylase levels",
+      "To replace all maintenance medications"
+    ],
+    "answer": 0,
+    "explanation": "Long-standing extensive ulcerative colitis and Crohn colitis increase colorectal cancer risk, warranting periodic surveillance colonoscopy based on risk stratification."
+  },
+  {
+    "id": "g-gi-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with chronic hepatitis B infection has cirrhosis and is being monitored long-term. Which complication requires periodic surveillance imaging (typically abdominal ultrasound every 6 months, with or without AFP)?",
+    "options": [
+      "Hepatocellular carcinoma (HCC)",
+      "Acute appendicitis",
+      "Inguinal hernia",
+      "Otosclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Patients with cirrhosis (and certain high-risk chronic HBV subgroups) undergo periodic surveillance for hepatocellular carcinoma, typically with abdominal ultrasound every 6 months."
+  },
+  {
+    "id": "g-gi-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with chronic liver disease presents with asterixis ('flapping tremor'), confusion, lethargy, and reversed sleep-wake cycle. Which condition is present?",
+    "options": [
+      "Hepatic encephalopathy",
+      "Acute bacterial meningitis",
+      "Trigeminally mediated cluster headache",
+      "Primary hyperaldosteronism"
+    ],
+    "answer": 0,
+    "explanation": "Altered mental status, neuropsychiatric changes, and asterixis in a patient with liver dysfunction/portosystemic shunting indicate hepatic encephalopathy, requiring evaluation for precipitants (such as infection, GI bleeding, constipation, or electrolyte disturbances) and lactulose/rifaximin therapy."
+  },
+  {
+    "id": "g-gi-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with recurrent abdominal pain relieved or altered by defecation and associated with changes in stool frequency or form, without alarm symptoms (weight loss, anemia, nocturnal diarrhea, rectal bleeding), is most likely to have which functional disorder?",
+    "options": [
+      "Irritable bowel syndrome (IBS)",
+      "Acute perforated peptic ulcer",
+      "Strangulated femoral hernia",
+      "Hepatorenal syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent abdominal pain related to defecation and associated with altered bowel habits in the absence of alarm features characterizes irritable bowel syndrome."
+  },
+  {
+    "id": "g-gi-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with chronic alcohol use presents with elevated AST and ALT with AST typically greater than ALT (often AST:ALT ratio > 2:1) and elevated gamma-glutamyl transferase (GGT). Which liver condition is most classically associated with this enzyme pattern?",
+    "options": [
+      "Alcohol-associated liver disease",
+      "Acute viral hepatitis A with ALT > 3,000 U/L",
+      "Gilbert syndrome",
+      "Simple gallstone colic without liver injury"
+    ],
+    "answer": 0,
+    "explanation": "In alcohol-associated liver disease, AST is characteristically higher than ALT (often > 2:1, partly related to pyridoxal-5'-phosphate depletion reducing ALT synthesis) alongside elevated GGT."
+  }
+]

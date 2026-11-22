@@ -1,0 +1,274 @@
+[
+  {
+    "id": "g-neph-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with syndrome of inappropriate antidiuretic hormone (SIADH) presents with euvolemic hyponatremia, low serum osmolality, inappropriately concentrated urine (urine osmolality > 100 mOsm/kg), and urine sodium typically > 20–40 mEq/L, after excluding hypothyroidism, adrenal insufficiency, and diuretics. Which initial measure is commonly used in mild-to-moderate asymptomatic SIADH?",
+    "options": [
+      "Fluid restriction (often alongside treating the underlying cause such as medication, pulmonary disease, or malignancy)",
+      "Aggressive intravenous hypotonic 0.45% saline infusion",
+      "Oral potassium chloride alone without addressing free water excess",
+      "Routine daily loop diuretic monotherapy without assessing volume or sodium response"
+    ],
+    "answer": 0,
+    "explanation": "Fluid restriction is a cornerstone initial measure in mild-to-moderate SIADH alongside addressing the underlying trigger and monitoring serum sodium carefully."
+  },
+  {
+    "id": "g-neph-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with recurrent calcium oxalate kidney stones has mild hypercalciuria and normal serum calcium. Which medication class is commonly used to reduce urinary calcium excretion and prevent stone recurrence?",
+    "options": [
+      "Thiazide or thiazide-like diuretic (such as chlorthalidone or hydrochlorothiazide)",
+      "Oral aluminum hydroxide",
+      "High-dose daily vitamin C supplements",
+      "Long-term daily oral NSAIDs"
+    ],
+    "answer": 0,
+    "explanation": "Thiazide diuretics enhance renal calcium reabsorption in the distal convoluted tubule, reducing urinary calcium excretion in patients with recurrent calcium stones and hypercalciuria."
+  },
+  {
+    "id": "g-neph-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with non-anion-gap (hyperchloremic) metabolic acidosis, hypokalemia, and inability to acidify urine appropriately (urine pH persistently > 5.5) despite systemic acidemia, without severe proximal bicarbonate wasting or generalized Fanconi syndrome. Which condition is described?",
+    "options": [
+      "Distal (Type 1) renal tubular acidosis (RTA)",
+      "High-anion-gap lactic acidosis",
+      "Metabolic alkalosis from protracted vomiting",
+      "Primary hyperaldosteronism with hypokalemic alkalosis"
+    ],
+    "answer": 0,
+    "explanation": "Distal (Type 1) RTA impairs alpha-intercalated cell H+ secretion, causing non-anion-gap metabolic acidosis, hypokalemia, and an inappropriately high urine pH (> 5.5) during acidemia."
+  },
+  {
+    "id": "g-neph-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with chronic kidney disease and secondary hyperparathyroidism has elevated serum intact parathyroid hormone (PTH), normal or low-normal serum calcium, and hypocalciuria. Which vitamin D analog or calcimimetic strategy may be used under nephrology/endocrinology guidance?",
+    "options": [
+      "Active vitamin D sterols (such as calcitriol) and/or calcimimetics (such as cinacalcet when indicated by calcium/phosphate/PTH targets)",
+      "Discontinuing all calcium and mineral monitoring",
+      "High-dose intravenous furosemide daily in a non-edematous patient",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Management of CKD-mineral and bone disorder (CKD-MBD) targets phosphate control, judicious calcium/active vitamin D or calcimimetics as clinically indicated, and individualized PTH management."
+  },
+  {
+    "id": "g-neph-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with nephrotic syndrome in childhood or young adulthood presents with abrupt onset of generalized edema, heavy proteinuria, hypoalbuminemia, and hyperlipidemia, with normal kidney function, normal complement levels, and effacement of podocyte foot processes on electron microscopy (with normal light microscopy). What is the most likely diagnosis?",
+    "options": [
+      "Minimal change disease",
+      "Post-streptococcal glomerulonephritis",
+      "Autosomal dominant polycystic kidney disease",
+      "Acute pyelonephritis"
+    ],
+    "answer": 0,
+    "explanation": "Minimal change disease is a common cause of nephrotic syndrome (especially in children) characterized by podocyte foot process effacement on electron microscopy and typically a favorable response to corticosteroids."
+  },
+  {
+    "id": "g-neph-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "hard",
+    "question": "A patient presents with rapidly progressive glomerulonephritis (acute nephritic features with hematuria, RBC casts, hypertension, and rising serum creatinine over days to weeks) plus hemoptysis from diffuse alveolar hemorrhage, with linear IgG deposition along the glomerular and alveolar basement membranes. What is the diagnosis?",
+    "options": [
+      "Anti-glomerular basement membrane (anti-GBM) disease (Goodpasture syndrome)",
+      "Simple calcium oxalate nephrolithiasis",
+      "Gilbert syndrome",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "Anti-GBM disease targets type IV collagen alpha-3 chains in glomerular and alveolar basement membranes, producing linear IgG fluorescence, rapidly progressive glomerulonephritis, and pulmonary hemorrhage."
+  },
+  {
+    "id": "g-neph-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with end-stage kidney disease on maintenance hemodialysis has persistent refractory volume overload, severe hyperkalemia unresponsive to medical therapy, severe metabolic acidosis, or uremic pericarditis/encephalopathy. What is the definitive renal replacement therapy role in these settings?",
+    "options": [
+      "Urgent/scheduled hemodialysis (or peritoneal dialysis when appropriate) to remove excess fluid, potassium, uremic toxins, and acid load",
+      "Oral antacids alone",
+      "Elective repeat laboratory testing in 6 months",
+      "Stopping all fluid and electrolyte checks"
+    ],
+    "answer": 0,
+    "explanation": "Dialysis clears uremic solutes, corrects refractory volume overload, hyperkalemia, and severe acidemia, and treats uremic complications such as uremic pericarditis or encephalopathy."
+  },
+  {
+    "id": "g-neph-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "easy",
+    "question": "Which two routine laboratory tests are fundamental for screening and staging chronic kidney disease in patients with diabetes or hypertension?",
+    "options": [
+      "Serum creatinine (to calculate estimated GFR, eGFR) and spot urine albumin-to-creatinine ratio (uACR)",
+      "Serum amylase and serum lipase",
+      "Fasting TSH and free T4 only",
+      "Sputum AFB smear and chest X-ray"
+    ],
+    "answer": 0,
+    "explanation": "Annual screening with serum creatinine/eGFR and spot urine albumin-to-creatinine ratio (uACR) detects and stages kidney disease early in high-risk patients such as those with diabetes or hypertension."
+  },
+  {
+    "id": "g-neph-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient taking a loop diuretic (such as furosemide) for heart failure or edema develops muscle cramps, weakness, and premature ventricular beats, and laboratory testing shows hypokalemia and metabolic alkalosis. Which electrolyte abnormality is classically associated with loop and thiazide diuretics?",
+    "options": [
+      "Hypokalemia (often accompanied by metabolic alkalosis and sometimes hypomagnesemia)",
+      "Severe hyperkalemia in all patients",
+      "Hypercalcemia from loop diuretics (loop diuretics increase calcium excretion, whereas thiazides decrease it)",
+      "Isolated hypernatremia without water loss"
+    ],
+    "answer": 0,
+    "explanation": "Loop and thiazide diuretics increase distal sodium and water delivery and potassium secretion, predisposing to hypokalemia and contraction/alkalosis mechanisms."
+  },
+  {
+    "id": "g-neph-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with systemic lupus erythematosus (SLE) develops new-onset hypertension, peripheral edema, active urinary sediment with dysmorphic RBCs/RBC casts, and proteinuria. Which renal complication of SLE must be evaluated?",
+    "options": [
+      "Lupus nephritis",
+      "Simple inguinal hernia",
+      "Acute viral conjunctivitis",
+      "Otosclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Lupus nephritis is a serious organ manifestation of SLE presenting with proteinuria, hematuria/RBC casts, hypertension, or reduced kidney function, often requiring kidney biopsy to guide immunosuppressive therapy."
+  },
+  {
+    "id": "g-neph-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with severe acute rhabdomyolysis after prolonged immobilization or crush injury, with markedly elevated serum creatine kinase (CK > 20,000 U/L), dark tea-colored urine, myoglobinuria, and rising serum creatinine. Which initial supportive measure is critical to help preserve kidney function?",
+    "options": [
+      "Prompt, carefully monitored intravenous fluid resuscitation to restore perfusion and maintain urine output while monitoring electrolytes (especially potassium and calcium)",
+      "Oral ketoconazole",
+      "Discontinuing all hydration",
+      "Routine platelet transfusion without bleeding"
+    ],
+    "answer": 0,
+    "explanation": "Early, guided IV fluid resuscitation in rhabdomyolysis supports renal perfusion and tubular flow while clinicians closely monitor and treat hyperkalemia, hypocalcemia/hypercalcemia, and AKI."
+  },
+  {
+    "id": "g-neph-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient has a solitary kidney or bilateral renal disease and is scheduled for a procedure requiring iodinated contrast. Which pre-procedure approach is commonly used to reduce the risk of contrast-associated acute kidney injury in at-risk patients?",
+    "options": [
+      "Assess baseline renal function and volume status, use the lowest necessary contrast volume/iso- or low-osmolar agent, and administer periprocedural isotonic IV hydration when indicated",
+      "Administer routine high-dose oral NSAIDs right before contrast",
+      "Dehydrate the patient intentionally for 24 hours beforehand",
+      "Skip all renal risk assessment"
+    ],
+    "answer": 0,
+    "explanation": "Preventing contrast-associated AKI in high-risk CKD patients centers on risk assessment, avoiding unnecessary contrast/nephrotoxins, minimizing contrast volume, and providing appropriate isotonic hydration when indicated."
+  },
+  {
+    "id": "g-neph-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with hypertension, hypokalemia, and metabolic alkalosis has elevated plasma aldosterone with suppressed plasma renin activity (high aldosterone-to-renin ratio). Which diagnosis is most likely?",
+    "options": [
+      "Primary aldosteronism (Conn syndrome)",
+      "Addison disease (primary adrenal insufficiency)",
+      "Syndrome of inappropriate antidiuretic hormone (SIADH)",
+      "Diabetic ketoacidosis"
+    ],
+    "answer": 0,
+    "explanation": "Autonomous aldosterone excess (primary aldosteronism) causes hypertension, potassium wasting (hypokalemia), and metabolic alkalosis, typically with high aldosterone and low/suppressed renin."
+  },
+  {
+    "id": "g-neph-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with recurrent uric acid kidney stones and hyperuricosuria/acidic urine is evaluated for stone prevention. Which measure helps prevent uric acid stone crystallization?",
+    "options": [
+      "Increasing fluid intake to achieve high urine output and alkalinizing urine (such as with potassium citrate) when indicated, alongside addressing hyperuricemia/dietary triggers",
+      "Acidifying the urine further and restricting all fluids",
+      "High-purine organ meats daily",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Uric acid stones form preferentially in persistently acidic, concentrated urine; maintaining high fluid volume and alkalinizing urine (e.g., potassium citrate) helps dissolve or prevent uric acid stones."
+  },
+  {
+    "id": "g-neph-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with nephrotic syndrome (especially membranous nephropathy) in adults is evaluated for underlying associations. Which category of conditions should be considered as a potential secondary association in adults with membranous nephropathy?",
+    "options": [
+      "Malignancy (age-appropriate screening), autoimmune diseases (such as SLE), infections (such as hepatitis B), or certain drugs (such as NSAIDs)",
+      "Simple seasonal hay fever",
+      "Benign paroxysmal positional vertigo",
+      "Acute bacterial conjunctivitis"
+    ],
+    "answer": 0,
+    "explanation": "Membranous nephropathy in adults can be primary (anti-PLA2R/THSD7A-associated) or secondary to malignancy, autoimmune disorders like SLE, infections (e.g., HBV), or medications."
+  },
+  {
+    "id": "g-neph-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "easy",
+    "question": "A patient has an isolated urinary tract infection limited to the bladder (uncomplicated cystitis) with dysuria, frequency, and urgency, without fever, flank pain, pregnancy, or structural/urologic abnormality. Which clinical feature helps distinguish uncomplicated cystitis from acute pyelonephritis?",
+    "options": [
+      "Absence of fever, chills, flank/costovertebral angle tenderness, or systemic toxicity",
+      "High fever (39.5°C) with rigors and severe costovertebral angle tenderness",
+      "Septic shock with hemodynamic collapse",
+      "Gross flank mass with sepsis"
+    ],
+    "answer": 0,
+    "explanation": "Uncomplicated lower UTI (cystitis) presents with localized bladder symptoms without fever, flank pain, or systemic signs of upper tract infection (pyelonephritis)."
+  },
+  {
+    "id": "g-neph-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with chronic kidney disease and proteinuria is started on an ACE inhibitor. A small, transient rise in serum creatinine (up to ~30%) after starting or increasing the dose may occur due to reduced efferent arteriolar tone and intraglomerular pressure. What is the typical guidance for a mild, stable creatinine rise (< 30%) without hyperkalemia or volume depletion?",
+    "options": [
+      "Continue therapy and recheck serum creatinine and potassium within 2–4 weeks rather than reflexively stopping a renoprotective medication",
+      "Discontinue the ACE inhibitor permanently at a 5% creatinine change",
+      "Ignore potassium and creatinine monitoring completely",
+      "Start high-dose oral potassium chloride"
+    ],
+    "answer": 0,
+    "explanation": "A modest, stabilized increase in serum creatinine (< ~30%) after starting an ACEi or ARB reflects hemodynamic intraglomerular pressure reduction and generally supports continuing therapy with close monitoring of creatinine and potassium."
+  }
+]

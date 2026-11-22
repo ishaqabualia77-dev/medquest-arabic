@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-peds-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-month-old infant presents with 2 days of rhinorrhea and low-grade fever followed by cough, tachypnea, wheezing, and diffuse fine inspiratory crackles/rales, with mild subcostal retractions and oxygen saturation 94% on room air. Which viral etiology is most common in bronchiolitis?",
+    "options": [
+      "Respiratory syncytial virus (RSV)",
+      "Group A Streptococcus (Streptococcus pyogenes)",
+      "Plasmodium falciparum",
+      "Treponema pallidum"
+    ],
+    "answer": 0,
+    "explanation": "Acute bronchiolitis is primarily a viral lower respiratory tract illness in infants under 2 years (most commonly RSV), managed mainly with supportive care (hydration, nasal suctioning, and supplemental oxygen if hypoxemic) rather than routine bronchodilators, corticosteroids, or antibiotics."
+  },
+  {
+    "id": "g-peds-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child wakes at night with a sudden 'barking' (seal-like) cough, hoarseness, and inspiratory stridor at rest after mild upper respiratory symptoms. Which condition is most likely and what is standard initial therapy?",
+    "options": [
+      "Viral croup (acute laryngotracheobronchitis); single-dose systemic corticosteroid (such as oral dexamethasone), plus nebulized epinephrine if moderate-to-severe stridor/respiratory distress is present",
+      "Acute bacterial meningitis; oral ketoconazole",
+      "Simple iron-deficiency anemia; daily vitamin C alone",
+      "Pyloric stenosis; emergency pyloromyotomy without evaluation"
+    ],
+    "answer": 0,
+    "explanation": "Barking cough, hoarseness, and stridor in a toddler are classic for viral croup (most often parainfluenza virus); systemic corticosteroids reduce airway edema effectively, and nebulized epinephrine provides rapid short-term relief in moderate-to-severe distress."
+  },
+  {
+    "id": "g-peds-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "A 4-year-old unvaccinated child presents with abrupt onset of high fever, drooling, dysphagia, muffled ('hot potato') voice, anxiety, and sitting leaning forward ('tripod' position) with minimal or no cough. Why must aggressive throat examination with a tongue depressor in the clinic/ED be avoided before airway management is secured?",
+    "options": [
+      "It can trigger sudden complete upper airway obstruction/laryngospasm in suspected acute epiglottitis; airway stabilization in a controlled setting is top priority",
+      "Because throat examination causes immediate permanent deafness",
+      "Because epiglottitis is always cured by antacids",
+      "Because children never have airway compromise with drooling"
+    ],
+    "answer": 0,
+    "explanation": "Drooling, stridor/respiratory distress, anxiety, and forward leaning in acute epiglottitis signal impending airway compromise; agitating the child or probing the pharynx can precipitate complete airway closure before an airway team is ready."
+  },
+  {
+    "id": "g-peds-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 10-month-old infant with acute viral gastroenteritis and mild-to-moderate dehydration (dry mucous membranes, mildly sunken eyes, alert/irritable, drinking eagerly) is evaluated in clinic. Which rehydration approach is recommended first-line?",
+    "options": [
+      "Oral rehydration therapy (ORT) with low-osmolarity oral rehydration solution in small frequent volumes, alongside continued age-appropriate feeding/breastfeeding",
+      "Withholding all fluids and food for 48 hours",
+      "Giving plain high-sugar fruit juice or undiluted sports drinks exclusively",
+      "Routine antidiarrheal antimotility medications in young infants"
+    ],
+    "answer": 0,
+    "explanation": "Oral rehydration solution is first-line for mild-to-moderate dehydration in pediatric gastroenteritis, paired with early reintroduction of breast milk or regular diet once rehydrated."
+  },
+  {
+    "id": "g-peds-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 5-year-old child presents with fever for 6 days (39.3°C), bilateral non-exudative conjunctival injection, cracked red lips and 'strawberry tongue', polymorphous rash, cervical lymphadenopathy, and erythema/edema of the hands and feet with subsequent periungual desquamation. Which vasculitis must be diagnosed and treated promptly to prevent coronary artery aneurysms?",
+    "options": [
+      "Kawasaki disease",
+      "Simple allergic rhinitis",
+      "Henoch-Schönlein purpura (IgA vasculitis) without coronary screening",
+      "Atopic dermatitis"
+    ],
+    "answer": 0,
+    "explanation": "Kawasaki disease is an acute medium-vessel vasculitis of childhood associated with coronary artery aneurysms; prompt treatment with intravenous immunoglobulin (IVIG) and aspirin (per pediatric dosing guidelines) plus echocardiography is essential."
+  },
+  {
+    "id": "g-peds-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-year-old child presents after an upper respiratory infection with palpable purpura over the buttocks and lower extremities, colicky abdominal pain, arthralgias/arthritis of the knees and ankles, and normal platelet count. Which vasculitis is most likely?",
+    "options": [
+      "IgA vasculitis (Henoch-Schönlein purpura)",
+      "Immune thrombocytopenia (ITP)",
+      "Acute lymphoblastic leukemia",
+      "Kawasaki disease"
+    ],
+    "answer": 0,
+    "explanation": "Palpable purpura (typically lower extremities/buttocks), arthralgias/arthritis, abdominal pain, and potential kidney involvement (nephritis) with a normal platelet count characterize IgA vasculitis (HSP); urinalysis and blood pressure monitoring help detect renal involvement."
+  },
+  {
+    "id": "g-peds-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-week-old full-term infant presents with non-bilious, projectile vomiting immediately after feeds, persistent hunger, visible left-to-right gastric peristalsis on the abdomen, and a palpable 'olive'-shaped mass in the right upper quadrant, with hypochloremic, hypokalemic metabolic alkalosis. What is the diagnosis?",
+    "options": [
+      "Hypertrophic pyloric stenosis",
+      "Acute viral bronchiolitis",
+      "Post-streptococcal glomerulonephritis",
+      "Absence seizure"
+    ],
+    "answer": 0,
+    "explanation": "Projectile non-bilious emesis in a 3–6-week-old infant with hypochloremic, hypokalemic metabolic alkalosis (from loss of gastric acid/H+ and Cl- without bicarbonate) points to pyloric stenosis; initial management corrects fluids and electrolytes before surgical pyloromyotomy."
+  },
+  {
+    "id": "g-peds-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "An 8-month-old infant presents with sudden episodes of severe, colicky abdominal pain drawing the legs up every 15–20 minutes, vomiting, lethargy, and later 'currant jelly' stools (blood and mucus), with a sausage-shaped mass in the right upper/mid abdomen. Which pediatric abdominal emergency must be evaluated urgently?",
+    "options": [
+      "Intussusception",
+      "Simple colic resolving without evaluation",
+      "Primary hyperparathyroidism",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Intussusception occurs when a bowel segment telescopes into an adjacent segment (most commonly ileocolic), causing intermittent severe pain, emesis, lethargy, and currant-jelly stools; urgent ultrasound/air or contrast enema reduction (or surgery if perforation/peritonitis) is required."
+  },
+  {
+    "id": "g-peds-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "A 3-year-old child presents with bloody diarrhea, abdominal cramping, pallor, oliguria, and petechiae 5 days after eating undercooked beef. Labs show hemolytic anemia with schistocytes, thrombocytopenia, and acute kidney injury. Which post-infectious syndrome is described?",
+    "options": [
+      "Hemolytic uremic syndrome (HUS) (commonly Shiga toxin-producing E. coli O157:H7–associated)",
+      "Simple iron-deficiency anemia",
+      "Viral croup",
+      "Kawasaki disease"
+    ],
+    "answer": 0,
+    "explanation": "The triad of microangiopathic hemolytic anemia (with schistocytes), thrombocytopenia, and acute kidney injury following diarrheal illness (classically STEC) defines hemolytic uremic syndrome; supportive fluid/electrolyte/renal care is key, while antibiotics and antimotility agents are generally avoided in STEC gastroenteritis."
+  },
+  {
+    "id": "g-peds-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child with a history of simple febrile seizures develops a single generalized tonic-clonic seizure lasting 3 minutes during a febrile viral illness (temperature 39.1°C), with normal neurological examination and prompt return to baseline. What is typical regarding simple febrile seizures?",
+    "options": [
+      "They are generalized, last < 15 minutes, do not recur within 24 hours during the same febrile illness, occur in children typically aged 6 months to 5 years without CNS infection, and generally have an excellent prognosis without daily antiseizure therapy",
+      "They always cause permanent brain damage and require daily lifelong phenytoin",
+      "They always indicate bacterial meningitis and require daily anticonvulsants in every child",
+      "They occur only in adults over age 65"
+    ],
+    "answer": 0,
+    "explanation": "Simple febrile seizures are brief (< 15 min), generalized, non-recurrent within 24 hours, and benign overall, though evaluating for the source of fever (and ruling out meningitis when clinically indicated, especially in infants < 12 months) is essential."
+  },
+  {
+    "id": "g-peds-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 3-year-old child presents with 4 days of fever, ear tugging/irritability, and a bulging, erythematous tympanic membrane with decreased mobility on pneumatic otoscopy. Which diagnosis is most likely?",
+    "options": [
+      "Acute otitis media (AOM)",
+      "Simple cerumen impaction without inflammation",
+      "Benign paroxysmal positional vertigo",
+      "Psoriasis vulgaris"
+    ],
+    "answer": 0,
+    "explanation": "Acute onset of middle-ear inflammation signs—such as a bulging tympanic membrane with middle-ear effusion and acute symptoms like otalgia or fever—diagnoses acute otitis media, with amoxicillin often first-line when antibiotics are indicated."
+  },
+  {
+    "id": "g-peds-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 7-year-old child presents with acute sore throat, fever, tonsillar exudates, tender anterior cervical lymphadenopathy, and absence of cough, with a positive rapid antigen detection test (RADT) or throat culture for Group A Streptococcus. Which antibiotic is first-line to treat streptococcal pharyngitis and prevent acute rheumatic fever?",
+    "options": [
+      "Penicillin V or amoxicillin (a 10-day course)",
+      "Oral ketoconazole",
+      "Topical hydrocortisone cream",
+      "Oral metformin"
+    ],
+    "answer": 0,
+    "explanation": "Penicillin or amoxicillin is first-line for Group A streptococcal pharyngitis due to proven efficacy, narrow spectrum, safety, low cost, and prevention of acute rheumatic fever."
+  },
+  {
+    "id": "g-peds-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 14-month-old toddler who drinks large amounts of cow's milk from a bottle and eats few iron-rich solids is found to have pallor, hemoglobin 8.4 g/dL, MCV 64 fL, low ferritin, and elevated RDW. Which preventive/nutritional measure helps reduce iron-deficiency anemia in toddlers?",
+    "options": [
+      "Limiting cow's milk intake (generally to <= 16–24 oz/day after 12 months of age), transitioning from bottle to cup, and offering iron-rich foods (such as meats, beans, or iron-fortified foods) plus iron supplementation when deficient",
+      "Feeding unlimited cow's milk (> 40 oz/day) and no solid foods",
+      "Giving high-dose oral warfarin",
+      "Avoiding all dietary iron"
+    ],
+    "answer": 0,
+    "explanation": "Excessive cow's milk in toddlers contributes to iron deficiency by displacing iron-rich foods, providing low iron content, and potentially causing occult GI blood loss; limiting milk volume and providing iron-rich nutrition/supplementation addresses this."
+  },
+  {
+    "id": "g-peds-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "easy",
+    "question": "At what approximate developmental age do most typically developing infants sit independently without support and transfer objects from one hand to the other?",
+    "options": [
+      "Around 6 to 9 months of age",
+      "At birth (0 days)",
+      "Around 5 years of age",
+      "Around 16 years of age"
+    ],
+    "answer": 0,
+    "explanation": "Sitting independently without support and transferring objects hand-to-hand are classic gross and fine motor milestones typically achieved around 6–9 months of age."
+  },
+  {
+    "id": "g-peds-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 5-year-old child with persistent asthma uses a short-acting beta-agonist (SABA) inhaler 4 times a week for daytime wheezing/cough and wakes up with cough twice a month. What does frequent rescue inhaler use suggest about asthma control?",
+    "options": [
+      "Asthma is not well controlled; controller therapy (typically a low-dose inhaled corticosteroid, ICS) and trigger/inhaler-technique review should be evaluated per asthma guidelines",
+      "Asthma is completely cured and needs no follow-up",
+      "The child should stop all asthma medications including rescue therapy",
+      "Asthma requires oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Frequent daytime symptoms or rescue SABA use (> 2 days/week) or nighttime awakenings indicate suboptimal asthma control, warranting daily controller therapy (such as an ICS) and assessment of adherence and inhaler technique."
+  },
+  {
+    "id": "g-peds-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-year-old child presents with 3 weeks of fatigue, pallor, bruising/petechiae, bone/joint pain, hepatosplenomegaly, and lymphadenopathy. CBC shows anemia, thrombocytopenia, and markedly elevated or abnormal white count with circulating lymphoblasts on smear. Which pediatric malignancy is most common in children?",
+    "options": [
+      "Acute lymphoblastic leukemia (ALL)",
+      "Primary open-angle glaucoma",
+      "Simple calcium oxalate nephrolithiasis",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Acute lymphoblastic leukemia is the most common childhood cancer, often presenting with cytopenias (fatigue/pallor from anemia, bruising/petechiae from thrombocytopenia, fever/infection), bone pain, and organomegaly/lymphadenopathy."
+  },
+  {
+    "id": "g-peds-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child presents with fever, dysuria, foul-smelling urine, and irritability. Urinalysis shows positive leukocyte esterase and nitrites, and a properly collected urine culture grows > 50,000 CFU/mL of Escherichia coli. Why is renal and bladder ultrasound (RBUS) often considered after a first febrile UTI in young children (< 2 years)?",
+    "options": [
+      "To evaluate for underlying structural/anatomic abnormalities such as hydronephrosis or obstruction",
+      "To diagnose iron-deficiency anemia",
+      "To treat viral croup",
+      "To measure bone mineral density"
+    ],
+    "answer": 0,
+    "explanation": "In infants and young children (< 2 years) with a first febrile UTI, renal and bladder ultrasound helps identify anatomic/structural anomalies (such as hydronephrosis or obstructive uropathy)."
+  },
+  {
+    "id": "g-peds-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A newborn at 12 hours of life develops tachypnea, grunting, nasal flaring, and intercostal retractions shortly after birth, with chest radiograph showing diffuse reticulogranular ('ground-glass') opacities and air bronchograms, most commonly in a preterm infant. Which neonatal respiratory condition is described?",
+    "options": [
+      "Neonatal respiratory distress syndrome (RDS / surfactant deficiency)",
+      "Viral croup",
+      "Acute otitis media",
+      "Juvenile idiopathic arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Neonatal RDS results primarily from insufficient pulmonary surfactant in preterm infants, causing atelectasis, increased work of breathing, hypoxemia, and a characteristic diffuse ground-glass appearance with air bronchograms on chest radiograph."
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-neuro-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with gradually progressive memory loss (especially recent episodic memory), word-finding difficulty, disorientation, and impaired executive function over years without abrupt focal stroke deficits or reversible metabolic/infectious causes. Which neurodegenerative dementia is most common?",
+    "options": [
+      "Alzheimer disease",
+      "Acute subarachnoid hemorrhage",
+      "Benign paroxysmal positional vertigo",
+      "Guillain-Barré syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Alzheimer disease is the leading cause of dementia, classically presenting with insidious, progressive memory loss and cognitive decline alongside amyloid-beta and tau pathology."
+  },
+  {
+    "id": "g-neuro-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "An older patient presents with fluctuating cognition and alertness, vivid visual hallucinations, REM sleep behavior disorder, and parkinsonism (bradykinesia, rigidity) with pronounced sensitivity to antipsychotic medications. Which dementia syndrome is most likely?",
+    "options": [
+      "Dementia with Lewy bodies (DLB)",
+      "Simple essential hypertension",
+      "Iron-deficiency anemia",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Fluctuating cognition, recurrent well-formed visual hallucinations, REM sleep behavior disorder, and spontaneous parkinsonism characterize dementia with Lewy bodies; antipsychotics can cause severe neuroleptic sensitivity and must be used with extreme caution if ever needed."
+  },
+  {
+    "id": "g-neuro-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with recurrent, severe, unilateral periorbital or retro-orbital headaches lasting 15–180 minutes, occurring up to several times daily in clusters over weeks, accompanied by ipsilateral lacrimation, conjunctival injection, nasal congestion/rhinorrhea, and restlessness. What is this headache disorder?",
+    "options": [
+      "Cluster headache",
+      "Chronic tension-type headache",
+      "Subarachnoid hemorrhage",
+      "Normal pressure hydrocephalus"
+    ],
+    "answer": 0,
+    "explanation": "Cluster headache is a trigeminal autonomic cephalalgia causing brief, excruciating unilateral orbital/temporal pain with ipsilateral autonomic features and agitation; acute treatments include high-flow oxygen and triptans, with verapamil or transitional steroids often used for prevention."
+  },
+  {
+    "id": "g-neuro-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "hard",
+    "question": "A patient presents with progressive lower-extremity weakness, a distinct sensory level on the trunk, hyperreflexia/spasticity below the level, a Babinski sign, and urinary retention/incontinence over hours to days. Which spinal cord emergency must be evaluated urgently with MRI?",
+    "options": [
+      "Acute spinal cord compression (or acute transverse myelopathy)",
+      "Simple seasonal allergic rhinitis",
+      "Benign paroxysmal positional vertigo",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "A sensory level with motor weakness, upper motor neuron signs below the lesion, and bowel/bladder dysfunction suggests spinal cord pathology/compression, requiring urgent spine MRI and prompt neurosurgical or medical intervention (such as corticosteroids when indicated) to preserve neurologic function."
+  },
+  {
+    "id": "g-neuro-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient has a known history of tonic-clonic seizures and presents with a brief, sudden staring spell lasting ~10 seconds with unresponsiveness, subtle eyelid fluttering, and immediate return to baseline activity without a postictal state, with a 3-Hz spike-and-wave discharge on EEG. Which seizure type is described?",
+    "options": [
+      "Typical absence seizure",
+      "Acute ischemic middle cerebral artery stroke",
+      "Guillain-Barré syndrome",
+      "Trigeminal neuralgia"
+    ],
+    "answer": 0,
+    "explanation": "Typical absence seizures cause brief, abrupt impaired awareness/staring without a postictal phase and classically show generalized 3-Hz spike-and-wave activity on EEG (often treated with ethosuximide or valproate when isolated)."
+  },
+  {
+    "id": "g-neuro-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with bilateral action/postural tremor of the hands and arms (worse when holding a cup or writing, improving with small amounts of alcohol or rest) that has been present for years and has a positive family history, without bradykinesia or rigidity. What is the most likely diagnosis?",
+    "options": [
+      "Essential tremor",
+      "Parkinson disease",
+      "Myasthenia gravis",
+      "Multiple sclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Essential tremor is a common movement disorder characterized by bilateral upper-limb postural/kinetic tremor (sometimes involving head or voice), often familial, and commonly treated when functional with propranolol or primidone."
+  },
+  {
+    "id": "g-neuro-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with pain, tingling, and numbness (paresthesias) in the thumb, index, middle, and radial half of the ring finger—often waking the patient at night or worsening with wrist flexion/driving—with positive Tinel or Phalen maneuvers and thenar atrophy in advanced cases. Which nerve is compressed?",
+    "options": [
+      "Median nerve at the carpal tunnel (carpal tunnel syndrome)",
+      "Ulnar nerve at the elbow (cubital tunnel)",
+      "Radial nerve in the spiral groove",
+      "Common peroneal nerve at the fibular head"
+    ],
+    "answer": 0,
+    "explanation": "Carpal tunnel syndrome compresses the median nerve as it passes through the wrist carpal tunnel, sparing sensation over the thenar eminence (which is innervated by the palmar cutaneous branch arising proximal to the tunnel)."
+  },
+  {
+    "id": "g-neuro-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient sustains a minor head trauma or fall weeks ago and develops gradually worsening headache, personality changes, gait unsteadiness, and fluctuating drowsiness. Non-contrast head CT shows a crescent-shaped extra-axial collection crossing suture lines. What is the diagnosis?",
+    "options": [
+      "Subdural hematoma (subacute or chronic)",
+      "Epidural hematoma (biconvex/lens-shaped, classically limited by sutures)",
+      "Simple tension-type headache",
+      "Primary open-angle glaucoma"
+    ],
+    "answer": 0,
+    "explanation": "Subdural hematomas result from tearing of bridging veins and form a crescent-shaped extra-axial collection that can cross cranial sutures and present subacutely or chronically—especially in older adults, those on anticoagulants/antiplatelets, or after minor falls."
+  },
+  {
+    "id": "g-neuro-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with longstanding hypertension and hyperlipidemia has a left-sided ischemic stroke affecting the left middle cerebral artery territory. Which combination of deficits is classically seen with a left MCA stroke?",
+    "options": [
+      "Right-sided face and arm (greater than leg) weakness/sensory loss and expressive (Broca) and/or receptive (Wernicke) aphasia in a left-hemisphere-dominant individual",
+      "Bilateral lower-extremity paraplegia with normal speech and arm strength",
+      "Isolated resting pill-rolling tremor without motor or speech deficits",
+      "Pure bilateral hearing loss"
+    ],
+    "answer": 0,
+    "explanation": "The middle cerebral artery supplies the lateral cerebral hemisphere (face/arm motor and sensory cortex and language areas in the dominant hemisphere), producing contralateral face/arm weakness and aphasia when the dominant hemisphere is involved."
+  },
+  {
+    "id": "g-neuro-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A young adult presents with progressive chorea (involuntary dance-like movements), personality/behavioral changes, cognitive decline, and a family history of similar symptoms in an autosomal dominant pattern with CAG trinucleotide repeat expansion. What is the diagnosis?",
+    "options": [
+      "Huntington disease",
+      "Bell palsy",
+      "Trigeminal neuralgia",
+      "Normal pressure hydrocephalus"
+    ],
+    "answer": 0,
+    "explanation": "Huntington disease is an autosomal dominant neurodegenerative disorder caused by CAG repeat expansion in the HTT gene, leading to striatal atrophy, chorea, psychiatric/behavioral changes, and progressive dementia."
+  },
+  {
+    "id": "g-neuro-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "An overweight woman of childbearing age presents with daily headaches, transient visual obscurations, pulsatile tinnitus, and papilledema on fundoscopy, with normal brain MRI/MRV (except signs of elevated intracranial pressure) and elevated CSF opening pressure (> 25 cm H2O) with normal CSF composition. What is the diagnosis?",
+    "options": [
+      "Idiopathic intracranial hypertension (pseudotumor cerebri)",
+      "Acute bacterial meningitis",
+      "Parkinson disease",
+      "Guillain-Barré syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Idiopathic intracranial hypertension presents with elevated intracranial pressure symptoms, papilledema, and high CSF opening pressure without a mass lesion or hydrocephalus; weight management and acetazolamide are foundational alongside vision monitoring."
+  },
+  {
+    "id": "g-neuro-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with a history of prior stroke or transient ischemic attack from non-valvular atrial fibrillation is evaluated for long-term secondary stroke prevention. Which anticoagulation approach is standard when there is no mechanical heart valve or moderate-to-severe mitral stenosis?",
+    "options": [
+      "Oral anticoagulation (such as a direct oral anticoagulant [DOAC] or warfarin) tailored to stroke/bleeding risk and renal/clinical factors",
+      "Discontinuing all antithrombotic therapy without reason",
+      "Oral ketoconazole",
+      "Routine daily oral acetaminophen alone"
+    ],
+    "answer": 0,
+    "explanation": "Patients with atrial fibrillation and prior stroke/TIA have high thromboembolic stroke risk and generally warrant long-term oral anticoagulation (typically a DOAC unless contraindicated or mechanical valve/moderate-severe rheumatic mitral stenosis dictates warfarin)."
+  },
+  {
+    "id": "g-neuro-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient develops foot drop (difficulty dorsiflexing the foot and toes, causing a 'steppage' gait) and numbness over the lateral lower leg and dorsum of the foot after prolonged leg crossing or a fibular neck injury. Which peripheral nerve is injured?",
+    "options": [
+      "Common peroneal (fibular) nerve",
+      "Median nerve",
+      "Facial nerve (CN VII)",
+      "Optic nerve (CN II)"
+    ],
+    "answer": 0,
+    "explanation": "The common peroneal nerve wraps superficially around the fibular neck and is vulnerable to compression or trauma, causing ankle/toe dorsiflexion weakness (foot drop) and sensory loss over the lateral calf and dorsum of the foot."
+  },
+  {
+    "id": "g-neuro-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "hard",
+    "question": "A patient presents with acute bilateral descending paralysis starting in the cranial nerves (diplopia, ptosis, dysarthria, dysphagia) followed by symmetric descending limb weakness and autonomic dysfunction, without sensory loss, after eating home-canned vegetables or contaminated food. Which toxin-mediated emergency is suspected?",
+    "options": [
+      "Botulism (Clostridium botulinum neurotoxin blocking acetylcholine release at the neuromuscular junction)",
+      "Multiple sclerosis",
+      "Simple essential tremor",
+      "Parkinson disease"
+    ],
+    "answer": 0,
+    "explanation": "Botulism causes acute, symmetric descending flaccid paralysis beginning with bulbar/cranial nerves and preserved sensation; airway/respiratory monitoring and prompt botulinum antitoxin administration are critical."
+  },
+  {
+    "id": "g-neuro-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient has a known seizure disorder well-controlled on an antiseizure medication and asks about pregnancy planning. Why is folic acid supplementation and reviewing antiseizure medication selection important prior to conception?",
+    "options": [
+      "Certain antiseizure medications (especially valproate) carry higher risks of major congenital malformations and neurodevelopmental effects, and folic acid supplementation helps reduce neural tube defect risk",
+      "Pregnancy completely cures all seizure disorders on day one",
+      "Antiseizure medications should always be stopped abruptly without medical supervision when planning pregnancy",
+      "Folic acid has no role in pregnancy planning"
+    ],
+    "answer": 0,
+    "explanation": "Preconception counseling in epilepsy optimizes seizure control using the safest effective regimen (avoiding valproate when possible in people who can become pregnant) and provides folic acid supplementation while maintaining seizure safety."
+  },
+  {
+    "id": "g-neuro-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with diplopia, dysarthria, ataxia, and vertigo with crossed brainstem findings (ipsilateral cranial nerve deficit with contralateral limb motor/sensory deficit). Which vascular territory is classically involved in brainstem/cerebellar strokes?",
+    "options": [
+      "Vertebrobasilar / posterior circulation",
+      "Isolated anterior cerebral artery without brainstem involvement",
+      "Simple carpal tunnel",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "The posterior (vertebrobasilar) circulation supplies the brainstem, cerebellum, and occipital lobes; brainstem lesions commonly cause cranial nerve deficits, ataxia, vertigo, diplopia, and crossed motor/sensory signs."
+  },
+  {
+    "id": "g-neuro-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with pressing or tightening, non-pulsatile mild-to-moderate headache affecting both sides of the head ('band-like' pressure), without nausea, vomiting, or photophobia/phonophobia worsened by routine physical activity. What is the most likely diagnosis?",
+    "options": [
+      "Tension-type headache",
+      "Acute subarachnoid hemorrhage",
+      "Giant cell arteritis with jaw claudication and vision loss",
+      "Acute bacterial meningitis"
+    ],
+    "answer": 0,
+    "explanation": "Bilateral pressing/tightening mild-to-moderate pain lacking prominent migrainous features (like nausea or marked photophobia/phonophobia) is characteristic of tension-type headache."
+  },
+  {
+    "id": "g-neuro-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with Parkinson disease taking levodopa/carbidopa experiences gradual 'wearing-off' of medication benefit before the next scheduled dose and involuntary writhing/dyskinetic movements at peak dose. What is a common clinical strategy when adjusting Parkinson therapy?",
+    "options": [
+      "Adjusting dosing frequency/formulations or adding adjuncts (such as a MAO-B inhibitor, COMT inhibitor, or dopamine agonist as appropriate) in coordination with the treating clinician while monitoring dyskinesia and side effects",
+      "Stopping levodopa abruptly overnight in all patients",
+      "Prescribing high-dose oral warfarin",
+      "Ignoring worsening motor fluctuations indefinitely"
+    ],
+    "answer": 0,
+    "explanation": "Motor fluctuations ('wearing-off') and levodopa-induced dyskinesias are common with long-term levodopa therapy and are managed by tailoring dose timing/formulations and using appropriate adjunctive agents while avoiding abrupt levodopa withdrawal."
+  }
+]

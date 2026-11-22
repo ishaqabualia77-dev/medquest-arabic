@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-psych-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A young adult presents with an intense, persistent fear of social situations or scrutiny by others (such as speaking in public, eating in front of others, or meeting new people), fearing embarrassment or humiliation and avoiding these situations for over 6 months. What is the most likely diagnosis?",
+    "options": [
+      "Social anxiety disorder (social phobia)",
+      "Schizophrenia",
+      "Anorexia nervosa",
+      "Delirium"
+    ],
+    "answer": 0,
+    "explanation": "Marked fear or anxiety about one or more social situations involving possible scrutiny by others—lasting at least 6 months and causing distress or avoidance—characterizes social anxiety disorder."
+  },
+  {
+    "id": "g-psych-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has persistent distressing somatic symptoms (such as pain, fatigue, or gastrointestinal discomfort) accompanied by excessive thoughts, feelings, or behaviors related to those symptoms—spending disproportionate time and energy worrying about their health/symptoms—even when medical evaluation does not explain severe impairment. Which diagnosis fits best?",
+    "options": [
+      "Somatic symptom disorder",
+      "Bipolar I disorder",
+      "Panic disorder",
+      "Parkinson disease"
+    ],
+    "answer": 0,
+    "explanation": "Somatic symptom disorder involves one or more distressing somatic symptoms causing significant disruption of daily life plus excessive health/symptom-related thoughts, feelings, or behaviors lasting typically at least 6 months."
+  },
+  {
+    "id": "g-psych-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents after a stressful life event with sudden onset of acute blindness or leg paralysis that is incompatible with neuroanatomical pathways and inconsistent on examination, without feigning or malingering and not better explained by a medical or neurologic disorder. What is this condition?",
+    "options": [
+      "Functional neurological symptom disorder (conversion disorder)",
+      "Acute bacterial meningitis",
+      "Simple essential tremor",
+      "Iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "Functional neurological symptom disorder (conversion disorder) features altered voluntary motor or sensory function incompatible with recognized neurological or medical conditions, often associated with psychological stressors or clinical findings of internal inconsistency."
+  },
+  {
+    "id": "g-psych-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has a pervasive pattern of instability in interpersonal relationships, self-image, and affects, along with marked impulsivity, fear of abandonment, chronic feelings of emptiness, and recurrent suicidal gestures or self-harm beginning by early adulthood. Which personality disorder is most closely associated with this presentation?",
+    "options": [
+      "Borderline personality disorder",
+      "Obsessive-compulsive personality disorder",
+      "Schizoid personality disorder",
+      "Narcolepsy"
+    ],
+    "answer": 0,
+    "explanation": "Borderline personality disorder is characterized by emotional dysregulation, unstable relationships and self-image, impulsivity, fear of abandonment, and self-harm/suicidal behaviors; structured psychotherapies like dialectical behavior therapy (DBT) are mainstays of treatment."
+  },
+  {
+    "id": "g-psych-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has a lifelong pattern of preoccupation with orderliness, perfectionism, and mental/interpersonal control at the expense of flexibility, openness, and efficiency—such as excessive list-making, rigidity, and difficulty delegating tasks—without intrusive ego-dystonic obsessions or compulsions. Which personality disorder is described?",
+    "options": [
+      "Obsessive-compulsive personality disorder (OCPD)",
+      "Borderline personality disorder",
+      "Schizophrenia",
+      "Panic disorder"
+    ],
+    "answer": 0,
+    "explanation": "Unlike OCD (which involves intrusive obsessions and repetitive compulsions), OCPD is an enduring ego-syntonic pattern of perfectionism, rigidity, and need for control beginning by early adulthood."
+  },
+  {
+    "id": "g-psych-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with opioid use disorder presents in acute opioid withdrawal with piloerection ('gooseflesh'), yawning, lacrimation, rhinorrhea, myalgias, abdominal cramping, nausea/diarrhea, dilated pupils (mydriasis), and anxiety. Which medication is commonly used both for managing opioid withdrawal and long-term maintenance treatment of opioid use disorder?",
+    "options": [
+      "Buprenorphine (partial opioid agonist) or methadone (full opioid agonist) (with naltrexone used after detoxification for relapse prevention in appropriate patients)",
+      "Oral ketoconazole",
+      "Routine daily oral antihistamines",
+      "Subcutaneous insulin"
+    ],
+    "answer": 0,
+    "explanation": "Medications for opioid use disorder (MOUD)—such as buprenorphine and methadone—relieve withdrawal symptoms, reduce cravings and illicit opioid use, and lower overdose mortality."
+  },
+  {
+    "id": "g-psych-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient is brought to the emergency department after an acute opioid overdose with pinpoint (miotic) pupils, bradypnea/respiratory depression, and stupor/coma. Which immediate antagonist reverses life-threatening opioid respiratory depression?",
+    "options": [
+      "Naloxone (intravenous, intramuscular, or intranasal opioid antagonist)",
+      "Flumazenil",
+      "Oral metformin",
+      "Atropine alone for opioid apnea"
+    ],
+    "answer": 0,
+    "explanation": "Naloxone rapidly reverses opioid-induced respiratory and central nervous system depression; because naloxone's half-life can be shorter than long-acting opioids, repeated dosing or infusion and close monitoring are essential."
+  },
+  {
+    "id": "g-psych-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with major depressive disorder is started on a selective serotonin reuptake inhibitor (SSRI, such as sertraline or escitalopram). How long does it typically take for meaningful antidepressant clinical improvement to begin?",
+    "options": [
+      "Approximately 2 to 4 weeks (with full benefit often taking 6–8 weeks or more), though early side effects or activation can appear sooner",
+      "Within 5 minutes of the first tablet in all patients",
+      "Only after 2 years of continuous therapy",
+      "Antidepressants have no clinical effect in major depressive disorder"
+    ],
+    "answer": 0,
+    "explanation": "While neurochemical changes begin immediately, clinical response to SSRIs/SNRIs typically emerges over 2–4 weeks and continues building over several weeks, making patient education and early follow-up important."
+  },
+  {
+    "id": "g-psych-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient taking an antipsychotic medication develops an acute, painful, involuntary sustained muscle contraction or spasm—such as torticollis (neck twisting), oculogyric crisis (upward eye deviation), or jaw/tongue spasm—within hours to days of starting or increasing the dose. What is this reaction and first-line acute treatment?",
+    "options": [
+      "Acute dystonia; treated promptly with an anticholinergic agent (such as benztropine) or diphenhydramine",
+      "Tardive dyskinesia requiring no treatment ever",
+      "Simple anxiety attack",
+      "Iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "Acute dystonia is an early extrapyramidal reaction to dopamine receptor blockade that responds rapidly to IV/IM/PO benztropine or diphenhydramine."
+  },
+  {
+    "id": "g-psych-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient taking an antipsychotic medication reports a distressing inner sense of restlessness and a compelling urge to keep moving—pacing, rocking, or shifting weight from foot to foot—that is often misdiagnosed as simple anxiety or agitation. What is this extrapyramidal symptom called?",
+    "options": [
+      "Akathisia",
+      "Acute dystonia",
+      "Cataplexy",
+      "Anorexia nervosa"
+    ],
+    "answer": 0,
+    "explanation": "Akathisia presents as subjective inner restlessness and motor restlessness (inability to sit still), which can worsen if mistaken for agitation and treated with higher antipsychotic doses; reducing dose, switching agents, or using a beta-blocker (such as propranolol) or low-dose mirtazapine/benzodiazepine may help."
+  },
+  {
+    "id": "g-psych-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with years of antipsychotic exposure develops involuntary, repetitive, purposeless movements—such as lip-smacking, chewing/grimacing, tongue protrusion, or choreoathetoid finger movements—that persist even after antipsychotic reduction. Which late-onset movement disorder is described?",
+    "options": [
+      "Tardive dyskinesia",
+      "Acute dystonia",
+      "Panic disorder",
+      "Delirium"
+    ],
+    "answer": 0,
+    "explanation": "Tardive dyskinesia is a delayed-onset involuntary movement disorder associated with prolonged dopamine D2 receptor blockade, characterized by choreiform or rhythmic movements often involving the oral-buccal-lingual region and limbs."
+  },
+  {
+    "id": "g-psych-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A postpartum mother at 3 weeks after delivery presents with tearfulness, mood lability, insomnia, overwhelm, and mild anxiety that began a few days after childbirth and is gradually improving with support, without severe functional impairment, psychosis, or thoughts of harming herself or the baby. What is this condition?",
+    "options": [
+      "Postpartum blues ('baby blues')—distinct from postpartum depression (more persistent/severe mood/functioning impairment) and postpartum psychosis (psychiatric emergency with delusions/hallucinations/disorganization)",
+      "Schizophrenia",
+      "Anorexia nervosa",
+      "Parkinson disease"
+    ],
+    "answer": 0,
+    "explanation": "Postpartum blues are common, mild, transient mood fluctuations peaking in the first two weeks postpartum and resolving spontaneously, whereas postpartum depression persists/impairs function and postpartum psychosis requires urgent psychiatric evaluation for safety."
+  },
+  {
+    "id": "g-psych-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has a long-standing history of difficulty falling asleep or staying asleep (or early morning awakening) at least 3 nights per week for over 4 months, causing daytime fatigue and impaired concentration despite adequate opportunity for sleep, without another primary sleep disorder or substance cause. What is the diagnosis?",
+    "options": [
+      "Insomnia disorder (chronic)",
+      "Narcolepsy",
+      "Bipolar I disorder",
+      "Delirium"
+    ],
+    "answer": 0,
+    "explanation": "Chronic insomnia disorder involves persistent difficulty initiating or maintaining sleep (>= 3 nights/week for >= 3 months) with daytime impairment; cognitive behavioral therapy for insomnia (CBT-I) is recommended as first-line treatment."
+  },
+  {
+    "id": "g-psych-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A young adult presents with excessive daytime sleepiness, sudden brief episodes of bilateral muscle weakness/buckling triggered by strong emotion such as laughter (cataplexy), sleep paralysis, and hypnagogic/hypnopompic hallucinations. Which sleep disorder is most likely?",
+    "options": [
+      "Narcolepsy",
+      "Chronic tension-type headache",
+      "Obsessive-compulsive disorder",
+      "Major depressive disorder"
+    ],
+    "answer": 0,
+    "explanation": "Narcolepsy (especially Type 1, linked to hypocretin/orexin deficiency) features excessive daytime sleepiness and REM intrusion phenomena including cataplexy, sleep paralysis, and vivid sleep-related hallucinations."
+  },
+  {
+    "id": "g-psych-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with bipolar I disorder is stabilized on mood-stabilizing therapy. Which medication is a classic mood stabilizer for bipolar disorder with evidence for reducing both manic and depressive relapses as well as suicide risk, requiring periodic monitoring of serum levels, renal function, and thyroid function?",
+    "options": [
+      "Lithium",
+      "Oral ketoconazole",
+      "Routine daily oral acetaminophen",
+      "Topical hydrocortisone"
+    ],
+    "answer": 0,
+    "explanation": "Lithium is a foundational mood stabilizer in bipolar disorder with anti-suicidal properties, requiring monitoring of lithium levels, renal function (creatinine/eGFR), electrolytes, calcium, and thyroid function (TSH)."
+  },
+  {
+    "id": "g-psych-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has a persistent, unreasonable fear and avoidance of a specific object or situation—such as flying, heights, spiders, or needles—lasting over 6 months, causing immediate anxiety upon exposure and out of proportion to actual danger. What is the diagnosis?",
+    "options": [
+      "Specific phobia",
+      "Schizophrenia",
+      "Delirium",
+      "Bulimia nervosa"
+    ],
+    "answer": 0,
+    "explanation": "Specific phobia involves marked fear or anxiety about a circumscribed object or situation lasting at least 6 months, typically leading to avoidance or endurance with intense distress; exposure-based cognitive behavioral therapy is highly effective."
+  },
+  {
+    "id": "g-psych-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with major depressive disorder is taking a second-generation antipsychotic (such as olanzapine or quetiapine) for bipolar disorder or augmentation. Which metabolic monitoring panel is recommended at baseline and periodically during treatment?",
+    "options": [
+      "Body mass index/waist circumference, blood pressure, fasting plasma glucose or HbA1c, and fasting lipid profile",
+      "Serum amylase and lipase only",
+      "Sputum AFB smear",
+      "Plain X-ray of the wrist"
+    ],
+    "answer": 0,
+    "explanation": "Several second-generation antipsychotics carry risks of weight gain, dyslipidemia, and insulin resistance/diabetes, making baseline and periodic metabolic monitoring essential."
+  },
+  {
+    "id": "g-psych-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient experiences emotional distress, depressed mood, and anxiety starting within 1 month of a major identifiable stressor (such as job loss or relationship breakup) that causes marked distress out of proportion to the stressor or impairment in social/occupational functioning, without meeting criteria for another major psychiatric disorder or uncomplicated bereavement. What is this diagnosis?",
+    "options": [
+      "Adjustment disorder",
+      "Schizophrenia",
+      "Bipolar I disorder",
+      "Alzheimer disease"
+    ],
+    "answer": 0,
+    "explanation": "Adjustment disorder involves emotional or behavioral symptoms developing within 3 months of an identifiable stressor and resolving within 6 months after the stressor or its consequences end."
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-psych-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "An adult patient reports persistent depressed mood, anhedonia, insomnia, fatigue, poor concentration, and feelings of worthlessness lasting more than three weeks without a history of mania or hypomania. Which medication class is typically selected first-line for moderate-to-severe major depressive disorder?",
+    "options": [
+      "Selective serotonin reuptake inhibitors (SSRIs)",
+      "Immediate monoamine oxidase inhibitors without washout consideration",
+      "Long-term daily benzodiazepine monotherapy",
+      "High-dose stimulant monotherapy"
+    ],
+    "answer": 0,
+    "explanation": "Selective serotonin reuptake inhibitors (SSRIs) are commonly chosen first-line for major depressive disorder due to favorable safety and tolerability profiles compared with older antidepressants."
+  },
+  {
+    "id": "g-psych-002",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with a one-week history of decreased need for sleep (feeling rested after 2 hours), pressured speech, flight of ideas, grandiosity, and impulsive spending that caused marked functional impairment. Which mood episode is present?",
+    "options": [
+      "Manic episode",
+      "Major depressive episode without mania",
+      "Persistent depressive disorder (dysthymia)",
+      "Somatic symptom disorder"
+    ],
+    "answer": 0,
+    "explanation": "An abnormally elevated, expansive, or irritable mood and increased energy/activity lasting at least one week (or requiring hospitalization) with functional impairment defines a manic episode."
+  },
+  {
+    "id": "g-psych-003",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient taking long-term lithium therapy for bipolar disorder presents with coarse tremor, ataxia, dysarthria, confusion, and nausea after starting a thiazide diuretic and becoming dehydrated. What is the most likely cause?",
+    "options": [
+      "Lithium toxicity precipitated by reduced renal clearance",
+      "Serotonin syndrome from lithium alone",
+      "Neuroleptic malignant syndrome",
+      "Acute opioid withdrawal"
+    ],
+    "answer": 0,
+    "explanation": "Dehydration, declining glomerular filtration rate, NSAIDs, ACE inhibitors, or thiazide diuretics can raise serum lithium levels and precipitate lithium toxicity."
+  },
+  {
+    "id": "g-psych-004",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient treated with an antipsychotic develops generalized muscular rigidity ('lead-pipe' rigidity), high fever, autonomic instability (tachycardia, labile blood pressure, diaphoresis), altered mental status, and markedly elevated serum creatine kinase. Which diagnosis is most likely?",
+    "options": [
+      "Neuroleptic malignant syndrome (NMS)",
+      "Acute dystonia",
+      "Akathisia",
+      "Tardive dyskinesia"
+    ],
+    "answer": 0,
+    "explanation": "Lead-pipe rigidity, hyperthermia, autonomic instability, encephalopathy, and elevated CK in a patient on dopamine receptor antagonists point to neuroleptic malignant syndrome."
+  },
+  {
+    "id": "g-psych-005",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient started on a first-generation antipsychotic develops involuntary, repetitive, choreiform movements of the tongue, lips, and jaw after months of therapy. Which condition is present?",
+    "options": [
+      "Tardive dyskinesia",
+      "Acute laryngospasm",
+      "Alcohol delirium tremens",
+      "Panic attack"
+    ],
+    "answer": 0,
+    "explanation": "Tardive dyskinesia typically presents with involuntary choreoathetoid or rhythmic movements (especially orofacial/buccolingual) after prolonged antipsychotic exposure."
+  },
+  {
+    "id": "g-psych-006",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with recurrent, sudden episodes of intense fear peaking within minutes, accompanied by palpitations, sweating, trembling, chest discomfort, and fear of losing control or dying, followed by persistent worry about future attacks. What is the diagnosis?",
+    "options": [
+      "Panic disorder",
+      "Specific phobia",
+      "Schizoid personality disorder",
+      "Conversion disorder"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent unexpected panic attacks accompanied by persistent concern about additional attacks or maladaptive behavioral changes characterize panic disorder."
+  },
+  {
+    "id": "g-psych-007",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient experiences intrusive, distressing thoughts about contamination that are not relieved by reasoning, leading to repetitive handwashing for hours each day to reduce anxiety. Which condition is present?",
+    "options": [
+      "Obsessive-compulsive disorder (OCD)",
+      "Delusional disorder",
+      "Bipolar I disorder",
+      "Somatic symptom disorder"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent intrusive obsessions paired with repetitive compulsions performed to neutralize distress or prevent a feared outcome characterize obsessive-compulsive disorder."
+  },
+  {
+    "id": "g-psych-008",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient who survived a severe traumatic event months ago reports intrusive nightmares and flashbacks, avoidance of reminders, negative alterations in mood/cognition, and hypervigilance lasting over a month. Which diagnosis is most likely?",
+    "options": [
+      "Post-traumatic stress disorder (PTSD)",
+      "Adjustment disorder lasting 3 days",
+      "Conversion disorder",
+      "Primary insomnia"
+    ],
+    "answer": 0,
+    "explanation": "Intrusion, avoidance, negative mood/cognitive changes, and hyperarousal lasting more than one month after trauma exposure are diagnostic hallmarks of PTSD."
+  },
+  {
+    "id": "g-psych-009",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with a 9-month history of auditory hallucinations, persecutory delusions, disorganized speech, avolition, and social withdrawal, with no mood episode explaining the symptoms and exclusion of substance or medical causes. Which diagnosis is most consistent?",
+    "options": [
+      "Schizophrenia",
+      "Brief psychotic disorder",
+      "Cyclothymic disorder",
+      "Generalized anxiety disorder"
+    ],
+    "answer": 0,
+    "explanation": "Continuous signs of disturbance for at least six months including active-phase positive and/or negative symptoms with functional decline support a diagnosis of schizophrenia."
+  },
+  {
+    "id": "g-psych-010",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient with heavy chronic alcohol use stops drinking abruptly and 48 hours later develops confusion, disorientation, visual hallucinations, agitation, tremor, tachycardia, and hypertension. Which medication class is first-line to prevent or treat severe alcohol withdrawal and delirium tremens?",
+    "options": [
+      "Benzodiazepines (such as lorazepam or diazepam), along with thiamine supplementation",
+      "Oral disulfiram initiated during active withdrawal",
+      "Naltrexone started immediately in acute delirium",
+      "Haloperidol monotherapy without benzodiazepines"
+    ],
+    "answer": 0,
+    "explanation": "Benzodiazepines are first-line for alcohol withdrawal and delirium tremens due to cross-tolerance at GABA-A receptors, and thiamine must be given promptly to prevent Wernicke encephalopathy."
+  },
+  {
+    "id": "g-psych-011",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient with chronic alcohol misuse presents with confusion, ophthalmoplegia or nystagmus, and gait ataxia. Which immediate vitamin administration is essential before glucose infusion?",
+    "options": [
+      "Intravenous or parenteral thiamine (vitamin B1)",
+      "Vitamin D3",
+      "Folic acid alone",
+      "Vitamin E"
+    ],
+    "answer": 0,
+    "explanation": "Thiamine deficiency underlies Wernicke encephalopathy (confusion, ataxia, ocular motility abnormalities), and thiamine should be administered promptly (before or with dextrose) to avoid precipitating or worsening neurologic injury."
+  },
+  {
+    "id": "g-psych-012",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with acute respiratory depression, pinpoint (miotic) pupils, and unresponsiveness with suspected opioid overdose. Which immediate antagonist should be administered?",
+    "options": [
+      "Naloxone",
+      "Flumazenil",
+      "Physostigmine",
+      "Atropine"
+    ],
+    "answer": 0,
+    "explanation": "Naloxone is a competitive opioid receptor antagonist that rapidly reverses opioid-induced respiratory and central nervous system depression."
+  },
+  {
+    "id": "g-psych-013",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A hospitalized older adult develops an acute fluctuating disturbance in attention and awareness over hours to days, disorganized thinking, and altered sleep-wake cycle following a urinary tract infection. What is the most likely diagnosis?",
+    "options": [
+      "Delirium",
+      "Major neurocognitive disorder (Alzheimer disease)",
+      "Specific learning disorder",
+      "Somatic symptom disorder"
+    ],
+    "answer": 0,
+    "explanation": "Delirium is characterized by an acute and fluctuating onset of inattention and altered awareness, typically triggered by an underlying medical illness, infection, or medication."
+  },
+  {
+    "id": "g-psych-014",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with excessive, difficult-to-control worry about multiple everyday domains (work, health, finances) on most days for at least six months, accompanied by restlessness, muscle tension, fatigue, and irritability. What is the diagnosis?",
+    "options": [
+      "Generalized anxiety disorder (GAD)",
+      "Social anxiety disorder",
+      "Panic disorder",
+      "Agoraphobia"
+    ],
+    "answer": 0,
+    "explanation": "Excessive chronic worry across multiple areas for at least six months plus somatic/cognitive anxiety symptoms defines generalized anxiety disorder."
+  },
+  {
+    "id": "g-psych-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient taking an SSRI starts linezolid or a monoamine oxidase inhibitor and develops agitation, hyperreflexia, inducible clonus, diaphoresis, shivering, and fever. What is the most likely diagnosis?",
+    "options": [
+      "Serotonin syndrome",
+      "Neuroleptic malignant syndrome",
+      "Hypoglycemic coma",
+      "Anticholinergic toxicity"
+    ],
+    "answer": 0,
+    "explanation": "Serotonin toxicity presents with neuromuscular hyperactivity (clonus, hyperreflexia), autonomic signs, and mental status changes following serotonergic drug combinations."
+  },
+  {
+    "id": "g-psych-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient abruptly develops sudden blindness or paralysis of a limb shortly after a severe emotional stressor, while neurologic examination demonstrates inconsistencies inconsistent with known neuroanatomic pathways and no malingering motive is evident. Which condition is suspected?",
+    "options": [
+      "Functional neurological symptom disorder (conversion disorder)",
+      "Illness anxiety disorder",
+      "Factitious disorder",
+      "Acute stroke"
+    ],
+    "answer": 0,
+    "explanation": "Neurologic symptoms incompatible with recognized medical/neurologic conditions following psychosocial stressors or triggers characterize functional neurological symptom disorder."
+  },
+  {
+    "id": "g-psych-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with a longstanding pattern of unstable interpersonal relationships, identity disturbance, impulsivity, fear of abandonment, and affective instability beginning by early adulthood. Which personality disorder is most consistent with this presentation?",
+    "options": [
+      "Borderline personality disorder",
+      "Obsessive-compulsive personality disorder",
+      "Schizoid personality disorder",
+      "Avoidant personality disorder"
+    ],
+    "answer": 0,
+    "explanation": "Pervasive instability in affect, self-image, and relationships along with marked impulsivity and fear of abandonment characterizes borderline personality disorder."
+  },
+  {
+    "id": "g-psych-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "easy",
+    "question": "A patient presents with persistent low mood less severe than a major depressive episode occurring on most days for at least two years without symptom-free periods exceeding two months and without history of mania or hypomania. What is the diagnosis?",
+    "options": [
+      "Persistent depressive disorder (dysthymia)",
+      "Bipolar II disorder",
+      "Adjustment disorder with anxiety",
+      "Cyclothymic disorder"
+    ],
+    "answer": 0,
+    "explanation": "Chronic depressed mood lasting at least two years in adults with depressive symptoms not meeting full major depression criteria throughout defines persistent depressive disorder."
+  },
+  {
+    "id": "g-psych-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with schizophrenia experiences persistent auditory hallucinations and poor functional outcomes despite trials of two adequate antipsychotics (including at least one atypical agent). Which medication is uniquely indicated for treatment-resistant schizophrenia?",
+    "options": [
+      "Clozapine (with mandatory absolute neutrophil count monitoring)",
+      "Oral diphenhydramine",
+      "Bupropion monotherapy",
+      "Lithium alone"
+    ],
+    "answer": 0,
+    "explanation": "Clozapine is the evidence-based treatment of choice for treatment-resistant schizophrenia and also reduces suicidal behavior risk, requiring routine ANC monitoring due to agranulocytosis risk."
+  },
+  {
+    "id": "g-psych-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with marked fear or anxiety about social situations in which they may be scrutinized by others and fear acting in a way that will be humiliating or embarrassing, leading to avoidance. What is the diagnosis?",
+    "options": [
+      "Social anxiety disorder (social phobia)",
+      "Agoraphobia",
+      "Separation anxiety disorder",
+      "Obsessive-compulsive disorder"
+    ],
+    "answer": 0,
+    "explanation": "Marked fear or anxiety triggered by social scrutiny and potential negative evaluation with avoidance or endurance under distress defines social anxiety disorder."
+  }
+]

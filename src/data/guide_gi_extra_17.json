@@ -1,0 +1,274 @@
+[
+  {
+    "id": "g-gi-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, right upper quadrant abdominal pain, and jaundice (Charcot triad). Which biliary emergency is characterized by this triad and may progress to hypotension and mental status changes (Reynolds pentad)?",
+    "options": [
+      "Acute cholangitis",
+      "Simple sliding hiatal hernia",
+      "Primary insomnia",
+      "Otosclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Charcot triad (fever, RUQ pain, jaundice) indicates acute cholangitis—an ascending biliary infection requiring prompt resuscitation, IV antibiotics, and biliary decompression (such as ERCP)."
+  },
+  {
+    "id": "g-gi-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with severe crampy left lower quadrant abdominal pain, fever, and leukocytosis, and CT abdomen/pelvis shows colonic wall thickening with pericolic fat stranding and small diverticula. What is the most likely diagnosis?",
+    "options": [
+      "Acute diverticulitis",
+      "Acute viral conjunctivitis",
+      "Benign paroxysmal positional vertigo",
+      "Herpes zoster oticus"
+    ],
+    "answer": 0,
+    "explanation": "Left lower quadrant pain, fever, leukocytosis, and pericolic fat stranding around colonic diverticula on CT are characteristic of acute colonic diverticulitis."
+  },
+  {
+    "id": "g-gi-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with longstanding GERD undergoes upper endoscopy, and esophageal biopsy shows replacement of normal stratified squamous epithelium by columnar epithelium with intestinal metaplasia in the distal esophagus. What is this finding?",
+    "options": [
+      "Barrett esophagus",
+      "Achalasia",
+      "Zenker diverticulum",
+      "Pyloric stenosis"
+    ],
+    "answer": 0,
+    "explanation": "Barrett esophagus is intestinal metaplasia of the distal esophageal mucosa—a complication of chronic GERD and a premalignant condition for esophageal adenocarcinoma."
+  },
+  {
+    "id": "g-gi-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with bronze/hyperpigmented skin, diabetes mellitus ('bronze diabetes'), hepatomegaly/cirrhosis, and arthropathy or cardiomyopathy, with elevated serum ferritin and transferrin saturation. Which iron-overload disorder is most likely?",
+    "options": [
+      "Hereditary hemochromatosis",
+      "Wilson disease",
+      "Gilbert syndrome",
+      "Acute appendicitis"
+    ],
+    "answer": 0,
+    "explanation": "Hereditary hemochromatosis causes excessive intestinal iron absorption and tissue iron deposition (liver, pancreas, skin, joints, heart), typically managed with therapeutic phlebotomy."
+  },
+  {
+    "id": "g-gi-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "easy",
+    "question": "A young adult presents with mild intermittent unconjugated hyperbilirubinemia and jaundice triggered by fasting, illness, or stress, with normal AST, ALT, alkaline phosphatase, and no hemolysis. What is the most likely benign condition?",
+    "options": [
+      "Gilbert syndrome",
+      "Acute ascending cholangitis",
+      "Spontaneous bacterial peritonitis",
+      "Fulminant hepatic failure"
+    ],
+    "answer": 0,
+    "explanation": "Gilbert syndrome is a common, benign hereditary cause of mild unconjugated hyperbilirubinemia due to reduced UGT1A1 glucuronidation activity, often noticed during fasting or intercurrent illness."
+  },
+  {
+    "id": "g-gi-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic pancreatitis presents with foul-smelling bulky stools (steatorrhea), weight loss, and fat-soluble vitamin deficiencies (A, D, E, K). Which therapeutic measure helps address maldigestion?",
+    "options": [
+      "Pancreatic enzyme replacement therapy (PERT) taken with meals and snacks",
+      "Discontinuing all food and fluids indefinitely",
+      "High-dose oral antihistamines alone",
+      "Routine daily laxatives to induce faster transit"
+    ],
+    "answer": 0,
+    "explanation": "Exocrine pancreatic insufficiency from chronic pancreatitis leads to fat malabsorption/steatorrhea and fat-soluble vitamin deficits, treated with pancreatic enzyme replacement therapy with meals alongside nutritional support."
+  },
+  {
+    "id": "g-gi-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with cirrhosis and tense ascites undergoes large-volume paracentesis (removing > 5 L of ascitic fluid). Which measure is commonly administered to help prevent paracentesis-induced circulatory dysfunction?",
+    "options": [
+      "Intravenous albumin infusion",
+      "Oral furosemide only without fluid/hemodynamic assessment",
+      "Subcutaneous heparin at high therapeutic doses for bleeding",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Intravenous albumin is given during large-volume paracentesis (particularly > 5 L) to reduce the risk of paracentesis-induced circulatory dysfunction and renal impairment."
+  },
+  {
+    "id": "g-gi-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with painless bright red blood per rectum (hematochezia) or blood noticed on toilet paper/bowl after defecation, without systemic toxicity or weight loss. Which common anorectal condition should be considered alongside age-appropriate colorectal evaluation?",
+    "options": [
+      "Hemorrhoids (internal or external)",
+      "Acute pancreatitis",
+      "Pneumothorax",
+      "Multiple sclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Painless hematochezia or blood dripping after bowel movements is a classic presentation of hemorrhoids, though bleeding warrants clinical evaluation to exclude other lower GI sources per age and red flags."
+  },
+  {
+    "id": "g-gi-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "hard",
+    "question": "An older patient with atrial fibrillation and diffuse atherosclerosis presents with severe abdominal pain out of proportion to physical examination findings, nausea, and vomiting, with metabolic acidosis and elevated lactate. Which vascular emergency must be suspected urgently?",
+    "options": [
+      "Acute mesenteric ischemia",
+      "Simple allergic rhinitis",
+      "Seborrheic keratosis",
+      "Inguinal lymphadenopathy"
+    ],
+    "answer": 0,
+    "explanation": "Severe abdominal pain initially out of proportion to abdominal tenderness—especially in patients with arrhythmia, embolic risk, or atherosclerosis—raises urgent concern for acute mesenteric ischemia."
+  },
+  {
+    "id": "g-gi-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A young adult presents with food impaction in the esophagus and episodic dysphagia, and upper endoscopy shows esophageal rings/furrows with eosinophils >= 15 per high-power field on esophageal biopsy after excluding other causes. What is the diagnosis?",
+    "options": [
+      "Eosinophilic esophagitis (EoE)",
+      "Acute cholecystitis",
+      "Spontaneous bacterial peritonitis",
+      "Celiac sprue alone without esophageal eosinophilia"
+    ],
+    "answer": 0,
+    "explanation": "Eosinophilic esophagitis presents with dysphagia or food impaction in children/adults and is diagnosed histologically by marked esophageal eosinophilia (>= 15 eos/HPF) with compatible symptoms and exclusion of other causes."
+  },
+  {
+    "id": "g-gi-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with metabolic risk factors (such as obesity, type 2 diabetes, or dyslipidemia) has hepatic steatosis on imaging or biopsy without significant alcohol consumption or another competing chronic liver disease. What is the modern clinical term for this condition?",
+    "options": [
+      "Metabolic dysfunction-associated steatotic liver disease (MASLD)",
+      "Acute bacterial meningitis",
+      "Hereditary spherocytosis",
+      "Primary aldosteronism"
+    ],
+    "answer": 0,
+    "explanation": "MASLD refers to hepatic steatosis occurring in the presence of cardiometabolic risk factors without excessive alcohol intake or other identifiable causes of steatosis."
+  },
+  {
+    "id": "g-gi-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with active peptic ulcer disease caused by Helicobacter pylori has completed standard eradication therapy. Which approach is recommended to confirm H. pylori eradication?",
+    "options": [
+      "Non-invasive testing (such as urea breath test or monoclonal stool antigen test) at least 4 weeks after completing antibiotics and while off PPI therapy for ~1–2 weeks",
+      "Repeating a serum IgG antibody test 3 days later",
+      "Checking serum amylase",
+      "No confirmation is ever useful in any ulcer patient"
+    ],
+    "answer": 0,
+    "explanation": "Eradication testing (urea breath test or stool antigen) is performed >= 4 weeks after finishing antibiotics (and after holding PPIs) to verify cure; serology cannot distinguish active from past infection."
+  },
+  {
+    "id": "g-gi-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient presents with persistent watery diarrhea, weight loss, and flushing after eating certain foods, and 24-hour urine shows elevated 5-hydroxyindoleacetic acid (5-HIAA). Which neuroendocrine tumor syndrome is associated with these findings?",
+    "options": [
+      "Carcinoid syndrome",
+      "Gilbert syndrome",
+      "Wilson disease",
+      "Acute appendicitis"
+    ],
+    "answer": 0,
+    "explanation": "Carcinoid syndrome arises from serotonin/vasoactive-secreting neuroendocrine tumors (commonly midgut/GI with hepatic metastases), causing flushing, secretory diarrhea, and elevated urinary 5-HIAA."
+  },
+  {
+    "id": "g-gi-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with cirrhosis develops acute kidney injury with no shock, no nephrotoxic drugs, no parenchymal kidney disease on urinalysis/ultrasound, and failure of serum creatinine to improve after volume expansion/albumin challenge. Which syndrome is suspected?",
+    "options": [
+      "Hepatorenal syndrome (HRS)",
+      "Simple urinary tract infection",
+      "Acute gouty arthritis",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "Hepatorenal syndrome is a form of functional acute kidney injury in patients with advanced cirrhosis/ascites caused by splanchnic vasodilation and renal vasoconstriction after excluding other causes."
+  },
+  {
+    "id": "g-gi-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "easy",
+    "question": "For average-risk adults without family history or symptoms, starting routine colorectal cancer screening around age 45–50 is recommended. Which of the following is an accepted colorectal cancer screening option?",
+    "options": [
+      "Colonoscopy (typically every 10 years if normal) or annual stool-based testing such as fecal immunochemical test (FIT)",
+      "Routine fasting serum lipase every year",
+      "Plain chest X-ray every 5 years",
+      "Routine serum vitamin B12 level"
+    ],
+    "answer": 0,
+    "explanation": "Standard colorectal cancer screening options for average-risk adults include colonoscopy and stool-based tests (such as annual FIT), selected based on patient preference, availability, and guidelines."
+  },
+  {
+    "id": "g-gi-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with ulcerative colitis or Crohn disease has inflammatory bowel disease involving the colon and develops cholestatic liver enzyme elevations (elevated alkaline phosphatase), with MRCP showing multifocal strictures and dilations of the intrahepatic and extrahepatic bile ducts. What is the diagnosis?",
+    "options": [
+      "Primary sclerosing cholangitis (PSC)",
+      "Gilbert syndrome",
+      "Acute viral hepatitis A",
+      "Simple hiatal hernia"
+    ],
+    "answer": 0,
+    "explanation": "Primary sclerosing cholangitis is a chronic cholestatic biliary disease characterized by multifocal stricturing/dilation of bile ducts and is strongly associated with inflammatory bowel disease (especially ulcerative colitis)."
+  },
+  {
+    "id": "g-gi-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Gastroenterology",
+    "difficulty": "medium",
+    "question": "A patient with chronic hepatitis C virus infection is evaluated for treatment. Which class of medications forms the standard, highly effective oral regimen for most patients with chronic HCV?",
+    "options": [
+      "Direct-acting antivirals (DAAs)",
+      "Long-term high-dose systemic corticosteroids",
+      "Oral iron chelators",
+      "Subcutaneous insulin"
+    ],
+    "answer": 0,
+    "explanation": "All-oral direct-acting antiviral (DAA) regimens achieve sustained virologic response (virologic cure) in the vast majority of patients with chronic hepatitis C with high safety and tolerability."
+  }
+]

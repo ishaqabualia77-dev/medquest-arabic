@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-anes-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient is scheduled for elective surgery and undergoes preoperative airway evaluation using the Mallampati classification while sitting upright with the head neutral and mouth maximally open. Which visual finding corresponds to Mallampati Class I?",
+    "options": [
+      "Full visualization of the soft palate, uvula, faucial pillars, and posterior pharyngeal wall",
+      "Only the hard palate is visible without any soft palate or uvula",
+      "Soft palate and base of the uvula are visible, while the tip of the uvula is obscured",
+      "Only the soft palate is visible with complete absence of uvula visibility"
+    ],
+    "answer": 0,
+    "explanation": "Mallampati Class I is defined by full visibility of the soft palate, faucial pillars, uvula, and posterior pharyngeal wall, and is part of a broader multifactorial airway assessment."
+  },
+  {
+    "id": "g-anes-002",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "hard",
+    "question": "Shortly after induction of general anesthesia using volatile anesthetics and/or succinylcholine, a patient develops rapidly rising end-tidal carbon dioxide (ETCO2), masseter spasm or generalized muscle rigidity, tachycardia, tachypnea, hyperthermia, and mixed metabolic and respiratory acidosis. What is the most likely diagnosis?",
+    "options": [
+      "Malignant hyperthermia",
+      "Serotonin syndrome",
+      "Acute adrenal crisis",
+      "Hypoglycemic reaction"
+    ],
+    "answer": 0,
+    "explanation": "Malignant hyperthermia is a hypermetabolic crisis triggered by volatile anesthetics or succinylcholine in susceptible individuals, presenting with rising ETCO2, rigidity, tachycardia, acidosis, and hyperthermia."
+  },
+  {
+    "id": "g-anes-003",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "hard",
+    "question": "A patient experiences malignant hyperthermia during anesthesia. Which immediate pharmacologic and supportive interventions are essential once triggering agents are discontinued?",
+    "options": [
+      "Administer intravenous dantrolene immediately, provide 100% oxygen with hyperventilation, actively cool the patient, treat hyperkalemia/arrhythmias/acidosis, and prepare for ICU care",
+      "Administer intravenous naloxone and continue halothane at low concentration",
+      "Give high-dose oral aspirin and discharge to the recovery room",
+      "Administer succinylcholine to relax muscle rigidity"
+    ],
+    "answer": 0,
+    "explanation": "Immediate dantrolene administration, cessation of triggering agents, hyperventilation with 100% oxygen, active cooling, and correction of metabolic derangements/arrhythmias are critical in malignant hyperthermia."
+  },
+  {
+    "id": "g-anes-004",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "Following endotracheal intubation, which confirmatory method is most reliable for verifying intratracheal tube placement alongside clinical inspection and auscultation?",
+    "options": [
+      "Sustained waveform capnography (continuous end-tidal CO2 detection across multiple breaths)",
+      "Visualizing chest movement alone without any gas or imaging confirmation",
+      "Measuring gastric pH from the endotracheal tube",
+      "Checking radial pulse oximetry alone without capnography"
+    ],
+    "answer": 0,
+    "explanation": "Sustained waveform capnography is the gold-standard immediate confirmation of tracheal intubation (alongside clinical assessment and chest radiography when indicated)."
+  },
+  {
+    "id": "g-anes-005",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient is scheduled for elective surgery and asks about preoperative fasting (NPO) guidelines for clear liquids in healthy adults without delayed gastric emptying. Which fasting interval for clear liquids is standard in contemporary anesthesia guidelines?",
+    "options": [
+      "At least 2 hours before anesthesia for clear liquids (such as water, clear apple juice, or black coffee without milk)",
+      "At least 24 hours without any clear fluids",
+      "Zero fasting required even for full heavy meals",
+      "At least 18 hours for water in all healthy adults"
+    ],
+    "answer": 0,
+    "explanation": "Standard preoperative fasting guidelines generally recommend clear liquids up to at least 2 hours prior to anesthesia in healthy patients without aspiration risk factors."
+  },
+  {
+    "id": "g-anes-006",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient with a history of pseudocholinesterase (butyrylcholinesterase) deficiency or atypical enzyme variant receives succinylcholine during induction. Which clinical effect should be anticipated?",
+    "options": [
+      "Prolonged neuromuscular blockade and delayed recovery of spontaneous respiration",
+      "Immediate reversal of all opioid analgesia",
+      "Severe acute bronchospasm cured by atropine alone",
+      "Complete resistance to all non-depolarizing neuromuscular blockers"
+    ],
+    "answer": 0,
+    "explanation": "Succinylcholine is hydrolyzed by plasma cholinesterase (butyrylcholinesterase); deficiency or variant activity prolongs its duration of action, requiring continued ventilatory support until neuromuscular recovery."
+  },
+  {
+    "id": "g-anes-007",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "Which non-depolarizing neuromuscular blocking agent can have its blockade rapidly reversed by sugammadex (an aminosteroid-encapsulating agent)?",
+    "options": [
+      "Rocuronium (and vecuronium)",
+      "Succinylcholine",
+      "Cisatracurium only via direct encapsulation by sugammadex",
+      "Bupivacaine"
+    ],
+    "answer": 0,
+    "explanation": "Sugammadex selectively encapsulates steroidal neuromuscular blockers—primarily rocuronium and (at higher doses when indicated) vecuronium—to reverse blockade."
+  },
+  {
+    "id": "g-anes-008",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient receives a neuromuscular blocking agent and develops persistent weakness in the post-anesthesia care unit. When reversing a non-depolarizing neuromuscular blocker with an acetylcholinesterase inhibitor such as neostigmine, which co-administered agent is given to prevent muscarinic side effects such as bradycardia and excess secretions?",
+    "options": [
+      "An antimuscarinic agent such as glycopyrrolate (or atropine)",
+      "Intravenous calcium gluconate as sole antagonist",
+      "Oral diazepam",
+      "Protamine sulfate"
+    ],
+    "answer": 0,
+    "explanation": "Acetylcholinesterase inhibitors increase acetylcholine at both nicotinic and muscarinic receptors, so an antimuscarinic (such as glycopyrrolate or atropine) is co-administered to blunt muscarinic bradycardia and secretions."
+  },
+  {
+    "id": "g-anes-009",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "hard",
+    "question": "During peripheral nerve block or local anesthetic infiltration, a patient abruptly develops perioral numbness, metallic taste, tinnitus, agitation, seizures, or ventricular arrhythmias/cardiac arrest. Which condition is present, and what specific rescue therapy is used alongside standard resuscitation?",
+    "options": [
+      "Local anesthetic systemic toxicity (LAST), treated with airway/seizure/cardiac arrest care and intravenous 20% lipid emulsion therapy",
+      "Anaphylaxis treated solely with oral loratadine",
+      "Simple vasovagal syncope requiring no monitoring",
+      "Hypokalemic periodic paralysis treated with potassium chloride bolus"
+    ],
+    "answer": 0,
+    "explanation": "Local anesthetic systemic toxicity (LAST) progresses from CNS excitation/depression to cardiovascular collapse and is managed with prompt resuscitation and intravenous 20% lipid emulsion."
+  },
+  {
+    "id": "g-anes-010",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient develops hypotension shortly after induction of spinal or epidural anesthesia due to sympathetic blockade causing vasodilation and decreased venous return. Which physiological mechanism explains this hypotension?",
+    "options": [
+      "Sympathetic preganglionic blockade leading to decreased systemic vascular resistance and venous pooling (reduced preload)",
+      "Direct myocardial infarction from local anesthetic coronary spasm in every case",
+      "Acute rise in intracranial pressure causing Cushing reflex",
+      "Excessive release of endogenous epinephrine"
+    ],
+    "answer": 0,
+    "explanation": "Neuraxial (spinal/epidural) anesthesia blocks sympathetic fibers, reducing systemic vascular resistance and venous return, which can cause hypotension and (with high thoracic block) bradycardia."
+  },
+  {
+    "id": "g-anes-011",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient develops a positional headache after dural puncture (post-dural puncture headache) that worsens within minutes of sitting or standing and improves when lying supine, sometimes accompanied by neck stiffness, photophobia, or auditory symptoms. What is the characteristic feature of this headache?",
+    "options": [
+      "Marked orthostatic worsening when upright and relief when recumbent due to cerebrospinal fluid hypotension/traction on pain-sensitive intracranial structures",
+      "Worsening exclusively when lying flat and improving when standing",
+      "Strict unilateral retro-orbital pain lasting 45 minutes with tearing",
+      "Constant throbbing pain unaffected by posture"
+    ],
+    "answer": 0,
+    "explanation": "Post-dural puncture headache is classically orthostatic—worse upright and relieved by lying flat—due to CSF leak and low CSF pressure."
+  },
+  {
+    "id": "g-anes-012",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "hard",
+    "question": "A patient with severe acute hypoxemic respiratory failure (such as ARDS) is mechanically ventilated. Which lung-protective ventilation strategy is recommended to reduce ventilator-induced lung injury?",
+    "options": [
+      "Low tidal volume ventilation (targeting approximately 6 mL/kg predicted body weight) with plateau pressure limitation (generally <= 30 cmH2O) and appropriate PEEP",
+      "High tidal volume ventilation (12–15 mL/kg predicted body weight) with zero PEEP",
+      "Hyperventilation to keep PaCO2 below 20 mmHg regardless of barotrauma",
+      "Disconnecting the ventilator for 30 minutes every hour"
+    ],
+    "answer": 0,
+    "explanation": "Lung-protective mechanical ventilation in ARDS uses low tidal volumes (~6 mL/kg predicted body weight), limits plateau pressure, and applies PEEP to prevent volutrauma and atelectotrauma."
+  },
+  {
+    "id": "g-anes-013",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A mechanically ventilated patient suddenly develops acute hypoxemia, high peak airway pressures, hypotension, and absent breath sounds on the right side. What is the most appropriate immediate action?",
+    "options": [
+      "Evaluate immediately for tension pneumothorax (and tube obstruction/kinking/right mainstem intubation), perform urgent decompression if tension pneumothorax is present, and support oxygenation/hemodynamics",
+      "Increase tidal volume to 14 mL/kg and turn off alarms",
+      "Administer oral antihistamines and wait 2 hours",
+      "Extubate without airway or hemodynamic support"
+    ],
+    "answer": 0,
+    "explanation": "Sudden desaturation with elevated peak airway pressures and hemodynamic instability in a ventilated patient requires rapid assessment for life-threatening causes such as tension pneumothorax or tube occlusion/displacement."
+  },
+  {
+    "id": "g-anes-014",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient is in the post-anesthesia care unit after receiving intravenous fentanyl/morphine and exhibits somnolence, bradypnea (respiratory rate 6/min), and pinpoint pupils. Which intervention is indicated?",
+    "options": [
+      "Support airway and oxygenation/ventilation and administer titrated intravenous naloxone",
+      "Administer intravenous flumazenil as primary opioid reversal",
+      "Give high-dose oral potassium chloride",
+      "Administer dantrolene sodium"
+    ],
+    "answer": 0,
+    "explanation": "Opioid-induced respiratory depression is managed with airway/ventilatory support and titrated naloxone (carefully titrated when avoiding acute withdrawal or severe pain crisis if appropriate, while prioritizing adequate ventilation)."
+  },
+  {
+    "id": "g-anes-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "easy",
+    "question": "A patient is being evaluated preoperatively for anesthesia fitness. Which classification system is widely used to assess a patient's overall physical status and systemic disease burden prior to surgery?",
+    "options": [
+      "ASA (American Society of Anesthesiologists) Physical Status Classification System",
+      "Glasgow Coma Scale",
+      "Child-Pugh Score",
+      "Wells Score"
+    ],
+    "answer": 0,
+    "explanation": "The ASA Physical Status classification (ASA I–VI) categorizes preoperative physical status based on systemic disease and functional impact."
+  },
+  {
+    "id": "g-anes-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient with significant trauma or major surgical hemorrhage requires massive transfusion. Which complication is associated with rapid transfusion of large volumes of stored red blood cells and citrated blood products?",
+    "options": [
+      "Hypocalcemia (from citrate binding calcium), hypothermia, coagulopathy, and acid-base/potassium disturbances",
+      "Hypercalcemia from citrate chelation",
+      "Metabolic alkalosis exclusively from unbuffered saline without any citrate effect",
+      "Immediate resolution of all coagulopathy without plasma or platelets"
+    ],
+    "answer": 0,
+    "explanation": "Massive transfusion can cause citrate-induced hypocalcemia, hypothermia, dilutional/consumptive coagulopathy, and electrolyte/acid-base abnormalities, requiring active monitoring and balanced resuscitation."
+  },
+  {
+    "id": "g-anes-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient in the operating room under general anesthesia develops sudden hypotension, bronchospasm/wheezing, flushing, and urticaria shortly after exposure to a medication or latex. Which emergency diagnosis and first-line treatment apply?",
+    "options": [
+      "Perioperative anaphylaxis, treated immediately with prompt intravenous or intramuscular epinephrine alongside airway/oxygen and IV fluid resuscitation",
+      "Simple anxiety, treated with reassurance alone",
+      "Migraine aura, treated with oral sumatriptan",
+      "Hypothyroidism, treated with oral levothyroxine"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine is the first-line treatment for anaphylaxis to reverse vasodilation, hypotension, airway edema, and bronchospasm, paired with airway/oxygen support and IV fluids."
+  },
+  {
+    "id": "g-anes-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient is at increased risk for postoperative nausea and vomiting (PONV) due to female sex, history of PONV or motion sickness, non-smoking status, and planned postoperative opioid use. Which preventive strategy is appropriate?",
+    "options": [
+      "Multimodal PONV prophylaxis (such as combining a 5-HT3 antagonist like ondansetron and dexamethasone, plus minimizing volatile/opioid triggers when feasible)",
+      "Withholding all antiemetics until severe dehydration occurs",
+      "Administering high-dose intraoperative morphine as antiemetic prophylaxis",
+      "Avoiding pulse oximetry in recovery"
+    ],
+    "answer": 0,
+    "explanation": "Patients at moderate-to-high risk for PONV benefit from multimodal antiemetic prophylaxis (such as ondansetron plus dexamethasone) and opioid/anesthetic-sparing techniques."
+  },
+  {
+    "id": "g-anes-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient undergoes neuraxial (spinal or epidural) anesthesia or deep peripheral nerve block and is receiving prophylactic or therapeutic anticoagulation. Which general principle governs timing of neuraxial needle/catheter placement and removal?",
+    "options": [
+      "Follow evidence-based ASRA/society time intervals relative to anticoagulant dosing and coagulation status to minimize the risk of spinal/epidural hematoma",
+      "Insert an epidural catheter immediately 10 minutes after full therapeutic anticoagulation without checking timing or coagulation",
+      "Anticoagulants never increase the risk of neuraxial hematoma",
+      "Remove epidural catheters only after starting full-dose thrombolytics"
+    ],
+    "answer": 0,
+    "explanation": "Spinal/epidural hematoma is a rare but catastrophic complication of neuraxial blocks; adherence to recommended anticoagulant timing intervals and coagulation checks is essential."
+  },
+  {
+    "id": "g-anes-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute severe pain in the emergency department or postoperative setting. Which principle characterizes multimodal analgesia?",
+    "options": [
+      "Combining analgesics with different mechanisms of action (such as acetaminophen, NSAIDs/COX-2 inhibitors when appropriate, and regional techniques) to improve pain control and reduce opioid requirements and side effects",
+      "Using only a single high-dose opioid without non-opioid or regional options in every patient",
+      "Avoiding analgesia completely until after hospital discharge",
+      "Giving two identical NSAIDs at maximum doses simultaneously"
+    ],
+    "answer": 0,
+    "explanation": "Multimodal analgesia targets multiple pain pathways concurrently to achieve effective analgesia while lowering opioid doses and opioid-related adverse effects."
+  }
+]

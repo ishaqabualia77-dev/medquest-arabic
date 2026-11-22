@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-emer-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with a deep puncture wound or contaminated laceration from a rusty nail or outdoor soil, and the last tetanus toxoid-containing booster was 8 years ago after completing primary childhood vaccination. Which tetanus prophylaxis approach is generally indicated for a dirty/wound-prone injury?",
+    "options": [
+      "Administer a tetanus toxoid-containing booster (such as Tdap) if >= 5 years have elapsed since the last dose for a dirty/contaminated wound (and administer tetanus immune globulin [TIG] if primary series is incomplete or unknown)",
+      "No tetanus prophylaxis is ever needed after 5 years for dirty wounds",
+      "Oral ketoconazole cures tetanus",
+      "Routine daily oral iron supplements"
+    ],
+    "answer": 0,
+    "explanation": "For clean, minor wounds, a booster is typically indicated if >= 10 years since the last dose, whereas for dirty/contaminated or tetanus-prone wounds, a booster is indicated if >= 5 years have passed since the last dose, plus TIG if vaccination history is incomplete or uncertain."
+  },
+  {
+    "id": "g-emer-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents after a dog or cat bite on the hand with erythema, warmth, swelling, purulent drainage, and pain over the extensor/flexor tendon sheath. Why are animal bites to the hand considered higher risk and require careful evaluation?",
+    "options": [
+      "Hand wounds have thin soft tissue over joints, tendons, and neurovascular structures and carry higher rates of deep space/tenosynovitis or septic arthritis complications, warranting thorough irrigation, wound assessment, targeted antibiotics (such as amoxicillin-clavulanate when indicated), and hand surgery follow-up when needed",
+      "Hand bites are always sterile and never require care",
+      "Animal bites only cause mild bruising without infection risk",
+      "Topical hydrocortisone cures deep hand infections"
+    ],
+    "answer": 0,
+    "explanation": "Animal bites—especially on the hand—can inoculate polymicrobial oral flora (such as Pasteurella, Staphylococcus, Streptococcus, and anaerobes) into deep compartments; thorough wound care, appropriate antibiotics, tetanus check, and surgical/orthopedic evaluation when deep structures are involved are important."
+  },
+  {
+    "id": "g-emer-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with known type 2 diabetes presents confused, severely dehydrated, with dry mucous membranes, tachycardia, blood glucose of 740 mg/dL, serum osmolality 335 mOsm/kg, absent or minimal urine/serum ketones, and minimal or no acidosis. Which hyperglycemic emergency is described?",
+    "options": [
+      "Hyperosmolar hyperglycemic state (HHS)",
+      "Simple iron-deficiency anemia",
+      "Viral croup",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "HHS typically develops over days in older or type 2 diabetic patients, causing profound dehydration, marked hyperglycemia, and high serum osmolality without prominent ketoacidosis; careful isotonic IV fluid replacement, electrolyte monitoring/repletion (especially potassium), and insulin therapy per protocol are essential."
+  },
+  {
+    "id": "g-emer-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is brought to the emergency department after inhaling smoke from a house fire with facial burns, singed nasal hairs, soot in sputum, hoarseness, and stridor. Why is early airway evaluation and timely endotracheal intubation important before severe airway edema develops?",
+    "options": [
+      "Thermal and chemical smoke inhalation injury can cause progressive upper airway edema that rapidly turns a patent airway into an impossible airway",
+      "Smoke inhalation never causes airway swelling",
+      "Facial burns are purely cosmetic with no airway risk",
+      "Oral ketoconazole prevents smoke inhalation edema"
+    ],
+    "answer": 0,
+    "explanation": "Signs of inhalation injury or impending airway obstruction (hoarseness, stridor, drooling, soot/facial burns, respiratory distress) warrant early airway assessment and secure intubation before swelling closes the glottic/supraglottic airway."
+  },
+  {
+    "id": "g-emer-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents after a motor vehicle crash with blunt chest trauma, paradoxical chest wall movement on a segment of ribs during respiration (flail chest), severe chest wall pain, and underlying pulmonary contusion. Which supportive priority helps prevent respiratory decompensation?",
+    "options": [
+      "Effective multimodal analgesia (to enable deep breathing and coughing/secretion clearance), supplemental oxygen/ventilatory support as indicated, and monitoring for associated pneumothorax or hemothorax",
+      "Wrapping the chest tightly with rigid tape to immobilize all lung expansion",
+      "Withholding all pain control",
+      "Discharging home without chest imaging or monitoring"
+    ],
+    "answer": 0,
+    "explanation": "In blunt chest trauma/flail chest, pain limits inspiration and coughing, risking atelectasis and pneumonia; adequate analgesia, oxygen/respiratory support, and evaluating for pneumothorax, hemothorax, or aortic/cardiac injury are key."
+  },
+  {
+    "id": "g-emer-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with hypotension (BP 76/50 mmHg), muffled/distant heart sounds, and distended neck veins (Beck triad) after penetrating chest trauma or pericardial disease, with bedside ultrasound showing pericardial effusion and right atrial/ventricular collapse. Which life-threatening condition is present and requires urgent relief?",
+    "options": [
+      "Cardiac tamponade—requiring urgent pericardiocentesis or emergent surgical pericardial window/thoracotomy alongside IV fluids/support",
+      "Simple allergic rhinitis",
+      "Mild iron-deficiency anemia",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Cardiac tamponade occurs when fluid/blood under pressure in the pericardial sac restricts ventricular filling and drops cardiac output; rapid drainage (pericardiocentesis or surgical drainage) relieves hemodynamic compromise."
+  },
+  {
+    "id": "g-emer-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents after a seizure or head injury with vomiting, drowsiness, and a Glasgow Coma Scale (GCS) score of 13 (eye opening to speech = 3, confused verbal response = 4, localizing motor response = 6). How is this GCS score interpreted?",
+    "options": [
+      "Mild traumatic brain injury / altered consciousness (GCS 13–15 is generally classified as mild, 9–12 moderate, and <= 8 severe—requiring airway protection consideration when GCS <= 8)",
+      "Normal full alertness with GCS 15",
+      "Brain death with zero neurological activity",
+      "A measure of serum potassium"
+    ],
+    "answer": 0,
+    "explanation": "The Glasgow Coma Scale sums Eye opening (1–4), Verbal response (1–5), and Motor response (1–6) from 3 to 15; GCS <= 8 traditionally indicates severe coma/impaired airway protection, warranting close airway and neurologic evaluation."
+  },
+  {
+    "id": "g-emer-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe testicular pain on the left side, nausea/vomiting, a high-riding testis with horizontal lie, and an absent cremasteric reflex on the left. Which urologic emergency must be treated within hours to save the testis?",
+    "options": [
+      "Testicular torsion—requiring urgent urologic evaluation and emergent surgical detorsion/orchiopexy (manual detorsion may be attempted if appropriate while expediting surgery)",
+      "Simple varicocele without pain or swelling",
+      "Pityriasis rosea",
+      "Primary open-angle glaucoma"
+    ],
+    "answer": 0,
+    "explanation": "Testicular torsion compromises testicular blood flow and requires rapid intervention (typically within ~6 hours of symptom onset for highest salvage rates); do not delay urgent surgical consultation for prolonged non-contributory tests when torsion is strongly suspected."
+  },
+  {
+    "id": "g-emer-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with atrial fibrillation presents with a rapid irregular ventricular rate of 148 bpm and hemodynamic instability (hypotension BP 74/42 mmHg, acute pulmonary edema/chest pain, or altered mental status) directly attributable to the tachyarrhythmia. Which immediate treatment is indicated?",
+    "options": [
+      "Immediate synchronized cardioversion (with appropriate analgesia/sedation when time permits), rather than waiting for rate control medications in an unstable patient",
+      "Unsynchronized defibrillation shock intentionally during the T wave in a stable patient with normal BP",
+      "Oral ketoconazole",
+      "Discharging home with oral acetaminophen"
+    ],
+    "answer": 0,
+    "explanation": "In hemodynamically unstable tachydysrhythmias (shock, ischemic chest pain, acute heart failure, or altered mental status due to the arrhythmia), synchronized cardioversion is indicated promptly."
+  },
+  {
+    "id": "g-emer-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with palpitations and dizziness with an ECG showing a regular narrow-complex tachycardia at 185 bpm with no clear P waves before QRS complexes (supraventricular tachycardia, SVT), and is hemodynamically stable. Which initial maneuver or medication is commonly used?",
+    "options": [
+      "Vagal maneuvers (such as modified Valsalva maneuver) first, followed by intravenous adenosine if vagal maneuvers are unsuccessful",
+      "Immediate oral warfarin",
+      "Subcutaneous insulin",
+      "Routine daily oral iron supplements"
+    ],
+    "answer": 0,
+    "explanation": "For hemodynamically stable paroxysmal SVT, vagal maneuvers (especially modified Valsalva) are first-line, followed by rapid IV push adenosine (with continuous ECG monitoring and awareness of transient flushing/chest discomfort or brief AV nodal pause)."
+  },
+  {
+    "id": "g-emer-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents after ingesting a large dose of a tricyclic antidepressant (TCA, such as amitriptyline) and develops drowsiness, anticholinergic signs (dry skin/mucous membranes, mydriasis, urinary retention, tachycardia), and ECG widening of the QRS complex (> 100–120 ms). Which specific therapy is used for TCA cardiotoxicity / QRS widening?",
+    "options": [
+      "Sodium bicarbonate (intravenous boluses/infusion targeting serum alkalization/pH and QRS narrowing)",
+      "Oral ketoconazole",
+      "Subcutaneous insulin alone",
+      "Topical permethrin"
+    ],
+    "answer": 0,
+    "explanation": "TCA toxicity blocks fast cardiac sodium channels, causing QRS prolongation and ventricular arrhythmias; sodium bicarbonate helps counteract sodium-channel blockade and narrow the QRS complex alongside supportive/airway/seizure care."
+  },
+  {
+    "id": "g-emer-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with severe anterior epistaxis (nosebleed) bleeding from both nostrils that has not stopped after 20 minutes of firm continuous compression of the soft cartilaginous nasal alae while leaning forward. What are appropriate next emergency steps?",
+    "options": [
+      "Continue direct firm compression with the patient leaning forward (not tilted back swallowing blood), apply topical vasoconstrictor/hemostatic measures (such as oxymetazoline or tranexamic acid/packing as indicated), and perform anterior/posterior nasal packing or ENT evaluation if bleeding persists",
+      "Tilt the head far backward and swallow all blood",
+      "Place hot compresses directly inside the nostril",
+      "Start high-dose oral warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Leaning forward with firm continuous pressure on the soft lower nose prevents blood aspiration/swallowing; persistent bleeding may require topical vasoconstrictors/hemostatics, cautery (if anterior source visualized), nasal packing, or ENT intervention, plus checking BP and anticoagulation/bleeding status."
+  },
+  {
+    "id": "g-emer-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with asthma presents to the emergency department with severe dyspnea, speaking only single words, tachypnea (RR 34/min), accessory muscle use, diffuse wheezing, and SpO2 89% on room air. Which initial treatments are standard in an acute severe asthma exacerbation?",
+    "options": [
+      "Supplemental oxygen titrated to target saturation, repeated/continuous nebulized or MDI short-acting beta-agonist (albuterol) often with ipratropium bromide, and systemic corticosteroids (oral or IV)",
+      "Withholding oxygen and bronchodilators completely",
+      "Oral ketoconazole",
+      "Routine daily oral iron supplements"
+    ],
+    "answer": 0,
+    "explanation": "Acute severe asthma exacerbations are treated promptly with controlled oxygen, short-acting beta-agonists (often combined with short-acting muscarinic antagonists like ipratropium in severe cases), and systemic corticosteroids, while monitoring closely for fatigue or impending respiratory failure ('silent chest')."
+  },
+  {
+    "id": "g-emer-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of severe lower abdominal pain, fever, chills, and mucopurulent/bloody cervical discharge with cervical motion tenderness and adnexal tenderness on pelvic exam. Why is prompt empiric broad-spectrum antibiotic coverage for pelvic inflammatory disease (PID) important?",
+    "options": [
+      "Prompt treatment helps prevent long-term sequelae such as tubo-ovarian abscess, chronic pelvic pain, infertility, and ectopic pregnancy, and partners should be evaluated/treated as indicated",
+      "PID always resolves spontaneously without antibiotics",
+      "Pelvic exam is never performed in lower abdominal pain",
+      "Oral ketoconazole is the sole treatment for PID"
+    ],
+    "answer": 0,
+    "explanation": "PID is an ascending polymicrobial infection of the upper female genital tract (commonly involving Neisseria gonorrhoeae and Chlamydia trachomatis among other organisms); early appropriate antibiotic therapy reduces reproductive and infectious complications, with pregnancy testing and STI screening/partner management."
+  },
+  {
+    "id": "g-emer-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is brought to the emergency department after an electrical injury or prolonged immobilization on the floor following a fall, with dark tea-colored/cola-colored urine, muscle pain/tenderness, and markedly elevated serum creatine kinase (CK > 15,000 U/L). Which complication must be monitored and prevented with careful intravenous fluid resuscitation?",
+    "options": [
+      "Rhabdomyolysis and pigment-induced acute kidney injury (alongside hyperkalemia, hypocalcemia, hyperphosphatemia, and compartment syndrome)",
+      "Simple seasonal allergic rhinitis",
+      "Pityriasis rosea",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Rhabdomyolysis releases myoglobin, potassium, phosphate, and CK into circulation; early IV fluid resuscitation to maintain adequate urine output, serial electrolyte/CK/renal monitoring, and checking for compartment syndrome are essential."
+  },
+  {
+    "id": "g-emer-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of severe pain in the lower leg/forearm out of proportion to examination after a tibial fracture or tight cast/dressing, accompanied by pain with passive stretching of the compartment muscles, paresthesias, tense swelling, and eventually pallor/pulselessness. Which surgical emergency is suspected?",
+    "options": [
+      "Acute compartment syndrome—requiring immediate removal/loosening of constrictive dressings/casts and urgent surgical fasciotomy if confirmed/indicated",
+      "Simple mild muscle cramp resolving with rest alone",
+      "Vitiligo",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Elevated pressure within a closed fascial compartment compromises capillary perfusion and neuromuscular viability; severe pain out of proportion and pain on passive stretch are early signs (loss of pulse is a late sign), requiring urgent decompression/fasciotomy."
+  },
+  {
+    "id": "g-emer-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with a history of cirrhosis and ascites presents to the emergency department with new or worsening fever, abdominal pain/tenderness, or hepatic encephalopathy, and diagnostic paracentesis shows ascitic fluid polymorphonuclear (PMN) neutrophil count >= 250 cells/mm3. What is the diagnosis?",
+    "options": [
+      "Spontaneous bacterial peritonitis (SBP)",
+      "Simple constipation",
+      "Acute gouty arthritis",
+      "Psoriasis vulgaris"
+    ],
+    "answer": 0,
+    "explanation": "An ascitic fluid PMN count >= 250 cells/mm3 (without an identifiable intra-abdominal surgical source) diagnoses SBP, requiring prompt empiric IV antibiotics (such as a third-generation cephalosporin per local susceptibility) and albumin in appropriate higher-risk patients to help reduce hepatorenal syndrome and mortality."
+  },
+  {
+    "id": "g-emer-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with sudden-onset severe headache, confusion, weakness, and vomiting, and bedside point-of-care glucose is 42 mg/dL. Why is checking point-of-care blood glucose rapidly standard in patients presenting with acute altered mental status or focal neurological deficits?",
+    "options": [
+      "Hypoglycemia can mimic stroke, seizure, or intoxication and is rapidly reversible once identified and treated, whereas delaying glucose checks can prolong neuroglycopenia",
+      "Blood glucose testing is only useful in patients with broken bones",
+      "Hypoglycemia never causes confusion or focal weakness",
+      "Glucose levels cannot be checked rapidly in the emergency department"
+    ],
+    "answer": 0,
+    "explanation": "Point-of-care glucose testing is fast, inexpensive, and vital in any patient with altered mental status, seizure, or stroke-like symptoms so hypoglycemia can be recognized and corrected immediately."
+  }
+]

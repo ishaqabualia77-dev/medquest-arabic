@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-rad-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with suspected pneumoperitoneum from hollow viscus perforation is evaluated with imaging. Which radiographic view is most sensitive for detecting small amounts of free intraperitoneal gas beneath the diaphragm?",
+    "options": [
+      "Upright chest radiograph (or left lateral decubitus abdominal radiograph if the patient cannot stand)",
+      "Supine abdominal radiograph alone",
+      "Plain lateral cervical spine radiograph",
+      "Non-contrast brain CT"
+    ],
+    "answer": 0,
+    "explanation": "An upright chest radiograph (allowing gas to rise under the hemidiaphragms) or left lateral decubitus film is preferred over a supine film for detecting small free intraperitoneal air, while abdominal CT is even more sensitive when clinically indicated."
+  },
+  {
+    "id": "g-rad-002",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe right flank pain radiating to the groin and microscopic hematuria with suspected ureteral calculus. Which non-invasive cross-sectional test is widely used for rapid, sensitive evaluation of urinary tract stones without contrast?",
+    "options": [
+      "Non-contrast helical CT of the abdomen and pelvis (low-dose stone protocol), alongside renal/bladder ultrasound as an initial/radiation-sparing option",
+      "Contrast-enhanced CT urogram as the only initial test regardless of renal function",
+      "Plain standing chest X-ray",
+      "Upper gastrointestinal barium swallow"
+    ],
+    "answer": 0,
+    "explanation": "Non-contrast CT of the abdomen and pelvis is highly sensitive and specific for detecting urinary calculi and hydronephrosis, while ultrasound is frequently used first in pregnancy, children, or initial screening."
+  },
+  {
+    "id": "g-rad-003",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with right upper quadrant pain, fever, and a positive Murphy sign with suspected acute cholecystitis. Which initial imaging modality is first-line?",
+    "options": [
+      "Right upper quadrant ultrasonography",
+      "Barium enema",
+      "Non-contrast head CT",
+      "Dual-energy X-ray absorptiometry (DEXA)"
+    ],
+    "answer": 0,
+    "explanation": "Right upper quadrant ultrasound is the initial imaging modality of choice for suspected acute cholecystitis, assessing for gallstones, gallbladder wall thickening, pericholecystic fluid, and sonographic Murphy sign."
+  },
+  {
+    "id": "g-rad-004",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with blunt or penetrating head trauma has an acute hyperdense (bright white) crescent-shaped extra-axial collection crossing suture lines on non-contrast head CT, typically from bridging vein tear. What is this appearance characteristic of?",
+    "options": [
+      "Acute subdural hematoma",
+      "Acute epidural hematoma (typically lens/biconvex shape limited by suture lines)",
+      "Normal aging cerebral atrophy",
+      "Simple arachnoid cyst"
+    ],
+    "answer": 0,
+    "explanation": "Subdural hematomas typically appear as crescent-shaped collections that can cross cranial suture lines (though limited by dural reflections such as the falx/tentorium), whereas epidural hematomas are classically biconvex/lentiform and bounded by suture lines."
+  },
+  {
+    "id": "g-rad-005",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "hard",
+    "question": "A patient presents with acute severe chest/back tearing pain and widened mediastinum on chest radiograph. Which imaging study is preferred in a hemodynamically stable patient to confirm or exclude acute thoracic aortic dissection?",
+    "options": [
+      "ECG-gated CT angiography (CTA) of the chest/aorta (or transesophageal echocardiography / MRI when appropriate)",
+      "Plain supine abdominal film",
+      "Routine non-contrast brain MRI alone",
+      "Thyroid ultrasound"
+    ],
+    "answer": 0,
+    "explanation": "CT angiography of the chest/aorta is rapid, widely available, and highly accurate for diagnosing acute aortic dissection, identifying the intimal flap, true/false lumens, and extension."
+  },
+  {
+    "id": "g-rad-006",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, cough, and right lower lobe consolidation on chest radiograph, and follow-up imaging is considered. Which general principle applies to chest radiographs in uncomplicated community-acquired pneumonia?",
+    "options": [
+      "Routine repeat chest radiograph is generally not required in patients who are clinically improving, but may be considered in persistent/non-resolving symptoms or higher-risk patients",
+      "Every patient requires a repeat chest X-ray every 24 hours regardless of recovery",
+      "Chest X-ray cannot detect lobar consolidation",
+      "MRI of the chest is first-line for routine pneumonia"
+    ],
+    "answer": 0,
+    "explanation": "In uncomplicated pneumonia with clinical improvement, routine follow-up chest radiography is generally unnecessary, whereas persistent symptoms or risk factors for underlying malignancy warrant reassessment."
+  },
+  {
+    "id": "g-rad-007",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with suspected deep vein thrombosis (DVT) of the lower extremity requires initial diagnostic imaging. Which test is first-line?",
+    "options": [
+      "Compression venous duplex ultrasonography of the lower extremity",
+      "Plain anteroposterior femur X-ray",
+      "Ventilation-perfusion lung scan alone without leg evaluation",
+      "Electromyography of the gastrocnemius"
+    ],
+    "answer": 0,
+    "explanation": "Venous duplex ultrasonography (combining real-time vein compression and Doppler flow) is the initial imaging test of choice for suspected lower-extremity DVT."
+  },
+  {
+    "id": "g-rad-008",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic kidney disease (estimated GFR < 30 mL/min) or acute kidney injury requires contrast-enhanced imaging. Which general precaution is important regarding iodinated contrast media?",
+    "options": [
+      "Assess clinical risk and kidney function, ensure contrast is clinically justified, and use isotonic IV hydration in high-risk patients when indicated",
+      "Administer full-dose iodinated contrast automatically without reviewing clinical indication or renal status",
+      "Avoid necessary life-saving contrast CT in unstable emergencies due to mild creatinine elevation alone",
+      "Use oral bicarbonate instead of evaluating hydration in every patient"
+    ],
+    "answer": 0,
+    "explanation": "When iodinated contrast is considered in patients with reduced kidney function, clinicians weigh diagnostic benefit against post-contrast acute kidney injury risk and apply appropriate hydration protocols when indicated."
+  },
+  {
+    "id": "g-rad-009",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with severe impaired kidney function (such as stage 4–5 CKD or dialysis) is being evaluated for contrast MRI. Which group of gadolinium-based contrast agents is preferred when gadolinium is necessary due to the lowest risk of nephrogenic systemic fibrosis (NSF)?",
+    "options": [
+      "Group II macrocyclic gadolinium-based contrast agents",
+      "Unchelated free gadolinium salts",
+      "High-risk linear agents without renal consideration",
+      "Intravenous barium sulfate"
+    ],
+    "answer": 0,
+    "explanation": "Group II gadolinium-based contrast agents have a very low risk of nephrogenic systemic fibrosis even in advanced renal impairment when clinically required."
+  },
+  {
+    "id": "g-rad-010",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with suspected cauda equina syndrome presents with new saddle anesthesia, urinary retention/incontinence, bilateral sciatica, and lower-extremity weakness. Which imaging study is most appropriate urgently?",
+    "options": [
+      "Urgent MRI of the lumbar spine without (and with if indicated) contrast",
+      "Standing AP lumbar X-ray only",
+      "DEXA bone mineral density scan",
+      "Abdominal ultrasound"
+    ],
+    "answer": 0,
+    "explanation": "Cauda equina syndrome is a neurosurgical/spinal emergency requiring urgent lumbar MRI to define nerve root compression and guide timely decompression."
+  },
+  {
+    "id": "g-rad-011",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "easy",
+    "question": "A postmenopausal woman is being screened or evaluated for osteoporosis and fracture risk. Which test is the standard reference method for measuring bone mineral density (BMD)?",
+    "options": [
+      "Dual-energy X-ray absorptiometry (DXA / DEXA) scan of the hip and lumbar spine",
+      "Plain chest radiograph",
+      "Liver elastography (FibroScan)",
+      "Non-contrast head CT"
+    ],
+    "answer": 0,
+    "explanation": "Central DXA scanning of the lumbar spine and proximal femur (hip) is the standard diagnostic test for assessing bone mineral density and diagnosing osteoporosis."
+  },
+  {
+    "id": "g-rad-012",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A pregnant patient in the first trimester presents with lower abdominal pain and vaginal bleeding, and intrauterine pregnancy has not yet been confirmed. Which initial imaging modality is preferred?",
+    "options": [
+      "Transvaginal (and/or transabdominal) pelvic ultrasonography",
+      "Abdominal-pelvic CT scan with IV contrast",
+      "Plain standing abdominal radiograph",
+      "Bone scintigraphy"
+    ],
+    "answer": 0,
+    "explanation": "Pelvic ultrasound (especially transvaginal ultrasound) is safe, avoids ionizing radiation in pregnancy, and evaluates for intrauterine pregnancy, ectopic pregnancy, or adnexal pathology."
+  },
+  {
+    "id": "g-rad-013",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient has a solitary pulmonary nodule detected incidentally on chest CT. Which imaging features generally raise greater concern for malignancy?",
+    "options": [
+      "Larger size, spiculated or irregular margins, interval growth on serial imaging, and solid or part-solid components in a patient with risk factors",
+      "Benign popcorn calcification or diffuse central/laminated calcification with stability over > 2 years",
+      "Intralesional macroscopic fat consistent with a hamartoma in a stable nodule",
+      "Complete resolution on a 3-month scan"
+    ],
+    "answer": 0,
+    "explanation": "Pulmonary nodule risk assessment considers nodule size, morphology (spiculation/irregularity), attenuation (solid, part-solid, ground-glass), growth rate on comparison scans, and clinical risk factors such as smoking history."
+  },
+  {
+    "id": "g-rad-014",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with acute left lower quadrant pain, fever, and leukocytosis has suspected acute diverticulitis. Which imaging modality is commonly used to confirm the diagnosis and assess for complications such as abscess or perforation?",
+    "options": [
+      "CT of the abdomen and pelvis with contrast (when safe/indicated)",
+      "Plain radiograph of the left knee",
+      "Thyroid scintigraphy",
+      "Carotid Doppler ultrasound"
+    ],
+    "answer": 0,
+    "explanation": "Contrast-enhanced CT of the abdomen and pelvis is the standard imaging modality to confirm acute colonic diverticulitis and detect complications like abscess, perforation, fistula, or obstruction."
+  },
+  {
+    "id": "g-rad-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient has a thyroid nodule identified on palpation or incidental imaging. Which initial diagnostic test is indicated to characterize the nodule and guide biopsy decisions?",
+    "options": [
+      "High-resolution thyroid ultrasound (alongside serum TSH measurement)",
+      "Immediate whole-body FDG-PET scan as first step",
+      "Lateral neck plain X-ray",
+      "24-hour urine metanephrines"
+    ],
+    "answer": 0,
+    "explanation": "Serum TSH and high-resolution neck/thyroid ultrasound are foundational for evaluating thyroid nodules, assessing suspicious sonographic features, and determining whether fine-needle aspiration (FNA) is indicated."
+  },
+  {
+    "id": "g-rad-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "hard",
+    "question": "A patient with a metallic cardiac pacemaker/defibrillator or ferromagnetic aneurysm clip or retained orbital metal fragment is being considered for MRI. Which step is essential before entering the MRI suite?",
+    "options": [
+      "Perform thorough MRI safety screening and verify device/implant MRI-conditional status and required protocols",
+      "Proceed immediately without checking device compatibility",
+      "Use a stronger magnetic field to test if the implant moves",
+      "Administer oral antihistamines as a substitute for safety screening"
+    ],
+    "answer": 0,
+    "explanation": "Strict MRI safety screening is mandatory to prevent thermal injury, device malfunction, or magnetic force/torque hazards from non-compatible implants or foreign bodies."
+  },
+  {
+    "id": "g-rad-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with painless obstructive jaundice, dark urine, pale stools, and a distended non-tender gallbladder. Imaging shows intrahepatic and extrahepatic biliary ductal dilation. Which modality helps delineate the level and cause of biliary obstruction?",
+    "options": [
+      "Ultrasound initially, followed by MRCP or contrast-enhanced CT (and ERCP/EUS for diagnostic/therapeutic intervention when indicated)",
+      "Plain chest radiograph",
+      "Lower-extremity venous duplex alone",
+      "DEXA scan"
+    ],
+    "answer": 0,
+    "explanation": "Ultrasound often detects biliary dilation initially, while MRCP or CT delineates the site/cause of obstruction, and ERCP/EUS provides targeted biliary sampling, drainage, or stone removal."
+  },
+  {
+    "id": "g-rad-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute shortness of breath and pleuritic chest pain with suspected pulmonary embolism, and has a normal chest radiograph with a contraindication to iodinated contrast. Which nuclear medicine test is a useful alternative to CTA?",
+    "options": [
+      "Ventilation-perfusion (V/Q) lung scan",
+      "Bone scan",
+      "Thyroid uptake scan",
+      "Hepatobiliary (HIDA) scan"
+    ],
+    "answer": 0,
+    "explanation": "A ventilation-perfusion (V/Q) scan is an established diagnostic alternative for evaluating suspected pulmonary embolism when CTPA is contraindicated (such as severe contrast allergy or certain renal/pregnancy scenarios)."
+  },
+  {
+    "id": "g-rad-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with cirrhosis and chronic hepatitis B/C is undergoing routine hepatocellular carcinoma (HCC) surveillance. Which imaging modality is standard for routine surveillance?",
+    "options": [
+      "Abdominal ultrasound every 6 months (often paired with or without serum AFP per guideline protocol)",
+      "Annual plain chest X-ray",
+      "Routine brain CT every 6 months",
+      "Wrist radiograph annually"
+    ],
+    "answer": 0,
+    "explanation": "Biannual (every 6 months) abdominal ultrasonography is the standard surveillance imaging test for detecting hepatocellular carcinoma in at-risk patients with cirrhosis or chronic HBV."
+  },
+  {
+    "id": "g-rad-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden severe unilateral testicular pain of 3 hours' duration with a high-riding testis, absent cremasteric reflex, and twisted cord position. Which imaging test is used when torsion is suspected and does not delay surgery if clinical suspicion is high?",
+    "options": [
+      "Color Doppler ultrasonography of the scrotum (showing absent or markedly decreased intratesticular blood flow), without delaying urgent surgical exploration when torsion is strongly suspected",
+      "Kidney-ureter-bladder (KUB) plain film",
+      "Brain MRI",
+      "Upper GI series"
+    ],
+    "answer": 0,
+    "explanation": "Scrotal Doppler ultrasound evaluates testicular perfusion in suspected torsion, but high clinical suspicion requires immediate surgical exploration without delay to preserve testicular viability."
+  }
+]

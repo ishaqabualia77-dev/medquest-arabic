@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-neph-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus has persistent albuminuria (urine albumin-to-creatinine ratio 180 mg/g) and preserved eGFR with well-controlled blood pressure. Which medication class is recommended first-line for renal protection (and cardiovascular benefit) when indicated?",
+    "options": [
+      "An angiotensin-converting enzyme inhibitor (ACEi) or angiotensin II receptor blocker (ARB) (often alongside an SGLT2 inhibitor per current diabetes/CKD guidelines)",
+      "Long-term daily oral NSAIDs",
+      "Oral ketoconazole",
+      "Routine loop diuretics in the absence of volume overload"
+    ],
+    "answer": 0,
+    "explanation": "ACE inhibitors or ARBs reduce intraglomerular pressure and proteinuria in diabetic kidney disease, and SGLT2 inhibitors provide additional kidney and cardiovascular protection in eligible patients."
+  },
+  {
+    "id": "g-neph-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with periorbital and lower-extremity edema, foamy urine, hypoalbuminemia (serum albumin 2.1 g/dL), heavy proteinuria (> 3.5 g/day), and hyperlipidemia. What is this clinical syndrome?",
+    "options": [
+      "Nephrotic syndrome",
+      "Acute cystitis",
+      "Primary spontaneous pneumothorax",
+      "Benign prostatic hyperplasia without renal disease"
+    ],
+    "answer": 0,
+    "explanation": "Heavy proteinuria (>= 3.5 g/day in adults), hypoalbuminemia, edema, and hyperlipidemia/lipiduria define nephrotic syndrome, associated with increased risks of thrombosis and infection."
+  },
+  {
+    "id": "g-neph-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents two weeks after a streptococcal pharyngitis with dark/cola-colored urine, periorbital edema, hypertension, and red blood cell casts on urinalysis, with low serum C3 complement. Which diagnosis is most consistent?",
+    "options": [
+      "Post-streptococcal glomerulonephritis (acute nephritic syndrome)",
+      "Simple calcium oxalate nephrolithiasis without hematuria or casts",
+      "Acute pyelonephritis with sterile urine",
+      "Minimal change disease with normal C3 and no RBC casts"
+    ],
+    "answer": 0,
+    "explanation": "Hematuria with dysmorphic RBCs/RBC casts, hypertension, edema, and transient hypocomplementemia (low C3) following Group A Streptococcus infection characterize acute post-streptococcal glomerulonephritis."
+  },
+  {
+    "id": "g-neph-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "hard",
+    "question": "A patient with chronic kidney disease and hyperkalemia (serum K+ 6.6 mEq/L) has peaked T waves and widened QRS complexes on ECG. Which immediate step stabilizes the cardiac membrane first?",
+    "options": [
+      "Intravenous calcium gluconate (or calcium chloride)",
+      "Oral potassium chloride supplementation",
+      "Elective outpatient repeat potassium check in 1 week",
+      "Subcutaneous insulin alone without stabilizing cardiac membrane when ECG changes are present"
+    ],
+    "answer": 0,
+    "explanation": "Intravenous calcium rapidly antagonizes potassium-induced cardiac membrane excitability and is given immediately when hyperkalemia causes ECG changes, followed by potassium-shifting therapies (insulin/glucose, beta-2 agonists) and elimination measures."
+  },
+  {
+    "id": "g-neph-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with volume depletion from vomiting and diarrhea has serum creatinine rising from 0.9 to 1.8 mg/dL, fractional excretion of sodium (FENa) < 1%, and urine sodium < 20 mEq/L. Which category of acute kidney injury is indicated?",
+    "options": [
+      "Prerenal acute kidney injury",
+      "Intrinsic acute tubular necrosis with muddy brown granular casts and FENa > 2%",
+      "Postrenal obstructive uropathy",
+      "Chronic end-stage kidney disease on hemodialysis"
+    ],
+    "answer": 0,
+    "explanation": "A low FENa (< 1%) and low urine sodium in the setting of hypovolemia or reduced effective arterial blood volume typically indicate a prerenal state with intact tubular sodium-retaining function."
+  },
+  {
+    "id": "g-neph-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden severe colicky flank pain radiating to the groin, nausea, and microscopic or gross hematuria. Non-contrast helical CT of the abdomen and pelvis is performed. What is the most common composition of kidney stones overall?",
+    "options": [
+      "Calcium oxalate (alone or mixed with calcium phosphate)",
+      "Pure cholesterol stones",
+      "Uric acid stones in > 80% of all cases",
+      "Cystine stones in > 75% of all cases"
+    ],
+    "answer": 0,
+    "explanation": "Calcium oxalate (often combined with calcium phosphate) is the most common type of nephrolithiasis."
+  },
+  {
+    "id": "g-neph-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient develops fever, chills, flank/costovertebral angle tenderness, dysuria, and pyuria with white blood cell casts on urinalysis. Which diagnosis is most likely?",
+    "options": [
+      "Acute pyelonephritis",
+      "Simple stress urinary incontinence",
+      "Primary aldosteronism",
+      "Nephrogenic diabetes insipidus from lithium alone"
+    ],
+    "answer": 0,
+    "explanation": "Fever, flank/CVA tenderness, urinary symptoms, pyuria, and bacteriuria/WBC casts point to acute pyelonephritis, requiring prompt appropriate antimicrobial therapy."
+  },
+  {
+    "id": "g-neph-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with advanced chronic kidney disease (stage G4–G5) has persistent hyperphosphatemia and secondary hyperparathyroidism. Which dietary/pharmacologic measure is commonly used to help control serum phosphate?",
+    "options": [
+      "Dietary phosphate restriction and oral phosphate binders taken with meals",
+      "High-phosphate processed meats and colas",
+      "Oral potassium citrate as primary phosphate binder",
+      "Discontinuing all renal monitoring"
+    ],
+    "answer": 0,
+    "explanation": "Controlling hyperphosphatemia in CKD involves dietary phosphate limitation and phosphate binders taken with meals to reduce intestinal phosphate absorption."
+  },
+  {
+    "id": "g-neph-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with anemia of chronic kidney disease has low hemoglobin, normal/adequate iron stores (or after iron repletion), and low erythropoietin relative to the degree of anemia. Which therapy stimulates red blood cell production when indicated?",
+    "options": [
+      "Erythropoiesis-stimulating agents (ESAs, such as epoetin alfa or darbepoetin) alongside iron sufficiency assessment",
+      "High-dose warfarin",
+      "Oral ketoconazole",
+      "Routine platelet transfusion without bleeding or thrombocytopenia"
+    ],
+    "answer": 0,
+    "explanation": "Anemia in CKD is often multifactorial (reduced erythropoietin production and iron deficiency/functional iron restriction); ESAs and iron supplementation are used selectively per guidelines and hemoglobin targets."
+  },
+  {
+    "id": "g-neph-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "easy",
+    "question": "A patient with chronic kidney disease has an estimated glomerular filtration rate (eGFR) of 38 mL/min/1.73 m2 and moderate albuminuria. Which KDIGO GFR category corresponds to eGFR 30–44 mL/min/1.73 m2?",
+    "options": [
+      "Stage G3b",
+      "Stage G1 (>= 90 mL/min/1.73 m2)",
+      "Stage G5 (< 15 mL/min/1.73 m2)",
+      "Normal kidney function with no stage"
+    ],
+    "answer": 0,
+    "explanation": "KDIGO classifies CKD GFR stages as G1 (>= 90), G2 (60–89), G3a (45–59), G3b (30–44), G4 (15–29), and G5 (< 15 mL/min/1.73 m2)."
+  },
+  {
+    "id": "g-neph-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with recurrent episodes of gross hematuria occurring 1–2 days after upper respiratory tract or GI infections, with normal serum C3 levels and mesangial IgA deposition on kidney biopsy. What is the diagnosis?",
+    "options": [
+      "IgA nephropathy (Berger disease)",
+      "Post-streptococcal glomerulonephritis with 2-week latency and low C3",
+      "Simple renal cyst",
+      "Acute tubular necrosis from contrast alone"
+    ],
+    "answer": 0,
+    "explanation": "Synpharyngitic gross hematuria (appearing concurrently with or within days of mucosal infection) and mesangial IgA deposits on immunofluorescence are classic for IgA nephropathy."
+  },
+  {
+    "id": "g-neph-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with a family history of bilateral enlarged kidneys and hepatic cysts presents with hypertension, flank pain, hematuria, and multiple bilateral renal cysts on renal ultrasound, with increased risk of intracranial berry aneurysms. What is the diagnosis?",
+    "options": [
+      "Autosomal dominant polycystic kidney disease (ADPKD)",
+      "Simple unilateral cortical cyst",
+      "Acute bacterial cystitis",
+      "Primary hyperaldosteronism"
+    ],
+    "answer": 0,
+    "explanation": "ADPKD causes bilateral enlarging renal cysts, progressive CKD, hypertension, hematuria, liver cysts, and intracranial aneurysms."
+  },
+  {
+    "id": "g-neph-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "hard",
+    "question": "A patient with severe hyponatremia (serum Na+ 114 mEq/L) presents with acute seizures and somnolence. Why must overly rapid correction of chronic hyponatremia be avoided while treating acute symptomatic hyponatremia?",
+    "options": [
+      "Overly rapid correction can precipitate osmotic demyelination syndrome (central pontine myelinolysis)",
+      "Overly rapid correction causes acute hypokalemic rhabdomyolysis exclusively",
+      "Sodium has no effect on brain osmolarity",
+      "Hyponatremia is treated by infusing large volumes of hypotonic 5% dextrose water"
+    ],
+    "answer": 0,
+    "explanation": "Rapidly raising serum sodium—especially in chronic hyponatremia—can cause osmotic demyelination syndrome; acute severe symptoms warrant careful hypertonic saline with controlled correction limits and frequent Na+ monitoring."
+  },
+  {
+    "id": "g-neph-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with acute urinary retention from benign prostatic hyperplasia has rising serum creatinine and bilateral hydronephrosis on renal ultrasound. Which immediate intervention relieves the obstruction?",
+    "options": [
+      "Prompt urinary bladder catheterization (decompression)",
+      "Oral calcium supplements",
+      "Starting daily thiazide diuretic",
+      "Elective repeat creatinine in 3 months"
+    ],
+    "answer": 0,
+    "explanation": "Postrenal acute kidney injury from lower urinary tract obstruction requires prompt bladder decompression via urethral (or suprapubic) catheterization."
+  },
+  {
+    "id": "g-neph-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient develops fever, rash, arthralgias, and eosinophilia/eosinophiluria 7–10 days after starting a new medication (such as a penicillin, NSAID, or PPI), along with rising serum creatinine and sterile pyuria/WBC casts. Which diagnosis is suspected?",
+    "options": [
+      "Drug-induced acute interstitial nephritis (AIN)",
+      "Chronic stable nephrolithiasis",
+      "Primary hyperthyroidism",
+      "Simple stress incontinence"
+    ],
+    "answer": 0,
+    "explanation": "Acute interstitial nephritis is frequently drug-induced and may present with fever, rash, eosinophilia, pyuria/WBC casts, and AKI; stopping the offending agent is essential."
+  },
+  {
+    "id": "g-neph-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with ischemic acute tubular necrosis (ATN) has prolonged hypotension and rising serum creatinine. Which microscopic finding on urine sediment examination is classically associated with ATN?",
+    "options": [
+      "Muddy brown granular casts and renal tubular epithelial cells",
+      "Normal acellular urine sediment with zero casts or cells",
+      "Pure calcium oxalate crystals only without casts",
+      "Oval fat bodies exclusively in cystitis"
+    ],
+    "answer": 0,
+    "explanation": "Acute tubular necrosis classically shows muddy brown granular casts and sloughed renal tubular epithelial cells on urine microscopy."
+  },
+  {
+    "id": "g-neph-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient with nephrotic syndrome (heavy proteinuria and hypoalbuminemia) develops sudden unilateral leg swelling, pain, and warmth, or flank pain and hematuria. Which prothrombotic complication is particularly associated with nephrotic syndrome (especially membranous nephropathy)?",
+    "options": [
+      "Venous thromboembolism (such as deep vein thrombosis, pulmonary embolism, or renal vein thrombosis)",
+      "Acute bacterial conjunctivitis",
+      "Primary open-angle glaucoma",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Loss of antithrombin III, protein C/S alterations, increased fibrinogen synthesis, and hemoconcentration in nephrotic syndrome predispose patients to venous thromboembolism, including renal vein thrombosis."
+  },
+  {
+    "id": "g-neph-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Nephrology",
+    "difficulty": "medium",
+    "question": "A patient presents with polyuria, polydipsia, and hypernatremia with dilute urine (low urine osmolality < 300 mOsm/kg) that does not concentrate appropriately despite high serum osmolality, and fails to respond adequately to exogenous desmopressin. What is this condition?",
+    "options": [
+      "Nephrogenic diabetes insipidus (arginine vasopressin resistance)",
+      "Syndrome of inappropriate antidiuretic hormone (SIADH)",
+      "Primary polydipsia with normal renal concentrating ability",
+      "Diabetic ketoacidosis"
+    ],
+    "answer": 0,
+    "explanation": "Dilute urine despite hyperosmolality with resistance/blunted response to desmopressin characterizes nephrogenic diabetes insipidus (commonly linked to lithium, hypercalcemia, hypokalemia, or genetic causes)."
+  }
+]

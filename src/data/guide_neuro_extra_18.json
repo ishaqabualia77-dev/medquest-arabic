@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-neuro-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "hard",
+    "question": "A patient presents with sudden-onset right-sided hemiparesis and expressive (Broca) aphasia 90 minutes ago. Non-contrast head CT shows no acute intracranial hemorrhage or large established infarct. Which immediate reperfusion intervention should be evaluated urgently if the patient meets eligibility criteria?",
+    "options": [
+      "Intravenous thrombolysis (e.g., alteplase or tenecteplase) and/or endovascular mechanical thrombectomy if large-vessel occlusion is present within the appropriate treatment window",
+      "Immediate high-dose oral warfarin without imaging",
+      "Discharging home with aspirin only after delaying care for 24 hours",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "In acute ischemic stroke with no hemorrhage on non-contrast CT, eligible patients within established time windows should be evaluated immediately for IV thrombolysis and/or mechanical thrombectomy to restore cerebral perfusion rapidly."
+  },
+  {
+    "id": "g-neuro-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient experiences a 15-minute episode of transient left-arm weakness and slurred speech that resolves completely within 20 minutes, with normal initial brain imaging. Why is urgent evaluation critical after a transient ischemic attack (TIA)?",
+    "options": [
+      "TIA carries a substantial short-term risk of completed ischemic stroke (highest in the first days to weeks), warranting urgent vascular/cardiac workup and secondary stroke prevention",
+      "TIA means the patient can never have a stroke in the future",
+      "TIA is always caused by simple dehydration requiring no workup",
+      "TIA requires stopping all blood pressure and lipid management"
+    ],
+    "answer": 0,
+    "explanation": "A TIA is a neurological warning sign with high early stroke risk; urgent carotid/intracranial imaging, ECG/rhythm evaluation, antiplatelet or anticoagulation therapy (as indicated), and risk-factor control help prevent a disabling stroke."
+  },
+  {
+    "id": "g-neuro-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "hard",
+    "question": "A patient presents with the sudden onset of the 'worst headache of my life' ('thunderclap headache'), nausea, vomiting, photophobia, and neck stiffness. Non-contrast head CT is obtained urgently to evaluate for which neurosurgical/neurologic emergency?",
+    "options": [
+      "Subarachnoid hemorrhage (commonly from a ruptured intracranial aneurysm)",
+      "Simple tension-type headache",
+      "Chronic cluster headache with no acute bleeding",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Sudden 'thunderclap' headache peaking within seconds to minutes suggests subarachnoid hemorrhage; urgent non-contrast CT is first-line, followed by lumbar puncture/xanthochromia or CTA/angiography if CT is negative and clinical suspicion remains high."
+  },
+  {
+    "id": "g-neuro-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with generalized tonic-clonic status epilepticus has continuous seizure activity lasting more than 5 minutes (or recurrent seizures without return to baseline consciousness). Which medication class is first-line for immediate acute termination of status epilepticus?",
+    "options": [
+      "Intravenous benzodiazepines (such as lorazepam or diazepam; or IM midazolam if IV access is not immediately available)",
+      "Oral metformin",
+      "Routine daily oral acetaminophen",
+      "Subcutaneous insulin"
+    ],
+    "answer": 0,
+    "explanation": "Benzodiazepines (such as IV lorazepam) are first-line acute therapy for status epilepticus, followed promptly by second-line IV antiseizure medications (such as levetiracetam, fosphenytoin/phenytoin, or valproate) if seizures persist."
+  },
+  {
+    "id": "g-neuro-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "An older patient presents with resting pill-rolling tremor (worse at rest, improving with purposeful movement), bradykinesia, cogwheel/lead-pipe rigidity, and postural instability. Which neurodegenerative condition is most likely?",
+    "options": [
+      "Parkinson disease",
+      "Myasthenia gravis",
+      "Guillain-Barré syndrome",
+      "Multiple sclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Resting tremor, bradykinesia, rigidity, and postural instability reflect dopaminergic neuron loss in the substantia nigra pars compacta characteristic of Parkinson disease, typically responding to levodopa/carbidopa."
+  },
+  {
+    "id": "g-neuro-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A young adult presents with subacute monocular vision loss with pain on eye movement (optic neuritis), followed months later by tingling/numbness in one leg and diplopia, with demyelinating lesions disseminated in time and space on brain/spinal MRI. What is the diagnosis?",
+    "options": [
+      "Multiple sclerosis (MS)",
+      "Simple calcium oxalate nephrolithiasis",
+      "Acute gouty arthritis",
+      "Hereditary hemochromatosis"
+    ],
+    "answer": 0,
+    "explanation": "Multiple sclerosis is an immune-mediated demyelinating central nervous system disorder characterized by episodes separated in time and space (such as optic neuritis, transverse myelitis, or brainstem/cerebellar syndromes) with characteristic MRI lesions."
+  },
+  {
+    "id": "g-neuro-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with fluctuating muscle weakness that worsens with repetitive use or later in the day and improves with rest—such as ptosis and diplopia after reading or sustained upward gaze—with positive acetylcholine receptor (AChR) antibodies. What is the most likely diagnosis?",
+    "options": [
+      "Myasthenia gravis",
+      "Amyotrophic lateral sclerosis (ALS)",
+      "Parkinson disease",
+      "Subarachnoid hemorrhage"
+    ],
+    "answer": 0,
+    "explanation": "Fatigable skeletal muscle weakness—especially ocular (ptosis, diplopia), bulbar, or proximal limb weakness—worsening with activity and improving with rest is classic for myasthenia gravis, commonly associated with anti-AChR antibodies."
+  },
+  {
+    "id": "g-neuro-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "hard",
+    "question": "Two weeks after a respiratory or gastrointestinal infection, a patient develops ascending symmetric lower-extremity weakness and paresthesias with loss/diminution of deep tendon reflexes (areflexia/hyporeflexia), and cerebrospinal fluid shows elevated protein with normal white cell count (albuminocytologic dissociation). What is the diagnosis?",
+    "options": [
+      "Guillain-Barré syndrome (acute inflammatory demyelinating polyneuropathy)",
+      "Primary open-angle glaucoma",
+      "Simple tension-type headache",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Ascending symmetric weakness, areflexia, and albuminocytologic dissociation on CSF analysis (elevated protein without pleocytosis) characterize Guillain-Barré syndrome; respiratory monitoring for impending neuromuscular respiratory failure plus IVIG or plasma exchange is essential."
+  },
+  {
+    "id": "g-neuro-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with recurrent episodes of unilateral throbbing/pulsatile headache lasting 4–72 hours, accompanied by nausea, photophobia, and phonophobia, sometimes preceded by a visual aura (such as scintillating scotoma). What is the most likely diagnosis?",
+    "options": [
+      "Migraine headache",
+      "Acute subarachnoid hemorrhage",
+      "Giant cell (temporal) arteritis in a 22-year-old without visual/jaw symptoms",
+      "Acute bacterial meningitis"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent unilateral throbbing headaches with nausea, photophobia/phonophobia, or transient aura are characteristic of migraine, treated acutely with NSAIDs/triptans (when no vascular contraindications exist) and managed preventively when frequent/disabling."
+  },
+  {
+    "id": "g-neuro-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient over age 50 presents with a new-onset temporal headache, scalp tenderness, jaw claudication when chewing, or transient visual symptoms/monocular vision loss, with markedly elevated ESR/CRP. Which urgent treatment is started immediately to prevent irreversible vision loss?",
+    "options": [
+      "Immediate high-dose systemic corticosteroids (such as prednisone or IV methylprednisolone if visual symptoms are present) without waiting for temporal artery biopsy",
+      "Oral antihistamines alone",
+      "Routine daily oral iron supplements",
+      "Elective repeat ESR in 3 months without treatment"
+    ],
+    "answer": 0,
+    "explanation": "Giant cell (temporal) arteritis is a large/medium-vessel vasculitis in older adults that risks permanent blindness; high-dose glucocorticoids must be initiated immediately upon strong clinical suspicion without delaying for biopsy."
+  },
+  {
+    "id": "g-neuro-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with brief, seconds-long episodes of spinning vertigo triggered by rolling over in bed or tilting the head back to look up, without hearing loss or focal brainstem deficits. A Dix-Hallpike maneuver induces torsional/upbeating nystagmus with latency and fatigability. What is the diagnosis and treatment?",
+    "options": [
+      "Benign paroxysmal positional vertigo (BPPV); canalith repositioning maneuver (such as the Epley maneuver)",
+      "Acute ischemic cerebellar stroke",
+      "Multiple sclerosis",
+      "Myasthenia gravis"
+    ],
+    "answer": 0,
+    "explanation": "Brief positional vertigo triggered by head movement with characteristic Dix-Hallpike nystagmus is classic for BPPV (most commonly posterior semicircular canalolithiasis), effectively treated with canalith repositioning maneuvers like the Epley maneuver."
+  },
+  {
+    "id": "g-neuro-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute unilateral facial weakness involving both the forehead and lower face (inability to wrinkle the forehead, close the eye tightly, or smile symmetrically on the affected side), with normal limb strength and sensation. Which cranial nerve is affected?",
+    "options": [
+      "Ipsilateral facial nerve (Cranial Nerve VII)—typical of Bell palsy (idiopathic acute peripheral facial nerve palsy), whereas central upper motor neuron lesions spare the forehead",
+      "Oculomotor nerve (Cranial Nerve III)",
+      "Trigeminal nerve (Cranial Nerve V)",
+      "Hypoglossal nerve (Cranial Nerve XII)"
+    ],
+    "answer": 0,
+    "explanation": "Peripheral CN VII palsy (such as Bell palsy) weakens both upper and lower ipsilateral facial muscles (including the forehead), whereas central lesions above the facial nucleus generally spare forehead movement due to bilateral cortical input."
+  },
+  {
+    "id": "g-neuro-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "An older patient presents with a triad of progressive gait disturbance ('magnetic' or shuffling broad-based gait), urinary incontinence, and cognitive decline/apathy, and brain imaging shows ventriculomegaly out of proportion to cortical sulcal atrophy. What is this condition?",
+    "options": [
+      "Normal pressure hydrocephalus (NPH)",
+      "Acute bacterial meningitis",
+      "Simple calcium oxalate nephrolithiasis",
+      "Hereditary spherocytosis"
+    ],
+    "answer": 0,
+    "explanation": "Gait apraxia/instability, cognitive impairment, and urinary incontinence ('wet, wobbly, wacky') with enlarged ventricles and minimal sulcal atrophy suggest normal pressure hydrocephalus, which may respond to CSF diversion (such as ventriculoperitoneal shunting) after appropriate evaluation."
+  },
+  {
+    "id": "g-neuro-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with chronic alcohol use disorder presents with confusion/disorientation, ophthalmoplegia/nystagmus, and gait ataxia. Which vitamin deficiency causes this triad and requires immediate parenteral replacement prior to or alongside glucose administration?",
+    "options": [
+      "Vitamin B1 (thiamine) deficiency (Wernicke encephalopathy)",
+      "Vitamin D deficiency",
+      "Vitamin K deficiency",
+      "Vitamin B12 deficiency alone without thiamine"
+    ],
+    "answer": 0,
+    "explanation": "Wernicke encephalopathy—characterized by encephalopathy, ocular motility abnormalities/nystagmus, and ataxia—is caused by thiamine (vitamin B1) deficiency; thiamine must be given promptly (and before glucose loads) to prevent or treat Wernicke-Korsakoff syndrome."
+  },
+  {
+    "id": "g-neuro-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with both upper motor neuron signs (hyperreflexia, spasticity, Babinski sign) and lower motor neuron signs (muscle atrophy, fasciculations, weakness) across limb and/or bulbar regions, without sensory loss or extraocular muscle paralysis. Which neurodegenerative disease is classically described?",
+    "options": [
+      "Amyotrophic lateral sclerosis (ALS)",
+      "Myasthenia gravis",
+      "Benign paroxysmal positional vertigo",
+      "Multiple sclerosis"
+    ],
+    "answer": 0,
+    "explanation": "Combined upper and lower motor neuron signs affecting bulbar and/or limb motor neurons without sensory loss are characteristic of amyotrophic lateral sclerosis."
+  },
+  {
+    "id": "g-neuro-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe, electric-shock-like stabbing pain in the cheek, jaw, or forehead lasting seconds, triggered by light touch, chewing, or brushing teeth, with a normal neurological examination. Which condition is most likely?",
+    "options": [
+      "Trigeminal neuralgia (tic douloureux)",
+      "Acute subarachnoid hemorrhage",
+      "Parkinson disease",
+      "Guillain-Barré syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Brief, intense, lancinating pain in one or more divisions of the trigeminal nerve (CN V) triggered by innocuous stimuli like chewing or light touch is classic for trigeminal neuralgia, commonly treated first-line with carbamazepine or oxcarbazepine."
+  },
+  {
+    "id": "g-neuro-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with longstanding poorly controlled hypertension presents with sudden-onset left hemiparesis, headache, and vomiting, and non-contrast head CT shows an intraparenchymal hemorrhage in the right basal ganglia (putamen). Which blood pressure management principle applies in acute intracerebral hemorrhage?",
+    "options": [
+      "Careful, titrated blood pressure lowering according to current stroke guidelines and baseline BP/hemorrhage size while avoiding precipitous drops in cerebral perfusion pressure",
+      "Raising blood pressure intentionally to > 240/140 mmHg",
+      "Starting oral warfarin immediately",
+      "Discharging home without neurosurgical/ICU evaluation"
+    ],
+    "answer": 0,
+    "explanation": "Hypertensive intracerebral hemorrhage commonly occurs in deep structures like the putamen/basal ganglia, thalamus, pons, or cerebellum; guidelines recommend carefully titrated BP control (e.g., targeting SBP around 130–140 mmHg in selected patients presenting early with moderate SBP elevation) while avoiding excessive hypotension."
+  },
+  {
+    "id": "g-neuro-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Neurology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus for 12 years presents with burning, tingling, and numbness in a symmetric 'stocking-glove' distribution in the feet and hands, worse at night, with reduced pinprick/vibration sense and absent ankle reflexes. What is the most likely diagnosis?",
+    "options": [
+      "Diabetic distal symmetric polyneuropathy",
+      "Acute bacterial meningitis",
+      "Parkinson disease",
+      "Subarachnoid hemorrhage"
+    ],
+    "answer": 0,
+    "explanation": "Chronic symmetric sensory symptoms starting distally in the feet ('stocking-glove' pattern) with diminished reflexes/vibration sense in a patient with diabetes are typical of diabetic peripheral neuropathy, managed with glycemic optimization, foot care, and neuropathic pain agents (such as duloxetine, pregabalin, or gabapentin) when symptomatic."
+  }
+]

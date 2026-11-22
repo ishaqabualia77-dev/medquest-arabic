@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-psych-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with 5 weeks of persistent depressed mood, anhedonia, insomnia, fatigue, poor concentration, feelings of worthlessness, and passive thoughts of death without history of mania or hypomania. Which diagnosis is most likely?",
+    "options": [
+      "Major depressive disorder (MDD)",
+      "Bipolar I disorder (current manic episode)",
+      "Simple specific phobia",
+      "Obsessive-compulsive personality disorder"
+    ],
+    "answer": 0,
+    "explanation": "Five or more DSM-5 depressive symptoms lasting at least 2 weeks—including depressed mood or anhedonia—without a history of mania or hypomania characterize major depressive disorder."
+  },
+  {
+    "id": "g-psych-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with a 9-day history of markedly elevated/expansive mood, decreased need for sleep (feeling rested after 2 hours of sleep), rapid pressured speech, grandiosity, racing thoughts, and impulsively spending large sums of money, requiring hospitalization for safety. What is the diagnosis?",
+    "options": [
+      "Manic episode (consistent with Bipolar I disorder)",
+      "Persistent depressive disorder (dysthymia)",
+      "Generalized anxiety disorder",
+      "Major neurocognitive disorder"
+    ],
+    "answer": 0,
+    "explanation": "A distinct period of abnormally elevated, expansive, or irritable mood and increased energy/activity lasting at least 7 days (or any duration if hospitalization is required or psychosis is present) defines a manic episode."
+  },
+  {
+    "id": "g-psych-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has recurrent, unexpected episodes of abrupt intense fear or discomfort reaching a peak within minutes, accompanied by palpitations, sweating, trembling, shortness of breath, chest tightness, and fear of losing control or dying, followed by persistent worry about future attacks. What is the diagnosis?",
+    "options": [
+      "Panic disorder",
+      "Schizophrenia",
+      "Somatic symptom disorder",
+      "Anorexia nervosa"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent unexpected panic attacks followed by at least 1 month of persistent concern about additional attacks or maladaptive behavioral changes characterize panic disorder."
+  },
+  {
+    "id": "g-psych-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient experiences intrusive, distressing thoughts about contamination and germs that they try to neutralize by washing their hands repeatedly for 45 minutes after touching door handles, recognizing the urges as excessive and time-consuming. What is the diagnosis?",
+    "options": [
+      "Obsessive-compulsive disorder (OCD)",
+      "Bipolar II disorder",
+      "Delirium",
+      "Antisocial personality disorder"
+    ],
+    "answer": 0,
+    "explanation": "OCD is characterized by recurrent intrusive obsessions (thoughts, urges, or images) and/or repetitive compulsions (behaviors or mental acts) aimed at reducing distress or preventing a feared outcome."
+  },
+  {
+    "id": "g-psych-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "Three months after surviving a severe motor vehicle collision, a patient has intrusive nightmares and flashbacks of the crash, avoids driving and highways, feels constantly on guard (hypervigilance), and has negative mood and detachment lasting over 1 month. What is the most likely diagnosis?",
+    "options": [
+      "Post-traumatic stress disorder (PTSD)",
+      "Adjustment disorder with uncomplicated resolution on day 1",
+      "Specific phobia of heights alone",
+      "Primary insomnia without trauma exposure"
+    ],
+    "answer": 0,
+    "explanation": "Intrusion symptoms, avoidance, negative alterations in cognitions/mood, and hyperarousal lasting more than 1 month following exposure to actual or threatened death, serious injury, or sexual violence define PTSD."
+  },
+  {
+    "id": "g-psych-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A young adult presents with 8 months of auditory hallucinations (hearing two voices conversing), persecutory delusions, disorganized speech, blunted affect, and social withdrawal, with medical/substance causes ruled out. Which diagnosis is most consistent?",
+    "options": [
+      "Schizophrenia",
+      "Acute delirium from urinary tract infection",
+      "Major depressive disorder without psychotic features",
+      "Panic disorder"
+    ],
+    "answer": 0,
+    "explanation": "Schizophrenia requires continuous signs of disturbance for at least 6 months, including at least 1 month of active-phase symptoms (such as hallucinations, delusions, or disorganized speech) plus impaired functioning, after excluding substance or general medical causes."
+  },
+  {
+    "id": "g-psych-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A hospitalized older patient develops acute confusion, fluctuating attention and awareness over hours, visual hallucinations, and a disorganized sleep-wake cycle 2 days after hip surgery and starting opioids. Which condition is most likely?",
+    "options": [
+      "Delirium",
+      "Major depressive disorder",
+      "Obsessive-compulsive disorder",
+      "Bipolar I disorder"
+    ],
+    "answer": 0,
+    "explanation": "Delirium is an acute, fluctuating disturbance in attention, awareness, and cognition—commonly precipitated in hospitalized older adults by medical illness, infection, metabolic derangements, hypoxia, or medications—requiring identification and treatment of underlying causes."
+  },
+  {
+    "id": "g-psych-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with bipolar disorder taking long-term lithium develops fine hand tremor, polyuria/polydipsia, and hypothyroidism, and later presents with coarse tremor, ataxia, dysarthria, confusion, and vomiting after starting a thiazide diuretic and becoming dehydrated. What is the primary concern?",
+    "options": [
+      "Lithium toxicity (precipitated by reduced renal lithium clearance from dehydration or diuretics/NSAIDs/ACE inhibitors)",
+      "Acute iron-deficiency anemia",
+      "Simple allergic rhinitis",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Lithium has a narrow therapeutic index and is renally cleared; volume depletion, NSAIDs, ACE inhibitors/ARBs, or thiazides can raise serum lithium levels, causing worsening tremor, ataxia, neuromuscular irritability, confusion, or encephalopathy."
+  },
+  {
+    "id": "g-psych-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient taking a selective serotonin reuptake inhibitor (SSRI) has linezolid or a monoamine oxidase inhibitor (MAOI) added and develops agitation, confusion, diaphoresis, tachycardia, hyperreflexia, clonus (especially inducible/ocular clonus), and myoclonus. Which toxic syndrome is present?",
+    "options": [
+      "Serotonin syndrome",
+      "Simple hypothyroidism",
+      "Iron-deficiency anemia",
+      "Bell palsy"
+    ],
+    "answer": 0,
+    "explanation": "Serotonin syndrome results from excessive serotonergic activity and classically features autonomic instability, altered mental status, and neuromuscular hyperactivity (hyperreflexia, inducible/spontaneous clonus, tremor); management involves stopping serotonergic agents, supportive care, and cyproheptadine in moderate-to-severe cases."
+  },
+  {
+    "id": "g-psych-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "hard",
+    "question": "A patient started recently on a high-potency typical antipsychotic (such as haloperidol) develops high fever (40.1°C), generalized severe 'lead-pipe' muscle rigidity, altered mental status, autonomic instability (tachycardia, labile blood pressure), elevated serum creatine kinase, and leukocytosis. What is the diagnosis?",
+    "options": [
+      "Neuroleptic malignant syndrome (NMS)",
+      "Serotonin syndrome with hyperreflexia and clonus",
+      "Panic attack",
+      "Simple tension headache"
+    ],
+    "answer": 0,
+    "explanation": "Neuroleptic malignant syndrome is an idiosyncratic, life-threatening reaction to dopamine receptor antagonists (or abrupt withdrawal of dopaminergic agents) characterized by fever, severe rigidity ('lead-pipe'), altered consciousness, autonomic instability, and markedly elevated CK; stop the offending agent and provide supportive ICU care, dantrolene, or bromocriptine as indicated."
+  },
+  {
+    "id": "g-psych-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with chronic alcohol use abruptly stops drinking after heavy daily intake and presents 36 hours later with tremor, anxiety, agitation, diaphoresis, tachycardia, hypertension, and vomiting. Which medication class is first-line to prevent or treat moderate-to-severe alcohol withdrawal and withdrawal seizures/delirium tremens?",
+    "options": [
+      "Benzodiazepines (such as lorazepam or chlordiazepoxide/diazepam per clinical status and hepatic function), alongside thiamine supplementation",
+      "Oral ketoconazole",
+      "Routine daily oral iron supplements",
+      "Subcutaneous insulin"
+    ],
+    "answer": 0,
+    "explanation": "Benzodiazepines are first-line therapy for alcohol withdrawal to reduce GABAergic withdrawal hyperexcitability and prevent seizures or delirium tremens, paired with thiamine to prevent Wernicke encephalopathy."
+  },
+  {
+    "id": "g-psych-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with persistent excessive worry across multiple domains (work, health, finances, family) on most days for at least 6 months, accompanied by restlessness, muscle tension, irritability, fatigue, and sleep disturbance. What is the diagnosis?",
+    "options": [
+      "Generalized anxiety disorder (GAD)",
+      "Schizophrenia",
+      "Bipolar I disorder",
+      "Delirium"
+    ],
+    "answer": 0,
+    "explanation": "Excessive anxiety and worry occurring more days than not for at least 6 months about multiple events/activities that the person finds difficult to control—plus at least three physical/cognitive symptoms in adults—characterize GAD."
+  },
+  {
+    "id": "g-psych-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with treatment-resistant schizophrenia who has not responded adequately to at least two adequate trials of different antipsychotic medications—or who has persistent severe suicidal behavior—is evaluated for clozapine. Which hematologic adverse effect requires mandatory regular absolute neutrophil count (ANC) monitoring?",
+    "options": [
+      "Severe neutropenia / agranulocytosis (alongside risks of myocarditis, metabolic effects, and seizures)",
+      "Primary open-angle glaucoma",
+      "Simple calcium oxalate stones",
+      "Acute gouty arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Clozapine is uniquely effective for treatment-resistant schizophrenia and reducing suicidal risk in schizophrenia/schizoaffective disorder, but requires structured ANC monitoring due to the risk of severe neutropenia/agranulocytosis."
+  },
+  {
+    "id": "g-psych-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A young woman has a markedly low body weight (BMI 15.8 kg/m2), an intense fear of gaining weight or becoming fat, persistent behaviors that interfere with weight gain, and a disturbed perception of her body shape/weight. What is the diagnosis?",
+    "options": [
+      "Anorexia nervosa",
+      "Bulimia nervosa (typically normal or above-normal body weight with recurrent binge-eating and compensatory purging)",
+      "Narcolepsy",
+      "Generalized anxiety disorder"
+    ],
+    "answer": 0,
+    "explanation": "Anorexia nervosa is defined by restriction of energy intake leading to significantly low body weight, intense fear of weight gain/persistent behavior preventing weight gain, and body image disturbance."
+  },
+  {
+    "id": "g-psych-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient has recurrent episodes of eating an unusually large amount of food in a discrete period with a sense of lack of control, followed by recurrent inappropriate compensatory behaviors (such as self-induced vomiting, laxative misuse, or excessive exercise) at least once a week for 3 months, while maintaining a normal or higher body weight. What is the diagnosis?",
+    "options": [
+      "Bulimia nervosa",
+      "Anorexia nervosa",
+      "Delirium",
+      "Parkinson disease"
+    ],
+    "answer": 0,
+    "explanation": "Recurrent binge-eating episodes accompanied by recurrent inappropriate compensatory behaviors occurring on average at least once weekly for 3 months—without meeting criteria for anorexia nervosa—characterize bulimia nervosa."
+  },
+  {
+    "id": "g-psych-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient presents with persistent depressed mood most of the day, for more days than not, for at least 2 years in adults (or 1 year in children/adolescents), with poor appetite or overeating, insomnia or hypersomnia, low energy, low self-esteem, and poor concentration, without ever having a manic or hypomanic episode. What is this chronic mood condition?",
+    "options": [
+      "Persistent depressive disorder (dysthymia)",
+      "Bipolar I disorder",
+      "Panic disorder",
+      "Obsessive-compulsive disorder"
+    ],
+    "answer": 0,
+    "explanation": "Persistent depressive disorder (dysthymia) involves chronic depressed mood lasting at least 2 years in adults with associated depressive symptoms and no history of mania or hypomania."
+  },
+  {
+    "id": "g-psych-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "A patient with a history of major depressive episodes experiences a distinct period of elevated, expansive, or irritable mood and increased energy/activity lasting at least 4 consecutive days (without marked impairment requiring hospitalization or psychosis), alongside prior major depression. Which diagnosis fits best?",
+    "options": [
+      "Bipolar II disorder (hypomanic episode plus major depressive episode(s))",
+      "Bipolar I disorder (requires a full manic episode)",
+      "Simple specific phobia",
+      "Major neurocognitive disorder"
+    ],
+    "answer": 0,
+    "explanation": "Bipolar II disorder is characterized by at least one hypomanic episode (at least 4 consecutive days of mood/energy change without marked functional impairment, hospitalization, or psychosis) and at least one major depressive episode."
+  },
+  {
+    "id": "g-psych-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Psychiatry",
+    "difficulty": "medium",
+    "question": "When evaluating a patient who expresses hopelessness and thoughts of self-harm or suicide during a clinical interview, what is an essential clinical principle?",
+    "options": [
+      "Directly and compassionately assess suicidal ideation, intent, plan, access to lethal means, and protective/risk factors, and implement appropriate safety planning and level of care",
+      "Avoid asking about suicide because asking plants the idea in the patient's mind",
+      "Minimize distressing feelings and send the patient away without safety assessment",
+      "Prescribe an antidepressant and schedule follow-up in 6 months without safety checks"
+    ],
+    "answer": 0,
+    "explanation": "Asking directly and empathetically about suicidal thoughts, plans, intent, and access to means does not increase suicidal risk; it enables structured risk assessment, means safety, and appropriate clinical care."
+  }
+]

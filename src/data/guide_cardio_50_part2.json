@@ -1,0 +1,402 @@
+[
+  {
+    "id": "g-cardio-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with a continuous 'machinery-like' murmur heard best at the left infraclavicular area/upper left sternal border. Which congenital heart defect is classically associated with this murmur?",
+    "options": [
+      "Patent ductus arteriosus (PDA)",
+      "Mitral stenosis",
+      "Tricuspid regurgitation",
+      "Hypertrophic cardiomyopathy"
+    ],
+    "answer": 0,
+    "explanation": "A continuous 'machinery' murmur across systole and diastole at the upper left sternal border/infraclavicular region is classic for patent ductus arteriosus."
+  },
+  {
+    "id": "g-cardio-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic heart failure with reduced ejection fraction develops worsening lower-extremity edema and weight gain of 3 kg over 4 days. Which medication is most helpful for rapid symptomatic volume relief?",
+    "options": [
+      "Loop diuretic (such as furosemide or torsemide)",
+      "Calcium channel blocker dihydropyridine",
+      "Oral iron alone",
+      "Immediate cessation of beta-blocker in a stable volume-overloaded patient"
+    ],
+    "answer": 0,
+    "explanation": "Loop diuretics are the cornerstone for relieving volume overload and congestion symptoms in heart failure."
+  },
+  {
+    "id": "g-cardio-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with a mid-systolic click followed by a late systolic murmur at the apex. Which valvular condition is classically associated with this auscultatory finding?",
+    "options": [
+      "Mitral valve prolapse",
+      "Aortic stenosis",
+      "Tricuspid stenosis",
+      "Pulmonary embolism"
+    ],
+    "answer": 0,
+    "explanation": "A mid-systolic click often followed by a late systolic murmur at the apex is characteristic of mitral valve prolapse."
+  },
+  {
+    "id": "g-cardio-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "hard",
+    "question": "A patient presents with sudden tearing chest pain radiating to the interscapular back, unequal upper-extremity blood pressures (> 20 mmHg difference), and a widened mediastinum on chest X-ray. What is the diagnosis?",
+    "options": [
+      "Acute aortic dissection",
+      "Acute uncomplicated gastritis",
+      "Stable angina pectoris",
+      "Simple viral pharyngitis"
+    ],
+    "answer": 0,
+    "explanation": "Sudden severe tearing chest/back pain, pulse or BP differential between limbs, and widened mediastinum suggest acute aortic dissection requiring urgent evaluation and anti-impulse therapy."
+  },
+  {
+    "id": "g-cardio-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with atrial fibrillation is undergoing rate control therapy. Which medication classes are commonly used to control ventricular rate in atrial fibrillation?",
+    "options": [
+      "Beta-blockers or non-dihydropyridine calcium channel blockers (diltiazem or verapamil), with digoxin in selected settings",
+      "Class IC antiarrhythmics as sole rate-control drugs in structural heart disease",
+      "Subcutaneous heparin as a rate-controlling drug",
+      "Oral nitrates"
+    ],
+    "answer": 0,
+    "explanation": "Beta-blockers and non-dihydropyridine calcium channel blockers (diltiazem/verapamil) are mainstays for ventricular rate control in atrial fibrillation."
+  },
+  {
+    "id": "g-cardio-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with a holosystolic blowing murmur at the apex radiating to the left axilla, with a displaced hyperdynamic apical impulse. Which valvular lesion is most likely?",
+    "options": [
+      "Mitral regurgitation",
+      "Aortic stenosis",
+      "Tricuspid atresia",
+      "Pulmonic stenosis"
+    ],
+    "answer": 0,
+    "explanation": "A holosystolic murmur at the cardiac apex radiating toward the axilla is classic for mitral regurgitation."
+  },
+  {
+    "id": "g-cardio-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with hypertension has hypokalemia, metabolic alkalosis, and elevated plasma aldosterone with suppressed plasma renin activity. Which diagnosis should be suspected?",
+    "options": [
+      "Primary aldosteronism (Conn syndrome)",
+      "Primary adrenal insufficiency (Addison disease)",
+      "Diabetes insipidus",
+      "Hypoparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Hypertension with hypokalemia, suppressed renin, and elevated aldosterone (high aldosterone-to-renin ratio) points toward primary aldosteronism."
+  },
+  {
+    "id": "g-cardio-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with paroxysmal spells of severe hypertension, pounding headache, diaphoresis, and palpitations. Which initial biochemical screening tests are used to evaluate suspected pheochromocytoma?",
+    "options": [
+      "Plasma free metanephrines or 24-hour urinary fractionated metanephrines and catecholamines",
+      "Fasting serum C-peptide",
+      "Serum TSH and free T4 alone",
+      "Rheumatoid factor and anti-CCP"
+    ],
+    "answer": 0,
+    "explanation": "Measurement of plasma free metanephrines or 24-hour urinary metanephrines is the preferred initial test for suspected pheochromocytoma."
+  },
+  {
+    "id": "g-cardio-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "easy",
+    "question": "A patient presents with crampy calf pain when walking a predictable distance that resolves within a few minutes of rest, with an ankle-brachial index (ABI) of 0.65. What is the diagnosis?",
+    "options": [
+      "Peripheral artery disease (intermittent claudication)",
+      "Acute deep vein thrombosis",
+      "Sciatica from L5 radiculopathy",
+      "Cellulitis of the calf"
+    ],
+    "answer": 0,
+    "explanation": "Exertional leg pain relieved by rest with an ABI <= 0.90 indicates peripheral artery disease."
+  },
+  {
+    "id": "g-cardio-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with non-ST-segment elevation acute coronary syndrome (NSTEMI) is admitted for medical and invasive management. Which combination of initial antithrombotic therapy is standard?",
+    "options": [
+      "Aspirin plus a P2Y12 inhibitor (such as ticagrelor, prasugrel, or clopidogrel) plus parenteral anticoagulation",
+      "Warfarin monotherapy without antiplatelet or parenteral agent in acute phase",
+      "Oral ibuprofen alone",
+      "No antiplatelet or anticoagulant therapy"
+    ],
+    "answer": 0,
+    "explanation": "NSTEMI management typically includes antiplatelet therapy (aspirin plus a P2Y12 inhibitor) and anticoagulation alongside risk-stratified coronary angiography/revascularization."
+  },
+  {
+    "id": "g-cardio-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "hard",
+    "question": "A patient presents with pulseless ventricular fibrillation or pulseless ventricular tachycardia in cardiac arrest. Which two interventions are most critical for survival?",
+    "options": [
+      "Immediate high-quality chest compressions and prompt defibrillation",
+      "Oral aspirin and elective outpatient ECG",
+      "Delayed compressions for 5 minutes while waiting for lab results",
+      "Routine IV calcium in every arrest without indication"
+    ],
+    "answer": 0,
+    "explanation": "Immediate CPR and early defibrillation are the primary life-saving interventions for shockable cardiac arrest rhythms (pulseless VT/VF)."
+  },
+  {
+    "id": "g-cardio-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with symptomatic bradycardia (heart rate 36/min) with hypotension and lightheadedness. Which medication is first-line acute pharmacologic therapy while preparing transcutaneous pacing if needed?",
+    "options": [
+      "Intravenous atropine",
+      "Adenosine",
+      "Verapamil",
+      "Propranolol"
+    ],
+    "answer": 0,
+    "explanation": "Atropine is the first-line drug for acute symptomatic bradycardia, with transcutaneous pacing or chronotropic infusions (such as epinephrine or dopamine) used when unresponsive."
+  },
+  {
+    "id": "g-cardio-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with heart failure with reduced ejection fraction (LVEF <= 35%) has persistent NYHA class II–III symptoms despite guideline-directed medical therapy. Which device therapy may be considered for primary prevention of sudden cardiac death?",
+    "options": [
+      "Implantable cardioverter-defibrillator (ICD)",
+      "External pacemaker worn only while sleeping",
+      "Routine carotid endarterectomy",
+      "Femoral vein filter"
+    ],
+    "answer": 0,
+    "explanation": "An ICD is indicated for primary prevention of sudden cardiac death in eligible patients with HFrEF (typically LVEF <= 35%) despite optimal medical therapy."
+  },
+  {
+    "id": "g-cardio-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic heart failure has a left bundle branch block (LBBB) with QRS duration >= 150 ms and LVEF <= 35% despite medical therapy. Which therapy may improve symptoms and ventricular synchrony?",
+    "options": [
+      "Cardiac resynchronization therapy (CRT)",
+      "High-dose oral digoxin alone without device evaluation",
+      "Strict bed rest for 6 months",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Cardiac resynchronization therapy (biventricular pacing) benefits selected HFrEF patients with conduction dyssynchrony, especially LBBB with QRS >= 150 ms."
+  },
+  {
+    "id": "g-cardio-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with a harsh crescendo-decrescendo systolic ejection murmur heard best at the right second intercostal space radiating to the carotid arteries, with a delayed and diminished carotid upstroke ('pulsus parvus et tardus'). What is the diagnosis?",
+    "options": [
+      "Aortic stenosis",
+      "Mitral regurgitation",
+      "Aortic regurgitation",
+      "Patent ductus arteriosus"
+    ],
+    "answer": 0,
+    "explanation": "A crescendo-decrescendo systolic murmur at the right upper sternal border radiating to the carotids with pulsus parvus et tardus is characteristic of aortic stenosis."
+  },
+  {
+    "id": "g-cardio-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute dyspnea, orthopnea, paroxysmal nocturnal dyspnea, bibasilar crackles, an S3 gallop, and pulmonary venous congestion on chest radiograph. What is the diagnosis?",
+    "options": [
+      "Acute decompensated heart failure / left ventricular heart failure",
+      "Uncomplicated acute sinusitis",
+      "Carpal tunnel syndrome",
+      "Osteoarthritis of the knee"
+    ],
+    "answer": 0,
+    "explanation": "Dyspnea, orthopnea, PND, bibasilar rales, and an S3 gallop indicate left-sided heart failure."
+  },
+  {
+    "id": "g-cardio-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with atrial fibrillation is taking warfarin and presents with an INR of 6.8 without active bleeding. What general approach is guided by bleeding risk and clinical status?",
+    "options": [
+      "Hold warfarin temporarily, assess bleeding risk and etiology of elevated INR, and consider small oral vitamin K when indicated by guidelines/risk profile",
+      "Double the warfarin dose immediately",
+      "Give 50 units of insulin",
+      "Ignore the INR and continue full warfarin without adjustment"
+    ],
+    "answer": 0,
+    "explanation": "Elevated INR without bleeding requires holding warfarin, evaluating causes/interactions, and considering low-dose oral vitamin K according to risk thresholds."
+  },
+  {
+    "id": "g-cardio-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with a history of rheumatic fever has a prosthetic mitral valve and is undergoing a dental procedure involving gingival manipulation. Which factor determines whether antibiotic prophylaxis is indicated?",
+    "options": [
+      "Presence of high-risk cardiac conditions (such as prosthetic heart valves, prior infective endocarditis, or certain unrepaired/repaired congenital heart lesions) during high-risk procedures",
+      "All patients with any innocent flow murmur require lifelong daily antibiotics before every dental cleaning",
+      "Prosthetic heart valves never warrant consideration of endocarditis prophylaxis",
+      "Dental procedures never cause bacteremia"
+    ],
+    "answer": 0,
+    "explanation": "Infective endocarditis prophylaxis is targeted to patients at highest risk of adverse outcomes (including prosthetic valves) undergoing specified invasive dental procedures."
+  },
+  {
+    "id": "g-cardio-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with hypertension and hyperlipidemia has a 10-year ASCVD risk >= 7.5%–10% or diabetes mellitus. Which lipid parameter is the primary target for statin intensity selection?",
+    "options": [
+      "Low-density lipoprotein cholesterol (LDL-C)",
+      "Serum total protein",
+      "Serum amylase",
+      "Serum uric acid"
+    ],
+    "answer": 0,
+    "explanation": "LDL cholesterol is the primary lipid target guiding statin intensity and add-on lipid-lowering therapy in ASCVD prevention."
+  },
+  {
+    "id": "g-cardio-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with recurrent syncope triggered by standing or prolonged upright posture, preceded by warmth, diaphoresis, nausea, and lightheadedness, with normal cardiac examination. What is the most likely cause?",
+    "options": [
+      "Vasovagal (neurocardiogenic) syncope",
+      "Complete third-degree AV block with permanent ventricular standstill",
+      "Acute ruptured abdominal aortic aneurysm",
+      "Massive pulmonary embolism with cardiogenic shock"
+    ],
+    "answer": 0,
+    "explanation": "Prodromal autonomic symptoms (diaphoresis, warmth, nausea, lightheadedness) in upright or stressful settings followed by brief loss of consciousness and rapid recovery are characteristic of vasovagal syncope."
+  },
+  {
+    "id": "g-cardio-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with an acute inferior myocardial infarction develops hypotension and clear lung fields with elevated jugular venous pressure after receiving nitroglycerin. Which right ventricular issue should be suspected?",
+    "options": [
+      "Right ventricular infarction (pre-load sensitive)",
+      "Primary severe asthma exacerbation",
+      "Hypertensive encephalopathy",
+      "Acute appendicitis"
+    ],
+    "answer": 0,
+    "explanation": "Right ventricular infarction often accompanies inferior MI and is preload-dependent; preload-reducing agents like nitrates can precipitate severe hypotension."
+  },
+  {
+    "id": "g-cardio-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "An ECG shows a PR interval greater than 200 ms (> 0.20 seconds) with every P wave followed by a normal QRS complex and a regular rhythm. How is this conduction abnormality classified?",
+    "options": [
+      "First-degree atrioventricular (AV) block",
+      "Second-degree AV block Mobitz type II",
+      "Third-degree complete AV block",
+      "Torsades de pointes"
+    ],
+    "answer": 0,
+    "explanation": "Prolonged PR interval (> 200 ms) with 1:1 AV conduction (every P wave conducts to a QRS) defines first-degree AV block."
+  },
+  {
+    "id": "g-cardio-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "hard",
+    "question": "A patient develops polymorphic ventricular tachycardia ('torsades de pointes') associated with a markedly prolonged corrected QT interval (QTc). Which initial treatment is recommended alongside correcting electrolytes (such as potassium and magnesium)?",
+    "options": [
+      "Intravenous magnesium sulfate",
+      "Procainamide or sotalol (which further prolong QT)",
+      "Oral digoxin",
+      "Adrenalectomy"
+    ],
+    "answer": 0,
+    "explanation": "Intravenous magnesium sulfate is first-line therapy for torsades de pointes even when serum magnesium is normal, alongside electrolyte repletion and pacing/isoproterenol when indicated."
+  },
+  {
+    "id": "g-cardio-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic refractory angina despite optimal medical therapy and revascularization options (or ineligible for revascularization) is evaluated for additional anti-anginal relief. Which agent inhibits the late sodium current to reduce angina frequency?",
+    "options": [
+      "Ranolazine",
+      "Warfarin",
+      "Spironolactone",
+      "Levothyroxine"
+    ],
+    "answer": 0,
+    "explanation": "Ranolazine is a chronic anti-anginal agent that inhibits the late inward sodium current and reduces calcium overload without markedly altering heart rate or blood pressure."
+  },
+  {
+    "id": "g-cardio-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with orthostatic dizziness and lightheadedness when standing up, with a drop in systolic blood pressure >= 20 mmHg or diastolic >= 10 mmHg within 3 minutes of standing. What is this finding called?",
+    "options": [
+      "Orthostatic hypotension",
+      "Hypertensive crisis",
+      "Pulsus alternans",
+      "Erb point murmur"
+    ],
+    "answer": 0,
+    "explanation": "A sustained reduction in systolic BP >= 20 mmHg or diastolic BP >= 10 mmHg within 3 minutes of standing or head-up tilt defines orthostatic hypotension."
+  }
+]

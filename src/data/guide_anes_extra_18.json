@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-anes-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic obstructive pulmonary disease (COPD) and hypertension is scheduled for elective laparoscopic cholecystectomy. Which American Society of Anesthesiologists (ASA) physical status classification best fits a patient with mild-to-moderate systemic disease that is well-controlled without constant threat to life?",
+    "options": [
+      "ASA II (patient with mild systemic disease)",
+      "ASA I (healthy patient with no organic, physiologic, or psychiatric disturbance)",
+      "ASA IV (patient with severe systemic disease that is a constant threat to life)",
+      "ASA V (moribund patient not expected to survive without the operation)"
+    ],
+    "answer": 0,
+    "explanation": "ASA Physical Status II applies to patients with mild systemic disease (such as controlled hypertension, mild asthma/COPD, or obesity with BMI 30–40) without substantive functional limitation, whereas ASA III implies severe systemic disease with substantive functional limitation."
+  },
+  {
+    "id": "g-anes-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "During preoperative airway evaluation, a patient can open the mouth widely and shows visualization of the soft palate, fauces, and uvula, with only the base of the uvula partially obscured by the tongue base. Which Mallampati class is this?",
+    "options": [
+      "Mallampati Class II",
+      "Mallampati Class I (soft palate, fauces, uvula, and anterior/posterior pillars fully visible)",
+      "Mallampati Class IV (hard palate only visible)",
+      "Mallampati Grade 0"
+    ],
+    "answer": 0,
+    "explanation": "Mallampati classification assesses oral/pharyngeal visibility with the patient sitting upright and tongue protruded maximally without phonation: Class II shows the soft palate, fauces, and part/base of the uvula, whereas Class III shows soft palate and base of uvula only, and Class IV shows hard palate only."
+  },
+  {
+    "id": "g-anes-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "hard",
+    "question": "Thirty minutes after induction of general anesthesia with sevoflurane and succinylcholine, a patient develops unexplained rapidly rising end-tidal CO2 (ETCO2), masseter spasm/generalized muscle rigidity, sinus tachycardia, hyperthermia (rising temperature), and metabolic/respiratory acidosis. Which life-threatening anesthesia emergency is suspected?",
+    "options": [
+      "Malignant hyperthermia (MH)",
+      "Simple allergic rhinitis",
+      "Hypoglycemic tremor alone",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Malignant hyperthermia is a pharmacogenetic hypermetabolic crisis triggered by volatile anesthetics and/or succinylcholine in susceptible individuals; immediate management stops triggering agents, hyperventilates with 100% oxygen, cools as needed, treats acidosis/hyperkalemia/arrhythmias, and administers dantrolene sodium promptly."
+  },
+  {
+    "id": "g-anes-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Which neuromuscular blocking agent causes depolarizing block at the neuromuscular junction and carries a risk of hyperkalemia (especially in burns, crush injury, denervation/stroke, or neuromuscular disease), myalgias, and triggering malignant hyperthermia?",
+    "options": [
+      "Succinylcholine",
+      "Sugammadex",
+      "Flumazenil",
+      "Acetaminophen"
+    ],
+    "answer": 0,
+    "explanation": "Succinylcholine is a depolarizing neuromuscular blocker with rapid onset and short duration, but extrajunctional acetylcholine receptor upregulation in denervation/burns/trauma can cause life-threatening potassium release and cardiac arrest."
+  },
+  {
+    "id": "g-anes-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient receives rocuronium (a non-depolarizing aminosteroid neuromuscular blocker) during surgery and requires rapid reversal of neuromuscular blockade at the end of the procedure. Which agent selectively encapsulates rocuronium (and vecuronium) to reverse blockade?",
+    "options": [
+      "Sugammadex",
+      "Succinylcholine",
+      "Atropine alone without cholinesterase inhibitor",
+      "Naloxone"
+    ],
+    "answer": 0,
+    "explanation": "Sugammadex is a modified gamma-cyclodextrin that binds steroidal neuromuscular blockers (rocuronium > vecuronium), reversing moderate or deep block rapidly without relying on acetylcholinesterase inhibition."
+  },
+  {
+    "id": "g-anes-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient develops sudden hypotension, bradycardia, and lightheadedness shortly after placement of a spinal (subarachnoid) or high thoracic epidural anesthetic. What is the primary physiologic mechanism of hypotension after neuraxial anesthesia?",
+    "options": [
+      "Sympathetic blockade causing peripheral vasodilation/venous pooling and decreased venous return/cardiac output (and high block can also affect cardioaccelerator fibers T1–T4)",
+      "Direct coronary artery occlusion by local anesthetic",
+      "Acute hyperkalemic arrest from lidocaine",
+      "Immediate pulmonary embolism in every patient"
+    ],
+    "answer": 0,
+    "explanation": "Neuraxial blockade interrupts sympathetic outflow, reducing systemic vascular resistance and venous return; management includes IV fluids/vasopressors (such as phenylephrine or ephedrine per hemodynamics) and airway/oxygen support if high block occurs."
+  },
+  {
+    "id": "g-anes-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Two days after spinal anesthesia, a patient develops a severe frontal/occipital headache that worsens markedly within minutes of sitting or standing upright and improves significantly when lying flat, sometimes accompanied by neck stiffness, nausea, tinnitus, or diplopia. What is the diagnosis?",
+    "options": [
+      "Post-dural puncture headache (PDPH)",
+      "Migraine aura without positional change",
+      "Acute bacterial meningitis in every case without evaluation",
+      "Giant cell arteritis"
+    ],
+    "answer": 0,
+    "explanation": "Post-dural puncture headache classically worsens upright and improves supine due to CSF leakage and intracranial hypotension; conservative measures (hydration, supine rest, caffeine/analgesics) are used initially, and an epidural blood patch may be performed if persistent/severe."
+  },
+  {
+    "id": "g-anes-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "hard",
+    "question": "During a peripheral nerve block or inadvertent intravascular injection of a local anesthetic (such as bupivacaine or lidocaine), a patient develops perioral numbness, metallic taste, tinnitus, agitation/seizures, or ventricular arrhythmias/cardiac arrest. Which rescue therapy is administered alongside airway/resuscitation measures for Local Anesthetic Systemic Toxicity (LAST)?",
+    "options": [
+      "Intravenous 20% lipid emulsion therapy",
+      "Oral ketoconazole",
+      "Subcutaneous insulin",
+      "Routine daily oral iron"
+    ],
+    "answer": 0,
+    "explanation": "Local anesthetic systemic toxicity (LAST) affects CNS and cardiovascular conduction/contractility; prompt airway/oxygenation support, seizure control, ACLS/arrhythmia management (avoiding local anesthetics and certain calcium channel blockers/beta-blockers per LAST guidance), and 20% intravenous lipid emulsion are essential."
+  },
+  {
+    "id": "g-anes-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with severe opioid-induced respiratory depression and unresponsiveness in the post-anesthesia care unit (PACU) is given naloxone. Which clinical point should be kept in mind when titrating naloxone after surgery?",
+    "options": [
+      "Titrate carefully to reverse life-threatening respiratory depression while avoiding abrupt complete opioid reversal that can trigger severe rebound pain, sympathetic surge/hypertension, pulmonary edema, or arrhythmias, and monitor for re-sedation",
+      "Give a single massive bolus and discharge home 2 minutes later",
+      "Naloxone has no effect on opioid receptors",
+      "Opioids should never be given after surgery under any circumstances"
+    ],
+    "answer": 0,
+    "explanation": "Careful titration of naloxone restores adequate ventilation while minimizing acute pain/catecholamine surge, and ongoing observation is needed because naloxone's duration may be shorter than long-acting opioids."
+  },
+  {
+    "id": "g-anes-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Why are fasting (NPO) guidelines prior to elective general anesthesia or deep sedation important?",
+    "options": [
+      "To reduce gastric volume and aspiration risk of gastric contents into the lungs during induction/airway instrumentation when protective airway reflexes are blunted",
+      "To increase blood sugar before surgery",
+      "To lower hemoglobin intentionally",
+      "To prevent all postoperative nausea completely"
+    ],
+    "answer": 0,
+    "explanation": "Preoperative fasting lowers gastric fluid volume and risk of aspiration pneumonitis/pneumonia when airway reflexes are lost during anesthesia or deep sedation (with specific fasting intervals for clear liquids, breast milk, infant formula, and light meals/solids)."
+  },
+  {
+    "id": "g-anes-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient undergoing general anesthesia develops a sudden drop in oxygen saturation (SpO2), absent or markedly diminished breath sounds and chest movement on the left side, tracheal deviation to the right, distended neck veins, and hypotension shortly after central venous catheter placement or positive-pressure ventilation. Which immediate life-threatening complication must be treated urgently?",
+    "options": [
+      "Tension pneumothorax—requiring immediate decompression (needle/finger thoracostomy followed by tube thoracostomy)",
+      "Simple seasonal allergy",
+      "Mild constipation",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Tension pneumothorax impairs venous return and cardiac output while compressing the lung and shifting the mediastinum; immediate decompression is life-saving and must not be delayed waiting for imaging if hemodynamic instability is present."
+  },
+  {
+    "id": "g-anes-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Which standard monitors are part of basic intra-operative monitoring during general anesthesia or moderate/deep sedation?",
+    "options": [
+      "Continuous pulse oximetry (SpO2), electrocardiography (ECG), non-invasive blood pressure (NIBP), and capnography (ETCO2, especially for endotracheal intubation/airway confirmation and ventilation monitoring), plus temperature monitoring when indicated",
+      "Peak flow meter only",
+      "Urine dipstick every 5 minutes",
+      "Visual acuity chart only"
+    ],
+    "answer": 0,
+    "explanation": "Continuous oxygenation (SpO2), ventilation/ETCO2 waveform capnography, circulation (ECG and BP), and temperature monitoring are foundational standards of anesthetic safety."
+  },
+  {
+    "id": "g-anes-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with a history of postoperative nausea and vomiting (PONV), motion sickness, non-smoking status, and planned postoperative opioid analgesia is scheduled for laparoscopic surgery. Why is multimodal PONV prophylaxis often used in higher-risk patients?",
+    "options": [
+      "Combining agents from different pharmacologic classes (such as a 5-HT3 antagonist like ondansetron, dexamethasone, or a dopamine/NK1 antagonist) plus minimizing volatile/opioid triggers provides additive antiemetic benefit",
+      "Because PONV never occurs after laparoscopic surgery",
+      "Because antiemetics cause permanent blindness",
+      "Because opioids prevent all nausea"
+    ],
+    "answer": 0,
+    "explanation": "Multimodal PONV prophylaxis targets multiple emetic pathways (serotonin, dopamine, histamine, neurokinin/inflammatory pathways) and reduces postoperative nausea and vomiting in at-risk surgical patients."
+  },
+  {
+    "id": "g-anes-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient has a known severe IgE-mediated allergy to neuromuscular blockers or latex and develops sudden bronchospasm, wheezing, flushing/urticaria, and profound hypotension during induction of anesthesia. Which medication is the first-line treatment for anaphylaxis?",
+    "options": [
+      "Epinephrine (adrenaline) administered promptly—typically IM for out-of-hospital/initial anaphylaxis or titrated IV in monitored/refractory perioperative shock alongside airway/oxygen and IV fluids",
+      "Oral ketoconazole",
+      "Routine daily oral vitamin D",
+      "Topical hydrocortisone cream alone"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine is first-line life-saving therapy for anaphylaxis, reversing airway edema, bronchospasm, and vasodilation; antihistamines and glucocorticoids are adjunctive rather than substitutes for epinephrine."
+  },
+  {
+    "id": "g-anes-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient receiving procedural sedation with midazolam becomes somnolent with hypoventilation and oxygen desaturation. Which specific benzodiazepine receptor antagonist reverses benzodiazepine-induced sedation/respiratory depression?",
+    "options": [
+      "Flumazenil",
+      "Naloxone",
+      "Sugammadex",
+      "Atropine"
+    ],
+    "answer": 0,
+    "explanation": "Flumazenil is a competitive GABA-A benzodiazepine receptor antagonist; it reverses benzodiazepine sedation but is used cautiously because it can precipitate withdrawal or seizures in benzodiazepine-dependent patients or patients who co-ingested pro-convulsant drugs."
+  },
+  {
+    "id": "g-anes-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Why is multimodal analgesia (combining non-opioid analgesics such as acetaminophen and/or NSAIDs when not contraindicated, regional/local anesthesia techniques, and targeted opioids only when needed) favored in contemporary perioperative pain management?",
+    "options": [
+      "It provides effective pain relief across complementary mechanisms while reducing total opioid requirement and opioid-related adverse effects such as respiratory depression, ileus, and sedation",
+      "Because non-opioid medications have zero side effects in any patient",
+      "Because pain after surgery should never be treated",
+      "Because opioids must be avoided even in severe acute trauma pain when non-opioids are insufficient"
+    ],
+    "answer": 0,
+    "explanation": "Multimodal analgesia improves pain control and functional recovery while lowering opioid exposure and side effects, tailored to patient factors (such as renal/GI/bleeding risk for NSAIDs or hepatic risk for acetaminophen)."
+  },
+  {
+    "id": "g-anes-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "During endotracheal intubation in general anesthesia, which finding is the most reliable confirmation of correct endotracheal tube placement in the trachea rather than the esophagus?",
+    "options": [
+      "Sustained waveform capnography (presence of end-tidal CO2 across multiple breaths) along with clinical signs such as bilateral chest rise, equal breath sounds, and absence of gastric insufflation",
+      "Feeling the tube go down easily without checking CO2",
+      "Normal blood pressure alone",
+      "Absence of coughing"
+    ],
+    "answer": 0,
+    "explanation": "Continuous waveform capnography (ETCO2) is the gold-standard confirmation of tracheal intubation and ventilation, integrated with direct visualization/auscultation and pulse oximetry."
+  },
+  {
+    "id": "g-anes-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with obstructive sleep apnea (OSA) is scheduled for surgery. What is a key perioperative safety consideration for patients with known or suspected OSA?",
+    "options": [
+      "Heightened sensitivity to sedatives and opioids (increasing risk of airway obstruction and respiratory depression), making careful airway planning, multimodal opioid-sparing analgesia, and appropriate postoperative monitoring important",
+      "Stopping CPAP therapy intentionally before surgery in all patients",
+      "Assuming OSA has no impact on airway or sedative sensitivity",
+      "Giving large unmonitored doses of sedatives prior to transfer"
+    ],
+    "answer": 0,
+    "explanation": "Patients with OSA are more vulnerable to upper airway collapse and ventilatory depression from sedatives, anesthetics, and opioids; continuing home CPAP, using multimodal analgesia, and monitoring closely postoperatively support safe recovery."
+  }
+]

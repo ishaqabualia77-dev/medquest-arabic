@@ -1,0 +1,338 @@
+[
+  {
+    "id": "g-id-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "hard",
+    "question": "A patient presents with acute fever, severe headache, neck stiffness (nuchal rigidity), and altered mental status. After drawing blood cultures and performing urgent neuroimaging/lumbar puncture per clinical indications, which immediate antimicrobial step is critical in suspected acute bacterial meningitis?",
+    "options": [
+      "Prompt empiric intravenous broad-spectrum antibiotics (such as ceftriaxone/cefotaxime plus vancomycin, and ampicillin if age > 50 or immunocompromised/pregnant) plus adjunctive dexamethasone when indicated—without delaying treatment if lumbar puncture is deferred",
+      "Wait 24 hours for final culture speciation before starting any antimicrobials",
+      "Oral antacids and outpatient observation alone",
+      "Routine daily oral antihistamines"
+    ],
+    "answer": 0,
+    "explanation": "Suspected acute bacterial meningitis is a medical emergency; empiric IV antibiotics (and dexamethasone when indicated) should be started immediately and never delayed by pending lumbar puncture or imaging."
+  },
+  {
+    "id": "g-id-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with 3 weeks of productive cough, low-grade evening fever, night sweats, and unintentional weight loss. Chest radiograph shows right upper lobe cavitary/infiltrative lesions. Which diagnostic test or precaution is essential initially?",
+    "options": [
+      "Airborne infection isolation precautions, sputum acid-fast bacilli (AFB) smears/mycobacterial cultures, and nucleic acid amplification testing (NAAT/Xpert) for Mycobacterium tuberculosis",
+      "Contact precautions only with oral antihistamines",
+      "Routine fasting lipid panel without respiratory evaluation",
+      "Discharging the patient to public transit without mask or isolation assessment"
+    ],
+    "answer": 0,
+    "explanation": "Subacute cough, constitutional symptoms, and upper-lobe cavitary/infiltrative chest imaging raise strong suspicion for active pulmonary tuberculosis, requiring airborne precautions and rapid microbiologic/NAAT testing."
+  },
+  {
+    "id": "g-id-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient develops watery diarrhea, cramping abdominal pain, and low-grade fever 10 days after completing a course of clindamycin or broad-spectrum antibiotics. Stool testing is positive for Clostridioides difficile toxin/NAAT. Which initial therapy is preferred for an initial episode of C. difficile infection?",
+    "options": [
+      "Oral vancomycin or oral fidaxomicin (per current IDSA/clinical guidelines, avoiding metronidazole as first-line when vancomycin/fidaxomicin are available)",
+      "Continuing the offending antibiotic at double dose",
+      "Routine antimotility opiates alone in severe colitis",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "First-line therapy for Clostridioides difficile infection is oral fidaxomicin or oral vancomycin, along with discontinuing unnecessary inciting antibiotics and assessing severity."
+  },
+  {
+    "id": "g-id-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient with a prosthetic heart valve or prior infective endocarditis presents with persistent fever, new regurgitant heart murmur, night sweats, and anorexia. Which diagnostic tests form the cornerstone of evaluating suspected infective endocarditis?",
+    "options": [
+      "Multiple sets of blood cultures (drawn prior to antibiotics when clinically safe) and echocardiography (transthoracic and/or transesophageal echocardiography)",
+      "Fasting serum amylase and lipase only",
+      "Plain X-ray of the ankle",
+      "Routine urine pregnancy test alone"
+    ],
+    "answer": 0,
+    "explanation": "Suspicion of infective endocarditis relies on obtaining multiple blood culture sets to identify bacteremia/fungemia and performing echocardiography to detect vegetations, valvular regurgitation, or perivalvular complications."
+  },
+  {
+    "id": "g-id-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, chills, dysuria, and tenderness over the right costovertebral angle, with urinalysis showing pyuria and bacteriuria. Which diagnosis is most likely?",
+    "options": [
+      "Acute pyelonephritis",
+      "Simple seasonal allergic rhinitis",
+      "Benign paroxysmal positional vertigo",
+      "Primary aldosteronism"
+    ],
+    "answer": 0,
+    "explanation": "Fever, flank/costovertebral angle tenderness, and urinary tract infection findings indicate acute pyelonephritis, requiring prompt antimicrobial therapy tailored to local resistance and severity."
+  },
+  {
+    "id": "g-id-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "hard",
+    "question": "A patient with sepsis has persistent hypotension requiring vasopressors to maintain mean arterial pressure >= 65 mmHg and serum lactate > 2 mmol/L despite adequate volume resuscitation. What is this clinical state called?",
+    "options": [
+      "Septic shock",
+      "Uncomplicated upper viral URI",
+      "Simple essential hypertension",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Septic shock is a subset of sepsis with profound circulatory, cellular, and metabolic abnormalities—specifically needing vasopressors to maintain MAP >= 65 mmHg and having elevated lactate (> 2 mmol/L) despite adequate fluid resuscitation—carrying high mortality."
+  },
+  {
+    "id": "g-id-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with an expanding, erythematous, warm, tender skin plaque on the lower leg with poorly demarcated borders, fever, and mild leukocytosis. Which skin and soft-tissue infection is most likely, and which organism is a common cause?",
+    "options": [
+      "Cellulitis; commonly beta-hemolytic streptococci (such as Streptococcus pyogenes) or Staphylococcus aureus",
+      "Osteoarthritis of the knee",
+      "Simple tinea versicolor without inflammation",
+      "Herpes zoster oticus"
+    ],
+    "answer": 0,
+    "explanation": "Cellulitis is an acute bacterial infection of the dermis and subcutaneous tissue characterized by spreading erythema, edema, warmth, and tenderness, most commonly caused by streptococci and Staphylococcus aureus."
+  },
+  {
+    "id": "g-id-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient newly diagnosed with HIV has a CD4 T-cell count of 110 cells/uL. Which opportunistic infection prophylaxis is indicated when CD4 count falls below 200 cells/uL (or in specific high-risk HIV settings)?",
+    "options": [
+      "Prophylaxis against Pneumocystis jirovecii pneumonia (PJP), typically with trimethoprim-sulfamethoxazole (TMP-SMX)",
+      "Routine daily high-dose oral steroids without indication",
+      "Oral ketoconazole for all patients",
+      "Discontinuing all antiretroviral therapy indefinitely"
+    ],
+    "answer": 0,
+    "explanation": "Patients with HIV and CD4 count < 200 cells/uL require Pneumocystis jirovecii pneumonia prophylaxis (trimethoprim-sulfamethoxazole is first-line), alongside initiating antiretroviral therapy (ART)."
+  },
+  {
+    "id": "g-id-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient with cirrhosis and ascites presents with new fever, abdominal pain/tenderness, or worsening hepatic encephalopathy. Diagnostic paracentesis of ascitic fluid shows an ascitic polymorphonuclear (PMN) leukocyte count >= 250 cells/mm3. What is the diagnosis?",
+    "options": [
+      "Spontaneous bacterial peritonitis (SBP)",
+      "Simple sliding hiatal hernia",
+      "Acute gouty arthritis",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "Ascitic fluid PMN count >= 250 cells/mm3 in a patient with cirrhosis/ascites (without an apparent intra-abdominal surgical source) diagnoses SBP, treated promptly with empiric IV third-generation cephalosporin (e.g., cefotaxime/ceftriaxone) and IV albumin in eligible high-risk patients."
+  },
+  {
+    "id": "g-id-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient with a diabetic foot ulcer has deep tissue erythema, purulence, probe-to-bone positivity, and MRI showing bone marrow edema/osteomyelitis of the underlying metatarsal. Which bone infection is present?",
+    "options": [
+      "Osteomyelitis",
+      "Simple osteoarthritis",
+      "Seborrheic keratosis",
+      "Primary insomnia"
+    ],
+    "answer": 0,
+    "explanation": "Osteomyelitis is infection of bone and bone marrow, often arising in diabetic foot ulcers by contiguous spread or via hematogenous seeding, requiring targeted antimicrobial therapy and surgical debridement/revascularization when indicated."
+  },
+  {
+    "id": "g-id-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, headache, myalgias, and an expanding target-like/bull's-eye rash (erythema migrans) after hiking in a wooded area. Which tick-borne bacterial infection is most likely?",
+    "options": [
+      "Lyme disease (Borrelia burgdorferi infection)",
+      "Acute appendicitis",
+      "Gilbert syndrome",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Erythema migrans following tick exposure in an endemic area is characteristic of early localized Lyme disease, treated with oral doxycycline (or amoxicillin/cefuroxime axetil when appropriate)."
+  },
+  {
+    "id": "g-id-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with high fever, severe headache, retro-orbital pain, severe myalgias/arthralgias ('breakbone fever'), rash, and thrombocytopenia/leukopenia after travel to a tropical/subtropical region. Which mosquito-borne viral illness is a key consideration?",
+    "options": [
+      "Dengue fever",
+      "Hereditary hemochromatosis",
+      "Simple calcium oxalate stone",
+      "Multiple sclerosis"
+    ],
+    "answer": 0,
+    "explanation": "High fever, severe myalgias/retro-orbital pain, thrombocytopenia, and leukopenia in an endemic tropical area suggest dengue; NSAIDs and aspirin are avoided due to bleeding risk while monitoring for plasma leakage/warning signs."
+  },
+  {
+    "id": "g-id-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with cyclical fevers, chills, sweats, headache, and hemolytic anemia with thrombocytopenia after traveling to a malaria-endemic region. Which diagnostic method confirms Plasmodium infection and species/parasitemia?",
+    "options": [
+      "Thick and thin peripheral blood smears (and/or rapid malaria antigen diagnostic testing)",
+      "Fasting serum TSH alone",
+      "Plain chest X-ray",
+      "Routine urinalysis without blood testing"
+    ],
+    "answer": 0,
+    "explanation": "Thick blood smears increase sensitivity for detecting malaria parasites, while thin smears allow species identification and quantification of parasitemia to guide treatment (such as artemisinin-based combination therapy or IV artesunate for severe malaria)."
+  },
+  {
+    "id": "g-id-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A healthcare worker sustains a percutaneous needlestick injury from a source patient whose hepatitis B surface antigen (HBsAg) status is positive, and the healthcare worker is previously unvaccinated/non-immune. Which post-exposure regimen is indicated?",
+    "options": [
+      "Hepatitis B immune globulin (HBIG) and initiation/completion of the hepatitis B vaccine series as soon as possible",
+      "Oral penicillin for 3 days only",
+      "No post-exposure measures are ever needed",
+      "Oral levothyroxine"
+    ],
+    "answer": 0,
+    "explanation": "After percutaneous or mucosal exposure to HBsAg-positive blood in a non-immune individual, administering HBIG and starting HB vaccination provides effective post-exposure prophylaxis."
+  },
+  {
+    "id": "g-id-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, chills, and a single hot, swollen, erythematous, severely painful joint (most commonly the knee) with markedly restricted range of motion. Which urgent diagnostic step is mandatory to evaluate for septic arthritis?",
+    "options": [
+      "Prompt arthrocentesis (joint aspiration) for synovial fluid cell count with differential, Gram stain, aerobic/anaerobic cultures, and crystal analysis",
+      "Applying a warm compress and discharging home without joint aspiration",
+      "Routine fasting lipid profile",
+      "Oral antihistamines"
+    ],
+    "answer": 0,
+    "explanation": "Suspected acute septic arthritis requires urgent joint aspiration prior to or immediately alongside empiric IV antibiotics to establish the diagnosis, rule out crystal arthropathy, and guide joint drainage/debridement."
+  },
+  {
+    "id": "g-id-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, sore throat, cervical lymphadenopathy, fatigue, and atypical lymphocytosis on peripheral blood smear, with a positive heterophile (Monospot) or EBV serologic test. Which viral infection is most likely?",
+    "options": [
+      "Infectious mononucleosis (commonly caused by Epstein-Barr virus, EBV)",
+      "Acute bacterial meningitis from Streptococcus pneumoniae",
+      "Primary hyperparathyroidism",
+      "Hereditary spherocytosis"
+    ],
+    "answer": 0,
+    "explanation": "Fever, pharyngitis, lymphadenopathy, fatigue, and atypical lymphocytes are classic for EBV infectious mononucleosis; management is supportive, and contact sports are typically avoided until splenomegaly/rupture risk resolves."
+  },
+  {
+    "id": "g-id-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient with untreated HIV infection and a CD4 count of 65 cells/uL presents with subacute headache, fever, confusion, and neck stiffness. Lumbar puncture shows elevated opening pressure, mildly low/normal glucose, lymphocytic pleocytosis, and positive cryptococcal antigen/India ink. What is the diagnosis?",
+    "options": [
+      "Cryptococcal meningitis",
+      "Simple seasonal allergic rhinitis",
+      "Benign paroxysmal positional vertigo",
+      "Acute gouty arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Cryptococcal meningitis occurs predominantly in severely immunocompromised patients (such as advanced HIV with CD4 < 100 cells/uL), managed with induction antifungal therapy (amphotericin B formulation plus flucytosine), elevated ICP management, and timed ART initiation."
+  },
+  {
+    "id": "g-id-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "easy",
+    "question": "Which infection-control precaution is primarily used to prevent transmission of infectious agents spread via large respiratory droplets (such as influenza or Bordetella pertussis during coughing/sneezing)?",
+    "options": [
+      "Droplet precautions (including medical mask for close contact/room entry and source control)",
+      "No precautions needed in any clinical setting",
+      "Routine daily oral iron supplements",
+      "Fasting blood glucose monitoring alone"
+    ],
+    "answer": 0,
+    "explanation": "Droplet precautions are used for pathogens transmitted primarily by respiratory droplets over short distances, complementing standard precautions and hand hygiene."
+  },
+  {
+    "id": "g-id-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient with community-acquired pneumonia is hospitalized on general medical ward care (non-ICU). Which standard empiric inpatient antibiotic strategy is commonly recommended?",
+    "options": [
+      "A beta-lactam (such as ceftriaxone) plus a macrolide (such as azithromycin) OR respiratory fluoroquinolone monotherapy (per local guidelines, allergies, and risk factors)",
+      "Oral ketoconazole alone",
+      "No antibiotics if fever is 38.6°C",
+      "High-dose daily warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Standard empiric inpatient CAP coverage for non-ICU patients typically combines a beta-lactam with a macrolide (or uses a respiratory fluoroquinolone) to cover typical bacterial pathogens like Streptococcus pneumoniae as well as atypical organisms."
+  },
+  {
+    "id": "g-id-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with painful grouped vesicles on an erythematous base distributed along a single unilateral dermatome (such as thoracic or ophthalmic branch of trigeminal nerve), preceded by burning or tingling pain. What is the diagnosis?",
+    "options": [
+      "Herpes zoster (shingles) due to reactivation of varicella-zoster virus",
+      "Simple psoriasis vulgaris",
+      "Primary aldosteronism",
+      "Iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "Unilateral dermatomal grouped vesicles on an erythematous base represent herpes zoster from VZV reactivation; antiviral therapy (such as valacyclovir, acyclovir, or famciclovir) is most effective when started early (within 72 hours or in complicated/ophthalmic/immunocompromised cases)."
+  },
+  {
+    "id": "g-id-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Infectious Diseases",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, chills, malaise, and a painless indurated genital/anal chancre that heals spontaneously over several weeks, followed weeks later by a non-pruritic maculopapular rash involving the palms and soles. Which sexually transmitted infection is classically described?",
+    "options": [
+      "Syphilis (Treponema pallidum infection—primary chancre followed by secondary rash involving palms and soles)",
+      "Acute gouty arthritis",
+      "Gilbert syndrome",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "Primary syphilis classically presents with a painless chancre, and secondary syphilis often causes a diffuse rash characteristically involving the palms and soles, treated primarily with benzathine penicillin G."
+  }
+]

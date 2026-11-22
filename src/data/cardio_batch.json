@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cardio-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "What is the preferred initial pharmacological treatment for symptomatic extrasystoles (premature beats)?",
+    "options": [
+      "Beta-blockers",
+      "Digoxin",
+      "Atropine",
+      "Oral potassium chloride alone"
+    ],
+    "answer": 0,
+    "explanation": "Beta-blockers are commonly used first-line to suppress symptomatic premature beats/extrasystoles."
+  }
+]

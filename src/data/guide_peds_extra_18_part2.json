@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-peds-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-week-old infant presents with prolonged unconjugated jaundice, pale/acholic stools, dark urine, and hepatomegaly. Which hepatobiliary emergency in infancy must be evaluated urgently (such as with hepatobiliary scintigraphy/HIDA scan, liver function tests, and cholangiography/biopsy) to allow timely surgical intervention before cirrhosis develops?",
+    "options": [
+      "Biliary atresia",
+      "Simple physiological newborn jaundice resolving in the first week",
+      "Acute otitis media",
+      "Absence seizure"
+    ],
+    "answer": 0,
+    "explanation": "Conjugated (direct) hyperbilirubinemia with acholic stools and dark urine in a young infant is a red flag for biliary atresia; early evaluation and Kasai hepatoportoenterostomy (ideally within the first 60–90 days of life) improve bile drainage outcomes."
+  },
+  {
+    "id": "g-peds-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 9-year-old boy presents 2 weeks after a Group A streptococcal skin/throat infection with periorbital edema, gross hematuria ('cola-colored' urine), hypertension, oliguria, and low serum C3 complement. Which acute glomerular disorder is most likely?",
+    "options": [
+      "Acute post-streptococcal glomerulonephritis (APSGN)",
+      "Hypertrophic pyloric stenosis",
+      "Viral croup",
+      "Atopic dermatitis"
+    ],
+    "answer": 0,
+    "explanation": "Nephritic presentation (hematuria, hypertension, edema, oliguria) following recent streptococcal infection with transient hypocomplementemia (low C3) is classic for APSGN, typically managed with supportive fluid/sodium restriction and blood pressure control."
+  },
+  {
+    "id": "g-peds-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-year-old child presents with marked generalized edema (periorbital puffiness in the morning, sacral/lower-extremity edema, and ascites) without gross hematuria or significant hypertension. Urinalysis shows heavy proteinuria, and labs reveal hypoalbuminemia and hyperlipidemia. Which condition is most common in this age group?",
+    "options": [
+      "Minimal change disease (idiopathic nephrotic syndrome)",
+      "Acute post-streptococcal glomerulonephritis",
+      "Intussusception",
+      "Neonatal respiratory distress syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Minimal change disease is the most frequent cause of nephrotic syndrome in young children, presenting with heavy proteinuria, hypoalbuminemia, edema, and hyperlipidemia, and typically responds well to systemic corticosteroids."
+  },
+  {
+    "id": "g-peds-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 5-year-old child presents with a 3-week history of polyuria, polydipsia, nocturia/new-onset bedwetting, and unintentional weight loss, and is brought in lethargic with deep rapid breathing (Kussmaul respirations) and fruity breath. Point-of-care glucose is 430 mg/dL with ketonuria and metabolic acidosis. What is the diagnosis?",
+    "options": [
+      "Diabetic ketoacidosis (DKA) (often the initial presentation of type 1 diabetes in children)",
+      "Simple iron-deficiency anemia",
+      "Viral croup",
+      "Acute otitis media"
+    ],
+    "answer": 0,
+    "explanation": "Hyperglycemia, ketosis/ketonemia, and high-anion-gap metabolic acidosis with Kussmaul respirations and dehydration define DKA; management focuses on careful isotonic fluid resuscitation, monitored intravenous insulin infusion, potassium replacement, and close neurologic/electrolyte monitoring (especially watching for cerebral edema in children)."
+  },
+  {
+    "id": "g-peds-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-month-old infant presents with 2 weeks of paroxysmal coughing fits ending in a high-pitched inspiratory 'whoop' and post-tussive emesis, with normal inter-paroxysmal appearance and afebrile course. Which bacterial respiratory infection is suspected?",
+    "options": [
+      "Pertussis (whooping cough, caused by Bordetella pertussis)",
+      "Acute otitis media",
+      "Hypertrophic pyloric stenosis",
+      "Minimal change disease"
+    ],
+    "answer": 0,
+    "explanation": "Paroxysmal coughing spells, inspiratory whoop, and post-tussive vomiting—especially in young infants who may present with apnea or cyanosis rather than a classic whoop—point toward pertussis; macrolide therapy (such as azithromycin) and post-exposure prophylaxis for close contacts/household members are key."
+  },
+  {
+    "id": "g-peds-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-year-old child presents with 4 days of high fever (39.6°C) that abruptly resolves on day 4, followed immediately by a blanching maculopapular rash starting on the trunk and spreading to the neck/extremities while the child appears well. Which viral exanthem is described?",
+    "options": [
+      "Roseola infantum (exanthem subitum, commonly caused by human herpesvirus 6 [HHV-6])",
+      "Measles (rubeola—fever typically rises/persists as rash spreads cephalocaudally with cough, coryza, conjunctivitis, and Koplik spots)",
+      "Varicella (pruritic vesicular rash in different stages of healing)",
+      "Impetigo"
+    ],
+    "answer": 0,
+    "explanation": "Roseola (HHV-6) classically causes several days of high fever in infants/toddlers followed by defervescence as a truncal maculopapular rash appears."
+  },
+  {
+    "id": "g-peds-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 5-year-old child presents with fever, painful oral vesicles/ulcers on the tongue and buccal mucosa, and tender vesicles/macules on the palms of the hands and soles of the feet. Which viral illness is most likely?",
+    "options": [
+      "Hand, foot, and mouth disease (most commonly coxsackievirus A16 or enterovirus 71)",
+      "Kawasaki disease",
+      "Acute post-streptococcal glomerulonephritis",
+      "Hypertrophic pyloric stenosis"
+    ],
+    "answer": 0,
+    "explanation": "Hand, foot, and mouth disease causes painful enanthem/oral ulcers and a rash on the hands and feet (and sometimes buttocks), managed with hydration and pain/fever control."
+  },
+  {
+    "id": "g-peds-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 7-year-old child presents with bright red, confluent erythematous cheeks ('slapped cheek' appearance) followed by a lacy reticular rash on the trunk and limbs, and a parent who is pregnant asks whether this poses a fetal risk if caused by parvovirus B19. What is a key clinical consideration?",
+    "options": [
+      "Erythema infectiosum (fifth disease, parvovirus B19) can cause transient red-cell aplasia in hemolytic anemias and, in pregnant contacts, fetal anemia or hydrops fetalis, warranting evaluation/monitoring if exposed during pregnancy",
+      "Parvovirus B19 is a bacterial infection cured by topical hydrocortisone",
+      "Slapped-cheek rash always requires emergency appendectomy",
+      "Parvovirus B19 never affects pregnant contacts"
+    ],
+    "answer": 0,
+    "explanation": "Fifth disease (parvovirus B19) classically causes a 'slapped cheek' facial rash and lacy truncal/limb rash; pregnant contacts or patients with chronic hemolytic anemias (like sickle cell disease) warrant targeted assessment for fetal or hematologic complications."
+  },
+  {
+    "id": "g-peds-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 12-month-old infant is brought for a well-child visit and has not received routine vaccines. Which general principle governs childhood immunization schedules and catch-up vaccination?",
+    "options": [
+      "Follow evidence-based pediatric catch-up immunization schedules without restarting series from the beginning when doses are delayed, while respecting minimum intervals and live-vaccine precautions (such as immunosuppression or pregnancy)",
+      "Restart every vaccine series from dose 1 whenever a scheduled visit is late",
+      "Never administer multiple vaccines during the same well-child visit",
+      "Delay all childhood vaccines until age 18"
+    ],
+    "answer": 0,
+    "explanation": "Delayed immunization does not require restarting a series—clinicians give the next due dose using established minimum intervals and age-appropriate catch-up schedules, and can safely co-administer multiple vaccines at a single visit."
+  },
+  {
+    "id": "g-peds-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 15-month-old child presents with delayed expressive language (fewer than a few spoken words, limited pointing/gestures), reduced response to name, limited eye contact, and repetitive hand-flapping or lining up toys. Which developmental evaluation is appropriate?",
+    "options": [
+      "Comprehensive developmental and autism spectrum disorder screening/evaluation along with formal hearing assessment",
+      "Reassuring parents that hearing and speech evaluation are never needed before age 10",
+      "Starting oral ketoconazole",
+      "Immediate surgical pyloromyotomy"
+    ],
+    "answer": 0,
+    "explanation": "Speech/social communication differences and repetitive behaviors in a toddler warrant formal developmental/autism screening, hearing testing (to rule out conductive or sensorineural hearing loss), and early intervention services."
+  },
+  {
+    "id": "g-peds-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child presents with chronic diarrhea, foul-smelling bulky stools, abdominal distension, poor weight gain (failure to thrive), and irritability after solid foods containing wheat/gluten were introduced, with positive tissue transglutaminase IgA antibodies (and normal total IgA). What is the diagnosis?",
+    "options": [
+      "Celiac disease (gluten-sensitive enteropathy)",
+      "Hypertrophic pyloric stenosis",
+      "Acute post-streptococcal glomerulonephritis",
+      "Absence seizure"
+    ],
+    "answer": 0,
+    "explanation": "Celiac disease is an immune-mediated enteropathy triggered by dietary gluten in genetically susceptible individuals, causing malabsorption, growth faltering/weight loss, and GI symptoms; lifelong strict gluten-free diet is the mainstay of treatment."
+  },
+  {
+    "id": "g-peds-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "An 18-month-old child who is exclusively breastfed without vitamin D supplementation presents with wide anterior fontanelle, frontal bossing, rachitic rosary (costochondral enlargement), bowing of the legs (genu varum), and wrist widening, with low 25-hydroxyvitamin D and elevated alkaline phosphatase. What is the diagnosis?",
+    "options": [
+      "Nutritional rickets (vitamin D deficiency)",
+      "Kawasaki disease",
+      "Intussusception",
+      "Minimal change disease"
+    ],
+    "answer": 0,
+    "explanation": "Vitamin D deficiency impairs calcium/phosphate mineralization of growing bone growth plates, causing rickets; vitamin D and adequate calcium supplementation treat deficiency, and routine vitamin D supplementation is recommended for breastfed/partially breastfed infants."
+  },
+  {
+    "id": "g-peds-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 3-year-old child who had a recent viral upper respiratory infection 10 days ago suddenly develops generalized petechiae and purpura with bruising, without fever, bone pain, hepatosplenomegaly, or lymphadenopathy. CBC shows isolated severe thrombocytopenia (platelets 14,000/uL) with normal hemoglobin and WBC count. What is the most likely diagnosis?",
+    "options": [
+      "Immune thrombocytopenia (ITP)",
+      "Acute lymphoblastic leukemia (typically accompanied by anemia/leukopenia or blasts, bone pain, or organomegaly/lymphadenopathy)",
+      "Hemolytic uremic syndrome",
+      "Viral croup"
+    ],
+    "answer": 0,
+    "explanation": "Isolated thrombocytopenia in an otherwise well-appearing child with mucocutaneous bleeding (petechiae/bruising) and normal red/white cell lines is characteristic of ITP, which is often post-viral and frequently self-limited in children."
+  },
+  {
+    "id": "g-peds-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-year-old child with sickle cell disease presents with fever of 39.2°C, lethargy, and irritability. Why is fever in a child with sickle cell disease treated as a medical emergency requiring prompt evaluation, blood cultures, and empiric parenteral broad-spectrum antibiotics?",
+    "options": [
+      "Functional asplenia/hyposplenism in sickle cell disease markedly increases susceptibility to rapid, overwhelming invasive bacterial infection (especially encapsulated organisms like Streptococcus pneumoniae)",
+      "Because fever in sickle cell disease always means appendicitis",
+      "Because sickle cell disease makes children immune to all bacteria",
+      "Because antibiotics are contraindicated in fever"
+    ],
+    "answer": 0,
+    "explanation": "Early splenic infarction/functional asplenia impairs clearance of encapsulated bacteria, making prompt evaluation and empiric antibiotics critical for febrile children with sickle cell disease."
+  },
+  {
+    "id": "g-peds-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-week-old newborn presents with poor feeding, lethargy, temperature instability (35.8°C or 38.4°C), tachypnea, and irritability. Why is a full sepsis evaluation (including blood culture, urine culture, and lumbar puncture/CSF studies as indicated) and prompt empiric IV antibiotics essential in a febrile neonate (<= 28 days old)?",
+    "options": [
+      "Neonates have immature immune defenses and face a high risk of invasive bacterial infection (such as Group B Streptococcus, E. coli, or Listeria) even when initial clinical signs are subtle",
+      "Because neonates never have serious infections",
+      "Because oral acetaminophen cures neonatal sepsis alone",
+      "Because lumbar puncture is only done in adults"
+    ],
+    "answer": 0,
+    "explanation": "Neonates (<= 28 days) with fever or signs of sepsis require urgent evaluation and empiric parenteral antimicrobials given the risk of rapid progression to bacteremia or meningitis."
+  },
+  {
+    "id": "g-peds-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-month-old infant is brought for a routine checkup and parents ask about safe sleep practices to reduce the risk of sudden infant death syndrome (SIDS) and sleep-related infant deaths. Which recommendation aligns with safe infant sleep guidance?",
+    "options": [
+      "Place the infant supine (on their back) for every sleep on a firm, flat surface in the parents' room (separate sleep surface) without loose bedding, pillows, or plush toys",
+      "Place the infant prone (on their stomach) or side to sleep with soft pillows and blankets",
+      "Put the infant to sleep on a soft couch or armchair",
+      "Cover the infant's head with heavy blankets while sleeping"
+    ],
+    "answer": 0,
+    "explanation": "Supine sleeping on a firm, flat sleep surface, room-sharing without bed-sharing, avoiding soft bedding/pillows/bumpers, and avoiding overheating are key evidence-based safe sleep practices to reduce SIDS/sleep-related infant mortality."
+  },
+  {
+    "id": "g-peds-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 3-year-old child presents with a 2-week history of dry cough, low-grade fever, and localized decreased breath sounds and wheezing on the right side after playing with small nuts/toys, with chest radiograph showing hyperinflation ('air trapping') of the right lung on expiration. Which condition must be suspected?",
+    "options": [
+      "Foreign body aspiration (with ball-valve air trapping on the affected side)",
+      "Minimal change disease",
+      "Hypertrophic pyloric stenosis",
+      "Juvenile idiopathic arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Sudden choking/coughing or asymmetric wheezing/decreased breath sounds and unilateral air trapping in a toddler suggest foreign body aspiration, requiring prompt evaluation and bronchoscopy."
+  },
+  {
+    "id": "g-peds-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 7-year-old child presents with swelling, warmth, and stiffness of the right knee lasting 8 weeks without trauma or infection, along with morning joint stiffness improving with activity. Which chronic pediatric rheumatologic condition is most common in children?",
+    "options": [
+      "Juvenile idiopathic arthritis (JIA)",
+      "Hypertrophic pyloric stenosis",
+      "Neonatal respiratory distress syndrome",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Juvenile idiopathic arthritis is the most common chronic rheumatic disease of childhood, defined by persistent arthritis of unknown cause lasting at least 6 weeks with onset before age 16, and warrants monitoring for uveitis (especially in oligoarticular JIA with positive ANA)."
+  }
+]

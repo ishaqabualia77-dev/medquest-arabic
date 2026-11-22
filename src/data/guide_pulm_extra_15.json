@@ -1,0 +1,242 @@
+[
+  {
+    "id": "g-pulm-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with asthma presents with acute dyspnea, wheezing, chest tightness, and peak expiratory flow at 55% of predicted despite using a short-acting beta-agonist inhaler at home. Which immediate combination therapy is appropriate in the acute care setting?",
+    "options": [
+      "Repeated/continuous nebulized short-acting beta-agonist (albuterol), systemic corticosteroids, and supplemental oxygen titrated to target saturation",
+      "Oral montelukast alone without bronchodilators or steroids",
+      "Routine sedatives or anxiolytics to reduce air hunger",
+      "Discontinuing all bronchodilators for 24 hours"
+    ],
+    "answer": 0,
+    "explanation": "Acute asthma exacerbations are treated promptly with repeated/continuous SABA therapy, systemic corticosteroids, and oxygen to maintain safe saturation while closely monitoring response."
+  },
+  {
+    "id": "g-pulm-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with chronic obstructive pulmonary disease (COPD) has a post-bronchodilator FEV1/FVC ratio < 0.70, chronic dyspnea, and frequent exacerbations despite dual bronchodilator therapy (LAMA + LABA), with blood eosinophil count >= 300 cells/uL. Which escalation is commonly considered?",
+    "options": [
+      "Adding an inhaled corticosteroid (ICS) to form triple therapy (LAMA + LABA + ICS)",
+      "Starting oral methotrexate as primary COPD maintenance",
+      "Stopping all inhalers and using oral codeine",
+      "Routine high-dose systemic prednisone daily for years"
+    ],
+    "answer": 0,
+    "explanation": "In COPD patients with persistent exacerbations on LAMA + LABA—especially those with elevated blood eosinophils (>= 300 cells/uL)—escalating to triple therapy (LAMA + LABA + ICS) reduces exacerbation risk."
+  },
+  {
+    "id": "g-pulm-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "hard",
+    "question": "A patient with suspected acute pulmonary embolism is hemodynamically unstable with sustained hypotension (systolic BP < 90 mmHg) and shock. Which reperfusion intervention is indicated emergently alongside anticoagulation and hemodynamic support?",
+    "options": [
+      "Systemic thrombolytic therapy (fibrinolysis, such as alteplase) unless strictly contraindicated, or catheter-directed/surgical embolectomy when appropriate",
+      "Outpatient oral rivaroxaban with discharge home",
+      "Elective repeat D-dimer in 1 week",
+      "Oral acetaminophen alone"
+    ],
+    "answer": 0,
+    "explanation": "Massive/high-risk pulmonary embolism causing hemodynamic instability or shock warrants urgent systemic thrombolysis (or mechanical/catheter/surgical thrombectomy when indicated) in addition to anticoagulation."
+  },
+  {
+    "id": "g-pulm-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, productive cough with purulent sputum, pleuritic chest pain, and right lower lobe consolidation on chest X-ray, with CURB-65 score of 0 and no severe comorbidities or aspiration risk. Which outpatient antibiotic strategy is typically appropriate?",
+    "options": [
+      "Empiric outpatient therapy tailored to local resistance and patient factors (such as amoxicillin or doxycycline, or a macrolide where appropriate)",
+      "Immediate ICU admission and mechanical ventilation",
+      "No antibiotics because bacterial pneumonia never occurs in outpatients",
+      "Oral acyclovir monotherapy"
+    ],
+    "answer": 0,
+    "explanation": "Low-risk outpatient community-acquired pneumonia is treated with guideline-concordant oral antibiotics selected according to comorbidities, recent antibiotic exposure, and local resistance patterns."
+  },
+  {
+    "id": "g-pulm-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient undergoes thoracentesis for a unilateral pleural effusion, and pleural fluid analysis shows pleural fluid protein / serum protein > 0.5 and pleural fluid LDH / serum LDH > 0.6. How is this pleural effusion classified?",
+    "options": [
+      "Exudative pleural effusion (by Light criteria)",
+      "Transudative pleural effusion",
+      "Chylothorax exclusively without protein/LDH evaluation",
+      "Normal pleural space"
+    ],
+    "answer": 0,
+    "explanation": "Meeting any of Light criteria (pleural/serum protein > 0.5, pleural/serum LDH > 0.6, or pleural LDH > two-thirds the upper limit of normal serum LDH) classifies the fluid as an exudate, prompting evaluation for infection, malignancy, inflammation, or pulmonary embolism."
+  },
+  {
+    "id": "g-pulm-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "hard",
+    "question": "A patient with a right-sided chest tube or trauma develops sudden severe dyspnea, hypoxia, distended neck veins, tracheal deviation to the left, absent right breath sounds, and hypotension. What is the immediate life-saving step?",
+    "options": [
+      "Immediate needle/finger decompression followed by tube thoracostomy (chest tube drainage)",
+      "Waiting for an elective outpatient chest CT before any intervention",
+      "Administering oral antihistamines",
+      "Applying positive pressure ventilation before decompressing the pleural space"
+    ],
+    "answer": 0,
+    "explanation": "Tension pneumothorax is an immediate clinical emergency requiring rapid pleural decompression (needle/finger thoracostomy) followed by tube thoracostomy."
+  },
+  {
+    "id": "g-pulm-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with chronic dry cough, progressive exertional dyspnea, bibasilar fine inspiratory ('Velcro-like') crackles, and digital clubbing, with high-resolution CT showing subpleural, basilar-predominant reticular opacities and honeycombing without an alternative cause. What is the diagnosis?",
+    "options": [
+      "Idiopathic pulmonary fibrosis (IPF)",
+      "Acute viral bronchitis",
+      "Simple allergic rhinitis",
+      "Pneumothorax"
+    ],
+    "answer": 0,
+    "explanation": "Progressive dyspnea, dry cough, bibasilar Velcro crackles, clubbing, and a usual interstitial pneumonia (UIP) pattern on HRCT (basilar/subpleural reticulation and honeycombing) characterize idiopathic pulmonary fibrosis."
+  },
+  {
+    "id": "g-pulm-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with dry cough, dyspnea, erythema nodosum, and bilateral hilar lymphadenopathy on chest radiograph, with non-caseating granulomas on biopsy and elevated serum ACE in some cases. What is the most likely diagnosis?",
+    "options": [
+      "Sarcoidosis",
+      "Small-cell lung cancer",
+      "Tension pneumothorax",
+      "Acute epiglottitis"
+    ],
+    "answer": 0,
+    "explanation": "Bilateral hilar adenopathy, erythema nodosum, pulmonary involvement, and non-caseating granulomas after excluding other granulomatous diseases are characteristic of sarcoidosis."
+  },
+  {
+    "id": "g-pulm-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with loud snoring, witnessed apneas, morning headaches, and excessive daytime sleepiness has an apnea-hypopnea index (AHI) of 22 events/hour on polysomnography. Which first-line therapy is recommended?",
+    "options": [
+      "Continuous positive airway pressure (CPAP) during sleep, alongside weight management and sleep hygiene when applicable",
+      "Long-term bedtime benzodiazepines to deepen sleep",
+      "Daily oral antibiotics",
+      "Immediate pneumonectomy"
+    ],
+    "answer": 0,
+    "explanation": "CPAP is the first-line treatment for moderate-to-severe obstructive sleep apnea (AHI >= 15/hr, or >= 5/hr with significant symptoms/comorbidities)."
+  },
+  {
+    "id": "g-pulm-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "easy",
+    "question": "A patient with long-standing asthma has daytime symptoms twice a week or fewer, nighttime awakenings once a month or less, and uses a reliever inhaler no more than twice weekly without activity limitation. How is this asthma symptom control generally categorized?",
+    "options": [
+      "Well-controlled asthma",
+      "Status asthmaticus with impending respiratory arrest",
+      "Severe persistent uncontrolled asthma with daily exacerbations",
+      "Irreversible chronic bronchitis"
+    ],
+    "answer": 0,
+    "explanation": "Infrequent daytime/nighttime symptoms, minimal reliever use, and no limitation of normal activities indicate well-controlled asthma."
+  },
+  {
+    "id": "g-pulm-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with chronic bronchitis or prior severe pneumonia presents with daily cough producing large amounts of purulent sputum, recurrent bronchial infections, digital clubbing, and bronchial wall dilation ('signet-ring' sign) on chest CT. What is the diagnosis?",
+    "options": [
+      "Bronchiectasis",
+      "Primary spontaneous pneumothorax",
+      "Asbestosis pleural plaques alone without airway dilation",
+      "Acute pulmonary edema"
+    ],
+    "answer": 0,
+    "explanation": "Chronic productive cough with copious purulent sputum, recurrent respiratory infections, and permanent airway dilation on chest CT characterize bronchiectasis."
+  },
+  {
+    "id": "g-pulm-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with a history of heavy cigarette smoking (35 pack-years) presents with cough, weight loss, hemoptysis, and a central hilar lung mass, with hypercalcemia or syndrome of inappropriate antidiuretic hormone (SIADH). Which lung cancer histologic type is classically linked to paraneoplastic SIADH?",
+    "options": [
+      "Small-cell lung cancer (SCLC)",
+      "Benign lipoma of the pleura",
+      "Fibroadenoma",
+      "Simple hamartoma"
+    ],
+    "answer": 0,
+    "explanation": "Small-cell lung cancer is strongly associated with smoking and paraneoplastic syndromes such as SIADH and Cushing syndrome (ectopic ACTH)."
+  },
+  {
+    "id": "g-pulm-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with a history of asbestos exposure decades ago presents with progressive dyspnea, pleuritic chest pain, and unilateral pleural thickening or effusion. Which pleural malignancy is classically associated with prior asbestos exposure?",
+    "options": [
+      "Malignant pleural mesothelioma",
+      "Acute bacterial tracheitis",
+      "Pulmonary alveolar proteinosis",
+      "Simple lobar atelectasis"
+    ],
+    "answer": 0,
+    "explanation": "Asbestos exposure is the primary risk factor for malignant pleural mesothelioma (as well as benign pleural plaques and asbestosis)."
+  },
+  {
+    "id": "g-pulm-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, night sweats, weight loss, and chronic cough with cavitary upper-lobe infiltrates on chest radiograph. Which immediate infection-control and diagnostic steps are required when active pulmonary tuberculosis is suspected?",
+    "options": [
+      "Place the patient in airborne isolation, obtain sputum samples for AFB smear/NAAT (e.g., GeneXpert) and mycobacterial culture, and initiate appropriate anti-TB therapy once confirmed/indicated",
+      "Place the patient in a regular open ward without mask precautions and prescribe a 3-day azithromycin pack",
+      "Perform bronchoscopy without isolation or sputum testing first in all routine cases",
+      "Discharge home without public health or diagnostic follow-up"
+    ],
+    "answer": 0,
+    "explanation": "Suspected active pulmonary TB requires airborne precautions, sputum microbiological/molecular testing (smear, NAAT, culture), and prompt initiation of standard multi-drug anti-TB therapy."
+  },
+  {
+    "id": "g-pulm-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with suspected acute pulmonary embolism is hemodynamically stable with a low-to-moderate clinical pretest probability (Wells score). Which diagnostic test is most useful to rule out PE when negative?",
+    "options": [
+      "High-sensitivity D-dimer testing (a negative D-dimer in low/intermediate pretest probability safely excludes acute PE without imaging)",
+      "Plain standing abdominal radiograph",
+      "Serum troponin alone without imaging or D-dimer",
+      "12-lead ECG alone as a standalone test to exclude PE"
+    ],
+    "answer": 0,
+    "explanation": "In patients with low or moderate pretest probability for PE, a normal high-sensitivity D-dimer effectively rules out acute pulmonary embolism without needing CT pulmonary angiography."
+  }
+]

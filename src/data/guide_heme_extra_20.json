@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-heme-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient presents with fatigue, pallor, and pica (craving ice/non-nutritive substances). Complete blood count shows hemoglobin 8.9 g/dL, MCV 68 fL (microcytic), low ferritin (9 ng/mL), low serum iron, high TIBC, and elevated transferrin. What is the most likely diagnosis?",
+    "options": [
+      "Iron-deficiency anemia",
+      "Anemia of chronic disease with high ferritin and low TIBC",
+      "Aplastic anemia with pancytopenia and hypocellular marrow",
+      "Hereditary spherocytosis with elevated MCV and spherocytes"
+    ],
+    "answer": 0,
+    "explanation": "Microcytic anemia with low ferritin, low serum iron, and elevated TIBC/transferrin is classic for iron-deficiency anemia; in adults, identifying and addressing the underlying source of blood loss (such as GI bleeding or menstrual loss) is essential alongside iron repletion."
+  },
+  {
+    "id": "g-heme-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with a history of terminal ileal resection or pernicious anemia presents with macrocytic anemia (MCV 112 fL), fatigue, glossitis, and paresthesias/loss of vibration and proprioception in the lower extremities. Which vitamin deficiency explains both the megaloblastic anemia and neurologic signs?",
+    "options": [
+      "Vitamin B12 (cobalamin) deficiency",
+      "Folate deficiency alone (folate deficiency causes megaloblastic anemia without classic subacute combined degeneration neurologic signs)",
+      "Vitamin K deficiency",
+      "Vitamin C deficiency"
+    ],
+    "answer": 0,
+    "explanation": "Vitamin B12 deficiency impairs DNA synthesis (causing megaloblastic macrocytic anemia) and myelin maintenance (causing peripheral neuropathy and dorsal/lateral column signs), whereas isolated folate deficiency does not cause classic B12 neurologic degeneration."
+  },
+  {
+    "id": "g-heme-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "hard",
+    "question": "A patient with G6PD deficiency develops acute back/abdominal pain, dark tea-colored urine, pallor, and jaundice 36 hours after taking trimethoprim-sulfamethoxazole or fava beans. Peripheral blood smear shows 'bite cells' and Heinz bodies. Which mechanism explains this episode?",
+    "options": [
+      "Acute intravascular and extravascular oxidative hemolysis due to impaired NADPH regeneration and glutathione protection against oxidative stress",
+      "Autoimmune IgG-mediated warm hemolysis with a positive direct antiglobulin (Coombs) test",
+      "Iron sequestration in macrophages without red cell destruction",
+      "Primary bone marrow aplasia"
+    ],
+    "answer": 0,
+    "explanation": "G6PD deficiency reduces NADPH production via the pentose phosphate pathway, leaving red cells vulnerable to oxidative stress (infections, fava beans, certain drugs), causing acute hemolysis, Heinz bodies, and bite cells."
+  },
+  {
+    "id": "g-heme-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden petechiae, purpura, and mucosal bleeding (epistaxis or gingival bleeding) with an isolated platelet count of 14,000/uL, normal hemoglobin, normal white blood cell count, and normal peripheral smear except for large platelets. What is the most likely diagnosis?",
+    "options": [
+      "Immune thrombocytopenia (ITP)",
+      "Acute myeloid leukemia with circulating blasts",
+      "Disseminated intravascular coagulation (DIC) with severe coagulopathy",
+      "Severe iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "Isolated thrombocytopenia in an otherwise well patient with normal RBC/WBC counts and no alternative cause is characteristic of immune thrombocytopenia (ITP), where antibodies/T-cell mechanisms accelerate platelet destruction and impair megakaryocyte production."
+  },
+  {
+    "id": "g-heme-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "hard",
+    "question": "A patient presents with fever, fluctuating confusion/neurologic deficits, acute kidney injury, thrombocytopenia, and microangiopathic hemolytic anemia with schistocytes on peripheral smear and markedly reduced ADAMTS13 activity (< 10%). Which life-threatening condition is present?",
+    "options": [
+      "Thrombotic thrombocytopenic purpura (TTP)",
+      "Simple essential hypertension",
+      "Iron-deficiency anemia",
+      "Chronic lymphocytic leukemia in asymptomatic Rai stage 0"
+    ],
+    "answer": 0,
+    "explanation": "Severe ADAMTS13 deficiency leads to ultra-large von Willebrand factor multimers and microvascular platelet thrombi, causing MAHA with schistocytes, thrombocytopenia, and end-organ (neurologic/renal) ischemia—requiring urgent plasma exchange and immunosuppressive therapy."
+  },
+  {
+    "id": "g-heme-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with deep vein thrombosis of the left leg is started on unfractionated heparin or low-molecular-weight heparin. On hospital day 6, the platelet count drops by 55% (from 260,000/uL to 117,000/uL) and new thrombosis occurs. Which diagnosis is strongly suspected?",
+    "options": [
+      "Heparin-induced thrombocytopenia (HIT)",
+      "Simple dehydration",
+      "Vitamin B12 deficiency",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "A >= 50% platelet drop typically 5–10 days after heparin exposure—especially when accompanied by thrombosis—raises suspicion for HIT; heparin must be stopped immediately and a non-heparin anticoagulant started while confirming."
+  },
+  {
+    "id": "g-heme-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with sickle cell disease presents with severe, generalized bone/joint pain in the back and extremities without fever or focal infection signs, consistent with a vaso-occlusive pain crisis. Which core supportive measures form initial management?",
+    "options": [
+      "Prompt, individualized analgesia (such as opioids and/or NSAIDs if not contraindicated), hydration assessment/correction if dehydrated, oxygen only if hypoxemic, and evaluation for triggers/infection",
+      "Immediate routine exchange transfusion for every uncomplicated mild pain episode",
+      "Discontinuing all pain control to avoid dependency during acute crisis",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Acute vaso-occlusive pain episodes in sickle cell disease require timely, effective pain management, careful hydration/oxygenation support, and investigation for precipitating factors such as infection or acute chest syndrome."
+  },
+  {
+    "id": "g-heme-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with sickle cell disease presents with new fever, cough, chest pain, tachypnea, hypoxemia, and a new pulmonary infiltrate on chest radiograph. Which life-threatening complication must be treated urgently?",
+    "options": [
+      "Acute chest syndrome",
+      "Simple seasonal allergic rhinitis",
+      "Primary open-angle glaucoma",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "Acute chest syndrome is a leading cause of morbidity and mortality in sickle cell disease, defined by a new pulmonary infiltrate plus respiratory symptoms/hypoxemia or fever; management includes oxygen, bronchodilators if indicated, empiric broad-spectrum antibiotics, pain control without hypoventilation, and simple or exchange transfusion per severity."
+  },
+  {
+    "id": "g-heme-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "An older patient presents with bone pain (especially back pain), hypercalcemia, renal insufficiency, and normocytic anemia, with serum protein electrophoresis showing a monoclonal spike (M-protein) and bone marrow showing > 10% clonal plasma cells. What is the diagnosis?",
+    "options": [
+      "Multiple myeloma",
+      "Iron-deficiency anemia",
+      "Acute appendicitis",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Clonal bone marrow plasma cells with monoclonal protein and myeloma-defining events/CRAB features (hypercalcemia, renal impairment, anemia, lytic bone lesions) characterize multiple myeloma."
+  },
+  {
+    "id": "g-heme-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A young adult presents with painless, rubbery cervical or supraclavicular lymphadenopathy, night sweats, unintentional weight loss (> 10% in 6 months), and fever. Lymph node biopsy shows Reed-Sternberg cells (CD15+, CD30+). Which malignancy is diagnosed?",
+    "options": [
+      "Hodgkin lymphoma",
+      "Acute gouty arthritis",
+      "Primary hyperparathyroidism",
+      "Achalasia"
+    ],
+    "answer": 0,
+    "explanation": "Painless lymphadenopathy with B symptoms (fever, drenching night sweats, unexplained weight loss) and multinucleated Reed-Sternberg cells on biopsy is classic for Hodgkin lymphoma."
+  },
+  {
+    "id": "g-heme-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "hard",
+    "question": "A patient with sepsis and severe trauma develops generalized bleeding from venipuncture sites and mucosal surfaces. Coagulation studies show prolonged PT and aPTT, low fibrinogen, elevated D-dimer/fibrin degradation products, and thrombocytopenia. Which condition is present?",
+    "options": [
+      "Disseminated intravascular coagulation (DIC)",
+      "Isolated mild von Willebrand trait without coagulopathy",
+      "Simple iron-deficiency anemia",
+      "Primary aldosteronism"
+    ],
+    "answer": 0,
+    "explanation": "DIC involves systemic activation of coagulation with consumption of platelets and clotting factors plus secondary fibrinolysis, producing thrombocytopenia, prolonged PT/aPTT, hypofibrinogenemia, and elevated D-dimer; treating the underlying trigger is essential."
+  },
+  {
+    "id": "g-heme-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient taking warfarin for atrial fibrillation has an INR of 9.2 without active major bleeding or life-threatening hemorrhage. Which management step is appropriate according to standard anticoagulation guidelines for supratherapeutic INR without bleeding?",
+    "options": [
+      "Hold warfarin and administer oral vitamin K (phytonadione), with close INR monitoring",
+      "Continue full-dose warfarin and give extra doses",
+      "Ignore an INR of 9.2 indefinitely",
+      "Start oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "For markedly elevated INR (> 8–10) without significant bleeding, holding warfarin and giving low-dose oral vitamin K accelerates INR reduction safely, whereas major bleeding warrants 4-factor prothrombin complex concentrate (PCC) plus IV vitamin K."
+  },
+  {
+    "id": "g-heme-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with autoimmune hemolytic anemia has warm IgG antibodies active at 37°C, elevated LDH and indirect bilirubin, low haptoglobin, reticulocytosis, and a positive direct antiglobulin (Coombs) test. What is a common first-line therapy for warm autoimmune hemolytic anemia?",
+    "options": [
+      "Systemic corticosteroids (such as prednisone)",
+      "Oral iron supplements alone",
+      "Routine daily antibiotics without infection",
+      "Oral metformin"
+    ],
+    "answer": 0,
+    "explanation": "Warm autoimmune hemolytic anemia is typically mediated by IgG autoantibodies causing extravascular hemolysis in the spleen and generally responds initially to corticosteroids."
+  },
+  {
+    "id": "g-heme-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with chronic myelogenous leukemia (CML) is found to have the Philadelphia chromosome resulting from the t(9;22)(q34;q11) translocation, creating the BCR-ABL1 fusion oncogene. Which targeted drug class transformed CML treatment?",
+    "options": [
+      "BCR-ABL1 tyrosine kinase inhibitors (TKIs, such as imatinib, dasatinib, or nilotinib)",
+      "Long-term daily oral NSAIDs",
+      "Subcutaneous insulin",
+      "Oral antihistamines"
+    ],
+    "answer": 0,
+    "explanation": "Tyrosine kinase inhibitors selectively inhibit the constitutively active BCR-ABL1 fusion tyrosine kinase produced by the t(9;22) Philadelphia chromosome, achieving high rates of durable molecular remission in CML."
+  },
+  {
+    "id": "g-heme-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with polycythemia vera presents with headache, facial fullness/plethora, aquagenic pruritus (itching after warm showers), elevated hemoglobin/hematocrit, and a JAK2 mutation (most commonly JAK2 V617F). Which interventions are cornerstone in managing low-risk polycythemia vera?",
+    "options": [
+      "Therapeutic phlebotomy to maintain hematocrit < 45% and low-dose aspirin (plus cytoreductive therapy when high-risk or indicated)",
+      "High-dose iron supplementation to raise hemoglobin further",
+      "Stopping all blood pressure and cardiovascular risk management",
+      "Oral levothyroxine"
+    ],
+    "answer": 0,
+    "explanation": "Polycythemia vera is a myeloproliferative neoplasm (typically JAK2-mutated) with elevated red cell mass and thrombosis risk; maintaining hematocrit < 45% via phlebotomy and using low-dose aspirin are foundational in appropriate patients."
+  },
+  {
+    "id": "g-heme-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient undergoing chemotherapy for acute leukemia develops a fever of 38.5°C and has an absolute neutrophil count (ANC) of 320 cells/uL. Which clinical condition and urgent action are indicated?",
+    "options": [
+      "Febrile neutropenia; prompt blood/site cultures and immediate empiric broad-spectrum intravenous antibacterial therapy (covering Pseudomonas and relevant pathogens per local/ID guidelines)",
+      "Wait 48 hours before starting antibiotics if the patient looks comfortable",
+      "Administer oral antihistamines and send home without cultures or antibiotics",
+      "Give oral vitamin C alone"
+    ],
+    "answer": 0,
+    "explanation": "Febrile neutropenia (typically fever >= 38.3°C once or >= 38.0°C sustained with ANC < 500 cells/uL or expected to fall < 500) is a medical emergency requiring prompt diagnostic workup and immediate empiric broad-spectrum IV antibiotics."
+  },
+  {
+    "id": "g-heme-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with hereditary spherocytosis presents with mild chronic hemolysis, splenomegaly, intermittent jaundice, and gallstones (pigment stones), with spherocytes on peripheral blood smear and a negative direct antiglobulin (Coombs) test. Which laboratory feature is classically elevated in hereditary spherocytosis?",
+    "options": [
+      "Mean corpuscular hemoglobin concentration (MCHC) (often > 36 g/dL) along with spherocytes and increased osmotic fragility",
+      "Low reticulocyte count with complete absence of red cell turnover",
+      "Elevated ferritin > 3,000 ng/mL with low MCHC",
+      "Isolated prolonged INR with normal CBC"
+    ],
+    "answer": 0,
+    "explanation": "Membrane protein defects in hereditary spherocytosis cause loss of red cell membrane surface area relative to volume, producing spherocytes, Coombs-negative hemolysis, splenomegaly, pigment gallstones, and characteristically elevated MCHC."
+  },
+  {
+    "id": "g-heme-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A young male with a history of easy bruising and deep joint bleeds (hemarthroses) or intramuscular hematomas after minor trauma has a markedly prolonged aPTT with a normal PT/INR and normal platelet count. Which inherited bleeding disorders fit this coagulation pattern?",
+    "options": [
+      "Hemophilia A (factor VIII deficiency) or Hemophilia B (factor IX deficiency)",
+      "Essential thrombocythemia with normal coagulation times",
+      "Primary aldosteronism",
+      "Simple iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "X-linked deficiencies of factor VIII (hemophilia A) or factor IX (hemophilia B) prolong the intrinsic/common pathway aPTT while leaving PT/INR and platelet counts normal, classically causing deep joint and soft-tissue bleeding."
+  },
+  {
+    "id": "g-heme-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "medium",
+    "question": "A patient with mucocutaneous bleeding (such as epistaxis, menorrhagia, or easy bruising) and a family history of bleeding has prolonged bleeding time/platelet function abnormalities, variable aPTT prolongation, and reduced von Willebrand factor antigen/activity. Which bleeding disorder is most common?",
+    "options": [
+      "von Willebrand disease (vWD)",
+      "Acute myeloid leukemia",
+      "Polycythemia vera",
+      "Hereditary hemochromatosis"
+    ],
+    "answer": 0,
+    "explanation": "von Willebrand disease is the most common inherited bleeding disorder, impairing platelet adhesion/aggregation and variably lowering factor VIII levels, typically causing mucocutaneous bleeding."
+  },
+  {
+    "id": "g-heme-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Hematology",
+    "difficulty": "easy",
+    "question": "In a hospitalized, hemodynamically stable adult patient without acute coronary ischemia or active massive hemorrhage, around which hemoglobin threshold is restrictive red blood cell transfusion generally supported by clinical guidelines?",
+    "options": [
+      "Hemoglobin < 7 g/dL (transfuse one unit at a time and reassess clinically)",
+      "Hemoglobin < 14 g/dL",
+      "Hemoglobin < 12 g/dL in all asymptomatic outpatients",
+      "Whenever platelet count is normal regardless of hemoglobin"
+    ],
+    "answer": 0,
+    "explanation": "Restrictive transfusion strategies (typically targeting/transfusion threshold around hemoglobin < 7 g/dL in most hospitalized hemodynamically stable patients) reduce unnecessary transfusion exposure without worse outcomes compared with liberal thresholds."
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "id": "g-endo-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with primary adrenal insufficiency (Addison disease) presents with fatigue, anorexia, weight loss, orthostatic hypotension, hyperpigmentation of skin creases/mucosal surfaces, hyponatremia, and hyperkalemia. Which hormonal pattern is characteristic?",
+    "options": [
+      "Low morning serum cortisol with markedly elevated ACTH (and aldosterone deficiency)",
+      "High morning serum cortisol with suppressed ACTH",
+      "Elevated TSH with low free T4",
+      "Elevated serum prolactin with normal cortisol and ACTH"
+    ],
+    "answer": 0,
+    "explanation": "Primary adrenal insufficiency involves destruction or dysfunction of the adrenal cortex, causing low cortisol and aldosterone with compensatory high ACTH (and hyperpigmentation from POMC/MSH co-secretion)."
+  },
+  {
+    "id": "g-endo-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient has a 2.2 cm solitary thyroid nodule found on ultrasound. Which initial diagnostic evaluation is standard to assess malignancy risk once thyroid function (TSH) is checked?",
+    "options": [
+      "Diagnostic thyroid ultrasound risk stratification (such as TI-RADS) and fine-needle aspiration (FNA) biopsy when indicated by nodule size and sonographic features",
+      "Immediate surgical total thyroidectomy without imaging or FNA",
+      "Routine serum amylase and lipase",
+      "Plain X-ray of the lumbar spine"
+    ],
+    "answer": 0,
+    "explanation": "Evaluation of a thyroid nodule begins with serum TSH and high-resolution thyroid ultrasound to assess suspicious sonographic features and size criteria for FNA biopsy."
+  },
+  {
+    "id": "g-endo-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus presents with episodes of sweating, shakiness, hunger, palpitations, and confusion that resolve promptly after ingesting fast-acting carbohydrates, with documented low capillary blood glucose (< 70 mg/dL). Which medication class is a classic iatrogenic cause of hypoglycemia in type 2 diabetes?",
+    "options": [
+      "Insulin or insulin secretagogues (such as sulfonylureas)",
+      "Metformin monotherapy in a patient without fasting/renal triggers",
+      "Acetohexamide-free dietary fiber alone",
+      "Topical emollients"
+    ],
+    "answer": 0,
+    "explanation": "Insulin and sulfonylureas stimulate insulin release or supply exogenous insulin independent of ambient glucose levels, making them leading medication causes of hypoglycemia."
+  },
+  {
+    "id": "g-endo-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus is started on metformin. Which rare but serious adverse condition is classically discussed in relation to metformin accumulation in severe renal impairment, severe hypoxia, or hepatic failure?",
+    "options": [
+      "Metformin-associated lactic acidosis (MALA)",
+      "Acute gouty arthritis",
+      "Primary aldosteronism",
+      "Achalasia"
+    ],
+    "answer": 0,
+    "explanation": "Metformin is renally cleared and inhibits hepatic gluconeogenesis; severe renal dysfunction or hypoperfusion can predispose to lactic acidosis, so eGFR thresholds guide safe prescribing."
+  },
+  {
+    "id": "g-endo-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with severe hypercalcemia (serum calcium 13.8 mg/dL) presents with nausea, constipation, polyuria, confusion, and dehydration. Which initial acute measures are commonly used in the hospital?",
+    "options": [
+      "Intravenous isotonic saline hydration (after assessing volume/cardiopulmonary status) followed by antiresorptive therapy such as intravenous bisphosphonate (e.g., zoledronic acid) or denosumab when appropriate",
+      "Oral calcium carbonate supplements",
+      "High-dose daily vitamin D3",
+      "Discontinuing all hydration"
+    ],
+    "answer": 0,
+    "explanation": "Acute management of moderate-to-severe hypercalcemia centers on restoring intravascular volume with IV isotonic fluids and inhibiting osteoclastic bone resorption with IV bisphosphonates (or denosumab)."
+  },
+  {
+    "id": "g-endo-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "easy",
+    "question": "Which diagnostic criterion threshold (when confirmed on repeat testing in the absence of unequivocal hyperglycemia) is used to diagnose diabetes mellitus using fasting plasma glucose?",
+    "options": [
+      "Fasting plasma glucose >= 126 mg/dL (7.0 mmol/L) (after at least 8 hours of no caloric intake)",
+      "Fasting plasma glucose >= 85 mg/dL (4.7 mmol/L)",
+      "Fasting plasma glucose >= 99 mg/dL (5.5 mmol/L)",
+      "Fasting plasma glucose >= 60 mg/dL (3.3 mmol/L)"
+    ],
+    "answer": 0,
+    "explanation": "Standard diagnostic thresholds for diabetes mellitus include fasting plasma glucose >= 126 mg/dL (7.0 mmol/L), 2-hour plasma glucose >= 200 mg/dL during a 75 g OGTT, HbA1c >= 6.5%, or random plasma glucose >= 200 mg/dL with classic hyperglycemic symptoms."
+  },
+  {
+    "id": "g-endo-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with newly diagnosed hyperthyroidism from Graves disease presents with resting heart rate 118 bpm, tremor, anxiety, and heat intolerance while awaiting antithyroid drug effect. Which drug class provides rapid symptom relief of tachycardia, tremor, and anxiety?",
+    "options": [
+      "Beta-adrenergic blockers (such as propranolol or atenolol, if not contraindicated)",
+      "Oral levothyroxine",
+      "Subcutaneous insulin",
+      "Long-term daily oral warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Beta-blockers rapidly attenuate adrenergic symptoms (tachycardia, tremor, anxiety) in thyrotoxicosis within hours while antithyroid medications or definitive therapy take longer to normalize thyroid hormone levels."
+  },
+  {
+    "id": "g-endo-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A postmenopausal woman undergoes dual-energy X-ray absorptiometry (DEXA) bone mineral density testing and has a lumbar spine or femoral neck T-score of -2.7. How is this bone density result classified by WHO criteria?",
+    "options": [
+      "Osteoporosis (T-score <= -2.5)",
+      "Normal bone mineral density (T-score >= -1.0)",
+      "Osteopenia / low bone mass (T-score between -1.0 and -2.5)",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Per WHO criteria on central DEXA in postmenopausal women and men aged 50 and older, a T-score <= -2.5 defines osteoporosis, whereas a T-score between -1.0 and -2.5 defines low bone mass (osteopenia)."
+  },
+  {
+    "id": "g-endo-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with vitamin D deficiency and secondary hyperparathyroidism presents with diffuse bone pain, proximal muscle weakness, and low serum 25-hydroxyvitamin D. In severe vitamin D deficiency with bone mineralization defects in adults, what is the clinical bone condition called?",
+    "options": [
+      "Osteomalacia (analogous to rickets in children with open growth plates)",
+      "Paget disease of bone",
+      "Osteopetrosis",
+      "Ankylosing spondylitis"
+    ],
+    "answer": 0,
+    "explanation": "Defective mineralization of osteoid matrix—commonly related to severe vitamin D deficiency—causes rickets in children and osteomalacia in adults."
+  },
+  {
+    "id": "g-endo-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with central diabetes insipidus (arginine vasopressin deficiency) after pituitary surgery or head trauma, developing polyuria, polydipsia, and hypernatremia with dilute urine that concentrates appropriately after desmopressin. Which therapy treats central diabetes insipidus?",
+    "options": [
+      "Desmopressin (DDAVP) alongside free water replacement guided by serum sodium and thirst/urine output",
+      "Oral metformin",
+      "High-dose intravenous calcium gluconate",
+      "Long-term daily oral NSAIDs"
+    ],
+    "answer": 0,
+    "explanation": "Central diabetes insipidus results from deficient antidiuretic hormone (vasopressin) secretion and responds to desmopressin (DDAVP) with careful fluid and sodium monitoring."
+  },
+  {
+    "id": "g-endo-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with fasting hypoglycemia, neuroglycopenic symptoms (confusion, visual changes, behavioral shifts), and elevated insulin and C-peptide levels during hypoglycemia despite negative sulfonylurea/secretagogue screen. Which pancreatic neuroendocrine tumor is suspected?",
+    "options": [
+      "Insulinoma",
+      "Pheochromocytoma",
+      "Prolactinoma",
+      "Glucagonoma with necrolytic migratory erythema only"
+    ],
+    "answer": 0,
+    "explanation": "Endogenous hyperinsulinemic hypoglycemia (elevated insulin and C-peptide with low glucose and absence of exogenous secretagogues) points to an insulinoma."
+  },
+  {
+    "id": "g-endo-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus taking an SGLT2 inhibitor develops nausea, vomiting, abdominal pain, and deep breathing with only mildly elevated blood glucose (165 mg/dL), positive serum/urine ketones, and high-anion-gap metabolic acidosis. What is this condition?",
+    "options": [
+      "Euglycemic diabetic ketoacidosis (euDKA)",
+      "Acute gouty arthritis",
+      "Primary aldosteronism",
+      "Simple iron-deficiency anemia"
+    ],
+    "answer": 0,
+    "explanation": "SGLT2 inhibitors promote glycosuria and can precipitate ketoacidosis with lower-than-typical blood glucose levels ('euglycemic DKA'), especially during illness, fasting, reduced insulin, or perioperative stress."
+  },
+  {
+    "id": "g-endo-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A pregnant patient at 26 weeks gestation undergoes a 75 g oral glucose tolerance test (or two-step screening) and meets diagnostic criteria for elevated blood glucose first recognized during pregnancy. What is the diagnosis?",
+    "options": [
+      "Gestational diabetes mellitus (GDM)",
+      "Primary hyperparathyroidism",
+      "Addison disease",
+      "Diabetes insipidus"
+    ],
+    "answer": 0,
+    "explanation": "Diabetes diagnosed in the second or third trimester of pregnancy that was not clearly overt pre-existing diabetes prior to gestation is termed gestational diabetes mellitus."
+  },
+  {
+    "id": "g-endo-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient taking amiodarone for arrhythmia develops new-onset hyperthyroidism or hypothyroidism. Why is thyroid function monitoring important in patients taking amiodarone?",
+    "options": [
+      "Amiodarone has high iodine content and direct cytotoxic/thyroid-modulating effects, causing either amiodarone-induced hypothyroidism or thyrotoxicosis",
+      "Amiodarone only treats hypercalcemia",
+      "Amiodarone has no effect on thyroid hormone synthesis or metabolism",
+      "Amiodarone cures type 1 diabetes mellitus"
+    ],
+    "answer": 0,
+    "explanation": "Amiodarone contains substantial organic iodine and can cause both hypothyroidism (Wolff-Chaikoff effect / underlying autoimmune thyroiditis) and thyrotoxicosis (Type 1 iodine-induced or Type 2 destructive thyroiditis)."
+  },
+  {
+    "id": "g-endo-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient presents with painless goiter, elevated anti-thyroid peroxidase (anti-TPO) antibodies, and elevated TSH with low free T4. Which autoimmune condition is the most common cause of hypothyroidism in iodine-sufficient areas?",
+    "options": [
+      "Hashimoto thyroiditis (chronic autoimmune thyroiditis)",
+      "Acute bacterial thyroiditis",
+      "Medullary thyroid carcinoma",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Hashimoto thyroiditis is the leading cause of hypothyroidism in iodine-sufficient regions, typically associated with lymphocytic thyroid infiltration and positive anti-TPO antibodies."
+  },
+  {
+    "id": "g-endo-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Endocrinology",
+    "difficulty": "medium",
+    "question": "A patient with type 2 diabetes mellitus has an HbA1c of 8.4% despite lifestyle measures and metformin. Which factor should be considered when selecting an add-on therapy?",
+    "options": [
+      "Presence of ASCVD, heart failure, or CKD, hypoglycemia risk, weight goals, cost/access, and side-effect profile",
+      "Selecting medications at random without assessing comorbidities or renal function",
+      "Avoiding glycemic reassessment for 3 years",
+      "Prescribing high-dose oral steroids to lower HbA1c"
+    ],
+    "answer": 0,
+    "explanation": "Individualizing add-on diabetes therapy balances cardiorenal protection, hypoglycemia avoidance, weight impact, patient preference, and safety/tolerability."
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-anes-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient receives a non-depolarizing neuromuscular blocker (such as cisatracurium or rocuronium) and is reversed at the end of surgery using neostigmine. Why is an antimuscarinic agent (such as glycopyrrolate or atropine) co-administered with neostigmine?",
+    "options": [
+      "To block muscarinic acetylcholine receptor side effects of neostigmine-induced excess acetylcholine—such as bradycardia, bronchospasm, and excessive secretions—while preserving nicotinic reversal at the neuromuscular junction",
+      "To prevent malignant hyperthermia in every patient",
+      "To reverse opioid overdose",
+      "To increase blood glucose above 300 mg/dL"
+    ],
+    "answer": 0,
+    "explanation": "Neostigmine inhibits acetylcholinesterase, increasing acetylcholine at both nicotinic (desired neuromuscular reversal) and muscarinic (parasympathetic) receptors; glycopyrrolate or atropine counteracts unwanted muscarinic effects like bradycardia and secretions."
+  },
+  {
+    "id": "g-anes-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with coronary artery disease and a recent drug-eluting stent placed 3 weeks ago is scheduled for elective non-cardiac surgery. Why is premature interruption of dual antiplatelet therapy (DAPT) within the first weeks after stent placement dangerous?",
+    "options": [
+      "Premature discontinuation markedly increases the risk of acute stent thrombosis, which frequently causes myocardial infarction or death",
+      "Because antiplatelet drugs cause hyperkalemia",
+      "Because stents dissolve automatically after 2 weeks",
+      "Because aspirin blocks all local anesthetics"
+    ],
+    "answer": 0,
+    "explanation": "Early stent thrombosis carries high morbidity and mortality; elective surgery is typically deferred until the critical DAPT window has passed, and any peri-procedural antiplatelet adjustment requires multidisciplinary cardiology, surgical, and anesthesia coordination."
+  },
+  {
+    "id": "g-anes-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with longstanding hypothyroidism is undergoing urgent surgery. Which perioperative physiological change can occur in significant untreated or severe hypothyroidism?",
+    "options": [
+      "Decreased basal metabolic rate, reduced cardiac output/contractility and baroreceptor responsiveness, blunted ventilatory drive to hypoxia/hypercapnia, impaired drug metabolism/clearance, and increased sensitivity to sedatives and opioids",
+      "Marked tachycardia and hyperthermia above 41°C",
+      "Accelerated drug clearance requiring triple opioid doses",
+      "Spontaneous correction of all electrolyte disturbances"
+    ],
+    "answer": 0,
+    "explanation": "Severe hypothyroidism reduces metabolic demand, cardiovascular reserve, ventilatory drive, and hepatic/renal clearance, increasing vulnerability to perioperative hypotension, hypothermia, and prolonged sedative/opioid effects."
+  },
+  {
+    "id": "g-anes-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient taking chronic daily systemic corticosteroids (such as prednisone >= 5–10 mg/day for several weeks or more) is presenting for surgery. Why is adrenal insufficiency / stress-dose steroid coverage considered in relevant surgical scenarios?",
+    "options": [
+      "Chronic exogenous glucocorticoids can suppress the hypothalamic-pituitary-adrenal (HPA) axis, impairing the cortisol stress response to surgical trauma and risking refractory perioperative hypotension/adrenal crisis",
+      "Because chronic steroids cause immediate hyperkalemia during surgery",
+      "Because steroids cure acute hemorrhage",
+      "Because HPA suppression never occurs after steroid use"
+    ],
+    "answer": 0,
+    "explanation": "HPA-axis suppression from chronic glucocorticoid therapy can limit endogenous cortisol surge during major surgical stress; stress-dose glucocorticoids (such as hydrocortisone) are tailored to the degree of HPA suppression and surgical stress."
+  },
+  {
+    "id": "g-anes-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient develops shivering, vasoconstriction, and core temperature of 35.2°C during a prolonged abdominal operation in a cool operating room. Why is maintaining normothermia (core temperature >= 36°C) during surgery important?",
+    "options": [
+      "Perioperative hypothermia can increase surgical site infection risk, impair coagulation/platelet function and increase blood loss, prolong anesthetic/neuromuscular drug metabolism, and provoke shivering/sympathetic stress",
+      "Because hypothermia guarantees zero postoperative pain",
+      "Because core temperature below 35°C prevents bleeding completely",
+      "Because warming devices are dangerous in every surgical case"
+    ],
+    "answer": 0,
+    "explanation": "Active warming (forced-air warming, warmed IV fluids, ambient temperature control) helps prevent hypothermia-associated coagulopathy/bleeding, wound infections, prolonged drug duration, and post-anesthetic shivering."
+  },
+  {
+    "id": "g-anes-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "During general anesthesia, a patient's oxygen saturation drops abruptly while end-tidal CO2 waveform suddenly disappears or drops sharply right after endotracheal tube manipulation. Which critical airway problem must be ruled out immediately?",
+    "options": [
+      "Esophageal intubation or accidental endotracheal tube dislodgement/extubation (or circuit disconnection/obstruction)",
+      "Simple iron-deficiency anemia",
+      "Mild seasonal allergies",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Sudden loss or marked drop in ETCO2 alongside desaturation requires immediate verification of tube position, circuit integrity, and ventilation with 100% oxygen, and prompt re-intubation or bag-mask ventilation if dislodged/esophageal."
+  },
+  {
+    "id": "g-anes-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Which induction agent is commonly used for rapid intravenous induction of general anesthesia and procedural sedation, known for fast onset and rapid recovery, though it can cause dose-dependent hypotension and vasodilation?",
+    "options": [
+      "Propofol",
+      "Oral ketoconazole",
+      "Topical permethrin",
+      "Routine daily oral vitamin B12"
+    ],
+    "answer": 0,
+    "explanation": "Propofol is widely used for rapid induction and maintenance of anesthesia or procedural sedation with quick awakening, while requiring hemodynamic monitoring due to potential decreases in blood pressure and systemic vascular resistance."
+  },
+  {
+    "id": "g-anes-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Which anesthetic/analgesic agent produces 'dissociative anesthesia'—preserving airway reflexes and sympathetic tone/blood pressure better than many other agents in selected trauma or hemodynamically unstable situations, while sometimes causing emergence phenomena/hallucinations?",
+    "options": [
+      "Ketamine",
+      "Sugammadex",
+      "Flumazenil",
+      "Warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Ketamine acts primarily via NMDA receptor antagonism to produce dissociative analgesia and anesthesia, typically supporting blood pressure and heart rate via catecholamine release, though emergence agitation/hallucinations can occur."
+  },
+  {
+    "id": "g-anes-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Why is adding epinephrine (often 1:200,000) to certain local anesthetic solutions used in selected regional or local blocks?",
+    "options": [
+      "Local vasoconstriction slows systemic absorption of the local anesthetic, prolonging block duration, reducing peak plasma levels/systemic toxicity risk, and helping limit local bleeding (with appropriate site-specific judgment)",
+      "Because epinephrine converts local anesthetics into general inhalational gases",
+      "Because epinephrine eliminates the need for sterile technique",
+      "Because epinephrine has no effect on blood vessels"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine-induced vasoconstriction decreases vascular uptake of local anesthetics, extending duration of action, reducing peak blood concentrations, and providing modest hemostasis (while avoiding inappropriate use where compromised perfusion is a concern, such as certain end-arterial settings per clinical guidance)."
+  },
+  {
+    "id": "g-anes-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient presents with severe acute pain after surgery and is prescribed patient-controlled analgesia (PCA) with an intravenous opioid. What is a core safety principle of opioid PCA?",
+    "options": [
+      "Only the patient themselves presses the PCA demand button (never family members or staff), alongside lock-out intervals, dose limits, and respiratory/sedation monitoring",
+      "Family members should press the button whenever the patient appears sleepy",
+      "Remove all lockout intervals and maximum dose limits",
+      "Skip respiratory rate and sedation checks completely"
+    ],
+    "answer": 0,
+    "explanation": "Patient-only activation ensures self-titration stops if the patient becomes drowsy/sedated; lockout intervals, dosing limits, and sedation/respiratory monitoring prevent opioid oversedation and respiratory depression."
+  },
+  {
+    "id": "g-anes-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with severe aortic stenosis is scheduled for non-cardiac surgery. Which hemodynamic goal is particularly important during anesthesia in severe aortic stenosis?",
+    "options": [
+      "Maintaining sinus rhythm, adequate intravascular volume/preload, and systemic vascular resistance while avoiding abrupt hypotension or marked tachycardia that can compromise coronary perfusion and cardiac output",
+      "Inducing profound vasodilation and severe hypotension",
+      "Ignoring volume status completely",
+      "Giving large unmonitored bolus doses of vasodilators to drop blood pressure rapidly"
+    ],
+    "answer": 0,
+    "explanation": "In severe aortic stenosis, fixed left ventricular outflow obstruction makes cardiac output and coronary perfusion dependent on preload, sinus rhythm, and systemic vascular resistance; sudden drops in SVR/BP can precipitate myocardial ischemia and cardiovascular collapse."
+  },
+  {
+    "id": "g-anes-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic heavy alcohol use or cirrhosis is undergoing anesthesia. How can chronic alcohol use or hepatic impairment affect perioperative anesthesia care?",
+    "options": [
+      "It can alter drug metabolism/protein binding, cross-tolerance/sensitivity to sedatives and anesthetics, coagulation/bleeding risk, nutritional/thiamine status, and risk of alcohol withdrawal",
+      "It has no effect on liver metabolism or withdrawal risk",
+      "It always prevents postoperative nausea completely",
+      "It eliminates the need for pre-op history or lab review"
+    ],
+    "answer": 0,
+    "explanation": "Chronic alcohol use and liver disease affect pharmacokinetics, coagulation, fluid/electrolyte balance, thiamine stores, and withdrawal risk, requiring individualized anesthetic planning and monitoring."
+  },
+  {
+    "id": "g-anes-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient presents with upper airway stridor, hoarseness, and respiratory distress shortly after extubation following thyroid or neck surgery. Which urgent post-extubation complication must be ruled out immediately?",
+    "options": [
+      "Post-extubation airway compromise—such as laryngeal edema, recurrent laryngeal nerve injury/vocal cord dysfunction, or expanding neck hematoma compressing the airway",
+      "Simple seasonal allergy",
+      "Mild iron-deficiency anemia",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Stridor and respiratory distress after extubation—especially after neck/thyroid surgery—require immediate airway assessment, oxygenation/re-intubation readiness, and urgent surgical evaluation if a neck hematoma is compressing the airway."
+  },
+  {
+    "id": "g-anes-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Why is quantitative or qualitative neuromuscular monitoring (such as train-of-four [TOF] monitoring) important when non-depolarizing neuromuscular blocking drugs are used during anesthesia?",
+    "options": [
+      "To guide dosing, verify adequate recovery of neuromuscular function before extubation, and reduce the risk of residual neuromuscular weakness and postoperative respiratory complications",
+      "Because neuromuscular blockers never cause residual weakness",
+      "Because train-of-four measures blood glucose",
+      "Because extubation should occur regardless of residual paralysis"
+    ],
+    "answer": 0,
+    "explanation": "Residual neuromuscular blockade can impair upper airway patency and ventilatory muscles after extubation; neuromuscular monitoring and appropriate reversal help ensure adequate neuromuscular recovery."
+  },
+  {
+    "id": "g-anes-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A pregnant patient at 38 weeks gestation is undergoing cesarean delivery under spinal anesthesia and becomes hypotensive and nauseous while lying flat supine. Which simple positioning maneuver helps relieve aortocaval compression?",
+    "options": [
+      "Left uterine displacement (such as tilting the table/pelvis to the left or using a wedge under the right hip) alongside hemodynamic support as indicated",
+      "Placing the patient in steep Trendelenburg with right lateral tilt only",
+      "Having the patient stand upright during spinal block",
+      "Withholding all oxygen and fluids"
+    ],
+    "answer": 0,
+    "explanation": "In late pregnancy, the gravid uterus can compress the inferior vena cava and aorta in the supine position, reducing venous return and uteroplacental perfusion; left uterine displacement helps restore venous return alongside vasopressors/fluids as needed."
+  },
+  {
+    "id": "g-anes-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient in the PACU has agitation, confusion, hypoxemia (SpO2 86%), and tachycardia after general anesthesia. What is a key first step when evaluating postoperative agitation or delirium?",
+    "options": [
+      "Rule out life-threatening physiological causes first—especially hypoxia, hypercapnia/airway obstruction, hypotension, hypoglycemia, urinary retention, or uncontrolled pain—before attributing agitation solely to emergence delirium",
+      "Administer heavy sedatives immediately without checking oxygenation or blood pressure",
+      "Ignore low oxygen saturation for 30 minutes",
+      "Discharge the patient home immediately"
+    ],
+    "answer": 0,
+    "explanation": "Hypoxemia, hypercarbia, hypotension, hypoglycemia, pain, and bladder distension are reversible physiological triggers of post-anesthetic agitation and must be evaluated promptly."
+  },
+  {
+    "id": "g-anes-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "Which anatomical landmark or technique is commonly used when performing landmark-guided spinal (subarachnoid) anesthesia in the lumbar spine in adults?",
+    "options": [
+      "Inserting the needle below the termination of the spinal cord (typically at the L3–L4 or L4–L5 interspace, approximated by Tuffier's line across the iliac crests) into the subarachnoid space to obtain clear cerebrospinal fluid",
+      "Inserting through the foramen magnum into the brainstem",
+      "Inserting at the C1–C2 interspace in the neck",
+      "Inserting into the pleural cavity"
+    ],
+    "answer": 0,
+    "explanation": "In adults, the conus medullaris typically terminates around L1–L2; lumbar puncture/spinal anesthesia is performed at lower lumbar interspaces (such as L3–L4 or L4–L5) to minimize risk of direct spinal cord trauma."
+  },
+  {
+    "id": "g-anes-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Anesthesia",
+    "difficulty": "medium",
+    "question": "A patient has a history of severe reactions to volatile anesthetics or succinylcholine and a known susceptibility to malignant hyperthermia. How should an anesthetic plan be modified for this patient?",
+    "options": [
+      "Avoid all volatile inhalational anesthetics and succinylcholine ('trigger-free' anesthesia using non-triggering IV agents/regional techniques as appropriate) and prepare a malignant hyperthermia cart/dantrolene protocol",
+      "Use sevoflurane and succinylcholine at higher doses",
+      "Skip preoperative anesthesia evaluation",
+      "Treat with oral ketoconazole preoperatively"
+    ],
+    "answer": 0,
+    "explanation": "For malignant hyperthermia-susceptible patients, avoiding volatile anesthetics and depolarizing neuromuscular blockers (succinylcholine) prevents triggering a hypermetabolic crisis, while maintaining full monitoring and emergency readiness."
+  }
+]

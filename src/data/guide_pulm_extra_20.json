@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-pulm-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with severe chronic obstructive pulmonary disease (COPD) has resting hypoxemia with PaO2 <= 55 mmHg or SpO2 <= 88% confirmed on repeated testing while clinically stable. Which long-term intervention is proven to improve survival in chronically hypoxemic COPD?",
+    "options": [
+      "Long-term continuous supplemental oxygen therapy (typically >= 15 hours/day)",
+      "Short-course oral amoxicillin once a month",
+      "Routine high-dose systemic corticosteroids indefinitely",
+      "Discontinuing smoking cessation counseling"
+    ],
+    "answer": 0,
+    "explanation": "Long-term oxygen therapy improves survival in patients with COPD who have chronic severe resting hypoxemia (PaO2 <= 55 mmHg or SpO2 <= 88%, or specific thresholds with cor pulmonale/polycythemia)."
+  },
+  {
+    "id": "g-pulm-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "hard",
+    "question": "A patient with sepsis from pneumonia develops severe acute hypoxemic respiratory failure (PaO2/FiO2 <= 100 mmHg) within 4 days of the insult, bilateral infiltrates on chest imaging not fully explained by heart failure or fluid overload, and requires positive end-expiratory pressure (PEEP). What is this syndrome?",
+    "options": [
+      "Severe acute respiratory distress syndrome (ARDS)",
+      "Primary spontaneous pneumothorax",
+      "Simple seasonal allergic rhinitis",
+      "Chronic stable asthma"
+    ],
+    "answer": 0,
+    "explanation": "Acute onset (within ~1 week) of hypoxemic respiratory failure with bilateral opacities not fully explained by cardiac failure/overload defines ARDS, with PaO2/FiO2 <= 100 mmHg indicating severe ARDS."
+  },
+  {
+    "id": "g-pulm-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A young non-smoker presents with progressive dyspnea on exertion, dry cough, and panacinar emphysema predominantly in the lower lung zones, accompanied by early-onset liver disease in some cases. Which genetic deficiency should be tested?",
+    "options": [
+      "Alpha-1 antitrypsin deficiency",
+      "Glucose-6-phosphate dehydrogenase (G6PD) deficiency",
+      "Hereditary spherocytosis",
+      "Wilson disease alone"
+    ],
+    "answer": 0,
+    "explanation": "Alpha-1 antitrypsin deficiency causes early-onset lower-lobe-predominant panacinar emphysema (especially in smokers) and can cause chronic liver disease/cirrhosis."
+  },
+  {
+    "id": "g-pulm-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with asthma and nasal polyps presents with wheezing, rhinorrhea, and peripheral blood eosinophilia, and chest imaging shows transient pulmonary infiltrates and central bronchiectasis. Skin prick testing or specific IgE to Aspergillus fumigatus is strongly positive with elevated total IgE. What is the diagnosis?",
+    "options": [
+      "Allergic bronchopulmonary aspergillosis (ABPA)",
+      "Tension pneumothorax",
+      "Acute epiglottitis",
+      "Small-cell lung cancer"
+    ],
+    "answer": 0,
+    "explanation": "ABPA occurs predominantly in patients with asthma or cystic fibrosis due to hypersensitivity to Aspergillus fumigatus, featuring elevated total/Aspergillus-specific IgE, eosinophilia, and central bronchiectasis."
+  },
+  {
+    "id": "g-pulm-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "easy",
+    "question": "Which intervention is the single most effective measure to slow the rate of decline in FEV1 and improve long-term prognosis in a patient with COPD who smokes?",
+    "options": [
+      "Smoking cessation",
+      "Routine daily oral antibiotics without infection",
+      "Prolonged bed rest",
+      "Inhaled mucolytics alone"
+    ],
+    "answer": 0,
+    "explanation": "Smoking cessation is the most impactful intervention in COPD to slow accelerated lung function (FEV1) decline and reduce morbidity and mortality."
+  },
+  {
+    "id": "g-pulm-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of pleuritic chest pain, shortness of breath, and mild tachycardia after a long-haul flight. Chest radiograph is unremarkable, and Wells score is intermediate. Which test is most commonly used to confirm acute pulmonary embolism when indicated?",
+    "options": [
+      "CT pulmonary angiography (CTPA) (or ventilation-perfusion [V/Q] scan if CTPA is contraindicated)",
+      "Plain X-ray of the cervical spine",
+      "Fasting lipid panel",
+      "Serum creatine kinase alone"
+    ],
+    "answer": 0,
+    "explanation": "CT pulmonary angiography is the standard imaging modality to confirm or exclude acute pulmonary embolism when testing is indicated after clinical probability and/or D-dimer evaluation."
+  },
+  {
+    "id": "g-pulm-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with pneumonia develops a parapneumonic pleural effusion, and thoracentesis reveals frank pus (or positive Gram stain/culture or pleural fluid pH < 7.20 with loculations). What is the appropriate management principle?",
+    "options": [
+      "Prompt drainage of the infected pleural space (such as tube thoracostomy/fibrinolytics or surgical decortication when indicated) plus appropriate systemic antibiotics",
+      "Observation only with no drainage despite frank pus",
+      "Oral antacids alone",
+      "Discontinuing antibiotics immediately"
+    ],
+    "answer": 0,
+    "explanation": "Complicated parapneumonic effusion or empyema requires timely pleural drainage alongside targeted systemic antibiotic therapy."
+  },
+  {
+    "id": "g-pulm-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with chronic cough, dyspnea, and fatigue after years of working in sandblasting or mining without respiratory protection. Chest radiograph shows small rounded opacities predominantly in the upper lung zones and 'eggshell' calcification of hilar lymph nodes. What is the diagnosis?",
+    "options": [
+      "Silicosis",
+      "Acute bacterial epiglottitis",
+      "Primary aldosteronism",
+      "Myasthenia gravis"
+    ],
+    "answer": 0,
+    "explanation": "Crystalline silica inhalation (e.g., sandblasting, mining, quarrying) causes silicosis, classically presenting with upper-lobe-predominant nodular opacities, hilar adenopathy (sometimes eggshell), and increased TB susceptibility."
+  },
+  {
+    "id": "g-pulm-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with asthma develops cough, chest tightness, and wheezing predominantly during or shortly after vigorous exercise, resolving within 30–60 minutes after rest or bronchodilator use. Which preventive step is commonly used before exercise?",
+    "options": [
+      "Short-acting beta-agonist (or low-dose ICS-formoterol per current stepwise asthma guidance) taken shortly before exercise, alongside regular controller therapy if persistent asthma is present",
+      "Oral sedative hypnotic 10 minutes before running",
+      "Complete avoidance of all physical activity for life",
+      "Subcutaneous insulin"
+    ],
+    "answer": 0,
+    "explanation": "Exercise-induced bronchoconstriction is commonly prevented with a SABA (or ICS-formoterol where recommended) prior to exercise and optimized underlying asthma control."
+  },
+  {
+    "id": "g-pulm-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, cough, and chest X-ray showing a thick-walled cavity with an air-fluid level in the right lung, often following aspiration in a patient with impaired consciousness or dental disease. What is the most likely diagnosis?",
+    "options": [
+      "Lung abscess",
+      "Uncomplicated seasonal hay fever",
+      "Primary open-angle glaucoma",
+      "Benign prostatic hyperplasia"
+    ],
+    "answer": 0,
+    "explanation": "A cavitary parenchymal lesion with an air-fluid level—frequently associated with aspiration risk factors such as alcohol/sedative intoxication, dysphagia, or periodontal disease—is classic for a lung abscess."
+  },
+  {
+    "id": "g-pulm-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with known COPD presents with an acute worsening of dyspnea, increased sputum volume, and increased sputum purulence over 2 days, without signs of severe respiratory acidosis or shock. Which treatment is commonly included in managing an acute COPD exacerbation?",
+    "options": [
+      "Short-acting bronchodilators (SABA with or without SAMA), a short course of systemic corticosteroids (typically ~5 days), and antibiotics when bacterial infection/purulence criteria are met",
+      "Starting daily long-term oral warfarin",
+      "Immediate surgical lobectomy",
+      "High-dose unmonitored sedatives"
+    ],
+    "answer": 0,
+    "explanation": "Acute COPD exacerbations are managed with increased bronchodilators, a short course of systemic corticosteroids, oxygen titrated carefully, and antibiotics when indicated."
+  },
+  {
+    "id": "g-pulm-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with a history of rheumatoid arthritis or systemic sclerosis develops progressive exertional dyspnea and dry cough. Pulmonary function tests show a restrictive pattern (reduced total lung capacity and FVC with preserved/elevated FEV1/FVC ratio) and reduced diffusing capacity for carbon monoxide (DLCO). What ventilatory pattern is present?",
+    "options": [
+      "Restrictive lung defect",
+      "Purely reversible obstructive defect without restriction",
+      "Normal spirometry",
+      "Isolated conductive hearing loss"
+    ],
+    "answer": 0,
+    "explanation": "Reduced total lung capacity (TLC) and FVC with a normal or high FEV1/FVC ratio characterizes a restrictive ventilatory defect, often seen in interstitial lung disease or chest wall/neuromuscular disorders."
+  },
+  {
+    "id": "g-pulm-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "hard",
+    "question": "A patient with chronic hypercapnic COPD presents with worsening somnolence and dyspnea, and arterial blood gas shows pH 7.26, PaCO2 68 mmHg, and PaO2 54 mmHg on room air. Which ventilatory support modality is often beneficial in acute hypercapnic respiratory failure when not requiring immediate endotracheal intubation?",
+    "options": [
+      "Non-invasive positive-pressure ventilation (BiPAP/NIV)",
+      "100% non-rebreather oxygen with complete avoidance of ventilation monitoring",
+      "Oral antihistamines",
+      "Routine chest physiotherapy alone as sole therapy"
+    ],
+    "answer": 0,
+    "explanation": "Non-invasive positive-pressure ventilation (NIV) reduces work of breathing, improves ventilation/CO2 clearance, and decreases intubation rates in acute hypercapnic respiratory failure due to COPD exacerbation."
+  },
+  {
+    "id": "g-pulm-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with a solitary pulmonary nodule discovered on chest CT is evaluated for malignancy risk. Which features increase concern for a malignant nodule rather than a benign granuloma or hamartoma?",
+    "options": [
+      "Larger nodule size, spiculated or irregular margins, older age or heavy smoking history, and growth over serial imaging",
+      "Diffuse central or 'popcorn' calcification with stability over > 2 years in a young non-smoker",
+      "Complete resolution on a repeat X-ray 2 weeks later",
+      "Absence of any risk factors or imaging changes"
+    ],
+    "answer": 0,
+    "explanation": "Larger size, spiculated borders, interval growth, and clinical risk factors (such as age and smoking history) increase malignancy probability, whereas benign calcification patterns and long-term stability favor benignity."
+  },
+  {
+    "id": "g-pulm-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden pleuritic chest pain and shortness of breath at rest; chest radiograph shows a 35% right pneumothorax with absent right breath sounds and no tracheal shift or hypotension. What is the initial management approach?",
+    "options": [
+      "Supplemental oxygen, pain control, and pleural air evacuation/drainage (such as needle aspiration or chest tube/catheter drainage) or observation per size/symptoms/guidelines",
+      "Immediate coronary artery bypass grafting",
+      "Oral statin therapy",
+      "Antibiotics for 21 days as sole treatment for air in the pleural space"
+    ],
+    "answer": 0,
+    "explanation": "Symptomatic or moderate-to-large pneumothorax without tension physiology is managed with oxygen, analgesia, and pleural air removal/drainage (or observation in small stable cases per guidelines)."
+  },
+  {
+    "id": "g-pulm-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with chronic cough, wheezing, and dyspnea several hours after exposure to bird droppings or moldy hay/organic dusts, with fever, chills, and crackles on examination. Which condition is characterized by immune-mediated inflammation of small airways and alveoli after inhaling organic antigens or chemicals?",
+    "options": [
+      "Hypersensitivity pneumonitis (extrinsic allergic alveolitis)",
+      "Acute gouty arthritis",
+      "Primary hypothyroidism",
+      "Herpes simplex keratitis"
+    ],
+    "answer": 0,
+    "explanation": "Hypersensitivity pneumonitis results from repeated inhalation of sensitizing organic antigens (such as avian proteins or thermophilic actinomycetes) or low-molecular-weight chemicals, presenting acutely, subacutely, or chronically."
+  },
+  {
+    "id": "g-pulm-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with suspected obstructive sleep apnea has a STOP-Bang questionnaire score of 5 and daytime somnolence. Which test is the gold-standard diagnostic study to confirm OSA and quantify apnea-hypopnea events?",
+    "options": [
+      "Polysomnography (in-laboratory sleep study) or validated home sleep apnea testing in appropriate uncomplicated patients",
+      "Plain X-ray of the lumbar spine",
+      "Serum ferritin alone",
+      "12-lead ECG alone"
+    ],
+    "answer": 0,
+    "explanation": "Polysomnography (or validated home sleep apnea testing in selected patients without major complicating comorbidities) confirms OSA and measures the apnea-hypopnea index (AHI)."
+  },
+  {
+    "id": "g-pulm-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "easy",
+    "question": "A patient is prescribed a metered-dose inhaler (MDI) for asthma. Which technique error most commonly reduces lung drug delivery and increases oropharyngeal deposition?",
+    "options": [
+      "Actuating the inhaler rapidly without slow deep inhalation or failing to use a valved holding chamber (spacer)",
+      "Exhaling gently before actuating the inhaler",
+      "Holding the breath for a few seconds after inhalation",
+      "Rinsing the mouth after an inhaled corticosteroid"
+    ],
+    "answer": 0,
+    "explanation": "Poor hand-breath coordination, rapid inhalation, or lack of a spacer reduces aerosol delivery to the lower airways and increases oropharyngeal deposition (and candidiasis risk with ICS)."
+  },
+  {
+    "id": "g-pulm-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient presents with cough, dyspnea, and pulmonary infiltrates along with sinusitis/nasal crusting and glomerulonephritis or positive c-ANCA (PR3-ANCA). Which small-vessel vasculitis frequently involves the upper and lower respiratory tracts and kidneys?",
+    "options": [
+      "Granulomatosis with polyangiitis (GPA)",
+      "Primary open-angle glaucoma",
+      "Simple iron-deficiency anemia",
+      "Acute viral gastroenteritis"
+    ],
+    "answer": 0,
+    "explanation": "Granulomatosis with polyangiitis (GPA) is an ANCA-associated small-vessel vasculitis (commonly PR3/c-ANCA) classically affecting the upper airway, lungs, and kidneys."
+  },
+  {
+    "id": "g-pulm-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pulmonology",
+    "difficulty": "medium",
+    "question": "A patient with asthma has persistent symptoms despite low-dose inhaled corticosteroid (ICS) therapy. According to stepwise asthma management principles, what is a preferred next step before jumping to high-dose systemic steroids?",
+    "options": [
+      "Verify inhaler technique and adherence/triggers, and step up controller therapy (such as adding a LABA as ICS-LABA or increasing ICS dose per stepwise guidelines)",
+      "Stop the inhaled corticosteroid and rely solely on oral antihistamines",
+      "Prescribe daily oral antibiotics indefinitely",
+      "Perform routine pulmonary function testing every hour"
+    ],
+    "answer": 0,
+    "explanation": "Before escalating therapy in uncontrolled asthma, clinicians check adherence, inhaler technique, and triggers, then step up maintenance therapy (commonly adding a LABA or adjusting ICS regimen per guidelines)."
+  }
+]

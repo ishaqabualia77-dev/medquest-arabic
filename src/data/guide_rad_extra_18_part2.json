@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-rad-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with blunt trauma to the abdomen undergoes bedside Extended Focused Assessment with Sonography for Trauma (eFAST). Which four standard sonographic views are typically examined in eFAST to detect free fluid (hemoperitoneum/hemothorax) or pneumothorax?",
+    "options": [
+      "Right upper quadrant (Morison pouch / hepatorenal recess), left upper quadrant (splenorenal recess), pelvic (suprapubic/rectovesical or pouch of Douglas), and subxiphoid/cardiac views, plus thoracic pleural views for pneumothorax/hemothorax",
+      "Cervical spine, wrist, ankle, and heel views only",
+      "Sinus, mastoid, optic nerve, and thyroid views only",
+      "Hip DEXA scan, knee MRI, shoulder X-ray, and elbow ultrasound"
+    ],
+    "answer": 0,
+    "explanation": "eFAST rapidly evaluates trauma patients at the bedside for free intraperitoneal fluid in dependent recesses (RUQ, LUQ, pelvis), pericardial fluid/tamponade, and pleural fluid/pneumothorax."
+  },
+  {
+    "id": "g-rad-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A 55-year-old patient presents with painless obstructive jaundice, dark urine, pale stools, and weight loss. Abdominal CT or MRCP shows intrahepatic and extrahepatic biliary ductal dilation ('double-duct sign' when both common bile duct and pancreatic duct are dilated) and a hypodense mass in the head of the pancreas. What is the suspected diagnosis?",
+    "options": [
+      "Pancreatic head mass / carcinoma causing biliary and pancreatic duct obstruction",
+      "Simple sliding hiatal hernia",
+      "Acute post-streptococcal glomerulonephritis",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Concurrent dilation of the common bile duct and main pancreatic duct ('double-duct sign') in painless jaundice strongly raises concern for a periampullary or pancreatic head lesion, warranting dedicated multiphase CT/MRCP, staging, and multidisciplinary/gastroenterology-surgical evaluation."
+  },
+  {
+    "id": "g-rad-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic heavy alcohol use or gallstones presents with severe epigastric pain radiating to the back, nausea, and vomiting. Contrast-enhanced abdominal CT performed later in the course (typically after 48–72 hours if needed for complications/severity) shows pancreatic enlargement, peripancreatic fat stranding/fluid collections, or necrosis. What is the diagnosis?",
+    "options": [
+      "Acute pancreatitis",
+      "Simple constipation",
+      "Benign paroxysmal positional vertigo",
+      "Psoriasis vulgaris"
+    ],
+    "answer": 0,
+    "explanation": "Acute pancreatitis is typically diagnosed clinically and biochemically (serum lipase/amylase >= 3 times upper limit of normal and characteristic pain), while CT is used selectively to assess severity, complications (such as necrosis or fluid collections), or alternative diagnoses."
+  },
+  {
+    "id": "g-rad-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic liver disease / cirrhosis undergoes a screening abdominal ultrasound. Why is periodic right upper quadrant ultrasound surveillance (often every 6 months in eligible high-risk cirrhosis patients) recommended?",
+    "options": [
+      "To screen for hepatocellular carcinoma (HCC) at an earlier, potentially treatable stage and evaluate portal hypertension signs (such as splenomegaly, ascites, or altered portal flow)",
+      "Because ultrasound cures cirrhosis by itself",
+      "Because HCC never occurs in cirrhotic livers",
+      "Because ultrasound measures serum albumin directly"
+    ],
+    "answer": 0,
+    "explanation": "Patients with cirrhosis or high-risk chronic hepatitis B/C face elevated risk of hepatocellular carcinoma; periodic ultrasound surveillance (with or without AFP per guidelines) aims for early detection and treatment eligibility."
+  },
+  {
+    "id": "g-rad-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents after a fall onto an outstretched hand with tenderness in the anatomical snuffbox and scaphoid tubercle pain, even though initial wrist radiographs look normal. Why is immobilization in a thumb-spica splint and follow-up imaging (repeat X-ray in ~10–14 days or early MRI) important?",
+    "options": [
+      "Scaphoid fractures can be occult on initial plain radiographs, and missed/untreated fractures carry a high risk of non-union and avascular necrosis of the proximal pole due to retrograde blood supply",
+      "Scaphoid fractures never require immobilization",
+      "Anatomical snuffbox tenderness always indicates gout",
+      "Repeat evaluation is never necessary if the first X-ray looks normal"
+    ],
+    "answer": 0,
+    "explanation": "Because the scaphoid receives retrograde blood supply from its distal end, proximal pole fractures risk avascular necrosis and non-union; suspected scaphoid fracture with normal initial X-rays warrants thumb-spica immobilization and targeted follow-up imaging (such as MRI or repeat radiographs)."
+  },
+  {
+    "id": "g-rad-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with a history of malignancy presents with severe back pain, lower-extremity weakness, sensory loss/numbness, and new bowel or bladder dysfunction (urinary retention or incontinence). Which urgent imaging study is indicated to evaluate for spinal cord compression?",
+    "options": [
+      "Emergent MRI of the entire spine (or relevant spinal segments) with and without contrast per institutional neuro-oncology/emergency protocol",
+      "Plain chest X-ray only",
+      "Electrocardiogram (ECG)",
+      "Urinalysis dipstick alone"
+    ],
+    "answer": 0,
+    "explanation": "Suspected malignant epidural spinal cord compression or cauda equina syndrome is a neurological emergency; prompt MRI confirms level/extent of compression and guides immediate high-dose corticosteroids (when indicated), neurosurgical/radiation oncology consultation, and decompression."
+  },
+  {
+    "id": "g-rad-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of severe headache, nausea, and vomiting, and non-contrast head CT shows a crescent-shaped (concave/crescentic) extra-axial collection crossing cranial sutures with mass effect and midline shift. What is the diagnosis?",
+    "options": [
+      "Subdural hematoma",
+      "Epidural hematoma (biconvex/lens-shaped, typically limited by sutures)",
+      "Simple sinusitis",
+      "Normal pressure hydrocephalus"
+    ],
+    "answer": 0,
+    "explanation": "Subdural hematomas usually result from bridging vein rupture (often after trauma, falls, or in older adults/anticoagulated patients), forming a crescentic collection along the dural space that crosses suture lines and varies in attenuation from hyperdense (acute) to isodense/hypodense (subacute/chronic)."
+  },
+  {
+    "id": "g-rad-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with suspected acute pulmonary embolism has a low-to-moderate pretest probability and a negative quantitative high-sensitivity D-dimer test. How is this result interpreted in clinical imaging decision-making?",
+    "options": [
+      "A negative D-dimer in a patient with low or moderate pretest probability safely rules out acute PE without needing CT pulmonary angiography (CTPA), whereas a positive D-dimer or high pretest probability warrants imaging (such as CTPA)",
+      "A negative D-dimer requires immediate thrombolysis",
+      "D-dimer is only measured in patients with broken bones",
+      "A positive D-dimer always means pneumonia"
+    ],
+    "answer": 0,
+    "explanation": "Combining validated clinical pretest probability (such as Wells or Geneva score) with D-dimer avoids unnecessary CTPA radiation and contrast exposure in low/moderate-risk patients with a negative D-dimer."
+  },
+  {
+    "id": "g-rad-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A child presents with projectile non-bilious vomiting around 4 weeks of age and a palpable 'olive-like' epigastric mass. Abdominal ultrasonography shows a thickened pyloric muscle channel (pyloric canal length and muscle wall thickness exceeding standard diagnostic thresholds) with delayed gastric emptying. What is the diagnosis?",
+    "options": [
+      "Hypertrophic pyloric stenosis (HPS)",
+      "Intussusception",
+      "Biliary atresia",
+      "Acute post-streptococcal glomerulonephritis"
+    ],
+    "answer": 0,
+    "explanation": "Abdominal ultrasound is the imaging study of choice for hypertrophic pyloric stenosis, demonstrating an elongated and thickened pyloric muscle; management includes correcting dehydration and electrolyte imbalances (hypochloremic, hypokalemic metabolic alkalosis) before pyloromyotomy."
+  },
+  {
+    "id": "g-rad-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A 9-month-old infant presents with intermittent severe colicky abdominal pain, vomiting, lethargy, and 'currant jelly' stools. Abdominal ultrasound shows a 'target' or 'doughnut' sign in transverse view and a 'pseudokidney' appearance in longitudinal view. Which condition is demonstrated?",
+    "options": [
+      "Ileocolic intussusception",
+      "Hypertrophic pyloric stenosis",
+      "Nutritional rickets",
+      "Simple viral croup"
+    ],
+    "answer": 0,
+    "explanation": "The 'target' or 'doughnut' sign on ultrasound reflects telescoping of one bowel segment (intussusceptum) into an adjacent segment (intussuscipiens); prompt evaluation and reduction (such as air/contrast enema when uncomplicated/stable, or surgery if peritonitis/perforation is present) are critical."
+  },
+  {
+    "id": "g-rad-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "Which imaging feature on a plain abdominal radiograph supports mechanical small bowel obstruction (SBO)?",
+    "options": [
+      "Dilated loops of small bowel (often with valvulae conniventes / 'stack of coins' or 'coil-spring' appearance) and multiple air-fluid levels—frequently at varying heights ('step-ladder' pattern)—with relatively decompressed colon/rectum",
+      "Completely normal bowel gas pattern with no distension",
+      "Calcified gallstones in the right shoulder",
+      "Normal lung fields only"
+    ],
+    "answer": 0,
+    "explanation": "Plain radiographs and CT abdomen/pelvis help evaluate suspected SBO by showing dilated small bowel loops and air-fluid levels, while CT is especially helpful to identify the transition point, etiology, and signs of strangulation or ischemia."
+  },
+  {
+    "id": "g-rad-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient undergoes chest radiography for chronic cough and dyspnea, which reveals hyperlucent lung fields, flattened hemidiaphragms, increased retrosternal airspace on lateral view, and a narrow vertical ('tubular') heart shadow. Which chronic lung condition is typically associated with these findings?",
+    "options": [
+      "Chronic obstructive pulmonary disease (COPD) / emphysema with hyperinflation",
+      "Acute lobar pneumonia with dense consolidation",
+      "Large left-sided pleural effusion",
+      "Normal chest anatomy"
+    ],
+    "answer": 0,
+    "explanation": "Air trapping and hyperinflation in emphysema/COPD produce flattened diaphragms, widened retrosternal clear space, increased lung lucency, and a narrowed cardiac silhouette, though spirometry is required to confirm airflow obstruction."
+  },
+  {
+    "id": "g-rad-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "Why is gadolinium-based contrast agent safety reviewed in patients with severe renal impairment (such as severely reduced eGFR or acute kidney injury)?",
+    "options": [
+      "Certain older/less stable linear gadolinium-based contrast agents have been linked to nephrogenic systemic fibrosis (NSF) in severe renal dysfunction, making risk assessment and preferring lower-risk macrocyclic agents (or avoiding non-essential gadolinium) important",
+      "Because gadolinium is a type of antibiotic",
+      "Because renal function has no effect on contrast excretion",
+      "Because gadolinium causes immediate hypoglycemia in all patients"
+    ],
+    "answer": 0,
+    "explanation": "Evaluating renal function and selecting appropriate gadolinium-based contrast agents (such as group II macrocyclic agents when contrast is clinically warranted) helps minimize NSF risk while ensuring diagnostic quality."
+  },
+  {
+    "id": "g-rad-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe chest pain radiating to the back, and CT angiography (CTA) of the chest shows an intimal flap separating true and false lumens in the ascending aorta (Stanford type A / DeBakey type I or II). Why is rapid CTA diagnosis so important here?",
+    "options": [
+      "Ascending aortic dissection (Stanford type A) carries a high risk of life-threatening complications—such as aortic rupture, cardiac tamponade, acute aortic regurgitation, or coronary/cerebral malperfusion—requiring emergent cardiothoracic surgical repair",
+      "Ascending aortic dissection is treated solely with topical hydrocortisone",
+      "CTA cannot visualize the aorta",
+      "Simple bed rest for 3 weeks is the definitive cure for type A dissection"
+    ],
+    "answer": 0,
+    "explanation": "CTA rapidly defines the extent of aortic dissection (ascending vs. descending), branch vessel involvement, and complications, guiding emergent surgical repair for type A dissection and medical/endovascular management in appropriate type B cases."
+  },
+  {
+    "id": "g-rad-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient with a suspected bone tumor or osteomyelitis on plain radiograph undergoes further cross-sectional evaluation. How do CT and MRI provide complementary information in musculoskeletal pathology?",
+    "options": [
+      "CT excels at delineating cortical bone destruction, periosteal reaction, calcification, and matrix mineralization, whereas MRI excels at evaluating bone marrow involvement, soft-tissue extent, joint effusion, and neurovascular structures",
+      "Plain X-ray is the only imaging test that ever shows soft tissue or marrow",
+      "MRI uses high-dose ionizing radiation to measure cortical calcium",
+      "CT and MRI have identical soft-tissue and cortical bone resolution"
+    ],
+    "answer": 0,
+    "explanation": "CT provides high spatial resolution for cortical bone integrity and mineralization, while MRI offers superior contrast for marrow edema/infiltration and surrounding soft tissues."
+  },
+  {
+    "id": "g-rad-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of unilateral leg swelling, warmth, and tenderness, and venous Doppler ultrasound is negative despite persistent strong clinical suspicion of proximal DVT or iliac vein thrombosis. What is an appropriate next step?",
+    "options": [
+      "Repeat compression ultrasound (e.g., in ~5–7 days if serial testing strategy is used) or obtain CT/MR venography as clinically indicated, while considering empiric anticoagulation if clinical suspicion is high and bleeding risk is acceptable",
+      "Stop all clinical evaluation permanently after one negative scan",
+      "Start oral ketoconazole",
+      "Perform immediate leg amputation"
+    ],
+    "answer": 0,
+    "explanation": "When initial ultrasound does not confirm DVT despite significant clinical suspicion (or when pelvic/iliac DVT is suspected), serial ultrasound or cross-sectional venography and risk-stratified anticoagulation decisions guide safe management."
+  },
+  {
+    "id": "g-rad-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "A patient presents with acute severe right upper quadrant pain, fever, and jaundice (Charcot triad) plus hypotension and mental status changes (Reynolds pentad). Which imaging modality is often performed first to look for biliary dilatation/stones, followed by MRCP or ERCP when biliary obstruction/cholangitis is suspected?",
+    "options": [
+      "Right upper quadrant abdominal ultrasound first, followed by MRCP or therapeutic biliary decompression (such as ERCP) as clinically indicated",
+      "Plain skull radiograph",
+      "Electroencephalogram (EEG)",
+      "Spirometry"
+    ],
+    "answer": 0,
+    "explanation": "RUQ ultrasound is a rapid initial test for biliary obstruction/stones, while MRCP or ERCP provides detailed biliary mapping and allows urgent biliary drainage in acute suppurative cholangitis alongside resuscitation and broad-spectrum antibiotics."
+  },
+  {
+    "id": "g-rad-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Radiology",
+    "difficulty": "medium",
+    "question": "What is the main advantage of diagnostic ultrasonography (including point-of-care ultrasound [POCUS]) in acute clinical settings?",
+    "options": [
+      "It provides real-time, portable bedside visualization without ionizing radiation, allowing rapid serial assessments and procedural guidance (such as vascular access, paracentesis, or thoracentesis)",
+      "It penetrates dense cortical bone better than CT",
+      "It requires no operator skill or clinical correlation",
+      "It replaces blood tests and physical examination in every case"
+    ],
+    "answer": 0,
+    "explanation": "Ultrasound is radiation-free, repeatable at the bedside, and useful both for rapid diagnostic evaluation (e.g., effusions, gallbladder, DVT, pregnancy/pelvis, eFAST) and for real-time procedural guidance."
+  }
+]

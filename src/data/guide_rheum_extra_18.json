@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-rheum-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 38-year-old woman presents with symmetrical pain, swelling, and morning stiffness lasting more than 60 minutes in the metacarpophalangeal (MCP), proximal interphalangeal (PIP), and wrist joints for 3 months, with sparing of the distal interphalangeal (DIP) joints, positive rheumatoid factor (RF) and anti-CCP antibodies, and elevated ESR/CRP. Which disease-modifying therapy is typically initiated early as first-line anchor therapy once diagnosed?",
+    "options": [
+      "Methotrexate (with folic acid supplementation)",
+      "Oral ketoconazole",
+      "Routine daily oral iron supplements without joint disease",
+      "Topical permethrin"
+    ],
+    "answer": 0,
+    "explanation": "Early initiation of conventional synthetic DMARDs—most commonly methotrexate (with folic acid to reduce mucosal/GI/hepatic adverse effects)—is foundational in rheumatoid arthritis (RA) to control synovitis, prevent joint erosions, and preserve function, often alongside short-term bridging glucocorticoids or NSAIDs as needed."
+  },
+  {
+    "id": "g-rheum-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 26-year-old woman presents with a photosensitive malar ('butterfly') rash sparing the nasolabial folds, oral ulcers, arthralgias, pleuritis, leukopenia, positive antinuclear antibodies (ANA), and positive anti-double-stranded DNA (anti-dsDNA) antibodies with low C3 and C4 complement levels. Which medication is recommended for nearly all patients with systemic lupus erythematosus (SLE) unless contraindicated?",
+    "options": [
+      "Hydroxychloroquine (an antimalarial DMARD that reduces lupus flares, improves skin/joint/constitutional symptoms, and has protective long-term benefits—requiring baseline and periodic retinal screening)",
+      "Oral warfarin in every patient without thrombosis",
+      "High-dose daily methotrexate alone without evaluating organ involvement",
+      "Routine antibiotic prophylaxis for life"
+    ],
+    "answer": 0,
+    "explanation": "Hydroxychloroquine is a cornerstone background therapy in SLE, lowering flare rates and supporting long-term outcomes, with baseline and periodic ophthalmologic screening recommended due to potential retinal toxicity with long-term use."
+  },
+  {
+    "id": "g-rheum-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 54-year-old man wakes up abruptly at 3 a.m. with excruciating pain, erythema, warmth, and marked swelling over the first metatarsophalangeal joint (podagra) after a large meal rich in purines and alcohol. Arthrocentesis of synovial fluid shows negatively birefringent needle-shaped crystals under polarized light microscopy. What is the diagnosis?",
+    "options": [
+      "Acute gouty arthritis (monosodium urate crystal arthropathy)",
+      "Pseudogout / calcium pyrophosphate deposition (CPPD—classically rhomboid/rod-shaped weakly positively birefringent crystals)",
+      "Osteoarthritis of the hip",
+      "Polymyalgia rheumatica"
+    ],
+    "answer": 0,
+    "explanation": "Acute gout presents with rapid-onset monoarticular arthritis (classically first MTP joint) and needle-shaped negatively birefringent monosodium urate crystals on synovial fluid analysis; acute flares are treated with anti-inflammatory therapy (such as NSAIDs, colchicine, or glucocorticoids), while urate-lowering therapy (such as allopurinol) is introduced/titrated per guidelines without stopping ongoing urate-lowering therapy during an acute attack."
+  },
+  {
+    "id": "g-rheum-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 68-year-old patient presents with acute painful swelling of the knee and radiographs show chondrocalcinosis (linear calcification of hyaline or fibrocartilage such as the meniscus). Synovial fluid microscopy demonstrates rhomboid-shaped, weakly positively birefringent crystals. Which condition is present?",
+    "options": [
+      "Calcium pyrophosphate deposition disease (CPPD / pseudogout)",
+      "Acute gout from monosodium urate",
+      "Ankylosing spondylitis",
+      "Juvenile idiopathic arthritis"
+    ],
+    "answer": 0,
+    "explanation": "CPPD causes acute or chronic crystal arthritis (commonly affecting the knee or wrist) with rhomboid, weakly positively birefringent calcium pyrophosphate crystals and frequent radiographic chondrocalcinosis."
+  },
+  {
+    "id": "g-rheum-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 24-year-old man presents with chronic inflammatory low back pain starting before age 40 that worsens with rest and morning stiffness (> 30–60 minutes), improves with exercise/activity, and is associated with sacroiliitis on imaging, enthesitis (Achilles tendinitis), anterior uveitis, and HLA-B27 positivity. Which spondyloarthritis is most likely?",
+    "options": [
+      "Ankylosing spondylitis (axial spondyloarthritis)",
+      "Simple mechanical lumbar strain relieved completely by bed rest",
+      "Polymyalgia rheumatica",
+      "Giant cell arteritis"
+    ],
+    "answer": 0,
+    "explanation": "Inflammatory back pain in a young adult, sacroiliitis, enthesitis, uveitis, and HLA-B27 association are hallmarks of axial spondyloarthritis / ankylosing spondylitis; regular physical therapy/exercise and NSAIDs are first-line, with biologic DMARDs (such as TNF or IL-17 inhibitors) when indicated."
+  },
+  {
+    "id": "g-rheum-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "hard",
+    "question": "A 72-year-old woman presents with a new-onset unilateral temporal headache, scalp tenderness when combing hair, jaw claudication while chewing, and markedly elevated ESR/CRP, along with sudden painless visual blurring in one eye. Why is initiating high-dose systemic glucocorticoids immediately (even before temporal artery biopsy) essential?",
+    "options": [
+      "Giant cell (temporal) arteritis carries a high risk of irreversible vision loss (such as anterior ischemic optic neuropathy) or stroke; prompt systemic glucocorticoid therapy helps prevent permanent visual loss while temporal artery biopsy or imaging is arranged without delaying treatment",
+      "Temporal arteritis always resolves spontaneously without treatment",
+      "Biopsy must be delayed for 6 months before any medication is given",
+      "Oral ketoconazole is the primary treatment for giant cell arteritis"
+    ],
+    "answer": 0,
+    "explanation": "In suspected giant cell arteritis—especially with visual symptoms or jaw claudication—immediate glucocorticoids protect against irreversible blindness; a diagnostic temporal artery biopsy (or vascular imaging) should be obtained promptly, as short-term steroids do not immediately erase histopathologic findings."
+  },
+  {
+    "id": "g-rheum-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 69-year-old patient presents with subacute aching and morning stiffness (> 45 minutes) of the shoulder and hip girdles without true muscle weakness on strength testing, markedly elevated ESR/CRP, and rapid dramatic improvement with low-to-moderate dose systemic prednisone, without temporal headache, jaw claudication, or visual symptoms. Which diagnosis is most likely?",
+    "options": [
+      "Polymyalgia rheumatica (PMR)",
+      "Dermatomyositis with severe proximal motor weakness",
+      "Acute gouty podagra",
+      "Septic arthritis of the knee"
+    ],
+    "answer": 0,
+    "explanation": "Polymyalgia rheumatica affects older adults (> 50 years) with proximal girdle pain and stiffness, elevated inflammatory markers, and prompt response to low-dose glucocorticoids; clinicians also screen for overlapping giant cell arteritis symptoms."
+  },
+  {
+    "id": "g-rheum-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 42-year-old woman presents with triphasic color changes in the fingers upon cold exposure (pallor/white -> cyanosis/blue -> rubor/red), thickened/taut skin over the fingers (sclerodactyly) and face, telangiectasias, calcinosis cutis, and esophageal dysmotility/reflux, with positive anticentromere antibodies. Which syndrome is described?",
+    "options": [
+      "Limited cutaneous systemic sclerosis (formerly CREST syndrome)",
+      "Acute gouty arthritis",
+      "Polymyalgia rheumatica",
+      "Simple allergic contact dermatitis"
+    ],
+    "answer": 0,
+    "explanation": "Raynaud phenomenon with skin thickening distal to elbows/knees (limited cutaneous systemic sclerosis), calcinosis, esophageal dysmotility, sclerodactyly, and telangiectasias are classic features, and patients also require monitoring for pulmonary arterial hypertension and interstitial lung disease."
+  },
+  {
+    "id": "g-rheum-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 48-year-old woman presents with persistent dry eyes (keratoconjunctivitis sicca) and dry mouth (xerostomia), dental caries, parotid gland enlargement, positive anti-Ro/SSA and anti-La/SSB antibodies, and lymphocytic sialadenitis on minor salivary gland biopsy. Which autoimmune condition is most likely?",
+    "options": [
+      "Sjögren syndrome (primary or secondary)",
+      "Hypertrophic pyloric stenosis",
+      "Acute post-streptococcal glomerulonephritis",
+      "Ankylosing spondylitis"
+    ],
+    "answer": 0,
+    "explanation": "Sjögren syndrome causes exocrine gland dysfunction leading to keratoconjunctivitis sicca and xerostomia, associated with anti-SSA/Ro and anti-SSB/La antibodies and increased lifetime risk of B-cell lymphoma."
+  },
+  {
+    "id": "g-rheum-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 36-year-old woman presents with progressive symmetrical proximal muscle weakness (difficulty rising from a chair, climbing stairs, or combing hair), purplish-red periorbital rash ('heliotrope rash'), erythematous papules over the extensor surfaces of MCP/PIP joints ('Gottron papules'), and elevated creatine kinase (CK). What is the diagnosis?",
+    "options": [
+      "Dermatomyositis",
+      "Simple mechanical low back strain",
+      "Essential tremor",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Dermatomyositis combines proximal inflammatory myopathy (elevated CK/aldolase, EMG/MRI/muscle biopsy abnormalities) with characteristic cutaneous findings (heliotrope rash, Gottron papules/sign), and warrants age/risk-appropriate malignancy screening in adults alongside immunosuppressive therapy (glucocorticoids and steroid-sparing immunosuppressants)."
+  },
+  {
+    "id": "g-rheum-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 34-year-old patient with a history of psoriasis presents with asymmetric oligoarthritis/polyarthritis, dactylitis ('sausage digits'), nail pitting/onycholysis, and enthesitis. Which rheumatologic condition is most likely?",
+    "options": [
+      "Psoriatic arthritis (PsA)",
+      "Acute rheumatic fever",
+      "Polymyalgia rheumatica",
+      "Osteoarthritis of the knees alone"
+    ],
+    "answer": 0,
+    "explanation": "Psoriatic arthritis occurs in a subset of patients with psoriasis (and can occasionally precede skin lesions), presenting with peripheral arthritis, dactylitis, enthesitis, nail changes, or axial involvement."
+  },
+  {
+    "id": "g-rheum-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 22-year-old man presents 3 weeks after a gastrointestinal (e.g., Campylobacter, Salmonella, Shigella) or genitourinary (e.g., Chlamydia trachomatis) infection with asymmetric lower-extremity oligoarthritis, enthesitis, conjunctivitis, and painless mucocutaneous lesions (such as circinate balanitis or keratoderma blennorrhagicum). Which condition is suspected?",
+    "options": [
+      "Reactive arthritis",
+      "Acute gout from monosodium urate",
+      "Simple viral croup",
+      "Primary hyperparathyroidism"
+    ],
+    "answer": 0,
+    "explanation": "Reactive arthritis is a sterile spondyloarthritis triggered ~1–4 weeks after a preceding genitourinary or enteric infection, often associated with HLA-B27 and extra-articular mucocutaneous or ocular manifestations."
+  },
+  {
+    "id": "g-rheum-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 28-year-old patient presents with acute onset of a single hot, red, swollen, and severely painful knee with restricted range of motion and fever (38.8°C), and synovial fluid aspiration shows markedly elevated WBC count (> 50,000/uL, predominantly neutrophils) with positive Gram stain/culture. Which urgent priority governs care?",
+    "options": [
+      "Prompt joint drainage/decompression (arthrocentesis/lavage/surgical drainage as indicated) and immediate empiric intravenous antibiotics tailored to likely pathogens (such as Staphylococcus aureus or gonococcal/non-gonococcal organisms per risk) to prevent joint cartilage destruction",
+      "Treating solely with warm compresses and waiting 2 weeks to see if swelling goes down",
+      "Oral ketoconazole",
+      "Ignoring fever and joint aspiration"
+    ],
+    "answer": 0,
+    "explanation": "Acute septic arthritis is a rheumatologic/orthopedic emergency because bacterial enzymes and inflammatory mediators rapidly destroy articular cartilage; timely synovial sampling, joint drainage, and empiric IV antibiotics are critical."
+  },
+  {
+    "id": "g-rheum-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 64-year-old woman presents with activity-related knee pain that worsens with weight-bearing/use and improves with rest, brief morning stiffness (< 30 minutes), bony enlargement/crepitus, and radiographs showing joint-space narrowing, osteophytes, subchondral sclerosis, and subchondral cysts without prominent systemic inflammation. What is the diagnosis?",
+    "options": [
+      "Osteoarthritis (OA)",
+      "Acute septic arthritis",
+      "Systemic lupus erythematosus",
+      "Giant cell arteritis"
+    ],
+    "answer": 0,
+    "explanation": "Osteoarthritis is a common degenerative/mechanical joint disorder characterized by cartilage loss, osteophyte formation, subchondral bone changes, pain worse with use, and brief morning stiffness; core management emphasizes exercise/physical therapy, weight management when applicable, self-management, and topical/oral analgesics or intra-articular options as appropriate."
+  },
+  {
+    "id": "g-rheum-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 45-year-old patient presents with chronic sinusitis/nasal crusting and epistaxis, cavitary pulmonary nodules/hemoptysis, and rapidly progressive glomerulonephritis with red cell casts, along with positive cytoplasmic/PR3-ANCA (c-ANCA). Which small-vessel vasculitis is most likely?",
+    "options": [
+      "Granulomatosis with polyangiitis (GPA, formerly Wegener granulomatosis)",
+      "Simple seasonal allergic rhinitis",
+      "Osteoarthritis of the fingers",
+      "Polymyalgia rheumatica"
+    ],
+    "answer": 0,
+    "explanation": "GPA is an ANCA-associated small-vessel vasculitis classically affecting the upper respiratory tract, lungs, and kidneys (pulmonary-renal syndrome), requiring prompt remission-induction immunosuppression (such as rituximab or cyclophosphamide with glucocorticoids) and maintenance therapy."
+  },
+  {
+    "id": "g-rheum-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 38-year-old patient presents with adult-onset asthma, allergic rhinitis/nasal polyps, peripheral blood eosinophilia (> 10% or markedly elevated absolute eosinophil count), migratory pulmonary infiltrates, and eosinophilic/vasculitic neuropathy or cardiomyopathy. Which condition is described?",
+    "options": [
+      "Eosinophilic granulomatosis with polyangiitis (EGPA, formerly Churg-Strauss syndrome)",
+      "Simple iron-deficiency anemia",
+      "Hypertrophic pyloric stenosis",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "EGPA is characterized by asthma, eosinophilia, and small-to-medium vessel vasculitis affecting nerves, heart, skin, sinuses, or lungs."
+  },
+  {
+    "id": "g-rheum-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 32-year-old woman with a history of recurrent deep vein thromboses and two first-trimester pregnancy losses presents with positive anticardiolipin antibodies, anti-beta-2-glycoprotein I antibodies, and/or lupus anticoagulant on repeat testing at least 12 weeks apart. Which condition is diagnosed?",
+    "options": [
+      "Antiphospholipid syndrome (APS)",
+      "Simple iron-deficiency anemia",
+      "Acute gouty podagra",
+      "Viral croup"
+    ],
+    "answer": 0,
+    "explanation": "Antiphospholipid syndrome combines arterial, venous, or microvascular thrombosis and/or qualifying pregnancy morbidity with persistent antiphospholipid antibodies, typically requiring long-term anticoagulation after thrombotic APS (often warfarin rather than DOACs in higher-risk/arterial/triple-positive APS per guidelines) and tailored obstetric anticoagulation/aspirin regimens during pregnancy."
+  },
+  {
+    "id": "g-rheum-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 39-year-old woman presents with widespread musculoskeletal pain for more than 3 months across multiple body regions, accompanied by profound fatigue, unrefreshing sleep, cognitive 'fibro fog', and mood symptoms, while physical joint exam shows no synovitis and inflammatory markers (ESR/CRP) and autoimmune panels are normal. Which condition is most likely?",
+    "options": [
+      "Fibromyalgia",
+      "Acute septic arthritis",
+      "Giant cell arteritis",
+      "Acute gouty arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Fibromyalgia involves nociplastic widespread pain, fatigue, sleep disturbance, and cognitive/somatic symptoms without inflammatory synovitis or elevated inflammatory markers; management centers on patient education, graded aerobic/physical activity, sleep/behavioral therapies, and targeted pharmacotherapy (such as SNRIs, duloxetine/milnacipran, or pregabalin/gabapentinoids when appropriate)."
+  }
+]

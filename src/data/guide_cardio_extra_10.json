@@ -1,0 +1,162 @@
+[
+  {
+    "id": "g-cardio-051",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with heart failure with reduced ejection fraction (HFrEF) already taking a beta-blocker and an ACE inhibitor or ARNI still has a resting heart rate of 78 bpm in sinus rhythm and persistent symptoms. Which agent slows the sinus node via If channel inhibition when indicated?",
+    "options": [
+      "Ivabradine (typically when resting HR >= 70 bpm in sinus rhythm on maximally tolerated beta-blocker)",
+      "Intravenous calcium gluconate",
+      "Oral warfarin",
+      "Subcutaneous enoxaparin"
+    ],
+    "answer": 0,
+    "explanation": "Ivabradine selectively inhibits the sinoatrial If current to reduce heart rate in selected symptomatic HFrEF patients in sinus rhythm despite guideline-directed beta-blocker therapy."
+  },
+  {
+    "id": "g-cardio-052",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic heart failure and persistent volume overload despite loop diuretic therapy shows inadequate diuresis due to distal tubular sodium reabsorption. Which diuretic class is sometimes added transiently ('sequential nephron blockade') with close electrolyte monitoring?",
+    "options": [
+      "Thiazide or thiazide-like diuretic (such as metolazone or hydrochlorothiazide)",
+      "Oral ketoconazole",
+      "Sublingual nitroglycerin",
+      "Oral albuterol"
+    ],
+    "answer": 0,
+    "explanation": "Adding a thiazide-like diuretic (such as metolazone) to a loop diuretic can augment diuresis in diuretic-resistant congestion, requiring careful monitoring of potassium, sodium, and renal function."
+  },
+  {
+    "id": "g-cardio-053",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with hypertension has a loud abdominal bruit heard in the epigastrium/flank, flash pulmonary edema episodes, and a rise in serum creatinine > 30% shortly after starting an ACE inhibitor. Which diagnosis should be suspected?",
+    "options": [
+      "Renovascular hypertension (renal artery stenosis)",
+      "Primary hyperparathyroidism",
+      "Acute gouty arthritis",
+      "Herpes zoster ophthalmicus"
+    ],
+    "answer": 0,
+    "explanation": "Significant renal artery stenosis can cause refractory/renovascular hypertension, flash pulmonary edema, and an acute increase in serum creatinine upon ACE inhibitor or ARB initiation."
+  },
+  {
+    "id": "g-cardio-054",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with fever, new regurgitant heart murmur, Roth spots, Osler nodes, Janeway lesions, and splinter hemorrhages. Which diagnostic workup is essential first-line?",
+    "options": [
+      "Multiple sets of blood cultures (before starting antibiotics when clinically stable to do so) and echocardiography",
+      "Plain X-ray of the left ankle alone",
+      "Serum amylase and lipase alone",
+      "Routine EEG"
+    ],
+    "answer": 0,
+    "explanation": "Suspected infective endocarditis requires prompt blood cultures to identify the causative organism and echocardiography (transthoracic/transesophageal) to evaluate vegetations and valvular dysfunction."
+  },
+  {
+    "id": "g-cardio-055",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "hard",
+    "question": "A patient presents with chest pain and ECG shows ST-segment elevations in leads II, III, and aVF. Which coronary artery is most commonly occluded?",
+    "options": [
+      "Right coronary artery (RCA) (or left circumflex artery in patients with left dominance)",
+      "Left anterior descending artery (proximal LAD) exclusively in all patients",
+      "Internal carotid artery",
+      "Superior mesenteric artery"
+    ],
+    "answer": 0,
+    "explanation": "ST elevations in leads II, III, and aVF localize to the inferior wall of the left ventricle, supplied most commonly by the right coronary artery (and less commonly the left circumflex)."
+  },
+  {
+    "id": "g-cardio-056",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "hard",
+    "question": "A patient presents with acute anterior chest pain and ST-segment elevations in leads V1 through V4 (and V5–V6). Which coronary artery territory is primarily involved?",
+    "options": [
+      "Left anterior descending (LAD) coronary artery",
+      "Posterior tibial artery",
+      "Renal artery",
+      "Brachial artery"
+    ],
+    "answer": 0,
+    "explanation": "Precordial ST-segment elevations across V1–V4/V6 correspond to the anterior wall supplied by the left anterior descending coronary artery."
+  },
+  {
+    "id": "g-cardio-057",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with atrial fibrillation has a history of major gastrointestinal bleeding and a HAS-BLED score of 4, while still having a CHA2DS2-VASc score of 4. What is the appropriate clinical approach?",
+    "options": [
+      "Address modifiable bleeding risks (such as controlling blood pressure, avoiding unnecessary NSAIDs/antiplatelets, and treating GI pathology) and make a shared individualized decision regarding anticoagulation",
+      "Automatically stop all stroke prevention forever without addressing bleeding causes or reassessing risk",
+      "Prescribe dual antiplatelet therapy (aspirin plus clopidogrel) instead of oral anticoagulation for stroke prevention in AF",
+      "Administer daily high-dose vitamin K"
+    ],
+    "answer": 0,
+    "explanation": "A high HAS-BLED score flags bleeding risk to mitigate (by correcting reversible factors) rather than serving as an automatic standalone contraindication to anticoagulation when thromboembolic stroke risk is high."
+  },
+  {
+    "id": "g-cardio-058",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "easy",
+    "question": "A patient with established coronary artery disease and prior myocardial infarction is being discharged on secondary prevention therapy. Which lifestyle and pharmacologic measure is essential long-term?",
+    "options": [
+      "Smoking cessation, cardiac rehabilitation/regular exercise, blood pressure and diabetes control, daily antiplatelet therapy, and statin therapy",
+      "Discontinuing all cardiovascular medications once chest pain resolves",
+      "Avoiding all physical activity permanently",
+      "High-sodium processed diet"
+    ],
+    "answer": 0,
+    "explanation": "Comprehensive secondary prevention after MI combines lifestyle modification (especially smoking cessation and cardiac rehab) with antiplatelet therapy, statins, and risk-factor control."
+  },
+  {
+    "id": "g-cardio-059",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient presents with palpitations and an ECG showing a short PR interval (< 120 ms), a slurred upstroke of the QRS complex ('delta wave'), and wide QRS complex. Which electrophysiologic condition is characterized by this pattern?",
+    "options": [
+      "Wolff-Parkinson-White (WPW) pattern (accessory pathway pre-excitation)",
+      "First-degree AV block",
+      "Sinus arrest",
+      "Left axis deviation alone"
+    ],
+    "answer": 0,
+    "explanation": "A short PR interval with a delta wave (slurred initial QRS deflection) reflects ventricular pre-excitation via an accessory pathway (WPW pattern/syndrome)."
+  },
+  {
+    "id": "g-cardio-060",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Cardiology",
+    "difficulty": "medium",
+    "question": "A patient with chronic hypertension and dyslipidemia presents with painless, progressive lower-extremity swelling, elevated jugular venous pressure, hepatomegaly, and ascites without prominent pulmonary crackles. Which pattern of heart failure is predominantly suggested?",
+    "options": [
+      "Right-sided (systemic venous) congestion / right ventricular failure",
+      "Acute isolated migraine",
+      "Primary hyperthyroidism",
+      "Acute bacterial conjunctivitis"
+    ],
+    "answer": 0,
+    "explanation": "Elevated JVP, peripheral edema, congestive hepatomegaly, and ascites point toward right-sided heart failure / systemic venous congestion."
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-derm-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with well-demarcated erythematous plaques covered with thick silvery-white scales over the extensor surfaces of the elbows and knees, along with nail pitting. Gentle removal of scales reveals pinpoint bleeding. What is the most likely diagnosis?",
+    "options": [
+      "Plaque psoriasis",
+      "Atopic dermatitis",
+      "Tinea corporis",
+      "Pemphigus vulgaris"
+    ],
+    "answer": 0,
+    "explanation": "Well-demarcated erythematous plaques with silvery scale on extensor surfaces, nail pitting, and Auspitz sign (pinpoint bleeding on scale removal) are classic features of plaque psoriasis."
+  },
+  {
+    "id": "g-derm-002",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient with a personal and family history of asthma and allergic rhinitis presents with chronic pruritic erythematous patches and lichenification in the antecubital and popliteal fossae. Which topical therapy is first-line for acute flares?",
+    "options": [
+      "Topical corticosteroids alongside regular emollient barrier repair",
+      "Systemic oral griseofulvin for 8 weeks",
+      "Topical podophyllotoxin",
+      "Intralesional bleomycin"
+    ],
+    "answer": 0,
+    "explanation": "Atopic dermatitis is managed with liberal emollients and topical corticosteroids for flares (with topical calcineurin inhibitors or non-steroidal agents as steroid-sparing options when appropriate)."
+  },
+  {
+    "id": "g-derm-003",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "hard",
+    "question": "A patient presents with flaccid bullae on normal or erythematous skin that rupture easily to leave painful erosions, mucosal erosions of the oral cavity, and a positive Nikolsky sign. Direct immunofluorescence shows intercellular IgG and C3 deposits in a net-like pattern around keratinocytes. What is the diagnosis?",
+    "options": [
+      "Pemphigus vulgaris",
+      "Bullous pemphigoid",
+      "Dermatitis herpetiformis",
+      "Erythema multiforme minor"
+    ],
+    "answer": 0,
+    "explanation": "Flaccid blisters, mucosal involvement, positive Nikolsky sign, and intercellular IgG/C3 (desmoglein autoantibodies) in the epidermis characterize pemphigus vulgaris."
+  },
+  {
+    "id": "g-derm-004",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "An older adult presents with intensely pruritic, tense bullae arising on erythematous or normal-appearing skin on the flexural trunk and extremities, typically sparing the oral mucosa, with a negative Nikolsky sign. Direct immunofluorescence shows linear IgG and C3 along the dermoepidermal junction. What is the diagnosis?",
+    "options": [
+      "Bullous pemphigoid",
+      "Pemphigus vulgaris",
+      "Contact irritant dermatitis",
+      "Seborrheic dermatitis"
+    ],
+    "answer": 0,
+    "explanation": "Tense bullae in older adults, usually without oral mucosal involvement and with linear IgG/C3 at the basement membrane zone, are characteristic of bullous pemphigoid."
+  },
+  {
+    "id": "g-derm-005",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with intensely pruritic grouped vesicles and excoriations on the extensor elbows, knees, and buttocks, and reports chronic gastrointestinal symptoms with positive tissue transglutaminase IgA. Direct immunofluorescence of perilesional skin shows granular IgA deposits in dermal papillae. What is the diagnosis?",
+    "options": [
+      "Dermatitis herpetiformis",
+      "Scabies",
+      "Herpes simplex labialis",
+      "Vitiligo"
+    ],
+    "answer": 0,
+    "explanation": "Pruritic papulovesicles on extensor surfaces with granular dermal papillary IgA deposits are strongly associated with celiac disease and respond to a gluten-free diet (and dapsone when needed)."
+  },
+  {
+    "id": "g-derm-006",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with an annular erythematous plaque with central clearing and a raised scaly active border on the trunk. A potassium hydroxide (KOH) preparation of skin scrapings reveals branching septate hyphae. Which treatment is appropriate?",
+    "options": [
+      "Topical antifungal azole or allylamine (such as clotrimazole or terbinafine)",
+      "High-potency topical corticosteroid monotherapy",
+      "Oral isotretinoin",
+      "Topical permethrin 5% cream"
+    ],
+    "answer": 0,
+    "explanation": "Tinea corporis (superficial dermatophyte infection) shows branching septate hyphae on KOH prep and responds to topical antifungals (systemic therapy is reserved for extensive, refractory, hair-bearing, or nail involvement)."
+  },
+  {
+    "id": "g-derm-007",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "easy",
+    "question": "A patient presents with hypopigmented, hyperpigmented, or salmon-colored finely scaling macules and patches over the upper chest, back, and shoulders that become more noticeable after sun exposure. KOH microscopy shows short hyphae and yeast cells in a 'spaghetti and meatball' pattern. What is the diagnosis?",
+    "options": [
+      "Pityriasis versicolor (tinea versicolor)",
+      "Vitiligo",
+      "Melasma",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Malassezia overgrowth causes finely scaling hypo- or hyperpigmented macules on the trunk with a classic 'spaghetti and meatballs' appearance on KOH microscopy."
+  },
+  {
+    "id": "g-derm-008",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with well-demarcated depigmented (chalk-white) macules and patches with complete absence of melanocytes on wood lamp accentuation, located around the mouth, hands, and body folds. What is the most likely diagnosis?",
+    "options": [
+      "Vitiligo",
+      "Pityriasis versicolor",
+      "Atopic dermatitis",
+      "Rosacea"
+    ],
+    "answer": 0,
+    "explanation": "Complete depigmentation due to autoimmune or acquired loss of functional melanocytes characterizes vitiligo."
+  },
+  {
+    "id": "g-derm-009",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with a single oval salmon-colored scaly plaque ('herald patch') on the trunk, followed days to weeks later by smaller oval erythematous plaques with a collarette of scale distributed along Langer skin cleavage lines in a 'Christmas tree' pattern. What is the most likely diagnosis?",
+    "options": [
+      "Pityriasis rosea",
+      "Secondary syphilis",
+      "Guttate psoriasis",
+      "Lupus erythematosus"
+    ],
+    "answer": 0,
+    "explanation": "A herald patch followed by a truncal eruption aligned along cleavage lines ('Christmas tree' pattern) is classic for pityriasis rosea, which is typically self-limiting (syphilis serology should be considered when atypical or involving palms/soles)."
+  },
+  {
+    "id": "g-derm-010",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with pruritic, purple, polygonal, planar papules and plaques with fine white lacy lines (Wickham striae) on the flexor wrists and ankles, along with oral mucosal reticulated lesions. Which diagnosis is most likely?",
+    "options": [
+      "Lichen planus",
+      "Psoriasis vulgaris",
+      "Erythema nodosum",
+      "Seborrheic keratosis"
+    ],
+    "answer": 0,
+    "explanation": "Pruritic planar violaceous papules with Wickham striae on flexor surfaces and mucosal involvement are characteristic of lichen planus."
+  },
+  {
+    "id": "g-derm-011",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with central facial erythema, telangiectasias, inflammatory papules, and pustules across the cheeks, nose, chin, and forehead without comedones, worsened by heat, sun, spicy foods, or alcohol. What is the most likely diagnosis?",
+    "options": [
+      "Rosacea",
+      "Acne vulgaris",
+      "Perioral contact dermatitis alone",
+      "Melasma"
+    ],
+    "answer": 0,
+    "explanation": "Centrofacial erythema, telangiectasias, and papulopustules without comedones—often triggered by flushing stimuli—characterize rosacea."
+  },
+  {
+    "id": "g-derm-012",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient treated with systemic oral isotretinoin for severe nodulocystic acne requires strict pregnancy prevention counseling and monitoring. Which key precautions apply to isotretinoin therapy?",
+    "options": [
+      "Strict teratogenicity prevention (two forms of contraception before, during, and after therapy per program rules) along with monitoring lipids and liver enzymes",
+      "Safe to continue during pregnancy if taken with folic acid",
+      "Co-administration with oral tetracyclines as first-line combination to reduce pseudotumor cerebri risk",
+      "No laboratory monitoring needed in any patient"
+    ],
+    "answer": 0,
+    "explanation": "Isotretinoin is strongly teratogenic and requires strict contraceptive protocols and monitoring of serum triglycerides/cholesterol and transaminases (and avoiding concurrent tetracyclines due to intracranial hypertension risk)."
+  },
+  {
+    "id": "g-derm-013",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with intense generalized pruritus that worsens markedly at night, with tiny burrows in the finger webs and wrists, affecting household contacts. Which first-line scabicidal treatment is commonly used?",
+    "options": [
+      "Topical permethrin 5% cream (applied from neck/jawline down, including under nails and skin folds, and treating close contacts)",
+      "Topical hydrocortisone 1% cream alone",
+      "Oral acyclovir",
+      "Topical mupirocin alone"
+    ],
+    "answer": 0,
+    "explanation": "Scabies is treated with topical permethrin 5% (or oral ivermectin in selected/crusted cases), alongside environmental measures and treating close contacts simultaneously."
+  },
+  {
+    "id": "g-derm-014",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with tender, erythematous, warm subcutaneous nodules located symmetrically on the anterior shins without ulceration, following a streptococcal infection or sarcoidosis. What is the diagnosis?",
+    "options": [
+      "Erythema nodosum",
+      "Basal cell carcinoma",
+      "Actinic keratosis",
+      "Bullous impetigo"
+    ],
+    "answer": 0,
+    "explanation": "Painful erythematous pretibial nodules representing septal panniculitis are characteristic of erythema nodosum, often triggered by infections, drugs, IBD, or sarcoidosis."
+  },
+  {
+    "id": "g-derm-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A fair-skinned patient with chronic sun exposure presents with a slow-growing pearly papule on the nose with rolled translucent borders and superficial telangiectasias that occasionally bleeds and ulcerates. What is the most likely diagnosis?",
+    "options": [
+      "Basal cell carcinoma",
+      "Melanoma in situ",
+      "Dermatofibroma",
+      "Molluscum contagiosum"
+    ],
+    "answer": 0,
+    "explanation": "A pearly nodule with rolled borders and telangiectasias on sun-exposed skin is the classic presentation of basal cell carcinoma, the most common skin cancer."
+  },
+  {
+    "id": "g-derm-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient with a history of chronic sun damage or a non-healing ulcer presents with a firm erythematous hyperkeratotic plaque or nodule with central crusting/ulceration on sun-exposed skin. Which malignancy should be suspected?",
+    "options": [
+      "Squamous cell carcinoma (SCC) of the skin",
+      "Seborrheic dermatitis",
+      "Vitiligo",
+      "Urticaria"
+    ],
+    "answer": 0,
+    "explanation": "Cutaneous squamous cell carcinoma often presents as a firm, scaling, hyperkeratotic, or ulcerated plaque/nodule on sun-damaged skin or chronic wounds and requires biopsy/excision."
+  },
+  {
+    "id": "g-derm-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "hard",
+    "question": "A pigmented skin lesion demonstrates asymmetry, irregular notched borders, multiple colors/variegation, diameter > 6 mm, and recent evolution in size or shape. Which next step is essential?",
+    "options": [
+      "Excisional biopsy (or full-thickness biopsy appropriate to lesion site) to evaluate for melanoma and determine Breslow thickness",
+      "Reassurance without biopsy for 2 years",
+      "Cryotherapy with liquid nitrogen without histopathology",
+      "Topical hydroquinone bleaching cream"
+    ],
+    "answer": 0,
+    "explanation": "Lesions suspicious for melanoma by ABCDE criteria or evolution require histopathologic evaluation via biopsy so depth (Breslow thickness) can guide staging and wide local excision margins."
+  },
+  {
+    "id": "g-derm-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "easy",
+    "question": "A patient presents with multiple dome-shaped, flesh-colored papules with a central umbilication on the trunk or extremities. Which viral condition is present?",
+    "options": [
+      "Molluscum contagiosum",
+      "Herpes zoster",
+      "Psoriasis guttata",
+      "Erythema multiforme"
+    ],
+    "answer": 0,
+    "explanation": "Small umbilicated flesh-colored papules caused by a poxvirus are characteristic of molluscum contagiosum."
+  },
+  {
+    "id": "g-derm-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient presents with greasy yellowish scaling plaques and erythema involving the nasolabial folds, eyebrows, glabella, and scalp (dandruff/seborrheic dermatitis). Which treatment approach is commonly used?",
+    "options": [
+      "Ketoconazole (or selenium sulfide / zinc pyrithione) shampoos/creams and short-term mild-to-moderate topical corticosteroids as needed",
+      "Oral methotrexate as first-line monotherapy",
+      "Systemic vancomycin for 10 days",
+      "Strict avoidance of all bathing"
+    ],
+    "answer": 0,
+    "explanation": "Seborrheic dermatitis is typically managed with topical antifungals (such as ketoconazole) and short courses of anti-inflammatory topical corticosteroids."
+  },
+  {
+    "id": "g-derm-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Dermatology",
+    "difficulty": "medium",
+    "question": "A patient develops transient, intensely pruritic, erythematous edematous wheals (hives) with central pallor that resolve within 24 hours in individual spots and reappear elsewhere. What is the diagnosis?",
+    "options": [
+      "Urticaria",
+      "Cellulitis",
+      "Pemphigus vulgaris",
+      "Lichen planus"
+    ],
+    "answer": 0,
+    "explanation": "Transient pruritic wheals/hives where individual lesions typically fade within 24 hours without leaving epidermal scaling or scarring characterize urticaria."
+  }
+]

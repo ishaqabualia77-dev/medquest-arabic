@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-rheum-033",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 61-year-old man presents with recurrent oral aphthous ulcers, painful genital ulcers, papulopustular/erythema nodosum-like skin lesions, and anterior or posterior uveitis/retinal vasculitis. Which systemic vasculitis affecting vessels of variable sizes is most likely?",
+    "options": [
+      "Behçet disease",
+      "Simple iron-deficiency anemia",
+      "Osteoarthritis of the knees",
+      "Polymyalgia rheumatica"
+    ],
+    "answer": 0,
+    "explanation": "Behçet disease is a variable-vessel vasculitis classically presenting with recurrent oral ulcers, genital ulcers, ocular inflammation (uveitis/retinal vasculitis), mucocutaneous lesions, and potential vascular, neurologic, or gastrointestinal involvement."
+  },
+  {
+    "id": "g-rheum-034",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 52-year-old patient with rheumatoid arthritis taking methotrexate is starting a tumor necrosis factor (TNF) inhibitor or other targeted biologic/JAK therapy. Which pre-treatment screening steps are routinely performed before initiating biologic or targeted synthetic DMARDs?",
+    "options": [
+      "Screening for latent or active tuberculosis (via IGRA or tuberculin skin test and chest imaging when indicated) and hepatitis B and hepatitis C serologies (plus updating appropriate vaccinations prior to immunosuppression)",
+      "No infectious screening or vaccination review is ever required before biologic therapy",
+      "Starting oral ketoconazole automatically in every patient",
+      "Stopping all blood tests permanently"
+    ],
+    "answer": 0,
+    "explanation": "Biologic and targeted synthetic DMARDs can reactivate latent tuberculosis or hepatitis B virus; screening for TB and viral hepatitis B/C and reviewing immunization status (giving inactivated vaccines and indicated live vaccines before starting therapy when appropriate) are standard safety steps."
+  },
+  {
+    "id": "g-rheum-035",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 29-year-old woman with systemic lupus erythematosus presents with new-onset lower-extremity edema, hypertension, active urine sediment with dysmorphic red blood cells and red cell casts, proteinuria, and rising serum creatinine. Which organ complication of SLE is suspected and typically warrants renal biopsy to guide therapy?",
+    "options": [
+      "Lupus nephritis",
+      "Simple allergic contact dermatitis",
+      "Benign paroxysmal positional vertigo",
+      "Hypertrophic pyloric stenosis"
+    ],
+    "answer": 0,
+    "explanation": "Hematuria/red cell casts, proteinuria, hypertension, or rising creatinine in SLE points toward lupus nephritis; renal biopsy determines histologic class and guides targeted immunosuppressive induction and maintenance regimens."
+  },
+  {
+    "id": "g-rheum-036",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 56-year-old man with chronic tophaceous gout and chronic kidney disease stage 3 is initiated on urate-lowering therapy to reach a target serum uric acid level (< 6 mg/dL, or < 5 mg/dL in severe tophaceous disease). Which xanthine oxidase inhibitor is commonly used first-line and titrated slowly with flare prophylaxis?",
+    "options": [
+      "Allopurinol (started at a low dose—especially in renal impairment—and titrated gradually alongside anti-inflammatory flare prophylaxis such as low-dose colchicine, NSAID, or low-dose prednisone)",
+      "High-dose aspirin to raise uric acid levels",
+      "Oral ketoconazole",
+      "Routine daily oral vitamin B12"
+    ],
+    "answer": 0,
+    "explanation": "Allopurinol is first-line urate-lowering therapy in gout; slow dose titration and concurrent flare prophylaxis help prevent mobilization gout flares when serum urate begins to fall."
+  },
+  {
+    "id": "g-rheum-037",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 44-year-old woman with rheumatoid arthritis presents with a painful, swollen, erythematous right knee that developed over 24 hours, accompanied by low-grade fever, while her other joints remain stable. Why is arthrocentesis (joint aspiration) with cell count, Gram stain, culture, and crystal analysis essential before assuming a simple rheumatoid arthritis flare?",
+    "options": [
+      "Septic arthritis can closely mimic an acute flare of a chronically inflamed joint in rheumatoid arthritis, and delaying diagnosis/treatment of joint infection risks rapid cartilage destruction and sepsis",
+      "Rheumatoid arthritis patients can never develop bacterial joint infection",
+      "Joint fluid analysis is only done in veterinary medicine",
+      "Empirical steroids alone always cure bacterial arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Patients with pre-existing joint disease (such as RA) or immunosuppression have higher risk of septic arthritis; an acute monoarticular flare—especially with fever or disproportionate pain—warrants prompt synovial fluid evaluation and appropriate antimicrobials/drainage if infected."
+  },
+  {
+    "id": "g-rheum-038",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 67-year-old woman with osteoporosis and a prior fragility vertebral fracture has low bone mineral density (T-score <= -2.5 at lumbar spine, femoral neck, or total hip on DEXA). Aside from calcium and vitamin D adequacy and fall prevention, which class of medications is commonly used first-line to reduce vertebral and non-vertebral fracture risk?",
+    "options": [
+      "Oral or intravenous bisphosphonates (such as alendronate or zoledronic acid, with attention to esophageal/GI precautions for oral bisphosphonates and dental/renal considerations)",
+      "Oral ketoconazole",
+      "Topical permethrin",
+      "Routine daily warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Bisphosphonates inhibit osteoclast-mediated bone resorption and reduce vertebral, hip, and non-vertebral fractures in osteoporosis; evaluation for secondary causes of bone loss, adequate calcium/vitamin D, weight-bearing/resistance exercise, and fall prevention accompany pharmacotherapy."
+  },
+  {
+    "id": "g-rheum-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 31-year-old woman presents with new-onset joint pain, fever, and a malar-like rash 6 weeks after starting hydralazine or procainamide for hypertension/arrhythmia, with positive ANA and antihistone antibodies but negative anti-dsDNA and normal complement levels. Which condition is most likely?",
+    "options": [
+      "Drug-induced lupus erythematosus (DILE)",
+      "Osteoarthritis of the knees",
+      "Acute gouty podagra",
+      "Polymyalgia rheumatica"
+    ],
+    "answer": 0,
+    "explanation": "Drug-induced lupus can be triggered by medications such as hydralazine, procainamide, isoniazid, minocycline, or TNF inhibitors, typically presenting with constitutional and musculoskeletal/serosal symptoms and resolving after discontinuing the offending drug under medical supervision."
+  },
+  {
+    "id": "g-rheum-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 58-year-old man presents with asymmetric distal hand joint pain and swelling, Heberden nodes (bony enlargements of the distal interphalangeal [DIP] joints) and Bouchard nodes (proximal interphalangeal [PIP] joints), and first carpometacarpal (CMC) base-of-thumb pain worsened by gripping or pinching. Which diagnosis is most likely?",
+    "options": [
+      "Hand osteoarthritis",
+      "Acute septic arthritis of the hip",
+      "Giant cell arteritis",
+      "Ankylosing spondylitis"
+    ],
+    "answer": 0,
+    "explanation": "DIP (Heberden nodes), PIP (Bouchard nodes), and first CMC joint involvement with bony enlargement and activity-related pain are classic features of hand osteoarthritis."
+  },
+  {
+    "id": "g-rheum-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 23-year-old woman presents with a 2-week history of migratory arthralgias/tenosynovitis, skin pustules/vesicles on an erythematous base over the extremities, and mild fever, with a recent sexually transmitted exposure history. Which infectious arthritis syndrome should be suspected?",
+    "options": [
+      "Disseminated gonococcal infection (DGI, caused by Neisseria gonorrhoeae)",
+      "Polymyalgia rheumatica",
+      "Osteoarthritis of the spine",
+      "Calcium pyrophosphate deposition disease"
+    ],
+    "answer": 0,
+    "explanation": "Disseminated gonococcal infection classically presents in sexually active young adults with migratory polyarthralgia, tenosynovitis, and characteristic skin lesions (vesiculopustular/petechial/papular lesions on distal extremities), or purulent monoarthritis; prompt targeted antibiotic therapy and STI testing/partner care are essential."
+  },
+  {
+    "id": "g-rheum-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 47-year-old patient with diffuse cutaneous systemic sclerosis develops abrupt severe hypertension (BP 210/120 mmHg), headache, visual changes, microangiopathic hemolytic anemia with schistocytes, thrombocytopenia, and rapidly rising serum creatinine. Which life-threatening complication of systemic sclerosis is occurring?",
+    "options": [
+      "Scleroderma renal crisis",
+      "Simple seasonal allergic rhinitis",
+      "Benign paroxysmal positional vertigo",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Scleroderma renal crisis causes accelerated/malignant hypertension, acute kidney injury, and thrombotic microangiopathy-like features, requiring urgent blood pressure control—classically with ACE inhibitors (such as captopril/enalapril per clinical guidance)—and close nephrology care."
+  },
+  {
+    "id": "g-rheum-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "Why is a positive antinuclear antibody (ANA) test alone insufficient to diagnose systemic lupus erythematosus (SLE)?",
+    "options": [
+      "ANA can be positive at low titers in healthy individuals (especially older adults) as well as in other autoimmune conditions, infections, or malignancies, so it must be interpreted alongside compatible clinical features and more specific autoantibodies (such as anti-dsDNA or anti-Smith)",
+      "A positive ANA test proves SLE in 100% of people without any symptoms",
+      "ANA only tests for bacterial infections",
+      "ANA is a radiograph of the spine"
+    ],
+    "answer": 0,
+    "explanation": "ANA has high sensitivity for SLE but limited specificity on its own; diagnosis integrates clinical signs/symptoms, laboratory/organ findings, and specific serologies."
+  },
+  {
+    "id": "g-rheum-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 50-year-old man with rheumatoid arthritis develops painless firm subcutaneous nodules over pressure points such as the extensor forearm/olecranon, alongside seropositive polyarthritis. What are these lesions and what do they typically reflect?",
+    "options": [
+      "Rheumatoid nodules—associated with seropositive (RF/anti-CCP positive) and often more severe or extra-articular rheumatoid arthritis",
+      "Gouty tophi caused by uric acid crystals",
+      "Koplik spots of measles",
+      "Herpes zoster vesicles"
+    ],
+    "answer": 0,
+    "explanation": "Rheumatoid nodules occur in roughly 20–30% of patients with seropositive RA—most commonly over pressure points like the olecranon—and correlate with RF/anti-CCP positivity and systemic/extra-articular disease activity."
+  },
+  {
+    "id": "g-rheum-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 62-year-old patient with long-term systemic glucocorticoid therapy (> 3 months of prednisone >= 5–7.5 mg/day) is evaluated for bone health. Which preventive measures are typically recommended in glucocorticoid-induced osteoporosis?",
+    "options": [
+      "Assessing fracture risk and bone mineral density, ensuring adequate calcium and vitamin D intake, encouraging weight-bearing exercise and fall prevention, minimizing glucocorticoid dose/duration when clinically feasible, and initiating bone-protective therapy (such as a bisphosphonate or other guideline-indicated agent) when risk thresholds are met",
+      "Stopping all weight-bearing activity and ignoring bone density",
+      "Giving oral ketoconazole to strengthen bones",
+      "Assuming steroids never affect bone density"
+    ],
+    "answer": 0,
+    "explanation": "Systemic glucocorticoids rapidly increase bone resorption and fracture risk; risk assessment, calcium/vitamin D, lifestyle/fall prevention, steroid optimization, and pharmacologic therapy when indicated help prevent fragility fractures."
+  },
+  {
+    "id": "g-rheum-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 33-year-old patient with inflammatory bowel disease (Crohn disease or ulcerative colitis) develops peripheral arthritis or axial spondyloarthritis symptoms. How do enteropathic arthritis symptoms often behave in relation to intestinal disease?",
+    "options": [
+      "Peripheral arthritis often parallels flares of underlying bowel inflammation (though axial spondyloarthritis/sacroiliitis can run a course more independent of bowel flares)",
+      "Enteropathic arthritis never occurs with inflammatory bowel disease",
+      "Joint pain in IBD is always caused by iron-deficiency anemia",
+      "NSAIDs are always completely risk-free in active IBD flares"
+    ],
+    "answer": 0,
+    "explanation": "Peripheral arthropathy in IBD frequently tracks with intestinal disease activity and improves as bowel inflammation is controlled, whereas axial spondyloarthritis may progress independently; NSAIDs are used cautiously in IBD due to potential GI flare risk."
+  },
+  {
+    "id": "g-rheum-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 55-year-old patient presents with palpable purpura (non-blanching raised violaceous spots) predominantly on the lower legs and buttocks, arthralgias, abdominal pain, and hematuria/proteinuria (often following an upper respiratory infection or in children/adults with IgA deposition). Which small-vessel leukocytoclastic vasculitis is classic for this presentation?",
+    "options": [
+      "IgA vasculitis (Henoch-Schönlein purpura)",
+      "Simple mechanical lumbar strain",
+      "Osteoarthritis of the first CMC joint",
+      "Polymyalgia rheumatica"
+    ],
+    "answer": 0,
+    "explanation": "IgA vasculitis is an immune-complex small-vessel vasculitis with IgA-dominant deposits, typically presenting with palpable purpura (especially lower extremities/buttocks), arthralgias/arthritis, abdominal pain, and renal involvement (nephritis)."
+  },
+  {
+    "id": "g-rheum-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 30-year-old woman with known systemic lupus erythematosus plans to become pregnant. Why is preconception planning and timing pregnancy during a period of quiet/low disease activity (typically >= 6 months of quiescent lupus) important?",
+    "options": [
+      "Active SLE—especially active lupus nephritis or antiphospholipid antibodies—increases risks of lupus flares, preeclampsia, miscarriage/fetal loss, preterm birth, and fetal growth restriction, and teratogenic medications (such as mycophenolate, methotrexate, or cyclophosphamide) must be stopped/switched safely well ahead of conception with specialist guidance",
+      "Pregnancy is completely risk-free regardless of active lupus nephritis or teratogenic drugs",
+      "Mycophenolate and methotrexate are safe throughout pregnancy",
+      "Lupus never flares during or after pregnancy"
+    ],
+    "answer": 0,
+    "explanation": "Quiescent disease for >= 6 months before conception, medication review to replace teratogens (such as mycophenolate or methotrexate) with pregnancy-compatible therapies (such as hydroxychloroquine and appropriate azathioprine/tacrolimus regimens if needed), and antiphospholipid/renal risk assessment improve maternal and fetal outcomes."
+  },
+  {
+    "id": "g-rheum-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "A 65-year-old man presents with asymmetric pulses/blood pressure between the left and right arms, claudication of the upper extremities, carotid/subclavian bruits, and constitutional symptoms, with CT/MR angiography showing large-vessel stenoses/wall thickening of the aorta and its major branches. Which large-vessel vasculitis is most likely in a patient older than 50?",
+    "options": [
+      "Giant cell arteritis (large-vessel GCA, whereas Takayasu arteritis classically presents in patients < 40 years of age)",
+      "Simple seasonal allergic rhinitis",
+      "Osteoarthritis of the knees",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Both GCA and Takayasu arteritis are large-vessel vasculitides involving the aorta and major branches; onset age typically distinguishes them (commonly > 50 years in GCA vs. < 40 years in Takayasu arteritis)."
+  },
+  {
+    "id": "g-rheum-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Rheumatology",
+    "difficulty": "medium",
+    "question": "Why is distinguishing inflammatory arthritis from non-inflammatory mechanical joint pain (such as osteoarthritis or soft-tissue injury) a foundational first step in rheumatology evaluation?",
+    "options": [
+      "Inflammatory arthritis typically features prolonged morning stiffness (> 30–60 minutes), joint swelling/warmth/synovitis, improvement with movement rather than rest, and potential systemic or extra-articular organ involvement requiring targeted anti-inflammatory/DMARD therapy to prevent joint damage",
+      "Inflammatory arthritis and mechanical joint pain have identical treatments and zero difference in joint damage risk",
+      "Morning stiffness lasting 2 hours is normal in healthy joints",
+      "Non-inflammatory pain always requires systemic immunosuppression"
+    ],
+    "answer": 0,
+    "explanation": "Recognizing inflammatory synovitis (prolonged morning stiffness, true joint effusion/swelling, warmth, systemic features) guides timely rheumatologic workup and early DMARD therapy when indicated, whereas mechanical conditions prioritize biomechanical, rehabilitative, and symptom-targeted care."
+  }
+]

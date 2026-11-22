@@ -1,0 +1,322 @@
+[
+  {
+    "id": "g-peds-001",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-month-old infant presents with 2 days of rhinorrhea and low-grade fever followed by tachypnea, wheezing, and diffuse fine crackles/rales on auscultation, with hyperinflation on chest radiograph. Which supportive management is cornerstone in typical uncomplicated cases?",
+    "options": [
+      "Supportive care including hydration assessment, nasal suctioning, and supplemental oxygen if hypoxemic",
+      "Routine systemic oral corticosteroids in every infant",
+      "Routine bronchodilators or hypertonic saline nebulizers continued indefinitely regardless of response",
+      "Empirical broad-spectrum antibiotics in all afebrile mild cases"
+    ],
+    "answer": 0,
+    "explanation": "Acute viral bronchiolitis (most commonly RSV) is primarily managed supportively with hydration, suctioning, and oxygen when needed; routine steroids or antibiotics are generally not indicated."
+  },
+  {
+    "id": "g-peds-002",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child presents with a 2-day history of barking ('seal-like') cough, hoarseness, and inspiratory stridor at rest after an upper respiratory prodrome. Which initial therapy is recommended?",
+    "options": [
+      "Single-dose systemic corticosteroid (such as oral dexamethasone), with nebulized epinephrine if moderate-to-severe stridor or respiratory distress is present",
+      "Immediate endotracheal intubation without evaluation in mild croup",
+      "Oral azithromycin for 5 days",
+      "Warm mist tent alone without corticosteroids"
+    ],
+    "answer": 0,
+    "explanation": "Croup (laryngotracheobronchitis) is treated with systemic corticosteroids (e.g., dexamethasone) and nebulized epinephrine for moderate-to-severe distress/stridor."
+  },
+  {
+    "id": "g-peds-003",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "An unimmunized or under-immunized 3-year-old child presents abruptly over hours with high fever, drooling, dysphagia, muffled ('hot potato') voice, anxiety, and sitting upright leaning forward ('tripod' position) without a barking cough. What is the most critical immediate step?",
+    "options": [
+      "Secure the airway in a controlled setting (such as the operating room) with anesthesia/ENT support and start IV antibiotics after airway control, avoiding distressing throat exam or supine positioning",
+      "Examine the posterior pharynx forcefully with a tongue depressor at the bedside first",
+      "Discharge home with oral amoxicillin and ibuprofen",
+      "Obtain a lateral neck X-ray by forcing the child to lie flat immediately"
+    ],
+    "answer": 0,
+    "explanation": "Acute epiglottitis is a life-threatening airway emergency; airway protection must be prioritized calmly without provoking complete airway obstruction."
+  },
+  {
+    "id": "g-peds-004",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 9-month-old infant with mild-to-moderate dehydration from acute viral gastroenteritis without shock or intractable vomiting requires rehydration. Which route is preferred first-line?",
+    "options": [
+      "Oral rehydration therapy (ORT) with low-osmolarity oral rehydration solution given in small frequent volumes",
+      "Strict nothing-by-mouth (NPO) for 48 hours",
+      "Routine anti-diarrheal antimotility agents (such as loperamide) in young infants",
+      "Plain tap water or undiluted juice as sole rehydration fluid"
+    ],
+    "answer": 0,
+    "explanation": "Oral rehydration therapy is the preferred first-line treatment for mild-to-moderate dehydration in children with acute gastroenteritis."
+  },
+  {
+    "id": "g-peds-005",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "A 10-month-old previously healthy infant presents with sudden episodes of severe colicky abdominal pain drawing up the legs every 15–20 minutes, inconsolable crying, vomiting, and later 'currant jelly' stools with a sausage-shaped abdominal mass. What is the most likely diagnosis?",
+    "options": [
+      "Intussusception",
+      "Hypertrophic pyloric stenosis",
+      "Hirschsprung disease",
+      "Celiac disease"
+    ],
+    "answer": 0,
+    "explanation": "Intermittent severe colicky abdominal pain, vomiting, a palpable right-sided/sausage-shaped mass, and currant-jelly stools in an infant are classic for intussusception."
+  },
+  {
+    "id": "g-peds-006",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-week-old male infant presents with progressive, forceful non-bilious projectile vomiting immediately after feeds, visible left-to-right gastric peristalsis, and a palpable 'olive' mass in the right upper quadrant, with hypochloremic, hypokalemic metabolic alkalosis. What is the diagnosis?",
+    "options": [
+      "Hypertrophic pyloric stenosis",
+      "Malrotation with midgut volvulus",
+      "Gastroesophageal reflux disease",
+      "Intussusception"
+    ],
+    "answer": 0,
+    "explanation": "Forceful non-bilious emesis around 2–8 weeks of age, an olive-like pyloric mass, and hypochloremic hypokalemic metabolic alkalosis characterize hypertrophic pyloric stenosis."
+  },
+  {
+    "id": "g-peds-007",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-year-old child presents with fever, sore throat, headache, abdominal pain, and a fine sandpaper-like erythematous rash starting on the trunk/neck and spreading outward, with circumoral pallor, strawberry tongue, and Pastia lines in skin folds. What is the most likely diagnosis?",
+    "options": [
+      "Scarlet fever (group A streptococcal pharyngitis with erythrogenic toxin)",
+      "Measles (rubeola)",
+      "Rubella",
+      "Roseola infantum (HHV-6)"
+    ],
+    "answer": 0,
+    "explanation": "Sandpaper rash, Pastia lines, strawberry tongue, and pharyngitis in a child point to scarlet fever, treated with penicillin or amoxicillin."
+  },
+  {
+    "id": "g-peds-008",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-year-old child presents 2 weeks after an untreated streptococcal pharyngitis with migratory polyarthritis, fever, and a new holosystolic apical murmur radiating to the axilla. Which condition should be diagnosed and treated?",
+    "options": [
+      "Acute rheumatic fever",
+      "Henoch-Schönlein purpura (IgA vasculitis)",
+      "Juvenile idiopathic arthritis (oligoarticular)",
+      "Kawasaki disease"
+    ],
+    "answer": 0,
+    "explanation": "Migratory arthritis, carditis/valvulitis, and fever following group A streptococcal infection indicate acute rheumatic fever, requiring streptococcal eradication and secondary prophylaxis."
+  },
+  {
+    "id": "g-peds-009",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 5-year-old child presents with palpable purpura on the buttocks and lower legs, colicky abdominal pain, arthralgias/arthritis, and hematuria following a recent upper respiratory infection, with normal platelet count. What is the diagnosis?",
+    "options": [
+      "IgA vasculitis (Henoch-Schönlein purpura)",
+      "Immune thrombocytopenia (ITP)",
+      "Hemolytic uremic syndrome (HUS)",
+      "Acute lymphoblastic leukemia"
+    ],
+    "answer": 0,
+    "explanation": "Palpable purpura on dependent/extensor surfaces with normal platelets, arthralgia, abdominal pain, and renal involvement characterizes IgA vasculitis."
+  },
+  {
+    "id": "g-peds-010",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "A 3-year-old child presents several days after an episode of bloody diarrhea with pallor, lethargy, oliguria, microangiopathic hemolytic anemia with schistocytes, thrombocytopenia, and acute kidney injury. Which diagnosis is most likely?",
+    "options": [
+      "Hemolytic uremic syndrome (HUS)",
+      "Henoch-Schönlein purpura",
+      "Iron deficiency anemia",
+      "Celiac crisis"
+    ],
+    "answer": 0,
+    "explanation": "The triad of microangiopathic hemolytic anemia, thrombocytopenia, and acute kidney injury—often following Shiga toxin-producing E. coli gastroenteritis—defines HUS."
+  },
+  {
+    "id": "g-peds-011",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-year-old child presents with fever lasting 6 days, bilateral non-exudative conjunctival injection, cracked red lips and strawberry tongue, cervical lymphadenopathy, polymorphous rash, and erythema/edema of the hands and feet. Which diagnosis is most likely?",
+    "options": [
+      "Kawasaki disease",
+      "Infectious mononucleosis",
+      "Stevens-Johnson syndrome",
+      "Systemic juvenile idiopathic arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Prolonged fever with mucocutaneous inflammation, extremity changes, rash, and lymphadenopathy is characteristic of Kawasaki disease, requiring prompt IVIG and aspirin therapy plus echocardiography to monitor coronary arteries."
+  },
+  {
+    "id": "g-peds-012",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 15-month-old child presents with a brief (< 5 minutes) generalized tonic-clonic seizure during a febrile illness, returning to baseline alertness promptly afterward, with a normal neurologic examination and no prior afebrile seizures. How is this classified?",
+    "options": [
+      "Simple febrile seizure",
+      "Complex/focal status epilepticus",
+      "Juvenile myoclonic epilepsy",
+      "Bacterial meningitis"
+    ],
+    "answer": 0,
+    "explanation": "A single generalized seizure lasting less than 15 minutes within 24 hours of a febrile illness in a child aged 6 months to 5 years with normal neurologic baseline is a simple febrile seizure (while ruling out CNS infection when clinically indicated)."
+  },
+  {
+    "id": "g-peds-013",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 4-year-old child presents with generalized edema (periorbital and lower extremity), heavy proteinuria, hypoalbuminemia, and hyperlipidemia, with normal blood pressure and normal kidney function. Which histologic lesion is the most common cause in this age group?",
+    "options": [
+      "Minimal change disease",
+      "IgA nephropathy",
+      "Membranous nephropathy",
+      "Alport syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Minimal change disease is the most common cause of idiopathic nephrotic syndrome in young children and typically responds well to corticosteroid therapy."
+  },
+  {
+    "id": "g-peds-014",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "easy",
+    "question": "A full-term exclusively breastfed infant is being evaluated for routine nutritional supplementation. Which vitamin supplement is routinely recommended starting shortly after birth?",
+    "options": [
+      "Vitamin D supplementation (typically 400 IU daily)",
+      "Vitamin B12 10 mg daily",
+      "High-dose vitamin A 200,000 IU weekly",
+      "Vitamin K daily orally for 1 year"
+    ],
+    "answer": 0,
+    "explanation": "Breastfed infants generally receive 400 IU/day of vitamin D starting in the first days of life to prevent rickets (while vitamin K is given at birth to prevent vitamin K deficiency bleeding)."
+  },
+  {
+    "id": "g-peds-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 12-month-old child who drinks large quantities of cow's milk and eats few solid foods presents with pallor, microcytic anemia (Hb 8.4 g/dL, MCV 64 fL), low ferritin, and elevated TIBC. Which dietary change is key alongside iron therapy?",
+    "options": [
+      "Limiting cow's milk intake (generally <= 16–24 oz/day after age 1 year), encouraging iron-rich solid foods, and administering oral iron supplementation",
+      "Switching exclusively to cow's milk and avoiding solid foods",
+      "Giving folate alone without iron",
+      "Starting long-term oral warfarin"
+    ],
+    "answer": 0,
+    "explanation": "Excessive cow's milk in toddlers contributes to iron deficiency through low iron content and occult GI blood loss; treatment combines oral iron and dietary modification."
+  },
+  {
+    "id": "g-peds-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 7-year-old child presents with polyuria, polydipsia, nocturia, and weight loss over 3 weeks, with a random blood glucose of 340 mg/dL and positive urinary ketones without severe acidosis. What is the most likely diagnosis?",
+    "options": [
+      "New-onset type 1 diabetes mellitus",
+      "Primary nephrogenic diabetes insipidus",
+      "Congenital hypothyroidism",
+      "Cushing disease"
+    ],
+    "answer": 0,
+    "explanation": "Classic hyperglycemic symptoms (polyuria, polydipsia, weight loss) with markedly elevated glucose in a child strongly indicate type 1 diabetes mellitus."
+  },
+  {
+    "id": "g-peds-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 3-week-old neonate presents with prolonged jaundice, pale/acholic stools, dark urine, and hepatomegaly. Laboratory tests show conjugated (direct) hyperbilirubinemia. Which diagnosis must be urgently evaluated?",
+    "options": [
+      "Biliary atresia",
+      "Physiologic unconjugated neonatal jaundice",
+      "Breast milk unconjugated hyperbilirubinemia alone",
+      "Gilbert syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Conjugated hyperbilirubinemia in a neonate with acholic stools and dark urine is a red flag requiring prompt evaluation for biliary atresia (where early Kasai hepatoportoenterostomy improves outcomes)."
+  },
+  {
+    "id": "g-peds-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 2-month-old infant presents with a loud, harsh holosystolic murmur heard best at the lower left sternal border, tachypnea, sweating during feeds, and poor weight gain. Which congenital heart defect is most commonly associated with a loud holosystolic murmur at the lower left sternal border?",
+    "options": [
+      "Ventricular septal defect (VSD)",
+      "Patent ductus arteriosus with continuous machinery murmur only",
+      "Atrial septal defect with fixed split S2 as sole finding",
+      "Coarctation of the aorta"
+    ],
+    "answer": 0,
+    "explanation": "A holosystolic murmur at the lower left sternal border in an infant with signs of left-to-right shunt/heart failure is classic for a ventricular septal defect."
+  },
+  {
+    "id": "g-peds-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "medium",
+    "question": "A 6-month-old infant is not yet sitting without support, does not roll over, and has poor head control. Which step is most appropriate on developmental surveillance?",
+    "options": [
+      "Perform a formal developmental screening/evaluation and refer to early intervention and pediatric neurology/developmental specialist as indicated",
+      "Tell the parents to wait until school age before any evaluation",
+      "Prescribe daily multivitamins as the sole intervention without developmental assessment",
+      "Order routine skull X-rays without clinical/neurologic assessment"
+    ],
+    "answer": 0,
+    "explanation": "Developmental delay (such as inability to sit independently or roll by 6 months) warrants structured developmental assessment and timely referral to early intervention services."
+  },
+  {
+    "id": "g-peds-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Pediatrics",
+    "difficulty": "hard",
+    "question": "A 4-year-old child presents with 3 weeks of fatigue, pallor, bone pain, petechiae, lymphadenopathy, and hepatosplenomegaly. Complete blood count shows anemia, thrombocytopenia, and circulating lymphoblasts. Which diagnosis is most likely?",
+    "options": [
+      "Acute lymphoblastic leukemia (ALL)",
+      "Immune thrombocytopenia (ITP)",
+      "Aplastic anemia",
+      "Benign transient erythroblastopenia of childhood"
+    ],
+    "answer": 0,
+    "explanation": "Bone marrow failure features (anemia, thrombocytopenia), bone pain, organomegaly/lymphadenopathy, and blasts in a young child are characteristic of acute lymphoblastic leukemia, the most common childhood malignancy."
+  }
+]

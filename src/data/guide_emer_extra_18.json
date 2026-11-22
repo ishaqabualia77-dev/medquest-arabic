@@ -1,0 +1,290 @@
+[
+  {
+    "id": "g-emer-015",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with suspected septic shock presents with hypotension (BP 78/44 mmHg despite an initial fluid bolus), tachycardia, warm extremities or mottled skin, lactate 4.2 mmol/L, and a likely pneumonia source. Which bundle components are prioritized early in sepsis and septic shock management?",
+    "options": [
+      "Prompt blood/relevant cultures before antibiotics (without delaying antimicrobials), early administration of broad-spectrum intravenous antimicrobials, intravenous crystalloid resuscitation for hypoperfusion, and norepinephrine as first-line vasopressor if hypotension persists despite fluids",
+      "Withholding antibiotics for 24 hours until all culture results return",
+      "Using oral ketoconazole as sole therapy",
+      "Discharging home with oral acetaminophen only"
+    ],
+    "answer": 0,
+    "explanation": "Early recognition, obtaining cultures promptly without delaying antimicrobials, timely IV broad-spectrum antibiotics, crystalloid resuscitation, and norepinephrine for fluid-refractory septic shock are core pillars of sepsis resuscitation."
+  },
+  {
+    "id": "g-emer-016",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is brought to the emergency department 45 minutes after ingesting a large unknown quantity of acetaminophen (paracetamol) tablets. Why is obtaining a serum acetaminophen level at >= 4 hours post-ingestion (and starting N-acetylcysteine [NAC] promptly when indicated) critical?",
+    "options": [
+      "Acetaminophen overdose can cause severe, potentially fatal centrilobular hepatic necrosis; serum levels plotted on the Rumack-Matthew nomogram at >= 4 hours help guide NAC therapy, which prevents or limits hepatotoxicity when started early",
+      "Acetaminophen overdose causes immediate permanent blindness within 2 minutes",
+      "NAC is only used for iron-deficiency anemia",
+      "Acetaminophen levels are never helpful in overdose"
+    ],
+    "answer": 0,
+    "explanation": "N-acetylcysteine replenishes hepatic glutathione and detoxifies NAPQI, preventing or reducing severe liver injury when given early after significant acetaminophen ingestion; levels drawn earlier than 4 hours may underestimate peak concentration before absorption/distribution completes."
+  },
+  {
+    "id": "g-emer-017",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "hard",
+    "question": "A farm worker presents after exposure to organophosphate pesticides with pinpoint (miotic) pupils, profuse bronchorrhea and wheezing/bronchospasm, lacrimation, salivation, diaphoresis, urination, diarrhea, and muscle fasciculations/weakness. Which immediate antidote combination is used alongside airway/oxygenation and decontamination?",
+    "options": [
+      "Atropine (to reverse muscarinic effects such as bronchorrhea and bradycardia/bronchospasm) plus pralidoxime (2-PAM, to regenerate acetylcholinesterase), along with removing contaminated clothing and washing skin",
+      "Naloxone and flumazenil alone",
+      "Oral ketoconazole and warfarin",
+      "Routine daily oral iron supplements"
+    ],
+    "answer": 0,
+    "explanation": "Organophosphates inhibit acetylcholinesterase, causing cholinergic excess (SLUDGE/DUMBBELS muscarinic signs plus nicotinic weakness/fasciculations); atropine is titrated to dry bronchial secretions/improve oxygenation, and pralidoxime is given early alongside decontamination and supportive care."
+  },
+  {
+    "id": "g-emer-018",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "Several family members are rescued from a closed room with a malfunctioning gas heater or generator and present with headache, dizziness, nausea, confusion, and cherry-red or normal skin without cyanosis, with pulse oximetry reading near normal or falsely reassuring despite tissue hypoxia. Which initial treatment is indicated?",
+    "options": [
+      "High-flow 100% oxygen (via non-rebreather mask or mechanical ventilation) immediately—and evaluating for hyperbaric oxygen therapy in severe carbon monoxide (CO) poisoning (such as loss of consciousness, neurological deficits, severe acidosis/high COHb, or pregnancy)",
+      "Oral antihistamines only",
+      "Discharging them back into the same room with windows closed",
+      "Oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Carbon monoxide binds hemoglobin with much higher affinity than oxygen, shifting the oxyhemoglobin dissociation curve left and impairing cellular respiration; 100% oxygen shortens CO elimination half-life, and hyperbaric oxygen is considered in severe poisoning or pregnancy."
+  },
+  {
+    "id": "g-emer-019",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with fever (39.7°C), severe headache, stiff neck (nuchal rigidity), and altered mental status. Why is prompt empiric antimicrobial therapy (plus dexamethasone when indicated in suspected bacterial meningitis) initiated urgently without waiting hours for imaging/LP if lumbar puncture is delayed?",
+    "options": [
+      "Delaying antibiotics in suspected acute bacterial meningitis increases mortality and neurologic morbidity; empiric IV antibiotics (and dexamethasone when indicated) should be started immediately, with blood cultures drawn promptly",
+      "Bacterial meningitis always resolves spontaneously without antibiotics",
+      "Lumbar puncture cures bacterial meningitis by itself",
+      "Antibiotics are contraindicated in fever and neck stiffness"
+    ],
+    "answer": 0,
+    "explanation": "Acute bacterial meningitis progresses rapidly; prompt blood cultures and immediate empiric antimicrobials (with adjunctive dexamethasone before or with the first antibiotic dose when indicated, such as suspected pneumococcal meningitis) are critical."
+  },
+  {
+    "id": "g-emer-020",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with known type 1 diabetes is found confused, diaphoretic, shaky, and slurring words with a point-of-care blood glucose of 38 mg/dL, and is unable to swallow safely. Which immediate treatment is given in the emergency setting?",
+    "options": [
+      "Intravenous dextrose (such as D50W or D10W per protocol) if IV access is available, or intramuscular/intranasal glucagon if IV access is not immediately available, followed by repeat glucose checks and oral carbohydrates once awake and able to swallow safely",
+      "Subcutaneous regular insulin",
+      "Oral ketoconazole",
+      "Withholding glucose until tomorrow"
+    ],
+    "answer": 0,
+    "explanation": "Neuroglycopenia requires immediate glucose correction via IV dextrose (or glucagon if IV access is delayed), rechecking blood glucose regularly and identifying the precipitating cause (such as excess insulin, missed meals, alcohol, or renal/hepatic changes)."
+  },
+  {
+    "id": "g-emer-021",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "hard",
+    "question": "A patient presents to the emergency department with a severe headache, blurred vision, chest pain/dyspnea, and blood pressure of 224/128 mmHg with evidence of acute end-organ injury (such as papilledema/retinopathy, acute pulmonary edema, acute coronary ischemia, or acute kidney injury/encephalopathy). Which distinction defines a hypertensive emergency?",
+    "options": [
+      "Severely elevated blood pressure accompanied by acute or progressing target-organ damage, requiring controlled IV antihypertensive titration in a monitored setting rather than abrupt uncontrolled drops that could cause ischemia",
+      "Any blood pressure above 140/90 mmHg in a calm outpatient clinic with zero symptoms or organ injury",
+      "Low blood pressure with dehydration",
+      "Normal blood pressure with mild headache"
+    ],
+    "answer": 0,
+    "explanation": "Hypertensive emergency involves severe hypertension with acute target-organ damage, warranting titrated IV therapy (e.g., nicardipine, labetalol, or clevidipine depending on the clinical syndrome) with controlled initial BP reduction rather than precipitous drops."
+  },
+  {
+    "id": "g-emer-022",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe, tearing/ripping chest pain radiating to the back/interscapular area, asymmetric arm blood pressures or pulse deficit, and mediastinal widening on chest radiograph. Which life-threatening aortic emergency must be diagnosed rapidly with CT angiography (CTA)?",
+    "options": [
+      "Acute aortic dissection",
+      "Simple gastroesophageal reflux",
+      "Benign paroxysmal positional vertigo",
+      "Pityriasis rosea"
+    ],
+    "answer": 0,
+    "explanation": "Abrupt severe 'tearing' chest/back pain with pulse/BP asymmetry or neurologic deficits raises suspicion for acute aortic dissection; urgent CTA (or TEE/MRI as appropriate), anti-impulse therapy (such as IV beta-blocker before vasodilator in Stanford type A/B as indicated), and surgical consultation for type A are critical."
+  },
+  {
+    "id": "g-emer-023",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden pleuritic chest pain, dyspnea, tachypnea, tachycardia, and hypoxia a week after lower-extremity orthopedic surgery or a long flight, with a Wells score indicating high probability of pulmonary embolism (PE). Which diagnostic and management approach fits a hemodynamically stable patient with high PE probability?",
+    "options": [
+      "Prompt CT pulmonary angiography (CTPA) (or V/Q scan if CTPA is contraindicated/unsuitable) and initiating anticoagulation promptly when clinical suspicion is high and bleeding risk allows",
+      "Waiting 2 weeks before any evaluation",
+      "Oral ketoconazole",
+      "Routine daily oral iron supplements"
+    ],
+    "answer": 0,
+    "explanation": "In high-probability suspected PE, anticoagulation is often started promptly while confirmatory imaging (such as CTPA) is obtained, and massive/hemodynamically unstable PE may require urgent reperfusion therapies such as systemic thrombolysis or catheter/surgical intervention."
+  },
+  {
+    "id": "g-emer-024",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with end-stage renal disease who missed dialysis sessions presents with generalized weakness, paresthesias, and an ECG showing peaked T waves, widened QRS complexes, and sine-wave pattern with serum potassium 6.8 mEq/L. Which medication is given immediately to stabilize the cardiac membrane?",
+    "options": [
+      "Intravenous calcium (calcium gluconate or calcium chloride)",
+      "Oral potassium chloride",
+      "Oral ketoconazole",
+      "Subcutaneous warfarin"
+    ],
+    "answer": 0,
+    "explanation": "In hyperkalemia with ECG changes, IV calcium rapidly antagonizes potassium-induced cardiac membrane excitability (without lowering serum K+), alongside potassium-shifting therapies (IV insulin with dextrose, nebulized albuterol, sodium bicarbonate if acidotic) and potassium removal (hemodialysis, loop/thiazide diuretics if functioning kidneys, or GI binders)."
+  },
+  {
+    "id": "g-emer-025",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is brought to the emergency department with core temperature 41.2°C, hot dry or sweaty skin, and central nervous system dysfunction (confusion, delirium, seizures, or coma) after exertion in high heat. Which condition is present and what is the priority?",
+    "options": [
+      "Heat stroke—a life-threatening emergency requiring immediate rapid cooling (such as cold-water immersion or evaporative/ice-pack cooling protocols) and supportive resuscitation",
+      "Simple heat cramps alone without CNS changes",
+      "Hypothermia requiring external rewarming",
+      "Benign paroxysmal positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Heat stroke is defined by severe hyperthermia with central nervous system dysfunction (encephalopathy) and requires immediate rapid cooling to prevent multiorgan failure and death."
+  },
+  {
+    "id": "g-emer-026",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is found outdoors in cold weather with core temperature 31.5°C, shivering or loss of shivering at lower temperatures, bradycardia, lethargy, and J (Osborn) waves on ECG. What is a critical precaution when handling and rewarming a severely hypothermic patient?",
+    "options": [
+      "Handle gently (to avoid precipitating ventricular fibrillation), initiate active rewarming (warmed IV fluids, active external/internal warming per severity), and monitor rhythm and oxygenation closely",
+      "Shake or rub the limbs vigorously and ignore cardiac rhythm",
+      "Give cold ice baths to warm the patient",
+      "Administer oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Severe hypothermia increases myocardial irritability and arrhythmia risk; gentle handling, controlled active rewarming, airway/oxygen support, and careful rhythm monitoring are essential."
+  },
+  {
+    "id": "g-emer-027",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of urticaria, lip/tongue angioedema, stridor/wheezing, and hypotension (BP 76/46 mmHg) after a bee sting or peanut exposure. Which immediate action takes top priority?",
+    "options": [
+      "Administer intramuscular epinephrine (e.g., lateral thigh) immediately, place the patient in an appropriate position (supine/legs elevated if hypotensive, or upright/comfortable if severe respiratory distress allows), provide supplemental oxygen and IV fluids, and monitor closely",
+      "Wait 1 hour to see if hives fade on their own before giving epinephrine",
+      "Give oral antihistamines only and send home",
+      "Apply topical hydrocortisone cream to the lip only"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine is the cornerstone first-line treatment for anaphylaxis and must be given immediately upon recognition; delaying epinephrine in anaphylaxis is associated with worse outcomes and mortality."
+  },
+  {
+    "id": "g-emer-028",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "In adult basic and advanced life support (BLS/ACLS) for witnessed sudden cardiac arrest with a shockable rhythm (ventricular fibrillation or pulseless ventricular tachycardia), which two interventions are most critical to survival?",
+    "options": [
+      "Immediate high-quality chest compressions (minimal interruptions, adequate rate/depth, full chest recoil) and early defibrillation (shock delivery) as soon as a defibrillator is available",
+      "Checking pulse for 3 minutes before starting compressions and delaying defibrillation for 20 minutes",
+      "Giving oral antibiotics before chest compressions",
+      "Placing the patient in Trendelenburg without CPR"
+    ],
+    "answer": 0,
+    "explanation": "High-quality chest compressions with minimal pauses and early defibrillation for shockable rhythms are primary determinants of survival in cardiac arrest, alongside airway/ventilation support, epinephrine/antiarrhythmics per ACLS algorithms, and treating reversible causes (H's and T's)."
+  },
+  {
+    "id": "g-emer-029",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with atrial fibrillation and a mechanical prosthetic heart valve presents with a major life-threatening bleeding episode while taking warfarin with an INR of 8.5. How should reversal be approached while balancing thrombosis risk?",
+    "options": [
+      "Provide immediate hemostasis and urgent reversal (such as 4-factor prothrombin complex concentrate [PCC] plus vitamin K per bleeding severity), while carefully considering mechanical valve thrombosis risk when planning resumption of anticoagulation",
+      "Continue warfarin at a higher dose during active major bleeding",
+      "Disregard active bleeding and discharge without labs",
+      "Give oral ketoconazole"
+    ],
+    "answer": 0,
+    "explanation": "Major warfarin-associated bleeding requires urgent reversal (typically 4-factor PCC plus vitamin K) and source control, while timing of restarting anticoagulation after stabilization balances ongoing bleeding control against thromboembolic risk (especially with mechanical valves)."
+  },
+  {
+    "id": "g-emer-030",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with severe colicky right flank pain radiating to the groin, nausea, and microscopic or gross hematuria. Which initial imaging is commonly used in acute suspected nephrolithiasis alongside pain control and hydration assessment?",
+    "options": [
+      "Non-contrast helical CT of the abdomen/pelvis (or renal/bladder ultrasound with KUB in selected patients such as pregnancy or children to limit radiation)",
+      "Contrast-enhanced head CT",
+      "Plain chest X-ray only",
+      "Electroencephalogram (EEG)"
+    ],
+    "answer": 0,
+    "explanation": "Non-contrast CT of the abdomen and pelvis has high sensitivity and specificity for urinary stones without iodinated contrast, while ultrasound is preferred initially in pregnant patients and children; urgent urologic evaluation is required if signs of urosepsis/infected obstructed stone or acute renal failure are present."
+  },
+  {
+    "id": "g-emer-031",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute painful vision loss, marked eye redness, a mid-dilated or fixed unreactive pupil, corneal haze/edema, and nausea/vomiting/frontal headache. Which ophthalmologic emergency must be treated urgently to prevent irreversible optic nerve damage?",
+    "options": [
+      "Acute angle-closure glaucoma",
+      "Simple allergic conjunctivitis",
+      "Pinguecula",
+      "Dry eye syndrome without pain or vision loss"
+    ],
+    "answer": 0,
+    "explanation": "Acute angle-closure glaucoma causes rapid elevation of intraocular pressure with severe eye pain, blurred vision/halos, red eye, mid-dilated pupil, and nausea/vomiting, requiring urgent intraocular pressure lowering and ophthalmology evaluation."
+  },
+  {
+    "id": "g-emer-032",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with severe acute lower abdominal pain, vaginal bleeding or spotting, and a positive urine/serum pregnancy test at 7 weeks gestation, with dizziness and shoulder-tip pain. Which life-threatening emergency must be ruled out urgently?",
+    "options": [
+      "Ruptured ectopic pregnancy",
+      "Simple tension-type headache",
+      "Pityriasis rosea",
+      "Primary open-angle glaucoma"
+    ],
+    "answer": 0,
+    "explanation": "In any woman of childbearing age with abdominal pain or vaginal bleeding, a pregnancy test is essential; positive pregnancy with pain/bleeding or hemodynamic instability requires urgent evaluation (transvaginal ultrasound, serial beta-hCG if stable, or emergency surgical care if ruptured/unstable) to rule out ectopic pregnancy."
+  }
+]
