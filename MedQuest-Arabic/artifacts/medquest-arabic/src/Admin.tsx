@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useAuth } from '@clerk/react';
+// __TEMP_AUTH_BYPASS__: import { useAuth } from '@clerk/react';
 import {
   Activity, BookOpen, ClipboardList, LayoutDashboard,
   Plus, Search, ShieldCheck, Users, CheckCircle2,
@@ -102,7 +102,8 @@ function normalizeDifficulty(raw?: string | null): Question['difficulty'] {
 }
 
 export default function Admin({ questions }: Props) {
-  const { getToken } = useAuth();
+  // __TEMP_AUTH_BYPASS__: const { getToken } = useAuth();
+  const getToken = async () => null;
   const [page, setPage] = useState<'overview' | 'questions' | 'add' | 'requests' | 'tracks'>('overview');
   const [search, setSearch] = useState('');
   const [track, setTrack] = useState<'all' | 'internship' | 'specialty'>('all');

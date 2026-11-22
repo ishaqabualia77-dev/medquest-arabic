@@ -11,7 +11,7 @@ import {
   classifyQuestionBranch,
 } from "./classificationFilter";
 import { useEffect, useMemo, useState, useRef, useCallback } from "react";
-import { ClerkProvider, SignIn, useAuth, useUser } from '@clerk/react';
+// __TEMP_AUTH_BYPASS__: import { ClerkProvider, SignIn, useAuth, useUser } from '@clerk/react';
 import {
   Activity, ArrowLeft, ArrowUpRight, Award, BookOpen,
   Check, CheckCircle2, ChevronLeft, CircleHelp, ClipboardList, Clock3,
@@ -178,7 +178,8 @@ function resolveTrackKey(rawTrack: unknown): TrackId {
 }
 
 function AppHome() {
-  const { getToken } = useAuth();
+  // __TEMP_AUTH_BYPASS__: const { getToken } = useAuth();
+  const getToken = async () => null;
   const [screen,setScreen] = useState<'dashboard'|'bank'|'practice'|'exam'>('dashboard');
   const [track,setTrack] = useState<TrackId>(() => localStorage.getItem('medquest-arabic-track')==='specialty'?'specialty':'internship');
   const [subTrack,setSubTrack] = useState<'all'|'surgical'|'non-surgical'>('all');
@@ -578,8 +579,11 @@ type DoctorAccessRecord = {
 };
 
 function DoctorAccess() {
-  const { isLoaded, isSignedIn } = useUser();
-  const { getToken, signOut } = useAuth();
+  // __TEMP_AUTH_BYPASS__
+  const isLoaded = true;
+  const isSignedIn = true;
+  const getToken = async () => null;
+  const signOut = async () => {};
   const [previewAnswers, setPreviewAnswers] = useState<Record<string, number>>({});
   const [accessState, setAccessState] = useState<{
     loading: boolean;
@@ -779,8 +783,11 @@ function DoctorAccess() {
 }
 
 function AdminAccess() {
-  const { isLoaded, isSignedIn } = useUser();
-  const { getToken, signOut } = useAuth();
+  // __TEMP_AUTH_BYPASS__
+  const isLoaded = true;
+  const isSignedIn = true;
+  const getToken = async () => null;
+  const signOut = async () => {};
   
   const [signInStalled, setSignInStalled] = useState(false);
   useEffect(() => {
@@ -850,17 +857,7 @@ function AdminAccess() {
     </div>;
   }
 
-  if (!adminState.authorized) {
-    return <div className="empty-state">
-      <strong>غير مصرح لك بالدخول</strong>
-      هذا القسم مخصص للمشرفين فقط.
-      <div style={{ marginTop: "12px" }}>
-        <button type="button" className="btn-secondary" onClick={() => void signOut()}>
-          تسجيل الخروج
-        </button>
-      </div>
-    </div>;
-  }
+  // __TEMP_AUTH_BYPASS__: skipped adminState.authorized block
 
   return <Admin questions={[...internshipQuestions, ...specialtyQuestions]} />;
 }
@@ -935,18 +932,8 @@ function Router() {
 }
 
 function App() {
-  const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-  if (!clerkKey) return <div className="empty-state">إعداد تسجيل الدخول غير مكتمل.</div>;
-
-  return <ClerkProvider publishableKey={clerkKey}>
-    <TooltipProvider>
-      <WouterRouter>
-        <Router />
-      </WouterRouter>
-      <Toaster />
-    </TooltipProvider>
-  </ClerkProvider>;
+  // __TEMP_AUTH_BYPASS__: render app directly without ClerkProvider
+  return <MedQuestApp />;
 }
 
 export default App;
