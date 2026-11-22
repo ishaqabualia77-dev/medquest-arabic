@@ -622,8 +622,248 @@ function MedicationsSection({ onClose }: { onClose: () => void }) {
   );
 }
 
+
+interface DosePreset {
+  id: string;
+  label: string;
+  mgPerKg: number;
+  strengthMg: number;
+  perMl: number;
+  maxDailyMg?: number;
+  defaultFreq: number;
+  note: string;
+}
+
+const DOSE_PRESETS: DosePreset[] = [
+  {
+    id: "paracetamol-syrup",
+    label: "Paracetamol Syrup (Adol / Febramol 120mg/5ml)",
+    mgPerKg: 15,
+    strengthMg: 120,
+    perMl: 5,
+    maxDailyMg: 75 * 40,
+    defaultFreq: 4,
+    note: "10–15 mg/kg/dose q4–6h (max 4–5 doses/day)"
+  },
+  {
+    id: "paracetamol-drops",
+    label: "Paracetamol Drops (Adol 100mg/1ml)",
+    mgPerKg: 15,
+    strengthMg: 100,
+    perMl: 1,
+    defaultFreq: 4,
+    note: "10–15 mg/kg/dose q4–6h (0.1 * weight ml)"
+  },
+  {
+    id: "ibuprofen-susp",
+    label: "Ibuprofen Susp (Brufen / Trufen 100mg/5ml)",
+    mgPerKg: 10,
+    strengthMg: 100,
+    perMl: 5,
+    defaultFreq: 3,
+    note: "5–10 mg/kg/dose q6–8h (>6 months; preferred >2y)"
+  },
+  {
+    id: "amoxicillin-250",
+    label: "Amoxicillin Susp (Amoxil / Amoxicare 250mg/5ml)",
+    mgPerKg: 50,
+    strengthMg: 250,
+    perMl: 5,
+    defaultFreq: 3,
+    note: "25–50 mg/kg/day (up to 80–90 mg/kg/day in AOM)"
+  },
+  {
+    id: "amox-clav-156",
+    label: "Amoxicillin/Clavulanate Susp (Augmentin 156mg/5ml)",
+    mgPerKg: 80,
+    strengthMg: 156,
+    perMl: 5,
+    defaultFreq: 3,
+    note: "80–90 mg/kg/day in acute OM / sinusitis"
+  },
+  {
+    id: "azithromycin-200",
+    label: "Azithromycin Susp (Zithromax / Azicare 200mg/5ml)",
+    mgPerKg: 10,
+    strengthMg: 200,
+    perMl: 5,
+    defaultFreq: 1,
+    note: "10 mg/kg once daily (1/4 weight ml)"
+  },
+  {
+    id: "metronidazole-200",
+    label: "Metronidazole Susp (Flagyl 200mg/5ml)",
+    mgPerKg: 30,
+    strengthMg: 200,
+    perMl: 5,
+    defaultFreq: 3,
+    note: "30–50 mg/kg/day amoebiasis; 15 mg/kg/day giardiasis"
+  },
+  {
+    id: "prednisolone-5",
+    label: "Prednisolone Syrup (Predo 5mg/5ml)",
+    mgPerKg: 1,
+    strengthMg: 5,
+    perMl: 5,
+    maxDailyMg: 60,
+    defaultFreq: 1,
+    note: "1 mg/kg/day OD AM or divided BID (max 60 mg/day)"
+  }
+];
+
+function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
+  const [selectedId, setSelectedId] = useState<string>(DOSE_PRESETS[0].id);
+  const [weightKg, setWeightKg] = useState<string>("12");
+  const [mgPerKg, setMgPerKg] = useState<string>(String(DOSE_PRESETS[0].mgPerKg));
+  const [strengthMg, setStrengthMg] = useState<string>(String(DOSE_PRESETS[0].strengthMg));
+  const [perMl, setPerMl] = useState<string>(String(DOSE_PRESETS[0].perMl));
+  const [dosesPerDay, setDosesPerDay] = useState<string>(String(DOSE_PRESETS[0].defaultFreq));
+
+  const activePreset = useMemo(
+    () => DOSE_PRESETS.find((p) => p.id === selectedId) || DOSE_PRESETS[0],
+    [selectedId]
+  );
+
+  const handlePresetChange = (id: string) => {
+    setSelectedId(id);
+    const p = DOSE_PRESETS.find((item) => item.id === id);
+    if (p) {
+      setMgPerKg(String(p.mgPerKg));
+      setStrengthMg(String(p.strengthMg));
+      setPerMl(String(p.perMl));
+      setDosesPerDay(String(p.defaultFreq));
+    }
+  };
+
+  const w = Math.max(0, parseFloat(weightKg) || 0);
+  const doseRate = Math.max(0, parseFloat(mgPerKg) || 0);
+  const strMg = Math.max(0.0001, parseFloat(strengthMg) || 1);
+  const volMl = Math.max(0.0001, parseFloat(perMl) || 1);
+  const freq = Math.max(1, parseInt(dosesPerDay, 10) || 1);
+
+  const totalDailyMg = w * doseRate;
+  const singleDoseMg = totalDailyMg / freq;
+  const mgPerActualMl = strMg / volMl;
+  const singleDoseMl = singleDoseMg / mgPerActualMl;
+  const totalDailyMl = totalDailyMg / mgPerActualMl;
+
+  return (
+    <div className="panel" style={{ marginTop: 12 }} data-testid="dose-calculator-section">
+      <div className="blueprint-head" style={{ marginBottom: 12 }}>
+        <div>
+          <h3 className="panel-title">حاسبة جرعات الأدوية · Dose Calculator</h3>
+          <p className="panel-hint">قسم مستقل لحساب الجرعات حسب الوزن (mg/kg) وتحويل التركيز إلى مل (ml).</p>
+        </div>
+        <button
+          type="button"
+          className="btn-secondary"
+          style={{ padding: "6px 12px", fontSize: 12.5 }}
+          onClick={onClose}
+        >
+          إغلاق الحاسبة
+        </button>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: 10, marginBottom: 12 }}>
+        <div style={{ gridColumn: "1 / -1" }}>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>اختر مستحضراً جاهزاً أو عدّل القيم يدوياً</label>
+          <select
+            className="filter-select"
+            value={selectedId}
+            onChange={(e) => handlePresetChange(e.target.value)}
+            style={{ width: "100%" }}
+          >
+            {DOSE_PRESETS.map((p) => (
+              <option key={p.id} value={p.id}>{p.label}</option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الوزن (kg)</label>
+          <input
+            type="number"
+            step="0.5"
+            min="0"
+            value={weightKg}
+            onChange={(e) => setWeightKg(e.target.value)}
+            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
+          />
+        </div>
+
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الجرعة (mg/kg/day)</label>
+          <input
+            type="number"
+            step="0.5"
+            min="0"
+            value={mgPerKg}
+            onChange={(e) => setMgPerKg(e.target.value)}
+            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
+          />
+        </div>
+
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>التركيز (mg)</label>
+          <input
+            type="number"
+            step="0.5"
+            min="0.1"
+            value={strengthMg}
+            onChange={(e) => setStrengthMg(e.target.value)}
+            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
+          />
+        </div>
+
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>لكل حجم (ml)</label>
+          <input
+            type="number"
+            step="0.5"
+            min="0.1"
+            value={perMl}
+            onChange={(e) => setPerMl(e.target.value)}
+            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
+          />
+        </div>
+
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>عدد الجرعات / اليوم</label>
+          <input
+            type="number"
+            step="1"
+            min="1"
+            max="12"
+            value={dosesPerDay}
+            onChange={(e) => setDosesPerDay(e.target.value)}
+            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
+          />
+        </div>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10, padding: 12, borderRadius: 12, background: "#f5f8f6", border: "1px solid #e1e8e4" }}>
+        <div>
+          <div className="panel-hint">الجرعة الواحدة (ml)</div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: "#176b55" }}>{singleDoseMl.toFixed(2)} ml</div>
+          <div className="panel-hint">{singleDoseMg.toFixed(1)} mg لكل جرعة</div>
+        </div>
+        <div>
+          <div className="panel-hint">الإجمالي اليومي (ml)</div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: "#1f2933" }}>{totalDailyMl.toFixed(2)} ml / يوم</div>
+          <div className="panel-hint">{totalDailyMg.toFixed(1)} mg / يوم</div>
+        </div>
+      </div>
+
+      <p className="panel-hint" style={{ marginTop: 10, lineHeight: 1.65 }}>
+        <strong>ملاحظة سريرية:</strong> {activePreset.note} — راجع دائماً العمر والقصور الكلوي/الكبدي والحد الأقصى اليومي قبل الصرف.
+      </p>
+    </div>
+  );
+}
+
 function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
   const [medicationsOpen, setMedicationsOpen] = useState(false);
+  const [calculatorOpen, setCalculatorOpen] = useState(false);
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
   const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length};
@@ -669,6 +909,26 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
         </span>
       </button>
       {medicationsOpen && <MedicationsSection onClose={() => setMedicationsOpen(false)} />}
+
+      <div style={{ marginTop: 10 }}>
+        <button
+          type="button"
+          className={calculatorOpen ? "btn-primary" : "btn-secondary"}
+          data-testid="button-dose-calculator-independent"
+          onClick={() => setCalculatorOpen((v) => !v)}
+          style={{ width: "100%", justifyContent: "space-between", padding: "12px 16px" }}
+        >
+          <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700 }}>
+            <Zap size={17} />
+            <span>حاسبة جرعات الأدوية · Dose Calculator</span>
+            <span style={{ fontSize: 12, opacity: 0.8 }}>(أداة مستقلة)</span>
+          </span>
+          <span style={{ fontSize: 12.5 }}>
+            {calculatorOpen ? "إخفاء الحاسبة" : "فتح الحاسبة"}
+          </span>
+        </button>
+        {calculatorOpen && <DoseCalculatorSection onClose={() => setCalculatorOpen(false)} />}
+      </div>
     </div>
 
     <div className="below-grid">
