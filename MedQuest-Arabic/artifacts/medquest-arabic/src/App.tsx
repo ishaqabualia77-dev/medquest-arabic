@@ -221,6 +221,7 @@ function resolveTrackKey(rawTrack: unknown): TrackId {
 }
 
 function AppHome() {
+  const [aiOpen, setAiOpen] = useState(false);
   // __TEMP_AUTH_BYPASS__: const { getToken } = useAuth();
   const getToken = async () => null;
   const [screen,setScreen] = useState<'dashboard'|'bank'|'practice'|'exam'>('dashboard');
