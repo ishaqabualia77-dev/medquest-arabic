@@ -1,3 +1,4 @@
+import { palNonSurgicalQuestionsBatch1 } from "./palNonSurgicalQuestionsBatch1";
 import {
   ALL_CLASSIFICATION_BRANCHES,
   ClassificationBranchFilter,
@@ -118,7 +119,7 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
 };
 const categoriesByTrack: Record<TrackId, string[]> = {
   internship:['Emergency Medicine','Internal Medicine','Pediatrics','Obstetrics & Gynecology','Surgery','Psychiatry'],
-  specialty:['Cardiology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Infectious Disease'],
+  specialty:['Cardiology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Infectious Disease', ...palNonSurgicalQuestionsBatch1],
 };
 const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: specialtyQuestions };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
