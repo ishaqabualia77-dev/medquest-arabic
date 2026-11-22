@@ -17,7 +17,7 @@ import {
   Activity, ArrowLeft, ArrowUpRight, Award, BookOpen,
   Check, CheckCircle2, ChevronLeft, CircleHelp, ClipboardList, Clock3,
   GraduationCap, HeartPulse, Layers3, RotateCcw, ShieldCheck, Sparkles,
-  Stethoscope, Target, X, Zap, Timer,
+  Pill, Stethoscope, Target, X, Zap, Timer,
 } from 'lucide-react';
 import { Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -475,7 +475,198 @@ function ExamSimulation({track,subTrack,setSubTrack,questions,onTrackChange,onFi
   if(!q)return <section><div className="panel" style={{maxWidth:650,margin:"24px auto",textAlign:"center"}}><h3 className="panel-title">لا توجد أسئلة متاحة لهذا المسار الفرعي</h3><p className="panel-hint">جرّب التبديل إلى "الكل" أو اختيار مسار آخر.</p><div style={{display:"flex",gap:8,justifyContent:"center",marginTop:14}}><button type="button" className="btn-primary" onClick={()=>{setSubTrack("all");setStarted(false);setFinished(false);setAnswers({});setIndex(0);}}>عرض الكل</button><button type="button" className="btn-secondary" onClick={()=>{setStarted(false);setFinished(false);}}>رجوع لإعداد الامتحان</button></div></div></section>;return <section><div className="page-heading"><div><div className="eyebrow">{trackInfo[track].name}</div><h1 className="page-title">امتحان تجريبي</h1><p className="page-description">السؤال {index+1} من {examQuestions.length}</p></div><div className="meta-chip" style={{fontSize:18,fontWeight:800,color:seconds<60?'#b43d32':'#176b55'}}><Clock3 size={17}/> {fmt(seconds)}</div></div><div className="practice-card"><div className="practice-progress"><i style={{width:`${(index+1)/examQuestions.length*100}%`}}/></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((option,i)=><button key={i} className={`option${answers[q.id]===i?' correct':''}`} onClick={()=>setAnswers(p=>({...p,[q.id]:i}))}><span className="option-key">{optionLetters[i]}</span><span>{option}</span></button>)}</div><div className="practice-actions"><button className="text-button" disabled={index===0} onClick={()=>setIndex(v=>v-1)}>السابق</button>{index<examQuestions.length-1?<button className="btn-primary" onClick={()=>setIndex(v=>v+1)}>التالي <ArrowLeft size={14}/></button>:<button className="btn-primary" onClick={()=>setFinished(true)}>تسليم الامتحان <Check size={14}/></button>}</div><p className="panel-hint" style={{marginTop:12}}>تمت الإجابة عن {Object.keys(answers).length} من {examQuestions.length} سؤالاً. لا يمكن رؤية الإجابات الصحيحة قبل التسليم.</p></div></section>;
 }
 
+
+interface MedicationItem {
+  id: string;
+  arabicName: string;
+  englishName: string;
+  drugClass: string;
+  indications: string;
+  keyDosing: string;
+  cautionsAndPearls: string;
+}
+
+const MEDICATIONS_CATALOG: MedicationItem[] = [
+  {
+    id: "med-nitroglycerin",
+    arabicName: "نيتروجليسرين",
+    englishName: "Nitroglycerin (SL / IV)",
+    drugClass: "Nitrates · القلب والأوعية",
+    indications: "تسكين ألم الذبحة الصدرية الحادة، وتحسين التحميل المسبق في الوذمة الرئوية الحادة.",
+    keyDosing: "تحت اللسان 0.3–0.6 mg كل 5 دقائق (حتى 3 جرعات) أو تسريب وريدي معاير حسب الضغط.",
+    cautionsAndPearls: "ممنوع مع مثبطات PDE-5 (مثل Sildenafil) واحذر في احتشاء البطين الأيمن أو انخفاض الضغط."
+  },
+  {
+    id: "med-amiodarone",
+    arabicName: "أميودارون",
+    englishName: "Amiodarone",
+    drugClass: "Class III Antiarrhythmic · نظم القلب",
+    indications: "الرجفان الأذيني، وتسرع/رجفان البطين المقاوم في الطوارئ.",
+    keyDosing: "وريدي 150 mg خلال 10 دقائق في الحالات الحادة، ثم تسريب مستمر حسب البروتوكول.",
+    cautionsAndPearls: "تسمم درقي ورئوي وكبدي وقرني؛ راقب وظائف الغدة الدرقية والكبد والـ ECG."
+  },
+  {
+    id: "med-ceftriaxone",
+    arabicName: "سيفترياكسون",
+    englishName: "Ceftriaxone",
+    drugClass: "3rd-Gen Cephalosporin · مضادات حيوية",
+    indications: "الالتهاب الرئوي المكتسب من المجتمع، التهاب السحايا الجرثومي، وعدوى المسالك/الدم.",
+    keyDosing: "1–2 g مرة أو مرتين يومياً (وتُرفع إلى 2 g كل 12 ساعة في التهاب السحايا).",
+    cautionsAndPearls: "تجنب خلطه وريدياً مع محاليل الكالسيوم خاصة عند حديثي الولادة؛ يطرح أساساً عبر الصفراء/البول."
+  },
+  {
+    id: "med-vancomycin",
+    arabicName: "فانكومايسين",
+    englishName: "Vancomycin",
+    drugClass: "Glycopeptide Antibiotic · مضادات حيوية",
+    indications: "عدوى MRSA، التهاب السحايا/البطانة الشغافية المشتبه به، والتهاب القولون بـ C. difficile (فموياً).",
+    keyDosing: "جرعة تحميل 25–30 mg/kg وريدياً ثم معايرة حسب الكلى والتركيز العلاجي (AUC/MIC).",
+    cautionsAndPearls: "التسريب السريع يسبب متلازمة الرجل الأحمر؛ يُعدَّل في القصور الكلوي مع مراقبة الكرياتينين."
+  },
+  {
+    id: "med-insulin-reg-nph",
+    arabicName: "الأنسولين (المنتظم و NPH)",
+    englishName: "Regular & NPH Insulin",
+    drugClass: "Antidiabetic · الغدد الصماء",
+    indications: "ضبط سكر الدم في السكري، وتسريب الأنسولين الوريدي في الحماض الكيتوني السكري (DKA).",
+    keyDosing: "تُعاير الجرعات حسب مستوى السكر في الدم ونظام القاعدي/الوجبات أو بروتوكول DKA.",
+    cautionsAndPearls: "نقص سكر الدم ونقص البوتاسيوم أثناء العلاج هما الأهم؛ راقب K+ قبل وأثناء التسريب."
+  },
+  {
+    id: "med-levothyroxine",
+    arabicName: "ليفوثيروكسين",
+    englishName: "Levothyroxine (T4)",
+    drugClass: "Thyroid Hormone · الغدد الصماء",
+    indications: "قصور الغدة الدرقية الأولي والثانوي.",
+    keyDosing: "جرعة صباحية على معدة فارغة قبل الإفطار بـ 30–60 دقيقة، وتُعدَّل لكبار السن وأمراض القلب.",
+    cautionsAndPearls: "الحديد والكالسيوم ومثبطات مضخة البروتون تقلل امتصاصه؛ افصل بينها بـ 4 ساعات على الأقل."
+  },
+  {
+    id: "med-albuterol-ics",
+    arabicName: "سالبوتامول / موسعات القصبات",
+    englishName: "Albuterol (Salbutamol)",
+    drugClass: "Short-Acting Beta-2 Agonist · الصدرية",
+    indications: "تخفيف الأعراض الحادة والتشنج القصبي في الربو ومرض الانسداد الرئوي المزمن (COPD).",
+    keyDosing: "بخة/استنشاق عند اللزوم أو جلسات رذاذ متكررة في النوبات الحادة حسب التقييم السريري.",
+    cautionsAndPearls: "قد يسبب رعاشاً وتسرعاً في القلب ونقصاً مؤقتاً في البوتاسيوم مع الجرعات المتكررة."
+  },
+  {
+    id: "med-heparin-enoxaparin",
+    arabicName: "الهيبارين / إينوكسابارين",
+    englishName: "UFH & Enoxaparin (LMWH)",
+    drugClass: "Anticoagulant · مضادات التخثر",
+    indications: "علاج والوقاية من الخثار الوريدي العميق (DVT) والانصمام الرئوي (PE) والمتلازمة الإكليلية الحادة.",
+    keyDosing: "إينوكسابارين حسب الوزن (مع تعديل في القصور الكلوي) أو هيبارين وريدي معاير بـ aPTT.",
+    cautionsAndPearls: "خطر النزف وقلة الصفيحات المناعية (HIT)؛ راقب الصفيحات والوظيفة الكلوية."
+  }
+];
+
+function MedicationsSection({ onClose }: { onClose: () => void }) {
+  const [query, setQuery] = useState("");
+  const [selectedClass, setSelectedClass] = useState("ALL");
+  const classes = useMemo(
+    () => ["ALL", ...Array.from(new Set(MEDICATIONS_CATALOG.map((m) => m.drugClass)))],
+    []
+  );
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return MEDICATIONS_CATALOG.filter((m) => {
+      const matchesClass = selectedClass === "ALL" || m.drugClass === selectedClass;
+      if (!matchesClass) return false;
+      if (!q) return true;
+      return (
+        m.arabicName.toLowerCase().includes(q) ||
+        m.englishName.toLowerCase().includes(q) ||
+        m.drugClass.toLowerCase().includes(q) ||
+        m.indications.toLowerCase().includes(q)
+      );
+    });
+  }, [query, selectedClass]);
+
+  return (
+    <div className="panel" style={{ marginTop: 14 }} data-testid="medications-independent-section">
+      <div className="blueprint-head" style={{ marginBottom: 12 }}>
+        <div>
+          <h3 className="panel-title">الأدوية · Medications</h3>
+          <p className="panel-hint">قسم مستقل للمراجعة الدوائية السريعة غير مرتبط بمسارات الامتحانات.</p>
+        </div>
+        <button type="button" className="btn-secondary" style={{ padding: "6px 12px", fontSize: 12.5 }} onClick={onClose}>
+          إغلاق القسم
+        </button>
+      </div>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 12 }}>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="ابحث باسم الدواء (عربي / إنجليزي) أو الاستخدام..."
+          aria-label="بحث في الأدوية"
+          style={{
+            flex: "1 1 220px",
+            padding: "8px 12px",
+            borderRadius: 10,
+            border: "1px solid #d5dfd9",
+            fontSize: 13.5,
+          }}
+        />
+        <select
+          value={selectedClass}
+          onChange={(e) => setSelectedClass(e.target.value)}
+          aria-label="تصفية حسب المجموعة الدوائية"
+          className="filter-select"
+        >
+          {classes.map((c) => (
+            <option key={c} value={c}>
+              {c === "ALL" ? "جميع المجموعات الدوائية" : c}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div style={{ display: "grid", gap: 10 }}>
+        {filtered.length ? (
+          filtered.map((med) => (
+            <div
+              key={med.id}
+              style={{
+                padding: 12,
+                borderRadius: 10,
+                border: "1px solid #e3ebe6",
+                background: "#fafcfb",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+                <div>
+                  <strong style={{ fontSize: 14.5 }}>{med.arabicName}</strong>{" "}
+                  <span dir="ltr" style={{ fontSize: 12.5, color: "#475569", fontWeight: 600 }}>
+                    ({med.englishName})
+                  </span>
+                </div>
+                <span className="meta-chip">{med.drugClass}</span>
+              </div>
+              <p className="panel-hint" style={{ marginTop: 6, lineHeight: 1.65 }}>
+                <strong>الاستخدامات:</strong> {med.indications}
+              </p>
+              <p className="panel-hint" style={{ marginTop: 4, lineHeight: 1.65 }}>
+                <strong>الجرعات الشائعة:</strong> {med.keyDosing}
+              </p>
+              <p className="panel-hint" style={{ marginTop: 4, lineHeight: 1.65, color: "#7c2d12" }}>
+                <strong>تنبيهات وتداخلات:</strong> {med.cautionsAndPearls}
+              </p>
+            </div>
+          ))
+        ) : (
+          <div className="empty-state">
+            <strong>لا توجد أدوية مطابقة للبحث</strong>
+            جرّب كلمة بحث أخرى أو اختر جميع المجموعات الدوائية.
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
+  const [medicationsOpen, setMedicationsOpen] = useState(false);
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
   const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length};
@@ -502,6 +693,26 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
     <div className="track-grid">
       {(Object.keys(trackInfo) as TrackId[]).map(id=><button key={id} className={`track-card ${track===id?'selected':''}`} onClick={()=>chooseTrack(id)} data-testid={`track-${id}`}>
         <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id]} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
+    </div>
+
+    <div style={{ marginTop: 12 }}>
+      <button
+        type="button"
+        className={medicationsOpen ? "btn-primary" : "btn-secondary"}
+        data-testid="button-medications-independent"
+        onClick={() => setMedicationsOpen((v) => !v)}
+        style={{ width: "100%", justifyContent: "space-between", padding: "12px 16px" }}
+      >
+        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700 }}>
+          <Pill size={17} />
+          <span>الأدوية · Medications</span>
+          <span style={{ fontSize: 12, opacity: 0.8 }}>(قسم مستقل)</span>
+        </span>
+        <span style={{ fontSize: 12.5 }}>
+          {medicationsOpen ? "إخفاء القسم" : `فتح المرجع (${MEDICATIONS_CATALOG.length})`}
+        </span>
+      </button>
+      {medicationsOpen && <MedicationsSection onClose={() => setMedicationsOpen(false)} />}
     </div>
 
     <div className="below-grid">
