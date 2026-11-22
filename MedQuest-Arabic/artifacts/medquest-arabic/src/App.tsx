@@ -1,3 +1,12 @@
+import {
+  ALL_CLASSIFICATION_BRANCHES,
+  ClassificationBranchFilter,
+  ClassificationBranchId,
+  MINORS_IDS,
+  NON_SURGICAL_IDS,
+  SURGICAL_ALL_IDS,
+  classifyQuestionBranch,
+} from "./classificationFilter";
 import { useEffect, useMemo, useState, useRef, useCallback } from "react";
 import { ClerkProvider, SignIn, useAuth, useUser } from '@clerk/react';
 import {
@@ -167,6 +176,8 @@ function AppHome() {
   const [screen,setScreen] = useState<'dashboard'|'bank'|'practice'|'exam'>('dashboard');
   const [track,setTrack] = useState<TrackId>(() => localStorage.getItem('medquest-arabic-track')==='specialty'?'specialty':'internship');
   const [subTrack,setSubTrack] = useState<'all'|'surgical'|'non-surgical'>('all');
+  const [selectedBranches, setSelectedBranches] = useState<ClassificationBranchId[]>([...ALL_CLASSIFICATION_BRANCHES]);
+  const [mistakesOnly, setMistakesOnly] = useState<boolean>(false);
   const [showMenu,setShowMenu] = useState(false);
   const [progress,setProgress] = useState<Progress>(readProgress);
   const [difficulty,setDifficulty] = useState('All');
@@ -248,15 +259,35 @@ function AppHome() {
 
   const activeQuestionsByTrack = apiQuestions ?? questionsByTrack;
   const baseTrackQuestions = activeQuestionsByTrack[track];
-  const trackQuestions = track === 'specialty' && subTrack !== 'all'
+  const trackQuestions = track === 'specialty'
     ? baseTrackQuestions.filter((q) => {
-        const isSurg = /surg|cholecyst|aortic|vasospasm/i.test(q.specialty + ' ' + q.question);
+        const branch = classifyQuestionBranch(q.specialty, q.question);
+        const matchesBranch = selectedBranches.includes(branch);
+        if (!matchesBranch) return false;
+        if (subTrack === 'all') return true;
+        const isSurg = SURGICAL_ALL_IDS.includes(branch as any);
         return subTrack === 'surgical' ? isSurg : !isSurg;
       })
     : baseTrackQuestions;
   const visibleQuestions = useMemo(()=>trackQuestions.filter(q=>(difficulty==='All'||q.difficulty===difficulty)&&(category==='All'||q.specialty===category)),[trackQuestions,difficulty,category]);
-  const currentQuestion = trackQuestions[questionIndex];
-  const practiceDone = questionIndex >= trackQuestions.length;
+  const mistakeIdsSet = useMemo(() => {
+    const answeredList = progress.answered[track] || [];
+    const correctSet = new Set(progress.correct[track] || []);
+    return new Set(answeredList.filter((id) => !correctSet.has(id)));
+  }, [progress, track]);
+
+  const mistakeQuestionsCount = useMemo(
+    () => trackQuestions.filter((q) => mistakeIdsSet.has(q.id)).length,
+    [trackQuestions, mistakeIdsSet]
+  );
+
+  const activePracticeQuestions = useMemo(
+    () => (mistakesOnly ? trackQuestions.filter((q) => mistakeIdsSet.has(q.id)) : trackQuestions),
+    [mistakesOnly, trackQuestions, mistakeIdsSet]
+  );
+
+  const currentQuestion = activePracticeQuestions[questionIndex];
+  const practiceDone = questionIndex >= activePracticeQuestions.length;
   const matchedApiTrack = apiTracks.find((t) => resolveTrackKey(t.slug || t.id) === track);
   const currentTrack = {
     ...trackInfo[track],
@@ -265,7 +296,7 @@ function AppHome() {
 
   const chooseTrack = (value:TrackId) => {
     if (value===track) return;
-    setTrack(value); setQuestionIndex(0); setSelectedAnswer(null); setDifficulty('All'); setCategory('All');
+    setTrack(value); setQuestionIndex(0); setSelectedAnswer(null); setDifficulty('All'); setCategory('All'); setMistakesOnly(false);
   };
   const startPractice = () => { setQuestionIndex(0); setSelectedAnswer(null); setScreen('practice'); };
   const answerQuestion = (answer:number) => {
@@ -300,7 +331,7 @@ function AppHome() {
           <button className={`nav-item ${screen==='practice'?'active':''}`} onClick={()=>setPage('practice')} data-testid="nav-practice"><span className="nav-icon"><Target size={17}/></span>ابدأ التدريب</button>
           <button className={`nav-item ${screen==='exam'?'active':''}`} onClick={()=>setPage('exam')} data-testid="nav-exam"><span className="nav-icon"><Timer size={17}/></span>امتحان تجريبي</button>
         </nav>
-        <div className="side-track"><div className="side-caption">المسار الحالي</div><div className="track-mini"><span className="track-dot"/><span>{currentTrack.name}{track==='specialty'&&subTrack!=='all'?` · ${subTrack==='surgical'?'المسار الجراحي':'المسار اللاجراحي'}`:''}</span></div>{track==='specialty'&&<div style={{display:'flex',gap:6,marginTop:8,flexWrap:'wrap'}}><button type="button" className={`chip-btn ${subTrack==='all'?'active':''}`} onClick={()=>setSubTrack('all')}>الكل</button><button type="button" className={`chip-btn ${subTrack==='surgical'?'active':''}`} onClick={()=>setSubTrack('surgical')}>المسار الجراحي</button><button type="button" className={`chip-btn ${subTrack==='non-surgical'?'active':''}`} onClick={()=>setSubTrack('non-surgical')}>المسار اللاجراحي</button></div>}</div>
+        <div className="side-track"><div className="side-caption">المسار الحالي</div><div className="track-mini"><span className="track-dot"/><span>{currentTrack.name}{track==='specialty'&&subTrack!=='all'?` · ${subTrack==='surgical'?'المسار الجراحي':'المسار اللاجراحي'}`:''}</span></div>{track==='specialty'&&<div style={{display:'flex',gap:6,marginTop:8,flexWrap:'wrap'}}><button type="button" className={`chip-btn ${subTrack==='all'?'active':''}`} onClick={()=>{setSubTrack('all');setSelectedBranches([...ALL_CLASSIFICATION_BRANCHES]);}}>الكل</button><button type="button" className={`chip-btn ${subTrack==='surgical'?'active':''}`} onClick={()=>{setSubTrack('surgical');setSelectedBranches([...SURGICAL_ALL_IDS]);}}>الجراحي</button><button type="button" className={`chip-btn ${subTrack==='non-surgical'?'active':''}`} onClick={()=>{setSubTrack('non-surgical');setSelectedBranches([...NON_SURGICAL_IDS]);}}>اللاجراحي</button></div>}</div>
         <div className="side-bottom">خطوة ثابتة اليوم،<br/>تُحدث فرقاً في الغد.</div>
       </aside>
 
@@ -313,17 +344,35 @@ function AppHome() {
         <div className="content">
           {screen==='dashboard'&&<>
   <Dashboard track={track} chooseTrack={(id)=>{chooseTrack(id);if(id==='specialty'){setSubTrack('all');}}} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length}} trackTitleOverride={currentTrack.name} />
-  {track==='specialty'&&<div style={{display:"flex",gap:10,marginTop:14,flexWrap:"wrap"}}>
-    <button type="button" className="btn-primary" data-testid="button-specialty-surgical" onClick={()=>{setSubTrack('surgical');setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>امتحان الجراحي</button>
-    <button type="button" className="btn-secondary" data-testid="button-specialty-nonsurgical" onClick={()=>{setSubTrack('non-surgical');setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>امتحان اللاجراحي</button>
-  </div>}
+  {track==='specialty'&&<>
+    <ClassificationBranchFilter selectedBranches={selectedBranches} onChangeBranches={(next)=>{setSelectedBranches(next);setQuestionIndex(0);setSelectedAnswer(null);}} questions={baseTrackQuestions} onEnterSelectedQuestions={()=>{setMistakesOnly(false);setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}} />
+    <div style={{display:"flex",gap:10,marginTop:8,flexWrap:"wrap"}}>
+      <button type="button" className="btn-primary" data-testid="button-specialty-surgical" onClick={()=>{setSubTrack('surgical');setSelectedBranches([...SURGICAL_ALL_IDS]);setMistakesOnly(false);setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>تدريب / امتحان الجراحي</button>
+      <button type="button" className="btn-secondary" data-testid="button-specialty-nonsurgical" onClick={()=>{setSubTrack('non-surgical');setSelectedBranches([...NON_SURGICAL_IDS]);setMistakesOnly(false);setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>تدريب / امتحان اللاجراحي</button>
+      {mistakeQuestionsCount>0&&<button type="button" className="btn-secondary" data-testid="button-review-mistakes" onClick={()=>{setMistakesOnly(true);setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}}>مراجعة الأسئلة الخاطئة ({mistakeQuestionsCount})</button>}
+    </div>
+  </>}
 </>}
           {screen==='bank'&&<QuestionBank track={track} chooseTrack={chooseTrack} questions={visibleQuestions} total={trackQuestions.length} difficulty={difficulty} setDifficulty={setDifficulty} category={category} setCategory={setCategory} startPractice={startPractice} />}
-          {screen==='exam'&&<ExamSimulation key={`${track}-${examRun}-${subTrack}`} track={track} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} onTrackChange={chooseTrack} onFinish={recordExam} />}
+          {screen==='exam'&&<>
+            {track==='specialty'&&<ClassificationBranchFilter compact selectedBranches={selectedBranches} onChangeBranches={(next)=>{setSelectedBranches(next);}} questions={baseTrackQuestions} />}
+            <ExamSimulation key={`${track}-${examRun}-${subTrack}-${selectedBranches.join(",")}`} track={track} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} onTrackChange={chooseTrack} onFinish={recordExam} />
+          </>}
 
 
 
-          {screen==='practice'&&<PracticeModeView key={track + "-" + subTrack + "-" + trackQuestions.length} track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={trackQuestions} index={questionIndex} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={resetStudy} progress={progress} recordExam={recordExam} />}
+          {screen==='practice'&&<>
+            {track==='specialty'&&<ClassificationBranchFilter compact selectedBranches={selectedBranches} onChangeBranches={(next)=>{setSelectedBranches(next);setQuestionIndex(0);setSelectedAnswer(null);}} questions={baseTrackQuestions} onEnterSelectedQuestions={()=>{setQuestionIndex(0);setSelectedAnswer(null);}} />}
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:8,marginBottom:10,padding:"8px 12px",borderRadius:10,background:mistakesOnly?"#fff5f4":"#f8faf9",border:mistakesOnly?"1px solid #f0c5c0":"1px solid #dfe7e2"}}>
+              <span style={{fontSize:12.5,fontWeight:700,color:mistakesOnly?"#9e2d24":"#39473f"}}>
+                {mistakesOnly?`وضع مراجعة الأسئلة الخاطئة فقط (${activePracticeQuestions.length} سؤال في التخصصات المحددة)`:`عرض جميع الأسئلة المطابقة (${trackQuestions.length} سؤال · الأخطاء في التحديد الحالي: ${mistakeQuestionsCount})`}
+              </span>
+              <button type="button" className={mistakesOnly?"btn-primary":"btn-secondary"} style={{padding:"5px 11px",fontSize:12}} data-testid="toggle-mistakes-only" onClick={()=>{setMistakesOnly(v=>!v);setQuestionIndex(0);setSelectedAnswer(null);}}>
+                {mistakesOnly?"عرض الكل":"الأسئلة الخاطئة فقط (" + mistakeQuestionsCount + ")"}
+              </button>
+            </div>
+            {mistakesOnly&&activePracticeQuestions.length===0?<div className="panel" style={{textAlign:"center",padding:24,marginBottom:14}}><h3 className="panel-title">لا توجد أسئلة خاطئة في المسار والتخصصات المحددة</h3><p className="panel-hint">رائع! يمكنك العودة لجميع الأسئلة أو تعديل الأقسام المختارة.</p><button type="button" className="btn-primary" style={{marginTop:10}} onClick={()=>{setMistakesOnly(false);setQuestionIndex(0);setSelectedAnswer(null);}}>العودة لجميع الأسئلة</button></div>:<PracticeModeView key={track + "-" + subTrack + "-" + selectedBranches.join(",") + "-" + (mistakesOnly?"mistakes":"all") + "-" + activePracticeQuestions.length} track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={activePracticeQuestions} index={questionIndex} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={resetStudy} progress={progress} recordExam={recordExam} />}
+          </>}
           <footer className="practice-strip">
             <div className="practice-copy"><div className="practice-icon"><ShieldCheck size={18}/></div><div><p className="practice-title">تعلّم بثقة، خطوة بخطوة</p><p className="practice-text">محتوى تدريبي تعليمي، وليس بديلاً عن المشورة الطبية.</p></div></div>
             <button className="btn-primary" onClick={startPractice} data-testid="button-footer-practice">تدريب سريع <ArrowLeft size={14}/></button>
@@ -346,7 +395,21 @@ function AppHome() {
 }
 
 const difficultyLabels: Record<string, string> = typeof difficultyArabic !== "undefined" ? difficultyArabic : { Basic: "أساسي", Intermediate: "متوسط", Advanced: "متقدم" };
-function PracticeModeView(props: any) {
+interface PracticeModeViewProps {
+  track: TrackId;
+  chooseTrack: (value: TrackId) => void;
+  subTrack: ClassificationSubTrack;
+  setSubTrack: (v: ClassificationSubTrack) => void;
+  questions: Question[];
+  index: number;
+  selectedAnswer: number | null;
+  answerQuestion: (answer: number) => void;
+  nextQuestion: () => void;
+  reset: () => void;
+  progress: Progress;
+  recordExam: (items: Question[], answers: Record<string, number>) => void;
+}
+function PracticeModeView(props: PracticeModeViewProps) {
   const {
     track, chooseTrack, subTrack, setSubTrack, questions, index,
     selectedAnswer, answerQuestion, nextQuestion, reset, progress, recordExam
@@ -362,17 +425,17 @@ function PracticeModeView(props: any) {
   useEffect(() => { if (mode !== "exam" || examSubmitted || questions.length === 0) return; const t = window.setInterval(() => setSecondsLeft((v) => { if (v <= 1) { window.clearInterval(t); setExamSubmitted(true); return 0; } return v - 1; }), 1000); return () => window.clearInterval(t); }, [mode, examSubmitted, questions.length]);
   useEffect(() => { if (mode === "exam" && examSubmitted && !recordedRef.current) { recordedRef.current = true; recordExam(questions, examAnswers); } }, [mode, examSubmitted, recordExam, questions, examAnswers]);
   const bar = <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10, marginBottom: 14, padding: "10px 14px", borderRadius: 12, background: "#f8faf9", border: "1px solid #dfe7e2" }}><div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}><span style={{ fontSize: 13, fontWeight: 700 }}>أسلوب عرض الأسئلة:</span><button type="button" className={mode === "study" ? "btn-primary" : "btn-secondary"} onClick={() => switchMode("study")}>أسلوب الدراسة</button><button type="button" className={mode === "exam" ? "btn-primary" : "btn-secondary"} onClick={() => switchMode("exam")}>أسلوب الامتحان</button></div>{mode === "exam" && <div className="meta-chip" style={{ fontSize: 15, fontWeight: 800, color: secondsLeft < 60 ? "#b43d32" : "#176b55" }}><Clock3 size={16} /><span>الوقت المتبقي: {fmt(secondsLeft)}</span></div>}</div>;
-  if (mode === "study") return <div>{bar}<Practice track={track} chooseTrack={chooseTrack} subTrack={subTrack} setSubTrack={setSubTrack} questions={questions} index={index} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} reset={reset} progress={progress} /></div>;
+  if (mode === "study") return <div>{bar}<Practice track={track} chooseTrack={chooseTrack} question={questions[index]} index={index} total={questions.length} selectedAnswer={selectedAnswer} answerQuestion={answerQuestion} nextQuestion={nextQuestion} done={index >= questions.length} reset={reset} progress={progress} totalTrackQuestions={questions.length} /></div>;
   const totalQ = questions.length;
   const finished = examSubmitted || index >= totalQ;
   const q = questions[index];
   const chosen = q ? examAnswers[q.id] ?? null : null;
-  const score = questions.filter((item) => examAnswers[item.id] === item.answer).length;
-  const answeredCount = questions.filter((item) => examAnswers[item.id] !== undefined).length;
+  const score = questions.filter((item: Question) => examAnswers[item.id] === item.answer).length;
+  const answeredCount = questions.filter((item: Question) => examAnswers[item.id] !== undefined).length;
   const pct = totalQ ? Math.round((score / totalQ) * 100) : 0;
   if (!totalQ) return <div>{bar}<div className="empty-state"><strong>لا توجد أسئلة متاحة حالياً</strong></div></div>;
-  if (finished) return <div>{bar}<section><div className="panel" style={{ maxWidth: 740, margin: "16px auto", textAlign: "center" }}><div className="finish-mark"><Award size={28} /></div><div className="eyebrow">علامة الامتحان</div><h1 className="page-title">{score} / {totalQ}</h1><p className="page-description">علامتك: {pct}% · أجبت عن {answeredCount} من {totalQ} سؤالاً</p><div className="progress-line"><i style={{ width: pct + "%" }} /></div><div style={{ textAlign: "right", marginTop: 22 }}><h3 className="panel-title">مراجعة الأسئلة والشرح</h3>{questions.map((item, i) => { const pAns = examAnswers[item.id]; const ok = pAns === item.answer; return <div key={item.id} style={{ padding: "12px 0", borderTop: "1px solid #e8ece8" }}><b>{i + 1}. {item.question}</b><p className="panel-hint" style={{ color: ok ? "#176b55" : "#b43d32", fontWeight: 700 }}>{pAns === undefined ? "لم تُجب · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer] : ok ? "صحيحة: " + optionLetters[pAns] + ". " + item.options[pAns] : "إجابتك: " + optionLetters[pAns] + " · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer]}</p><p className="panel-hint" style={{ lineHeight: 1.8 }}>{item.explanation}</p></div>; })}</div><div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 18, flexWrap: "wrap" }}><button type="button" className="btn-primary" onClick={resetExam}><RotateCcw size={14} /> إعادة الامتحان</button><button type="button" className="btn-secondary" onClick={() => switchMode("study")}>أسلوب الدراسة</button></div></div></section></div>;
-  return <div>{bar}<section><div className="page-heading"><div><div className="eyebrow">أسلوب الامتحان · {trackInfo[track].name}</div><h1 className="page-title">امتحان بوقت محدّد مع الشرح</h1><p className="page-description">السؤال {index + 1} من {totalQ}</p></div><button type="button" className="btn-secondary" onClick={() => setExamSubmitted(true)}>إنهاء وعرض العلامة</button></div><div className="practice-card"><div className="practice-topline"><span className="question-counter">QUESTION {String(index + 1).padStart(2, "0")} / {String(totalQ).padStart(2, "0")}</span><span className={"meta-chip level-" + q.difficulty.toLowerCase()}>{difficultyLabels[q.difficulty]} · {q.difficulty}</span></div><div className="practice-progress"><i style={{ width: ((index + (chosen !== null ? 1 : 0)) / totalQ) * 100 + "%" }} /></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((opt, idx) => { const isC = idx === q.answer; const isP = idx === chosen; const st = chosen === null ? "" : isC ? " correct" : isP ? " incorrect" : " reveal"; return <button key={opt} type="button" className={"option" + st} onClick={() => { if (chosen === null) setExamAnswers((prev) => ({ ...prev, [q.id]: idx })); }} disabled={chosen !== null}><span className="option-key">{optionLetters[idx]}</span><span>{opt}</span>{chosen !== null && isC && <Check size={16} style={{ marginLeft: "auto" }} />}</button>; })}</div>{chosen !== null && <div className={"feedback " + (chosen === q.answer ? "" : "wrong")} role="status"><div className="feedback-head">{chosen === q.answer ? "إجابة صحيحة — أحسنت" : "ليست الإجابة الصحيحة"}</div><div className="feedback-answer">Correct answer: {optionLetters[q.answer]}. {q.options[q.answer]}</div><p className="feedback-copy">{q.explanation}</p><div className="feedback-label"><Sparkles size={13} /> التفسير السريري</div></div>}<div className="practice-actions"><button type="button" className="text-button" onClick={resetExam}><RotateCcw size={13} /> إعادة من البداية</button><button type="button" className="btn-primary" onClick={() => { if (index >= totalQ - 1) setExamSubmitted(true); else nextQuestion(); }}>{index === totalQ - 1 ? "إنهاء وعرض العلامة" : "السؤال التالي"} <ArrowLeft size={14} /></button></div></div></section></div>;
+  if (finished) return <div>{bar}<section><div className="panel" style={{ maxWidth: 740, margin: "16px auto", textAlign: "center" }}><div className="finish-mark"><Award size={28} /></div><div className="eyebrow">علامة الامتحان</div><h1 className="page-title">{score} / {totalQ}</h1><p className="page-description">علامتك: {pct}% · أجبت عن {answeredCount} من {totalQ} سؤالاً</p><div className="progress-line"><i style={{ width: pct + "%" }} /></div><div style={{ textAlign: "right", marginTop: 22 }}><h3 className="panel-title">مراجعة الأسئلة والشرح</h3>{questions.map((item: Question, i: number) => { const pAns = examAnswers[item.id]; const ok = pAns === item.answer; return <div key={item.id} style={{ padding: "12px 0", borderTop: "1px solid #e8ece8" }}><b>{i + 1}. {item.question}</b><p className="panel-hint" style={{ color: ok ? "#176b55" : "#b43d32", fontWeight: 700 }}>{pAns === undefined ? "لم تُجب · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer] : ok ? "صحيحة: " + optionLetters[pAns] + ". " + item.options[pAns] : "إجابتك: " + optionLetters[pAns] + " · الصحيحة: " + optionLetters[item.answer] + ". " + item.options[item.answer]}</p><p className="panel-hint" style={{ lineHeight: 1.8 }}>{item.explanation}</p></div>; })}</div><div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: 18, flexWrap: "wrap" }}><button type="button" className="btn-primary" onClick={resetExam}><RotateCcw size={14} /> إعادة الامتحان</button><button type="button" className="btn-secondary" onClick={() => switchMode("study")}>أسلوب الدراسة</button></div></div></section></div>;
+  return <div>{bar}<section><div className="page-heading"><div><div className="eyebrow">أسلوب الامتحان · {trackInfo[track].name}</div><h1 className="page-title">امتحان بوقت محدّد مع الشرح</h1><p className="page-description">السؤال {index + 1} من {totalQ}</p></div><button type="button" className="btn-secondary" onClick={() => setExamSubmitted(true)}>إنهاء وعرض العلامة</button></div><div className="practice-card"><div className="practice-topline"><span className="question-counter">QUESTION {String(index + 1).padStart(2, "0")} / {String(totalQ).padStart(2, "0")}</span><span className={"meta-chip level-" + q.difficulty.toLowerCase()}>{difficultyLabels[q.difficulty]} · {q.difficulty}</span></div><div className="practice-progress"><i style={{ width: ((index + (chosen !== null ? 1 : 0)) / totalQ) * 100 + "%" }} /></div><h2 className="practice-question">{q.question}</h2><div className="options">{q.options.map((opt: string, idx: number) => { const isC = idx === q.answer; const isP = idx === chosen; const st = chosen === null ? "" : isC ? " correct" : isP ? " incorrect" : " reveal"; return <button key={opt} type="button" className={"option" + st} onClick={() => { if (chosen === null) setExamAnswers((prev) => ({ ...prev, [q.id]: idx })); }} disabled={chosen !== null}><span className="option-key">{optionLetters[idx]}</span><span>{opt}</span>{chosen !== null && isC && <Check size={16} style={{ marginLeft: "auto" }} />}</button>; })}</div>{chosen !== null && <div className={"feedback " + (chosen === q.answer ? "" : "wrong")} role="status"><div className="feedback-head">{chosen === q.answer ? "إجابة صحيحة — أحسنت" : "ليست الإجابة الصحيحة"}</div><div className="feedback-answer">Correct answer: {optionLetters[q.answer]}. {q.options[q.answer]}</div><p className="feedback-copy">{q.explanation}</p><div className="feedback-label"><Sparkles size={13} /> التفسير السريري</div></div>}<div className="practice-actions"><button type="button" className="text-button" onClick={resetExam}><RotateCcw size={13} /> إعادة من البداية</button><button type="button" className="btn-primary" onClick={() => { if (index >= totalQ - 1) setExamSubmitted(true); else nextQuestion(); }}>{index === totalQ - 1 ? "إنهاء وعرض العلامة" : "السؤال التالي"} <ArrowLeft size={14} /></button></div></div></section></div>;
 }
 
 
