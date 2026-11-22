@@ -1,4 +1,5 @@
 import { palNonSurgicalQuestionsBatch3 } from "./palNonSurgicalQuestionsBatch3";
+import { nonSurgicalClassificationQuestions } from "./nonSurgicalClassificationQuestions";
 import { palNonSurgicalQuestionsBatch2 } from "./palNonSurgicalQuestionsBatch2";
 import { palNonSurgicalQuestionsBatch1 } from "./palNonSurgicalQuestionsBatch1";
 import {
@@ -106,6 +107,7 @@ const specialtyQuestions: Question[] = [
   ...palNonSurgicalQuestionsBatch1,
   ...palNonSurgicalQuestionsBatch2,
   ...palNonSurgicalQuestionsBatch3,
+  ...nonSurgicalClassificationQuestions,
 ];
 
 const trackInfo: Record<TrackId, { name: string; english: string; description: string; symbol: string; blueprint: BlueprintItem[] }> = {
@@ -124,7 +126,7 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
 };
 const categoriesByTrack: Record<TrackId, string[]> = {
   internship:['Emergency Medicine','Internal Medicine','Pediatrics','Obstetrics & Gynecology','Surgery','Psychiatry'],
-  specialty:['Cardiology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Infectious Disease','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia'],
+  specialty:['Cardiology','Pulmonology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Hematology','Infectious Diseases','Infectious Disease','Rheumatology','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia','Emergency'],
 };
 const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: specialtyQuestions };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
