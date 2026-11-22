@@ -1078,10 +1078,11 @@ function AiStudyAssistant({ trackName, onClose }: { trackName: string; onClose: 
   );
 }
 
-function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
-  const [medicationsOpen, setMedicationsOpen] = useState(false);
+function Dashboard({
+track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTitleOverride}:{track:TrackId;chooseTrack:(id:TrackId)=>void;progress:Progress;startPractice:()=>void;openBank:()=>void;questionsCountByTrack?:Record<TrackId,number>;trackTitleOverride?:string}) {
   const [aiOpen, setAiOpen] = useState(false);
-  const [calculatorOpen, setCalculatorOpen] = useState(false);
+  const [medicationsOpen, setMedicationsOpen] = useState(false);
+const [calculatorOpen, setCalculatorOpen] = useState(false);
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
   const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length};
@@ -1095,7 +1096,18 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
       <div className="hero-card">
         <div className="hero-top"><span className="hero-label">مسارك الدراسي الآن</span><span className="hero-pill">دراسة مركّزة</span></div>
         <div><h2 className="hero-title">{info.name}</h2><p className="hero-desc" dir="ltr" style={{textAlign:'right'}}>{info.english} · {info.description}</p></div>
-        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {counts[track]} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button></div>
+        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {counts[track]} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button>
+      <button
+        type="button"
+        className={aiOpen ? "btn-primary" : "btn-secondary"}
+        data-testid="button-ai-assistant"
+        onClick={() => setAiOpen((v) => !v)}
+        style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700 }}
+      >
+        <Sparkles size={17} />
+        <span>الذكاء الاصطناعي · AI</span>
+      </button></div>
+    {aiOpen && <AiStudyAssistant trackName={info.name} onClose={() => setAiOpen(false)} />}
       </div>
       <div className="streak-card">
         <div className="streak-head"><span>إيقاعك هذا الأسبوع</span><span className="streak-symbol"><Zap size={16}/></span></div>
