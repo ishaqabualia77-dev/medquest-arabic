@@ -933,7 +933,7 @@ function Router() {
 
 function App() {
   // __TEMP_AUTH_BYPASS__: render app directly without ClerkProvider
-  return <MedQuestApp />;
+  return <Router />;
 }
 
 export default App;
