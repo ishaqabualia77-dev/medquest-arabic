@@ -103,6 +103,9 @@ const specialtyQuestions: Question[] = [
   { id:'se-10', specialty:'Neurology', difficulty:'Advanced', question:'A patient with subarachnoid hemorrhage develops focal deficits on day 7. CT shows no new bleeding. Which complication is most likely?', options:['Cerebral vasospasm with delayed cerebral ischemia','Normal-pressure hydrocephalus','Medication-induced dystonia','Acute bacterial meningitis'], answer:0, explanation:'Delayed cerebral ischemia from cerebral vasospasm commonly occurs several days after aneurysmal subarachnoid hemorrhage, often peaking around days 5–10. New deficits require urgent assessment, exclusion of rebleeding and other causes, and specialist-led management. Nimodipine is used to improve neurological outcomes in appropriate patients.' },
   { id:'se-11', specialty:'Nephrology', difficulty:'Advanced', question:'A patient with rapidly progressive glomerulonephritis has hemoptysis and a positive anti-GBM antibody. Which diagnosis best explains this presentation?', options:['Goodpasture syndrome','Minimal change disease','IgA nephropathy','Membranous nephropathy'], answer:0, explanation:'Anti-glomerular basement membrane disease can affect both glomerular and pulmonary basement membranes, causing rapidly progressive glomerulonephritis with pulmonary hemorrhage (Goodpasture syndrome). This is a medical emergency requiring urgent nephrology involvement, confirmatory work-up, and prompt immunosuppressive therapy and plasma exchange when indicated.' },
   { id:'se-12', specialty:'Endocrinology', difficulty:'Advanced', question:'A patient with primary adrenal insufficiency presents with vomiting, hypotension, hyponatremia, and hyperkalemia. What is the immediate treatment priority?', options:['IV hydrocortisone and isotonic saline without waiting for confirmatory testing','Oral fludrocortisone only','Fluid restriction and insulin','Wait for ACTH stimulation test before treating'], answer:0, explanation:'Suspected adrenal crisis is life-threatening. Give immediate parenteral hydrocortisone and isotonic saline, with glucose when needed, while monitoring electrolytes and hemodynamics. Draw cortisol and ACTH first only if this can be done without delaying treatment. Identify and treat the precipitating cause.' },
+  ...palNonSurgicalQuestionsBatch1,
+  ...palNonSurgicalQuestionsBatch2,
+  ...palNonSurgicalQuestionsBatch3,
 ];
 
 const trackInfo: Record<TrackId, { name: string; english: string; description: string; symbol: string; blueprint: BlueprintItem[] }> = {
@@ -121,7 +124,7 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
 };
 const categoriesByTrack: Record<TrackId, string[]> = {
   internship:['Emergency Medicine','Internal Medicine','Pediatrics','Obstetrics & Gynecology','Surgery','Psychiatry'],
-  specialty:['Cardiology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Infectious Disease', ...palNonSurgicalQuestionsBatch1, ...palNonSurgicalQuestionsBatch2, ...palNonSurgicalQuestionsBatch3],
+  specialty:['Cardiology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Infectious Disease','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia'],
 };
 const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: specialtyQuestions };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
