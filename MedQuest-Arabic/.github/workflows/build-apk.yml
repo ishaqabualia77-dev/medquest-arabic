@@ -1,0 +1,52 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install dependencies and build web app
+        working-directory: artifacts/medquest-arabic
+        env:
+          PORT: 5173
+          BASE_PATH: /
+        run: |
+          pnpm install --frozen-lockfile || pnpm install
+          pnpm run build
+          npx cap sync android
+
+      - name: Build Debug APK
+        working-directory: artifacts/medquest-arabic/android
+        run: chmod +x gradlew && ./gradlew assembleDebug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: medquest-debug-apk
+          path: artifacts/medquest-arabic/android/app/build/outputs/apk/debug/app-debug.apk
