@@ -112,24 +112,26 @@ const specialtyQuestions: Question[] = [
 ];
 
 const trackInfo: Record<TrackId, { name: string; english: string; description: string; symbol: string; blueprint: BlueprintItem[] }> = {
-  "usmle-step1": {
-    name: "USMLE Step 1 · المزاولة الأمريكية",
-    english: "USMLE Step 1 · US Medical Licensing",
-    blueprint: [
-      { category: "Pathology & Pathophysiology", share: 35 },
-      { category: "Pharmacology & Microbiology", share: 30 },
-      { category: "Physiology & Organ Systems", share: 20 },
-      { category: "Biochemistry & Behavioral", share: 15 }
-    ]
+  internship: {
+    name:'امتحان الامتياز الفلسطيني', english:'Palestinian Internship', description:'أساسيات سريرية ومواقف شائعة في بداية الممارسة', symbol:'01',
+    blueprint:[
+      {category:'الطب الباطني',share:29},{category:'الطوارئ',share:25},{category:'الأطفال',share:21},{category:'الجراحة والتوليد',share:25},
+    ],
   },
-  "usmle-step2": {
-    name: "USMLE Step 2 CK · المزاولة الأمريكية",
-    english: "USMLE Step 2 CK · Clinical Knowledge",
+  specialty: {
+    name:'التصنيفي الفلسطيني', english:'Palestinian Classification (Surgical & Non-Surgical)', description:'يشمل المسار الجراحي والمسار اللاجراحي لامتحان التصنيفي الفلسطيني', symbol:'02',
+    blueprint:[
+      {category:'القلب والأوعية',share:24},{category:'الأعصاب والكلى',share:25},{category:'الغدد الصماء',share:24},{category:'الصدرية والعدوى',share:27},
+    ],
+  },
+  "imle": {
+    name: "IMLE · المزاولة الإسرائيلية",
+    english: "IMLE · Israeli Medical Licensing Exam",
     blueprint: [
-      { category: "Internal Medicine", share: 40 },
-      { category: "Surgery & OB/GYN", share: 25 },
-      { category: "Pediatrics & Psychiatry", share: 20 },
-      { category: "Preventive & Ethics", share: 15 }
+      { category: "Internal Medicine", share: 35 },
+      { category: "General Surgery", share: 25 },
+      { category: "Pediatrics & OB/GYN", share: 25 },
+      { category: "Emergency & Psychiatry", share: 15 }
     ]
   },
   "mrcp": {
@@ -142,27 +144,25 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
       { category: "Haematology, ID & Rheumatology", share: 15 }
     ]
   },
-  "imle": {
-    name: "IMLE · المزاولة الإسرائيلية",
-    english: "IMLE · Israeli Medical Licensing Exam",
+  "usmle-step2": {
+    name: "USMLE Step 2 CK · المزاولة الأمريكية",
+    english: "USMLE Step 2 CK · Clinical Knowledge",
     blueprint: [
-      { category: "Internal Medicine", share: 35 },
-      { category: "General Surgery", share: 25 },
-      { category: "Pediatrics & OB/GYN", share: 25 },
-      { category: "Emergency & Psychiatry", share: 15 }
+      { category: "Internal Medicine", share: 40 },
+      { category: "Surgery & OB/GYN", share: 25 },
+      { category: "Pediatrics & Psychiatry", share: 20 },
+      { category: "Preventive & Ethics", share: 15 }
     ]
   },
-  internship: {
-    name:'امتحان الامتياز الفلسطيني', english:'Palestinian Internship', description:'أساسيات سريرية ومواقف شائعة في بداية الممارسة', symbol:'01',
-    blueprint:[
-      {category:'الطب الباطني',share:29},{category:'الطوارئ',share:25},{category:'الأطفال',share:21},{category:'الجراحة والتوليد',share:25},
-    ],
-  },
-  specialty: {
-    name:'التصنيفي الفلسطيني', english:'Palestinian Classification (Surgical & Non-Surgical)', description:'يشمل المسار الجراحي والمسار اللاجراحي لامتحان التصنيفي الفلسطيني', symbol:'02',
-    blueprint:[
-      {category:'القلب والأوعية',share:24},{category:'الأعصاب والكلى',share:25},{category:'الغدد الصماء',share:24},{category:'الصدرية والعدوى',share:27},
-    ],
+  "usmle-step1": {
+    name: "USMLE Step 1 · المزاولة الأمريكية",
+    english: "USMLE Step 1 · US Medical Licensing",
+    blueprint: [
+      { category: "Pathology & Pathophysiology", share: 35 },
+      { category: "Pharmacology & Microbiology", share: 30 },
+      { category: "Physiology & Organ Systems", share: 20 },
+      { category: "Biochemistry & Behavioral", share: 15 }
+    ]
   },
 };
 const categoriesByTrack: Record<TrackId, string[]> = {
@@ -930,28 +930,7 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
     <div className="track-grid">
       {(Object.keys(trackInfo) as TrackId[]).map(id=><button key={id} className={`track-card ${track===id?'selected':''}`} onClick={()=>chooseTrack(id)} data-testid={`track-${id}`}>
         <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id]} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
-      {(["usmle-step1", "usmle-step2", "mrcp", "imle"] as const).map((extraId) => (
-        <button
-          key={extraId}
-          type="button"
-          className={`track-card ${track === extraId ? "selected" : ""}`}
-          onClick={() => chooseTrack(extraId)}
-          data-testid={`track-${extraId}`}
-        >
-          <span className="track-icon"><GraduationCap size={20} /></span>
-          <span className="track-info">
-            <span className="track-name">{trackInfo[extraId]?.name || extraId}</span>
-            <span className="track-desc" dir="ltr" style={{ display: "block", textAlign: "right" }}>
-              {trackInfo[extraId]?.english || ""}
-            </span>
-            <span className="track-meta">
-              {(counts?.[extraId] ?? 0)} QUESTIONS · {(progress?.answered?.[extraId]?.length ?? 0)} REVIEWED
-            </span>
-          </span>
-          <ArrowUpRight className="track-arrow" size={17} />
-        </button>
-      ))}
-    </div>
+</div>
 
     <div style={{ marginTop: 12 }}>
       <button
