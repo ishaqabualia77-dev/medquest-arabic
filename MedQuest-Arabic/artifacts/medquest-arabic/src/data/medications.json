@@ -2,6 +2,7 @@
   "adults": [
     {
       "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
       "tradeName": "Paramol",
       "scientificName": "Paracetamol",
       "dose": "500 mg",
@@ -11,6 +12,7 @@
     },
     {
       "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
       "tradeName": "Paramol plus",
       "scientificName": "Paracetamol / Caffeine",
       "dose": "500 mg / 65 mg",
@@ -20,86 +22,2485 @@
     },
     {
       "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
       "tradeName": "Emegrain",
       "scientificName": "Paracetamol / Metoclopramide",
       "dose": "500 mg / 5 mg",
       "route": "Tab",
       "frequency": "1*3",
-      "notes": "For migraine with N&V; >12 years"
+      "notes": "For migraine with N&V; >12 year"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Trufen",
+      "scientificName": "Ibuprofen",
+      "dose": "200, 400, 600 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "For fever and pain; For OA up to 3200 mg"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Trufen plus",
+      "scientificName": "Ibuprofen / Pseudoephedrine",
+      "dose": "200 mg / 30 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Rufenal",
+      "scientificName": "Diclofenac sodium",
+      "dose": "25, 50, 100 mg",
+      "route": "Tab / Supp",
+      "frequency": "1*3 (Tab) / 1*2 (Supp)",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Anaflam",
+      "scientificName": "Diclofenac potassium",
+      "dose": "50, 75, 100 mg",
+      "route": "Tab",
+      "frequency": "1*2 (50mg) / 1*1 (75-100mg)",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Treicox",
+      "scientificName": "Etoricoxib",
+      "dose": "60, 90, 120 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "For OA, RA, gout"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Coxib",
+      "scientificName": "Celecoxib",
+      "dose": "100, 200 mg",
+      "route": "Cap",
+      "frequency": "1*2 / 1*1",
+      "notes": "For OA, RA"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Indocaps",
+      "scientificName": "Indomethacin",
+      "dose": "25, 100 mg",
+      "route": "Cap / Supp",
+      "frequency": "1*2 (Cap) / 1*1 (Supp)",
+      "notes": "At night"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Naprex",
+      "scientificName": "Naproxen Na",
+      "dose": "250, 500 mg",
+      "route": "Tab",
+      "frequency": "1*2 / 1*1",
+      "notes": "At night"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Etodalac",
+      "scientificName": "Etodolac",
+      "dose": "400, 600 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Movlais",
+      "scientificName": "Meloxicam",
+      "dose": "7.5, 15 mg",
+      "route": "Tab",
+      "frequency": "1*2 / 1*1",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Pirox",
+      "scientificName": "Piroxicam",
+      "dose": "20 mg",
+      "route": "Cap / Supp",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Balgesic",
+      "scientificName": "Paracetamol / Orphenadrine",
+      "dose": "500 mg / 30 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": ">12 year; C/I: BPH, glaucoma"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Sirdulad",
+      "scientificName": "Tizanidine",
+      "dose": "4 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Tramal",
+      "scientificName": "Tramadol",
+      "dose": "50 mg",
+      "route": "Cap",
+      "frequency": "1*3",
+      "notes": ">14 year, up to 400 mg/day"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Tramal long",
+      "scientificName": "Tramadol",
+      "dose": "100, 150 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "up to 400 mg/day"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Zaldiar",
+      "scientificName": "Tramadol / Paracetamol",
+      "dose": "37.5 mg / 325 mg",
+      "route": "Tab",
+      "frequency": "PRN",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Scar ease",
+      "scientificName": "",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Iodocare",
+      "scientificName": "Povidone",
+      "dose": "",
+      "route": "Ointment",
+      "frequency": "",
+      "notes": "For wound dressing"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Diclofen emulgel",
+      "scientificName": "Diclofenac sodium",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*3",
+      "notes": ">14 year"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Xylene gel",
+      "scientificName": "Lidocaine",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Baby gel",
+      "scientificName": "",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Uroclean",
+      "scientificName": "Lithium carbonate / Sodium benzoate",
+      "dose": "",
+      "route": "Powder",
+      "frequency": "1 tsp *3 (in half glass of water)",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Adults.pdf",
+      "tradeName": "Utised",
+      "scientificName": "Phenazopyridine",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "2*3",
+      "notes": "After meal"
     },
     {
       "category": "2-Neurology",
+      "source": "Adults.pdf",
       "tradeName": "Assival",
       "scientificName": "Diazepam",
-      "dose": "5 / 10 mg",
+      "dose": "5, 10 mg",
       "route": "Tab",
       "frequency": "1*2",
       "notes": "Up to 60 mg/day"
     },
     {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Loracare",
+      "scientificName": "Lorazepam",
+      "dose": "1 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "For insomnia and in elderly; For anxiety"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Peridol",
+      "scientificName": "Haloperidol",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*3 (0.5*2 moderate, 1*2 severe)",
+      "notes": "For psychosis, vocal tics/utters"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Duvalep",
+      "scientificName": "Sodium valproate",
+      "dose": "200 mg",
+      "route": "Tab",
+      "frequency": "20 mg/kg/day",
+      "notes": "TMT of all forms of seizure"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Tegretol",
+      "scientificName": "Carbamazepine",
+      "dose": "200 mg",
+      "route": "Tab",
+      "frequency": "1*2 and increase dose weekly",
+      "notes": "Maintenance dose (800-1200 mg/day)"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Nerventin",
+      "scientificName": "Gabapentin",
+      "dose": "300 mg",
+      "route": "Cap",
+      "frequency": "1*1 at night",
+      "notes": "For TMT of neuropathic pain"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Elatrol",
+      "scientificName": "Amitriptyline",
+      "dose": "10, 25 mg",
+      "route": "Tab",
+      "frequency": "1*1 / 1*3 (depression); 1*1 (enuresis)",
+      "notes": "Pregnancy (C); in 7-12 year at night"
+    },
+    {
+      "category": "2-Neurology",
+      "source": "Adults.pdf",
+      "tradeName": "Fluoxicare",
+      "scientificName": "Fluoxetine",
+      "dose": "20 mg",
+      "route": "Cap",
+      "frequency": "1*1",
+      "notes": "For depression; Up to 80 mg/day in OCD"
+    },
+    {
       "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Amoxicare",
+      "scientificName": "Amoxicillin",
+      "dose": "250, 500, 1000 mg",
+      "route": "Cap / Tab",
+      "frequency": "1*3 (250/500mg) / 1*2 (1000mg)",
+      "notes": ">6 year as adult dose; Pregnancy (B)"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
       "tradeName": "Ogmin",
       "scientificName": "Amoxicillin / Clavulanic acid",
-      "dose": "500 mg / 875 mg",
+      "dose": "500 mg, 875 mg",
       "route": "Tab",
-      "frequency": "1*3 / 1*2",
+      "frequency": "1*3 (500mg) / 1*2 (875mg)",
       "notes": ""
     },
     {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Ampipharm",
+      "scientificName": "Ampicillin",
+      "dose": "500 mg",
+      "route": "Cap",
+      "frequency": "1*4",
+      "notes": "Before meal"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Megacare",
+      "scientificName": "Ampicillin / Flucloxacillin",
+      "dose": "250 mg / 250 mg",
+      "route": "Cap",
+      "frequency": "1*4",
+      "notes": "Before meal"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Megacare forte",
+      "scientificName": "Ampicillin / Flucloxacillin",
+      "dose": "500 mg / 250 mg",
+      "route": "Cap",
+      "frequency": "1*4",
+      "notes": "Before meal"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Cefacare",
+      "scientificName": "Cephalexin monohydrate",
+      "dose": "250, 500 mg",
+      "route": "Cap",
+      "frequency": "1*4 (250mg) / 1*2 (500mg)",
+      "notes": "1st G cephalosporin"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Zinnaxim",
+      "scientificName": "Cefuroxime",
+      "dose": "250, 500 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Adcef",
+      "scientificName": "Cefdinir",
+      "dose": "300 mg",
+      "route": "Cap",
+      "frequency": "1*2",
+      "notes": "D/I: with iron"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Rezacif OD",
+      "scientificName": "Cefixime",
+      "dose": "400 mg",
+      "route": "Cap",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Cefpo",
+      "scientificName": "Cefpodoxime",
+      "dose": "100, 200 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Ciprocare",
+      "scientificName": "Ciprofloxacin",
+      "dose": "250, 500, 750 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "C/I: pregnancy, <18 year"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Levox",
+      "scientificName": "Levofloxacin",
+      "dose": "500, 750 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "C/I: <18 year, pregnancy"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Factive",
+      "scientificName": "Gemifloxacin",
+      "dose": "320 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "For COPD, pneumonia"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Taricin",
+      "scientificName": "Ofloxacin / Floxacin",
+      "dose": "200 mg",
+      "route": "Caplet",
+      "frequency": "1*2",
+      "notes": "C/I: <18 year, pregnancy"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Azicare",
+      "scientificName": "Azithromycin",
+      "dose": "250, 500 mg",
+      "route": "Cap",
+      "frequency": "<18 yr: 1*2 then 1*1; >18 yr: 1*1*3 days",
+      "notes": "2 hrs after meal; STD: 1g single dose; Pregnancy B"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Klaricare",
+      "scientificName": "Clarithromycin",
+      "dose": "250, 500 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Klaricare xl",
+      "scientificName": "Clarithromycin",
+      "dose": "500 mg",
+      "route": "Tab (XL)",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Erythrotab",
+      "scientificName": "Erythromycin",
+      "dose": "250 mg",
+      "route": "Tab",
+      "frequency": "1*4",
+      "notes": "Before meal"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Clindacin",
+      "scientificName": "Clindamycin",
+      "dose": "150, 300 mg",
+      "route": "Cap",
+      "frequency": "1*4",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Doxypharm",
+      "scientificName": "Doxycycline",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "C/I: <12 year, pregnancy"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Sulprim",
+      "scientificName": "Sulfamethoxazole / Trimethoprim",
+      "dose": "400 mg / 80 mg",
+      "route": "Tab",
+      "frequency": "2*2",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Sulprim forte",
+      "scientificName": "Sulfamethoxazole / Trimethoprim",
+      "dose": "800 mg / 160 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Macrofuran",
+      "scientificName": "Nitrofurantoin",
+      "dose": "100 mg",
+      "route": "Cap",
+      "frequency": "1*4 for 1 week",
+      "notes": "Pregnancy (B); C/I: pregnancy at term"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Flagyl",
+      "scientificName": "Metronidazole",
+      "dose": "250, 500 mg",
+      "route": "Tab",
+      "frequency": "1*3 for 7 days; 2 g single/2 doses",
+      "notes": "Intestinal amebiasis (750 mg*3), trichomonas"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Vermacare",
+      "scientificName": "Mebendazole",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "1*2 for 3 days, repeat after 2 weeks",
+      "notes": "For Enterobiasis"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Zydex",
+      "scientificName": "Fusidic acid",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3 for 7 days",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Zydex-B",
+      "scientificName": "Fusidic acid / Betamethasone",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3 for 7 days",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Zydex-HC",
+      "scientificName": "Fusidic acid / Hydrocortisone",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3 for 7 days",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Betacare-G",
+      "scientificName": "Betamethasone / Gentamicin",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": "C/I in viral & fungal infxn"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Medihist",
+      "scientificName": "Neomycin / Dexamethasone / Clotrimazole",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Garamine",
+      "scientificName": "Gentamicin",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Tribiotic",
+      "scientificName": "Neomycin / Polymyxin",
+      "dose": "",
+      "route": "Powder",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Healer",
+      "scientificName": "Mafenide acetate",
+      "dose": "",
+      "route": "Ointment",
+      "frequency": "1*2",
+      "notes": "For wound and burn"
+    },
+    {
+      "category": "3-Antibiotics",
+      "source": "Adults.pdf",
+      "tradeName": "Silvaderm",
+      "scientificName": "Silver sulfadiazine",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "4-Antiviral",
+      "source": "Adults.pdf",
+      "tradeName": "Supraviran (Tab)",
+      "scientificName": "Acyclovir",
+      "dose": "200 mg (HSV) / 800 mg (HZV)",
+      "route": "Tab",
+      "frequency": "1*5 for 5 days",
+      "notes": "200mg for HSV; 800mg for HZV"
+    },
+    {
+      "category": "4-Antiviral",
+      "source": "Adults.pdf",
+      "tradeName": "Supraviran (Cream)",
+      "scientificName": "Acyclovir",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*5 for 5 days",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Flucan",
+      "scientificName": "Fluconazole",
+      "dose": "50, 100, 150 mg",
+      "route": "Cap",
+      "frequency": "1*1 for 7 days (oral) / single dose (vaginal)",
+      "notes": "Oral vs vaginal candidiasis"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Ketoral",
+      "scientificName": "Ketoconazole",
+      "dose": "200 mg",
+      "route": "Tab",
+      "frequency": "1*1 for 5 days",
+      "notes": "For skin infection, >12 year"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Lamirase (Tab)",
+      "scientificName": "Terbinafine",
+      "dose": "250 mg",
+      "route": "Tab",
+      "frequency": "1*1 for >2 weeks",
+      "notes": "For skin infection"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Dactazol (Cream)",
+      "scientificName": "Miconazole nitrate",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*2 for 2 weeks",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Lamirase (Cream / Spray)",
+      "scientificName": "Terbinafine",
+      "dose": "",
+      "route": "Cream / Spray",
+      "frequency": "1*2 (>4 wks Cream / 1 wk Spray)",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Dandrex",
+      "scientificName": "Ketoconazole",
+      "dose": "",
+      "route": "Cream / Shampoo",
+      "frequency": "1*1*5d (Cream) / 1*2 weekly*3wks (Shampoo)",
+      "notes": "P. versicolor / dandruff & seborrheic dermatitis"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Beta-canazole",
+      "scientificName": "Betamethasone / Clotrimazole",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Gyno-dactazol",
+      "scientificName": "Miconazole nitrate",
+      "dose": "",
+      "route": "Ovule",
+      "frequency": "1*1 for 3 days",
+      "notes": "At night"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Albocal",
+      "scientificName": "Antiseptic",
+      "dose": "",
+      "route": "Powder (Douche)",
+      "frequency": "1 sachet in 1 liter warm water",
+      "notes": "Vaginal douche"
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Candistatin",
+      "scientificName": "Nystatin",
+      "dose": "",
+      "route": "Oral drop",
+      "frequency": "4 cc * 4",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Dactazol (Oral gel)",
+      "scientificName": "Miconazole",
+      "dose": "",
+      "route": "Oral gel",
+      "frequency": "2.5 * 4",
+      "notes": ""
+    },
+    {
+      "category": "5-Antifungal",
+      "source": "Adults.pdf",
+      "tradeName": "Gargarol",
+      "scientificName": "Chlorhexidine",
+      "dose": "",
+      "route": "Mouth wash",
+      "frequency": "15 cc * 2",
+      "notes": "Antiseptic"
+    },
+    {
+      "category": "6-Acne vulgaris",
+      "source": "Adults.pdf",
+      "tradeName": "Clindex",
+      "scientificName": "Clindamycin",
+      "dose": "",
+      "route": "Solution / Gel",
+      "frequency": "1*2",
+      "notes": "For acne vulgaris"
+    },
+    {
+      "category": "6-Acne vulgaris",
+      "source": "Adults.pdf",
+      "tradeName": "Rootan",
+      "scientificName": "Tretinoin",
+      "dose": "0.05%, 0.025%",
+      "route": "Cream",
+      "frequency": "1*1 at night",
+      "notes": "Pregnancy (X)"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Pumodrin DM",
+      "scientificName": "",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "10 cc * 3",
+      "notes": "For dry cough (elderly)"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Tussibal CO",
+      "scientificName": "Codeine phosphate / Pseudoephedrine / Triprolidine",
+      "dose": "10 mg / 30 mg / 1.25 mg per 5 ml",
+      "route": "Syrup",
+      "frequency": "10 cc * 3",
+      "notes": "As antitussive, decongestant"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Tussibal expectorant",
+      "scientificName": "Codeine phosphate / Pseudoephedrine / Triprolidine / Guaifenesin",
+      "dose": "10 mg / 30 mg / 1.25 mg / 100 mg per 5 ml",
+      "route": "Syrup",
+      "frequency": "10 cc * 3",
+      "notes": "As expectorant, decongestant"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Paracod",
+      "scientificName": "Paracetamol / Codeine",
+      "dose": "325 mg / 20 mg",
+      "route": "Tab",
+      "frequency": "1*4",
+      "notes": "As antitussive"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Pectosin",
+      "scientificName": "Guaifenesin",
+      "dose": "100 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "10 cc * 3",
+      "notes": "As expectorant"
+    },
+    {
+      "category": "7-Antitussive and Expectorant",
+      "source": "Adults.pdf",
+      "tradeName": "Mucocare",
+      "scientificName": "Bromhexine HCl",
+      "dose": "8 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "As mucolytic"
+    },
+    {
+      "category": "8-Steroid",
+      "source": "Adults.pdf",
+      "tradeName": "Sterocort",
+      "scientificName": "Triamcinolone acetate",
+      "dose": "4 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "8-Steroid",
+      "source": "Adults.pdf",
+      "tradeName": "Prednitab",
+      "scientificName": "Prednisolone",
+      "dose": "5, 20 mg",
+      "route": "Tab",
+      "frequency": "5-60 mg/day (1*2) for 5 days",
+      "notes": ""
+    },
+    {
+      "category": "8-Steroid",
+      "source": "Adults.pdf",
+      "tradeName": "Betacort",
+      "scientificName": "Betamethasone",
+      "dose": "0.5 mg",
+      "route": "Tab",
+      "frequency": "0.5-7 mg/day (1*2)",
+      "notes": ""
+    },
+    {
+      "category": "8-Steroid",
+      "source": "Adults.pdf",
+      "tradeName": "Decort",
+      "scientificName": "Dexamethasone",
+      "dose": "0.5, 0.75, 2 mg",
+      "route": "Tab",
+      "frequency": "0.5-9 mg/day",
+      "notes": ""
+    },
+    {
+      "category": "8-Steroid",
+      "source": "Adults.pdf",
+      "tradeName": "Betacare",
+      "scientificName": "Betamethasone",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": ">1 yr"
+    },
+    {
+      "category": "9-Asthma Drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Miflonide",
+      "scientificName": "Budesonide",
+      "dose": "200 mcg",
+      "route": "Inhaler",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "9-Asthma Drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Ventocare",
+      "scientificName": "Salbutamol",
+      "dose": "2 mg",
+      "route": "Tab / Solution",
+      "frequency": "1*3 (Tab) / 1cc + 2cc N/S (Neb)",
+      "notes": ">12 year"
+    },
+    {
+      "category": "9-Asthma Drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Theotard",
+      "scientificName": "Theophylline",
+      "dose": "100, 200, 300 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Lorax",
+      "scientificName": "Loratadine",
+      "dose": "10 mg",
+      "route": "Tab",
+      "frequency": "1*1 at night",
+      "notes": ">6 year"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Aerius",
+      "scientificName": "Desloratadine",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "At any time"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Fexodin",
+      "scientificName": "Fexofenadine",
+      "dose": "120, 180 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "At night"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Allergon",
+      "scientificName": "Chlorpheniramine",
+      "dose": "3 mg",
+      "route": "Tab",
+      "frequency": "1*4",
+      "notes": ">12 year, C/I: BPH"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Lucast",
+      "scientificName": "Montelukast",
+      "dose": "10 mg",
+      "route": "Tab",
+      "frequency": "1*1 at night",
+      "notes": ">15 year"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Gripmin SR",
+      "scientificName": "Chlorpheniramine / Pseudoephedrine",
+      "dose": "8 mg / 120 mg",
+      "route": "Tab",
+      "frequency": "1*2 for 5 days",
+      "notes": ">12 year"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Flu",
+      "scientificName": "Chlorpheniramine / Phenylephrine / Dextromethorphan / Paracetamol / Caffeine",
+      "dose": "2 mg / 10 mg / 5 mg / 350 mg / 30 mg",
+      "route": "Tab",
+      "frequency": "Start with 2 tabs then 1*4",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Clarinase",
+      "scientificName": "Pseudoephedrine / Loratadine",
+      "dose": "",
+      "route": "Tab",
+      "frequency": "",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Frinase",
+      "scientificName": "Fluticasone",
+      "dose": "0.05%",
+      "route": "Nasal spray",
+      "frequency": "2 spray*1 then 1*1",
+      "notes": "For 5 days, at morning"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Nasocare",
+      "scientificName": "Xylometazoline",
+      "dose": "1 mg / 5 ml",
+      "route": "Nasal spray",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Betastin",
+      "scientificName": "Betahistine",
+      "dose": "8, 16 mg",
+      "route": "Tab",
+      "frequency": "1*3 for 1 month",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Cinazine",
+      "scientificName": "Cinnarizine",
+      "dose": "25, 75 mg",
+      "route": "Tab",
+      "frequency": "1*3 (25mg) / 1*1 (75mg)",
+      "notes": ""
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Ancozine",
+      "scientificName": "",
+      "dose": "",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "For motion sickness"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Cyprodine",
+      "scientificName": "Cyproheptadine HCl",
+      "dose": "4 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "For increase appetite"
+    },
+    {
+      "category": "10-Antihistamine and Decongestant",
+      "source": "Adults.pdf",
+      "tradeName": "Hudu sleep aid",
+      "scientificName": "Diphenhydramine",
+      "dose": "50 mg",
+      "route": "Tab",
+      "frequency": "1*1 at night",
+      "notes": "For insomnia (short TMT)"
+    },
+    {
+      "category": "11-Ear drop",
+      "source": "Adults.pdf",
+      "tradeName": "Floxin (Ear)",
+      "scientificName": "Ciprofloxacin",
+      "dose": "",
+      "route": "Ear drop",
+      "frequency": "3 drops * 2 for 1 week",
+      "notes": ""
+    },
+    {
+      "category": "11-Ear drop",
+      "source": "Adults.pdf",
+      "tradeName": "Floxin HC",
+      "scientificName": "Ciprofloxacin / Hydrocortisone",
+      "dose": "",
+      "route": "Ear drop",
+      "frequency": "3 drops * 2 for 1 week",
+      "notes": ">1 year, not in viral infxn"
+    },
+    {
+      "category": "11-Ear drop",
+      "source": "Adults.pdf",
+      "tradeName": "Otodex",
+      "scientificName": "Dexamethasone / Polymyxin / Neomycin",
+      "dose": "",
+      "route": "Ear drop",
+      "frequency": "Child (1 drop*3) / Adult (3 drops*3)",
+      "notes": ""
+    },
+    {
+      "category": "11-Ear drop",
+      "source": "Adults.pdf",
+      "tradeName": "Gentacol (Ear)",
+      "scientificName": "Gentamicin",
+      "dose": "",
+      "route": "Ear drop",
+      "frequency": "3 drops * 3 for 1 week",
+      "notes": ""
+    },
+    {
+      "category": "11-Ear drop",
+      "source": "Adults.pdf",
+      "tradeName": "Tempyrin",
+      "scientificName": "",
+      "dose": "",
+      "route": "Ear drop",
+      "frequency": "5 drops * 2 for 2 days",
+      "notes": "For ear wax"
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Floxin (Eye)",
+      "scientificName": "Ciprofloxacin",
+      "dose": "",
+      "route": "Eye drop",
+      "frequency": "1 drop q2h *2d then 1*6 *5d",
+      "notes": ""
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Gentacol (Eye)",
+      "scientificName": "Gentamicin",
+      "dose": "",
+      "route": "Eye drop",
+      "frequency": "3 drops * 3",
+      "notes": ""
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Chlorocetine",
+      "scientificName": "Chloramphenicol",
+      "dose": "",
+      "route": "Eye drop",
+      "frequency": "2 drops * 4 for 3 days",
+      "notes": ""
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Dexacol",
+      "scientificName": "Chloramphenicol / Dexamethasone",
+      "dose": "",
+      "route": "Eye drop",
+      "frequency": "1 drop q1h then 1*6 then 1 drop*3",
+      "notes": "For allergy and inflammation; C/I: glaucoma, all infxn"
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Allervin",
+      "scientificName": "Antazoline Sulphate / Naphazoline HCl",
+      "dose": "",
+      "route": "Eye drops",
+      "frequency": "Infant 1*2, Child 1*4, Adult 2*4",
+      "notes": "For allergic conjunctivitis; C/I: closed glaucoma"
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Ketofen",
+      "scientificName": "Ketotifen / Ketofen",
+      "dose": "",
+      "route": "Eye drops",
+      "frequency": "1 drop * 3",
+      "notes": "For allergic conjunctivitis"
+    },
+    {
+      "category": "12-Eye drop",
+      "source": "Adults.pdf",
+      "tradeName": "Normasal",
+      "scientificName": "NaCl",
+      "dose": "",
+      "route": "Eye drop",
+      "frequency": "1 drop * 3",
+      "notes": ""
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Pantover",
+      "scientificName": "Pantoprazole",
+      "dose": "20, 40 mg",
+      "route": "Tab",
+      "frequency": "1*1 for 2 months",
+      "notes": "Symptomatic/maintenance; GERD (before breakfast)"
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Ezomax",
+      "scientificName": "Esomeprazole",
+      "dose": "20, 40 mg",
+      "route": "Cap",
+      "frequency": "1*1 (40mg for 2m then 20mg)",
+      "notes": ""
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Mepral",
+      "scientificName": "Omeprazole",
+      "dose": "20, 40 mg",
+      "route": "Cap",
+      "frequency": "1*1",
+      "notes": "Pregnancy (C)"
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Randin",
+      "scientificName": "Ranitidine",
+      "dose": "150 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ">8 year as adult dose"
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Famodin",
+      "scientificName": "Famotidine",
+      "dose": "20, 40 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": ""
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Pramine",
+      "scientificName": "Metoclopramide",
+      "dose": "10 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "Pregnancy (C)"
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Peptipac",
+      "scientificName": "Amoxicillin / Clarithromycin / Omeprazole",
+      "dose": "1000 mg / 500 mg / 20 mg",
+      "route": "Tab",
+      "frequency": "1*2 for 7 days then PPI 3 weeks",
+      "notes": ""
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Diacare",
+      "scientificName": "Loperamide",
+      "dose": "2 mg",
+      "route": "Cap",
+      "frequency": "2 caps then 1 after each stool (max 8)",
+      "notes": ""
+    },
+    {
+      "category": "13-GI drugs",
+      "source": "Adults.pdf",
+      "tradeName": "Furamix",
+      "scientificName": "Furazolidone / Pectin / Quinolone / Kaolin",
+      "dose": "",
+      "route": "Tab",
+      "frequency": "2 tabs * 4",
+      "notes": "C/I: pregnancy, lactation"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Spasmin",
+      "scientificName": "Papaverine / Paracetamol / Allobarbitone / Homatropine",
+      "dose": "",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "C/I: BPH, glaucoma; Pregnancy (C)"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Scobutyl",
+      "scientificName": "Hyoscine",
+      "dose": "10 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "Same C/I as Spasmin"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Scobuty-Co",
+      "scientificName": "Hyoscine / Paracetamol",
+      "dose": "10 mg / 250 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "Same C/I as Spasmin"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Modulon",
+      "scientificName": "Mebeverine HCl",
+      "dose": "135 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": ">10 year, before meal"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Modex",
+      "scientificName": "Chlordiazepoxide",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "For IBS"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Probiotic",
+      "scientificName": "Multi-enzymes",
+      "dose": "",
+      "route": "Cap",
+      "frequency": "1*3",
+      "notes": "For IBS"
+    },
+    {
+      "category": "14-Anti spasmodic",
+      "source": "Adults.pdf",
+      "tradeName": "Eucarbon",
+      "scientificName": "Charcoal",
+      "dose": "",
+      "route": "Cap",
+      "frequency": "1*3",
+      "notes": "For IBS"
+    },
+    {
+      "category": "15-Laxative and Hemorrhoid drug",
+      "source": "Adults.pdf",
+      "tradeName": "Avilac",
+      "scientificName": "Lactulose",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "15-30 cc * 1",
+      "notes": "After breakfast"
+    },
+    {
+      "category": "15-Laxative and Hemorrhoid drug",
+      "source": "Adults.pdf",
+      "tradeName": "Laxin",
+      "scientificName": "Glycerin",
+      "dose": "2.3 g (88%)",
+      "route": "Supp",
+      "frequency": "PRN",
+      "notes": ""
+    },
+    {
+      "category": "15-Laxative and Hemorrhoid drug",
+      "source": "Adults.pdf",
+      "tradeName": "Laxidin",
+      "scientificName": "Bisacodyl",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "2-3 tabs",
+      "notes": "At night"
+    },
+    {
+      "category": "15-Laxative and Hemorrhoid drug",
+      "source": "Adults.pdf",
+      "tradeName": "Hemoral HC",
+      "scientificName": "Hydrocortisone / Lidocaine / Zinc oxide",
+      "dose": "0.5% / 1.5% / 5%",
+      "route": "Cream / Supp",
+      "frequency": "1*4 (Cream) / 1*2 (Supp)",
+      "notes": ""
+    },
+    {
+      "category": "15-Laxative and Hemorrhoid drug",
+      "source": "Adults.pdf",
+      "tradeName": "Daviton",
+      "scientificName": "Diosmin / Hesperidin",
+      "dose": "450 mg / 50 mg",
+      "route": "Tab",
+      "frequency": "2*3*4d, 2*2*3d, 1*2*1m",
+      "notes": "Acute hemorrhoidal attack; midday & evening"
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Fegrole",
+      "scientificName": "Ferrous fumarate / Folic acid",
+      "dose": "106 mg / 1 mg",
+      "route": "Tab",
+      "frequency": "1*1 (Prophylaxis/pregnancy) / 1*2 (TMT)",
+      "notes": ""
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Jeferol-R",
+      "scientificName": "Ferrous sulfate / Folic acid",
+      "dose": "160 mg / 0.4 mg",
+      "route": "Tab",
+      "frequency": "1*1 (Prophylaxis) / 1*2 (TMT)",
+      "notes": ""
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Jeferol-V",
+      "scientificName": "Ferrous gluconate / Folic acid / Other vitamins",
+      "dose": "250 mg / 2 mg",
+      "route": "Tab",
+      "frequency": "1*1 (Prophylaxis) / 1*3 (TMT)",
+      "notes": ""
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Folic acid",
+      "scientificName": "Folic acid",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*1 (Prophylaxis) / 1*2 (TMT)",
+      "notes": ""
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Alfacal",
+      "scientificName": "Alfacalcidol (D3)",
+      "dose": "0.25 mcg",
+      "route": "Cap",
+      "frequency": "1*1",
+      "notes": "Ca/P regulator"
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Calcivid",
+      "scientificName": "Elemental Ca / Vit D",
+      "dose": "600 mg / 200 IU",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "After meal"
+    },
+    {
+      "category": "16-Supplement and Vitamins",
+      "source": "Adults.pdf",
+      "tradeName": "Neurovit",
+      "scientificName": "B1, B6, B12",
+      "dose": "250, 259 mg, 250 mcg",
+      "route": "Tab",
+      "frequency": "1*3 for 2 weeks",
+      "notes": ""
+    },
+    {
+      "category": "17-chronic medication",
+      "source": "Adults.pdf",
+      "tradeName": "Aspirin",
+      "scientificName": "Acetylsalicylic acid",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "17-chronic medication",
+      "source": "Adults.pdf",
+      "tradeName": "Plavix",
+      "scientificName": "Clopidogrel",
+      "dose": "75 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "17-chronic medication",
+      "source": "Adults.pdf",
+      "tradeName": "Vasocor",
+      "scientificName": "Isosorbide mononitrate",
+      "dose": "20, 40 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "10-80 mg/day increase gradually"
+    },
+    {
+      "category": "17-chronic medication",
+      "source": "Adults.pdf",
+      "tradeName": "Lipidex",
+      "scientificName": "Atorvastatin",
+      "dose": "10, 20, 40 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "Pregnancy (X)"
+    },
+    {
+      "category": "17-chronic medication",
+      "source": "Adults.pdf",
+      "tradeName": "Zylol",
+      "scientificName": "Allopurinol",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "1*2 then 1*4",
+      "notes": "Not in acute attacks"
+    },
+    {
       "category": "18-Hypertension",
+      "source": "Adults.pdf",
       "tradeName": "Anapril",
       "scientificName": "Enalapril",
-      "dose": "5 / 10 / 20 mg",
+      "dose": "5, 10, 20 mg",
       "route": "Tab",
       "frequency": "10-40 mg daily",
       "notes": ""
     },
     {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Normantin",
+      "scientificName": "Atenolol",
+      "dose": "50, 100 mg",
+      "route": "Tab",
+      "frequency": "",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Deraline",
+      "scientificName": "Propranolol",
+      "dose": "10, 40 mg",
+      "route": "Tab",
+      "frequency": "1*3 / 1*1 (30-80 mg)",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Concor",
+      "scientificName": "Bisoprolol",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Amicor",
+      "scientificName": "Amlodipine",
+      "dose": "2.5, 5, 10 mg",
+      "route": "Cap",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Lozar",
+      "scientificName": "Losartan",
+      "dose": "50 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": "HTN, HF"
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Valzan-HCT",
+      "scientificName": "Valsartan + HCT",
+      "dose": "160/12.5, 80/12.5 mg",
+      "route": "Tab",
+      "frequency": "1*1",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Lazix",
+      "scientificName": "Furosemide",
+      "dose": "20, 40 mg",
+      "route": "Tab",
+      "frequency": "1*1 (20-80 mg/day single dose)",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Moduril",
+      "scientificName": "HCT / Amiloride",
+      "dose": "50 mg / 5 mg",
+      "route": "Tab",
+      "frequency": "1*1 HTN / 1*2 edema",
+      "notes": "C/I: hyperkalemia"
+    },
+    {
+      "category": "18-Hypertension",
+      "source": "Adults.pdf",
+      "tradeName": "Spirone",
+      "scientificName": "Spironolactone",
+      "dose": "100 mg",
+      "route": "Tab",
+      "frequency": "50-100mg HTN / 25-200mg edema",
+      "notes": "C/I: hyperkalemia"
+    },
+    {
       "category": "19-DM",
+      "source": "Adults.pdf",
       "tradeName": "Glucomet",
       "scientificName": "Metformin",
       "dose": "850 mg",
       "route": "Tab",
       "frequency": "1*2",
       "notes": "C/I: renal failure"
+    },
+    {
+      "category": "19-DM",
+      "source": "Adults.pdf",
+      "tradeName": "Amiran",
+      "scientificName": "Glimepiride",
+      "dose": "1, 2, 3, 4 mg",
+      "route": "Tab",
+      "frequency": "1*1 start with 1 mg",
+      "notes": "Before breakfast"
+    },
+    {
+      "category": "19-DM",
+      "source": "Adults.pdf",
+      "tradeName": "Glucocare",
+      "scientificName": "Glibenclamide",
+      "dose": "5 mg",
+      "route": "Tab",
+      "frequency": "1*1 then +5mg weekly (up to 20mg)",
+      "notes": "Before breakfast"
     }
   ],
   "pediatrics": [
     {
+      "category": "Pediatric Doses (Medscape)",
       "source": "Pediatric doses (1).pdf",
-      "genericName": "Paracetamol",
-      "tradeName": "Adol",
-      "strength": "120 mg/5 ml",
-      "form": "Syrup",
-      "pediatricDose": "Half weight q4-6h",
+      "tradeName": "Adol (Syrup)",
+      "scientificName": "Paracetamol",
+      "dose": "120 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "Half weight q4-6h (10-15 mg/kg/dose q4-6h)",
+      "notes": ">12y or >40kg treat as adult"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Adol (Drops)",
+      "scientificName": "Paracetamol",
+      "dose": "100 mg / 1 ml",
+      "route": "Drops",
+      "frequency": "0.1 * weight q4-6h (10-15 mg/kg/dose)",
       "notes": ""
     },
     {
+      "category": "Pediatric Doses (Medscape)",
       "source": "Pediatric doses (1).pdf",
-      "genericName": "Paracetamol",
-      "tradeName": "Adol",
-      "strength": "100 mg/1 ml",
-      "form": "Drops",
-      "pediatricDose": "One-tenth weight q4-6h (10-15 mg/kg/dose q4-6h)",
-      "notes": "Note: >12 years or >40 kg treat as adult dose"
+      "tradeName": "Adol (Supps)",
+      "scientificName": "Paracetamol",
+      "dose": "125 mg",
+      "route": "Supps",
+      "frequency": "1 full supp per 10 kg q4-6h",
+      "notes": ""
     },
     {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Brufen",
+      "scientificName": "Ibuprofen",
+      "dose": "100 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "Quarter weight q8h (5-10 mg/kg/dose q8h)",
+      "notes": "Preferred >2 years"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Amoxil",
+      "scientificName": "Amoxicillin",
+      "dose": "250 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "Quarter weight q8h (25-50 mg/kg/day)",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Augmentin",
+      "scientificName": "Amoxicillin / Clavulanate",
+      "dose": "156 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "Half weight q8h in OM (80-90 mg/kg/day)",
+      "notes": "Acute OM, sinusitis"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Zithromax",
+      "scientificName": "Azithromycin",
+      "dose": "200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "Quarter weight q24h (10 mg/kg/day)",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Bactrim",
+      "scientificName": "Cotrimoxazole",
+      "dose": "40/200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "Half weight q12h (8 mg TMP/kg/day)",
+      "notes": "Safe >2 months"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Flagyl (Ped)",
+      "scientificName": "Metronidazole",
+      "dose": "200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "1/3 wt q8h amoebiasis*10d; 1/8 wt q8h giardiasis*5d",
+      "notes": "30-50 mg/kg/d amoebiasis; 15 mg/kg/d giardiasis"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Dextro-cough",
+      "scientificName": "Dextromethorphan",
+      "dose": "15 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2.5 ml q6-8h (4-6y); 5 ml q6-8h (6-12y)",
+      "notes": "Not <4 years"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Histop",
+      "scientificName": "Chlorpheniramine",
+      "dose": "2 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2.5 ml q4-6h (2-6y); 5 ml q4-6h (6-12y)",
+      "notes": "Not <2 years"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Actifed",
+      "scientificName": "Chlorpheniramine / Phenylephrine",
+      "dose": "4/10 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2.5 ml q4-6h (2-6y); 5 ml q4-6h (6-12y)",
+      "notes": "Not <2 years"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Allergetin",
+      "scientificName": "Chlorpheniramine / Pseudoephedrine",
+      "dose": "2/30 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "5 ml q4-6h (6-12y)",
+      "notes": "Not <6 years"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Scopinal",
+      "scientificName": "Hyoscine",
+      "dose": "5 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "5 ml q8h (1-6y); 10 ml q8h (6-12y)",
+      "notes": "Not <6 months"
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Dompy",
+      "scientificName": "Domperidone",
+      "dose": "1 mg / 1 ml",
+      "route": "Susp",
+      "frequency": "Quarter weight TID before meals (0.25 mg/kg/dose)",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Ventolin (Neb)",
+      "scientificName": "Salbutamol",
+      "dose": "5 mg / 1 ml",
+      "route": "Solution (Neb)",
+      "frequency": "1 mark per 5 kg via nebulizer (0.15 mg/kg/dose)",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Predo",
+      "scientificName": "Prednisolone",
+      "dose": "5 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "Same weight OD AM or half weight BID (1 mg/kg, max 60mg/d)",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Vidrop",
+      "scientificName": "Cholecalciferol",
+      "dose": "2800 IU / 1 ml",
+      "route": "Drops",
+      "frequency": "4 drops OD <1y; 6 drops OD >1y",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Mixavit",
+      "scientificName": "Multivitamin",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "2.5 ml OD <1y; 5 ml OD 1-4y; 7.5 ml 4-12y",
+      "notes": ""
+    },
+    {
+      "category": "Pediatric Doses (Medscape)",
+      "source": "Pediatric doses (1).pdf",
+      "tradeName": "Feromin",
+      "scientificName": "Ferrous sulfate",
+      "dose": "25 mg elemental iron / 1 ml",
+      "route": "Drops",
+      "frequency": "1/5 wt therapeutic; 1 drop/15 kg prophylactic",
+      "notes": "3-6 mg/kg treatment; 1-2 mg/kg prophylactic"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
       "source": "Pediatrics_drugs-1.pdf",
       "tradeName": "Febramol",
       "scientificName": "Paracetamol",
-      "dose": "120 mg/5 ml; 80/150/300 mg",
+      "dose": "120 mg/5ml; 80/150/300 mg",
       "route": "Syrup / Supp",
       "frequency": "5-10 cc (1*3); 15 mg/kg/dose (1*3)",
       "notes": "<6 yr / >6 yr"
     },
     {
+      "category": "1-Analgesic and Antipyretic",
       "source": "Pediatrics_drugs-1.pdf",
-      "tradeName": "Azicare",
-      "scientificName": "Azithromycin",
-      "dose": "200 mg/5 ml",
+      "tradeName": "Paramol Extra",
+      "scientificName": "Paracetamol",
+      "dose": "250 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "15 mg/kg/dose (1*3)",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Trufen (Ped)",
+      "scientificName": "Ibuprofen",
+      "dose": "100 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "10 mg/kg/dose (1*3)",
+      "notes": ">6 month"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Trufen plus (Ped)",
+      "scientificName": "Ibuprofen / Pseudoephedrine",
+      "dose": "100 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "10 ml/kg/day (1*3)",
+      "notes": ">2 year"
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Extrafen / Rufenal",
+      "scientificName": "Ibuprofen / Paracetamol / Diclofenac sodium",
+      "dose": "100 mg/5ml; 125 mg/5ml; 12.5-150 mg",
+      "route": "Syrup / Supp",
+      "frequency": "2.5cc*3 (1-2y), 5cc*3 (3-6y), 10cc*3 (7-12y); 2mg/kg/d",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Baby gel (Ped)",
+      "scientificName": "Benzocaine",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Semiped",
+      "scientificName": "Simethicone",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "0.3 cc up to 12 times",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Kolic",
+      "scientificName": "Hyoscyamine / Phenobarbital",
+      "dose": "",
+      "route": "Oral drops",
+      "frequency": "1 drop / kg (1*4)",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Baby Nam",
+      "scientificName": "Na bicarbonate / Na citrate / Anise oil",
+      "dose": "",
+      "route": "Oral drops",
+      "frequency": "0-2y (2.5cc*3); >2y (5cc*3)",
+      "notes": "Colic"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Amoxicare (Ped)",
+      "scientificName": "Amoxicillin",
+      "dose": "125, 250, 400 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "1*3; 90 mg/kg/day (1*3)",
+      "notes": "URTI / Otitis media"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Ogmin (Ped)",
+      "scientificName": "Amoxicillin / Clavulanic acid",
+      "dose": "400 mg / 5 ml; 125, 250 mg",
+      "route": "Susp",
+      "frequency": "50 mg/kg/day (1*3 or 1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Ampicillin / Flucloxacillin (Ped)",
+      "scientificName": "Ampicillin / Flucloxacillin",
+      "dose": "100 mg/5ml; 125, 250 mg",
+      "route": "Susp",
+      "frequency": "40 mg/kg/day (1*4)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Megacare forte (Ped)",
+      "scientificName": "Ampicillin / Flucloxacillin",
+      "dose": "125, 250 mg",
+      "route": "Susp",
+      "frequency": "30 mg/kg/day (1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Cefadrox",
+      "scientificName": "Cefadroxil",
+      "dose": "200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "30 mg/kg/day (1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Zinnat",
+      "scientificName": "Cefuroxime",
+      "dose": "125, 250 mg",
+      "route": "Susp",
+      "frequency": "8 mg/kg/day (1*1 or 1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Cefix",
+      "scientificName": "Cefixime",
+      "dose": "200, 400 mg",
+      "route": "Susp",
+      "frequency": "14 mg/kg/day (1*1 or 1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Adcef (Ped)",
+      "scientificName": "Cefdinir",
+      "dose": "125, 250 mg / 5 ml",
       "route": "Susp",
       "frequency": "10 mg/kg/day (1*1)",
+      "notes": "0.4 * wt cc; away from milk"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Azicare (Ped)",
+      "scientificName": "Azithromycin",
+      "dose": "200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "15 mg/kg/day (1*2)",
       "notes": ">6 months, for 5 days"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Klaricare (Ped)",
+      "scientificName": "Clarithromycin",
+      "dose": "200 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "30-50 mg/kg/day (1*4)",
+      "notes": ">6 months; before meal"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Erythrocare",
+      "scientificName": "Erythromycin",
+      "dose": "200 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "50 mg/kg/day (1*2)",
+      "notes": ""
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Sulprim (Ped)",
+      "scientificName": "Sulfamethoxazole / Trimethoprim",
+      "dose": "40 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "50 mg/kg/day (1*3)",
+      "notes": ">2 months"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Flagyl (Syrup)",
+      "scientificName": "Metronidazole",
+      "dose": "125 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "5cc*2*3d then repeat after 2wks; 1/3*wt (1*3)*7-10d",
+      "notes": ">2 year"
+    },
+    {
+      "category": "2-Antibiotics",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Supraviran (Susp)",
+      "scientificName": "Acyclovir",
+      "dose": "200 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "<45kg: 80mg/kg/day (1*4); >45kg: adult dose",
+      "notes": "For chickenpox for 5 days"
+    },
+    {
+      "category": "4-Antifungal",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Sporofulvin",
+      "scientificName": "Griseofulvin",
+      "dose": "125 mg / 5 ml",
+      "route": "Susp",
+      "frequency": "10 mg/kg/day (1*3)",
+      "notes": ">2 year, for 3 weeks"
+    },
+    {
+      "category": "4-Antifungal",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Dactazol (Ped gel)",
+      "scientificName": "Miconazole",
+      "dose": "",
+      "route": "Oral gel",
+      "frequency": "<1y (1cc*4); >1y (2.5cc*4)",
+      "notes": "For candidiasis"
+    },
+    {
+      "category": "4-Antifungal",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Candistatin (Ped)",
+      "scientificName": "Nystatin",
+      "dose": "",
+      "route": "Oral drops",
+      "frequency": "Newborn (1cc*1); Child (1cc*4); Adult (4cc*1)",
+      "notes": "For oral thrush"
+    },
+    {
+      "category": "5-Dermatologic drug",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Decomb",
+      "scientificName": "Nystatin / Neomycin / Triamcinolone",
+      "dose": "",
+      "route": "Cream",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "5-Dermatologic drug",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Calderm",
+      "scientificName": "Zinc oxide / Calamine / Dermatol / Boric acid",
+      "dose": "",
+      "route": "Cream / Powder",
+      "frequency": "PRN",
+      "notes": "Skin fold"
+    },
+    {
+      "category": "5-Dermatologic drug",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Cool",
+      "scientificName": "Zinc oxide",
+      "dose": "",
+      "route": "Ointment",
+      "frequency": "With each diaper change",
+      "notes": ""
+    },
+    {
+      "category": "5-Dermatologic drug",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Dermalux",
+      "scientificName": "Zinc oxide / Lignocaine",
+      "dose": "",
+      "route": "Lotion",
+      "frequency": "1*3",
+      "notes": ""
+    },
+    {
+      "category": "5-Dermatologic drug",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Fenistil (Gel)",
+      "scientificName": "Dimethindene maleate",
+      "dose": "",
+      "route": "Gel",
+      "frequency": "1*3",
+      "notes": "Itching"
+    },
+    {
+      "category": "6-Scabies and Lice",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Scabicide",
+      "scientificName": "Benzyl benzoate",
+      "dose": "",
+      "route": "Emulsion",
+      "frequency": "",
+      "notes": "For scabies"
+    },
+    {
+      "category": "6-Scabies and Lice",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Tic tac",
+      "scientificName": "Permethrin",
+      "dose": "",
+      "route": "Shampoo",
+      "frequency": "",
+      "notes": "For lice and eggs"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Tussibal CO (Ped)",
+      "scientificName": "Codeine phosphate / Pseudoephedrine / Triprolidine",
+      "dose": "10 mg / 30 mg / 1.25 mg per 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (3cc*3); 6-12y (5cc*3)",
+      "notes": ">2 year; antitussive, decongestant"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Tussibal (Dextro)",
+      "scientificName": "Dextromethorphan / Honey / Pseudoephedrine / Triprolidine",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "2-6y (3cc*3); 6-12y (5cc*3)",
+      "notes": ">2 year; antitussive, decongestant"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Tussibal expectorant (Ped)",
+      "scientificName": "Guaifenesin / Pseudoephedrine / Triprolidine",
+      "dose": "100 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (5cc*3); 6-12y (10cc*3)",
+      "notes": ">2 year; expectorant, decongestant"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Fluamnic",
+      "scientificName": "",
+      "dose": "4 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (3cc*3); 6-12y (5cc*3)",
+      "notes": ">2 year; expectorant"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Pectosin (Ped)",
+      "scientificName": "",
+      "dose": "0.375 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "<5y (5cc*2); 5-10y (5cc*4); 3cc*3 (up to 9mg/d)",
+      "notes": "As mucolytic"
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Decort (Ped)",
+      "scientificName": "Dexamethasone",
+      "dose": "0.5, 0.75, 2 mg; 15 mg / 5 ml",
+      "route": "Tab / Syrup",
+      "frequency": "1-2 mg/kg/day for 5 days",
+      "notes": ""
+    },
+    {
+      "category": "7-Antitussive and Mucolytic",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Ventocare (Syrup)",
+      "scientificName": "Salbutamol",
+      "dose": "2 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (2.5cc*3); 6-12y (5cc*3); 1/3*wt (1*3)",
+      "notes": ">2 year"
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Fenistil (Drops)",
+      "scientificName": "Dimethindene maleate",
+      "dose": "1 mg / 1 ml",
+      "route": "Drops",
+      "frequency": "1 drop / kg / dose (1*3)",
+      "notes": "<1 year"
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Lorax (Syrup)",
+      "scientificName": "Loratadine",
+      "dose": "5 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (5cc*1); 6-12y (10cc*1)",
+      "notes": ">2 year"
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Rinazal",
+      "scientificName": "Desloratadine",
+      "dose": "2.5 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (2.5cc*1); 6-12y (5cc*1)",
+      "notes": ""
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Allergon (Syrup)",
+      "scientificName": "Chlorpheniramine",
+      "dose": "2 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (2.5cc*4); 6-12y (5cc*4)",
+      "notes": ">2 years"
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Lukast",
+      "scientificName": "Montelukast",
+      "dose": "5 mg, 10 mg",
+      "route": "Chewable tab / Tab",
+      "frequency": "6-14y (1*1); >15y (1*1)",
+      "notes": ""
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Cyprodine (Syrup)",
+      "scientificName": "Cyproheptadine HCl",
+      "dose": "2 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2-6y (5cc*3); 6-12y (10cc*3)",
+      "notes": ""
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Decongex cold",
+      "scientificName": "Chlorpheniramine / Pseudoephedrine / Paracetamol",
+      "dose": "1 mg/5ml; 15 mg/5ml; 160 mg/5ml",
+      "route": "Syrup",
+      "frequency": "2-6y (5cc*3); 6-12y (10cc*3)",
+      "notes": ""
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Normasal (Nasal)",
+      "scientificName": "NaCl",
+      "dose": "0.74%, 0.9%",
+      "route": "Nasal spray / drop",
+      "frequency": "1 spray*3 / 3 drops*3",
+      "notes": ""
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Nasocare (Nasal)",
+      "scientificName": "Oxymetazoline",
+      "dose": "0.025%",
+      "route": "Nasal spray",
+      "frequency": "1 spray*2 for 5 days",
+      "notes": ">2 year"
+    },
+    {
+      "category": "9-Antihistamine and Decongestant",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Nirvin",
+      "scientificName": "Oxymetazoline",
+      "dose": "0.5 mg / ml",
+      "route": "Nasal spray",
+      "frequency": "2-6y (1spray*2); >2y (1spray*3)",
+      "notes": ""
+    },
+    {
+      "category": "10-GI",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Pramine (Syrup)",
+      "scientificName": "Metoclopramide",
+      "dose": "5 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "<1y (2.5cc*4); 1-4y (5cc*4)",
+      "notes": ""
+    },
+    {
+      "category": "10-GI",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Furamix (Ped)",
+      "scientificName": "Furazolidone / Quinolone / Kaolin / Pectin",
+      "dose": "",
+      "route": "Supp",
+      "frequency": "PRN",
+      "notes": ">1 month; antibacterial, antiprotozoal, amebiasis, antidiarrheal"
+    },
+    {
+      "category": "10-GI",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Glycerin (Ped)",
+      "scientificName": "Glycerin",
+      "dose": "",
+      "route": "Supp",
+      "frequency": "PRN",
+      "notes": ""
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Adol (Drops 2)",
+      "scientificName": "Vit D (500 / 200 unit)",
+      "dose": "500 / 200 unit",
+      "route": "Drops",
+      "frequency": "2 drops daily",
+      "notes": "<1 year"
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Feromin (Syrup)",
+      "scientificName": "Ferrous sulfate",
+      "dose": "50 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "2 mg/kg/day (Prophylaxis); 6 mg/kg/day (TMT)",
+      "notes": ""
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Vit C drop",
+      "scientificName": "Vitamin C",
+      "dose": "50 mg / 20 drops",
+      "route": "Drop",
+      "frequency": "",
+      "notes": ""
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Vit A/C/Folic Syrup",
+      "scientificName": "Vit C, Vit A, Folic acid",
+      "dose": "",
+      "route": "Syrup",
+      "frequency": "1-3y (2.5cc*1); >3y (5cc*1)",
+      "notes": ""
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Duvalep (Syrup)",
+      "scientificName": "Sodium valproate",
+      "dose": "200 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "15 mg/kg/day, +5mg/kg/day weekly (up to 25mg/kg/d)",
+      "notes": ""
+    },
+    {
+      "category": "11-Nutrition and Supplement",
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Tegretol (Syrup)",
+      "scientificName": "Carbamazepine",
+      "dose": "200 mg / 5 ml",
+      "route": "Syrup",
+      "frequency": "10-15 mg/kg/day (1*3)",
+      "notes": ""
     }
   ]
 }
