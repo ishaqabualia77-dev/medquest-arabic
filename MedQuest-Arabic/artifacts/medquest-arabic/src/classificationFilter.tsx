@@ -56,6 +56,50 @@ export const MINORS_IDS: SurgicalBranchId[] = SURGICAL_MINORS.map((b) => b.id);
 export const NON_SURGICAL_IDS: NonSurgicalBranchId[] = NON_SURGICAL_BRANCHES.map((b) => b.id);
 
 export function classifyQuestionBranch(specialty: string, questionText = ""): ClassificationBranchId {
+  const rawSpec = (specialty || "").trim().toLowerCase();
+
+  // 1. Direct specialty match first so batch questions keep their exact assigned specialty
+  if (rawSpec === "internal medicine" || rawSpec === "cardiology" || rawSpec === "respiratory medicine" || rawSpec === "neurology" || rawSpec === "nephrology" || rawSpec === "endocrinology" || rawSpec === "gastroenterology" || rawSpec === "infectious disease" || rawSpec.includes("باطن")) {
+    return "Internal Medicine";
+  }
+  if (rawSpec === "pediatrics" || rawSpec === "paediatrics" || rawSpec.includes("أطفال")) {
+    return "Pediatrics";
+  }
+  if (rawSpec === "dermatology" || rawSpec.includes("جلدي")) {
+    return "Dermatology";
+  }
+  if (rawSpec === "psychiatry" || rawSpec.includes("نفسي")) {
+    return "Psychiatry";
+  }
+  if (rawSpec === "radiology" || rawSpec.includes("أشعة")) {
+    return "Radiology";
+  }
+  if (rawSpec === "anesthesia" || rawSpec === "anaesthesia" || rawSpec.includes("تخدير")) {
+    return "Anesthesia";
+  }
+  if (rawSpec === "ent" || rawSpec === "otorhinolaryngology" || rawSpec.includes("أنف")) {
+    return "ENT";
+  }
+  if (rawSpec === "ophthalmology" || rawSpec.includes("عيون")) {
+    return "Ophthalmology";
+  }
+  if (rawSpec === "orthopedics" || rawSpec === "orthopaedics" || rawSpec.includes("عظام")) {
+    return "Orthopedics";
+  }
+  if (rawSpec === "urosurgery" || rawSpec === "urology" || rawSpec.includes("مسالك")) {
+    return "Urosurgery";
+  }
+  if (rawSpec === "oncology" || rawSpec.includes("أورام")) {
+    return "Oncology";
+  }
+  if (rawSpec === "gynecology & obstetrics" || rawSpec === "obstetrics & gynecology" || rawSpec === "gynecology" || rawSpec === "obstetrics" || rawSpec.includes("نسائ") || rawSpec.includes("توليد")) {
+    return "Gynecology & Obstetrics";
+  }
+  if (rawSpec === "surgery" || rawSpec.includes("جراح")) {
+    return "Surgery";
+  }
+
+  // 2. Fallback keyword classification for general or untagged items
   const s = `${specialty || ""} ${questionText || ""}`.toLowerCase();
 
   if (/\b(ent|otorhinolaryng|otitis|sinusitis|tonsill|laryng|pharyng)\b|أنف|أذن|حنجر/i.test(s)) return "ENT";
