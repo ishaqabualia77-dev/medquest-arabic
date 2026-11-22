@@ -1,0 +1,105 @@
+{
+  "adults": [
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "tradeName": "Paramol",
+      "scientificName": "Paracetamol",
+      "dose": "500 mg",
+      "route": "Tab",
+      "frequency": "1*4",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "tradeName": "Paramol plus",
+      "scientificName": "Paracetamol / Caffeine",
+      "dose": "500 mg / 65 mg",
+      "route": "Tab",
+      "frequency": "1-2 PRN up to 4x",
+      "notes": ""
+    },
+    {
+      "category": "1-Analgesic and Antipyretic",
+      "tradeName": "Emegrain",
+      "scientificName": "Paracetamol / Metoclopramide",
+      "dose": "500 mg / 5 mg",
+      "route": "Tab",
+      "frequency": "1*3",
+      "notes": "For migraine with N&V; >12 years"
+    },
+    {
+      "category": "2-Neurology",
+      "tradeName": "Assival",
+      "scientificName": "Diazepam",
+      "dose": "5 / 10 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "Up to 60 mg/day"
+    },
+    {
+      "category": "3-Antibiotics",
+      "tradeName": "Ogmin",
+      "scientificName": "Amoxicillin / Clavulanic acid",
+      "dose": "500 mg / 875 mg",
+      "route": "Tab",
+      "frequency": "1*3 / 1*2",
+      "notes": ""
+    },
+    {
+      "category": "18-Hypertension",
+      "tradeName": "Anapril",
+      "scientificName": "Enalapril",
+      "dose": "5 / 10 / 20 mg",
+      "route": "Tab",
+      "frequency": "10-40 mg daily",
+      "notes": ""
+    },
+    {
+      "category": "19-DM",
+      "tradeName": "Glucomet",
+      "scientificName": "Metformin",
+      "dose": "850 mg",
+      "route": "Tab",
+      "frequency": "1*2",
+      "notes": "C/I: renal failure"
+    }
+  ],
+  "pediatrics": [
+    {
+      "source": "Pediatric doses (1).pdf",
+      "genericName": "Paracetamol",
+      "tradeName": "Adol",
+      "strength": "120 mg/5 ml",
+      "form": "Syrup",
+      "pediatricDose": "Half weight q4-6h",
+      "notes": ""
+    },
+    {
+      "source": "Pediatric doses (1).pdf",
+      "genericName": "Paracetamol",
+      "tradeName": "Adol",
+      "strength": "100 mg/1 ml",
+      "form": "Drops",
+      "pediatricDose": "One-tenth weight q4-6h (10-15 mg/kg/dose q4-6h)",
+      "notes": "Note: >12 years or >40 kg treat as adult dose"
+    },
+    {
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Febramol",
+      "scientificName": "Paracetamol",
+      "dose": "120 mg/5 ml; 80/150/300 mg",
+      "route": "Syrup / Supp",
+      "frequency": "5-10 cc (1*3); 15 mg/kg/dose (1*3)",
+      "notes": "<6 yr / >6 yr"
+    },
+    {
+      "source": "Pediatrics_drugs-1.pdf",
+      "tradeName": "Azicare",
+      "scientificName": "Azithromycin",
+      "dose": "200 mg/5 ml",
+      "route": "Susp",
+      "frequency": "10 mg/kg/day (1*1)",
+      "notes": ">6 months, for 5 days"
+    }
+  ]
+}

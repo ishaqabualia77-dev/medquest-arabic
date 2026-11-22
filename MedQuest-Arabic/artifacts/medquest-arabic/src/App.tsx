@@ -1,3 +1,4 @@
+import medicationsData from "./data/medications.json";
 import { palNonSurgicalQuestionsBatch3 } from "./palNonSurgicalQuestionsBatch3";
 import { nonSurgicalClassificationQuestions } from "./nonSurgicalClassificationQuestions";
 import { palNonSurgicalQuestionsBatch2 } from "./palNonSurgicalQuestionsBatch2";
@@ -476,131 +477,91 @@ function ExamSimulation({track,subTrack,setSubTrack,questions,onTrackChange,onFi
 }
 
 
-interface MedicationItem {
-  id: string;
-  arabicName: string;
-  englishName: string;
-  drugClass: string;
-  indications: string;
-  keyDosing: string;
-  cautionsAndPearls: string;
+interface MedEntry {
+  category?: string;
+  source?: string;
+  tradeName?: string;
+  scientificName?: string;
+  genericName?: string;
+  dose?: string;
+  strength?: string;
+  route?: string;
+  form?: string;
+  frequency?: string;
+  pediatricDose?: string;
+  notes?: string;
 }
 
-const MEDICATIONS_CATALOG: MedicationItem[] = [
-  {
-    id: "med-nitroglycerin",
-    arabicName: "نيتروجليسرين",
-    englishName: "Nitroglycerin (SL / IV)",
-    drugClass: "Nitrates · القلب والأوعية",
-    indications: "تسكين ألم الذبحة الصدرية الحادة، وتحسين التحميل المسبق في الوذمة الرئوية الحادة.",
-    keyDosing: "تحت اللسان 0.3–0.6 mg كل 5 دقائق (حتى 3 جرعات) أو تسريب وريدي معاير حسب الضغط.",
-    cautionsAndPearls: "ممنوع مع مثبطات PDE-5 (مثل Sildenafil) واحذر في احتشاء البطين الأيمن أو انخفاض الضغط."
-  },
-  {
-    id: "med-amiodarone",
-    arabicName: "أميودارون",
-    englishName: "Amiodarone",
-    drugClass: "Class III Antiarrhythmic · نظم القلب",
-    indications: "الرجفان الأذيني، وتسرع/رجفان البطين المقاوم في الطوارئ.",
-    keyDosing: "وريدي 150 mg خلال 10 دقائق في الحالات الحادة، ثم تسريب مستمر حسب البروتوكول.",
-    cautionsAndPearls: "تسمم درقي ورئوي وكبدي وقرني؛ راقب وظائف الغدة الدرقية والكبد والـ ECG."
-  },
-  {
-    id: "med-ceftriaxone",
-    arabicName: "سيفترياكسون",
-    englishName: "Ceftriaxone",
-    drugClass: "3rd-Gen Cephalosporin · مضادات حيوية",
-    indications: "الالتهاب الرئوي المكتسب من المجتمع، التهاب السحايا الجرثومي، وعدوى المسالك/الدم.",
-    keyDosing: "1–2 g مرة أو مرتين يومياً (وتُرفع إلى 2 g كل 12 ساعة في التهاب السحايا).",
-    cautionsAndPearls: "تجنب خلطه وريدياً مع محاليل الكالسيوم خاصة عند حديثي الولادة؛ يطرح أساساً عبر الصفراء/البول."
-  },
-  {
-    id: "med-vancomycin",
-    arabicName: "فانكومايسين",
-    englishName: "Vancomycin",
-    drugClass: "Glycopeptide Antibiotic · مضادات حيوية",
-    indications: "عدوى MRSA، التهاب السحايا/البطانة الشغافية المشتبه به، والتهاب القولون بـ C. difficile (فموياً).",
-    keyDosing: "جرعة تحميل 25–30 mg/kg وريدياً ثم معايرة حسب الكلى والتركيز العلاجي (AUC/MIC).",
-    cautionsAndPearls: "التسريب السريع يسبب متلازمة الرجل الأحمر؛ يُعدَّل في القصور الكلوي مع مراقبة الكرياتينين."
-  },
-  {
-    id: "med-insulin-reg-nph",
-    arabicName: "الأنسولين (المنتظم و NPH)",
-    englishName: "Regular & NPH Insulin",
-    drugClass: "Antidiabetic · الغدد الصماء",
-    indications: "ضبط سكر الدم في السكري، وتسريب الأنسولين الوريدي في الحماض الكيتوني السكري (DKA).",
-    keyDosing: "تُعاير الجرعات حسب مستوى السكر في الدم ونظام القاعدي/الوجبات أو بروتوكول DKA.",
-    cautionsAndPearls: "نقص سكر الدم ونقص البوتاسيوم أثناء العلاج هما الأهم؛ راقب K+ قبل وأثناء التسريب."
-  },
-  {
-    id: "med-levothyroxine",
-    arabicName: "ليفوثيروكسين",
-    englishName: "Levothyroxine (T4)",
-    drugClass: "Thyroid Hormone · الغدد الصماء",
-    indications: "قصور الغدة الدرقية الأولي والثانوي.",
-    keyDosing: "جرعة صباحية على معدة فارغة قبل الإفطار بـ 30–60 دقيقة، وتُعدَّل لكبار السن وأمراض القلب.",
-    cautionsAndPearls: "الحديد والكالسيوم ومثبطات مضخة البروتون تقلل امتصاصه؛ افصل بينها بـ 4 ساعات على الأقل."
-  },
-  {
-    id: "med-albuterol-ics",
-    arabicName: "سالبوتامول / موسعات القصبات",
-    englishName: "Albuterol (Salbutamol)",
-    drugClass: "Short-Acting Beta-2 Agonist · الصدرية",
-    indications: "تخفيف الأعراض الحادة والتشنج القصبي في الربو ومرض الانسداد الرئوي المزمن (COPD).",
-    keyDosing: "بخة/استنشاق عند اللزوم أو جلسات رذاذ متكررة في النوبات الحادة حسب التقييم السريري.",
-    cautionsAndPearls: "قد يسبب رعاشاً وتسرعاً في القلب ونقصاً مؤقتاً في البوتاسيوم مع الجرعات المتكررة."
-  },
-  {
-    id: "med-heparin-enoxaparin",
-    arabicName: "الهيبارين / إينوكسابارين",
-    englishName: "UFH & Enoxaparin (LMWH)",
-    drugClass: "Anticoagulant · مضادات التخثر",
-    indications: "علاج والوقاية من الخثار الوريدي العميق (DVT) والانصمام الرئوي (PE) والمتلازمة الإكليلية الحادة.",
-    keyDosing: "إينوكسابارين حسب الوزن (مع تعديل في القصور الكلوي) أو هيبارين وريدي معاير بـ aPTT.",
-    cautionsAndPearls: "خطر النزف وقلة الصفيحات المناعية (HIT)؛ راقب الصفيحات والوظيفة الكلوية."
-  }
-];
-
 function MedicationsSection({ onClose }: { onClose: () => void }) {
+  const [activeTab, setActiveTab] = useState<"adults" | "pediatrics">("adults");
   const [query, setQuery] = useState("");
-  const [selectedClass, setSelectedClass] = useState("ALL");
-  const classes = useMemo(
-    () => ["ALL", ...Array.from(new Set(MEDICATIONS_CATALOG.map((m) => m.drugClass)))],
-    []
+  const [selectedGroup, setSelectedGroup] = useState("ALL");
+
+  const rawList = useMemo(
+    () => (activeTab === "adults" ? medicationsData.adults : medicationsData.pediatrics) as MedEntry[],
+    [activeTab]
   );
+
+  const groups = useMemo(() => {
+    const vals = rawList
+      .map((m) => m.category || m.source || "")
+      .filter((v) => Boolean(v));
+    return ["ALL", ...Array.from(new Set(vals))];
+  }, [rawList]);
+
+  useEffect(() => {
+    setSelectedGroup("ALL");
+  }, [activeTab]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return MEDICATIONS_CATALOG.filter((m) => {
-      const matchesClass = selectedClass === "ALL" || m.drugClass === selectedClass;
-      if (!matchesClass) return false;
+    return rawList.filter((m) => {
+      const grp = m.category || m.source || "";
+      const matchesGroup = selectedGroup === "ALL" || grp === selectedGroup;
+      if (!matchesGroup) return false;
       if (!q) return true;
-      return (
-        m.arabicName.toLowerCase().includes(q) ||
-        m.englishName.toLowerCase().includes(q) ||
-        m.drugClass.toLowerCase().includes(q) ||
-        m.indications.toLowerCase().includes(q)
+      return Object.values(m).some((val) =>
+        String(val ?? "").toLowerCase().includes(q)
       );
     });
-  }, [query, selectedClass]);
+  }, [rawList, query, selectedGroup]);
 
   return (
-    <div className="panel" style={{ marginTop: 14 }} data-testid="medications-independent-section">
+    <div dir="ltr" className="panel" style={{ marginTop: 14, textAlign: "left" }} data-testid="medications-independent-section">
       <div className="blueprint-head" style={{ marginBottom: 12 }}>
         <div>
-          <h3 className="panel-title">الأدوية · Medications</h3>
-          <p className="panel-hint">قسم مستقل للمراجعة الدوائية السريعة غير مرتبط بمسارات الامتحانات.</p>
+          <h3 className="panel-title">Medications</h3>
+          <p className="panel-hint">Quick clinical drug & pediatric dosing reference.</p>
         </div>
         <button type="button" className="btn-secondary" style={{ padding: "6px 12px", fontSize: 12.5 }} onClick={onClose}>
-          إغلاق القسم
+          Close
         </button>
       </div>
+
+      <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+        <button
+          type="button"
+          className={activeTab === "adults" ? "btn-primary" : "btn-secondary"}
+          onClick={() => setActiveTab("adults")}
+        >
+          Adults ({medicationsData.adults.length})
+        </button>
+        <button
+          type="button"
+          className={activeTab === "pediatrics" ? "btn-primary" : "btn-secondary"}
+          onClick={() => setActiveTab("pediatrics")}
+        >
+          Pediatrics ({medicationsData.pediatrics.length})
+        </button>
+      </div>
+
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 12 }}>
         <input
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="ابحث باسم الدواء (عربي / إنجليزي) أو الاستخدام..."
-          aria-label="بحث في الأدوية"
+          placeholder="Search trade name, generic/scientific name, dose, or notes..."
+          aria-label="Search medications"
           style={{
             flex: "1 1 220px",
             padding: "8px 12px",
@@ -610,54 +571,50 @@ function MedicationsSection({ onClose }: { onClose: () => void }) {
           }}
         />
         <select
-          value={selectedClass}
-          onChange={(e) => setSelectedClass(e.target.value)}
-          aria-label="تصفية حسب المجموعة الدوائية"
-          className="filter-select"
+          value={selectedGroup}
+          onChange={(e) => setSelectedGroup(e.target.value)}
+          aria-label="Filter by category or source"
+          style={{
+            padding: "8px 12px",
+            borderRadius: 10,
+            border: "1px solid #d5dfd9",
+            fontSize: 13.5,
+            background: "#fff",
+          }}
         >
-          {classes.map((c) => (
-            <option key={c} value={c}>
-              {c === "ALL" ? "جميع المجموعات الدوائية" : c}
+          {groups.map((g) => (
+            <option key={g} value={g}>
+              {g === "ALL" ? "All Categories / Sources" : g}
             </option>
           ))}
         </select>
       </div>
-      <div style={{ display: "grid", gap: 10 }}>
-        {filtered.length ? (
-          filtered.map((med) => (
-            <div
-              key={med.id}
-              style={{
-                padding: 12,
-                borderRadius: 10,
-                border: "1px solid #e3ebe6",
-                background: "#fafcfb",
-              }}
-            >
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
-                <div>
-                  <strong style={{ fontSize: 14.5 }}>{med.arabicName}</strong>{" "}
-                  <span dir="ltr" style={{ fontSize: 12.5, color: "#475569", fontWeight: 600 }}>
-                    ({med.englishName})
-                  </span>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
+        {filtered.length > 0 ? (
+          filtered.map((med, idx) => {
+            const name = med.scientificName || med.genericName || "";
+            const doseVal = med.dose || med.strength || "";
+            const routeVal = med.route || med.form || "";
+            const freqVal = med.frequency || med.pediatricDose || "";
+            const groupVal = med.category || med.source || "";
+            return (
+              <div key={idx} style={{ border: "1px solid #e2e8e4", borderRadius: 10, padding: 12, background: "#fff" }}>
+                <div style={{ fontWeight: 700, fontSize: 15 }}>
+                  {med.tradeName} {name ? `(${name})` : ""}
                 </div>
-                <span className="meta-chip">{med.drugClass}</span>
+                {groupVal && <div style={{ fontSize: 12, color: "#6b7770", marginTop: 2 }}>{groupVal}</div>}
+                {doseVal && <div style={{ fontSize: 13, marginTop: 6 }}><strong>Dose / Strength:</strong> {doseVal}</div>}
+                {routeVal && <div style={{ fontSize: 13, marginTop: 2 }}><strong>Route / Form:</strong> {routeVal}</div>}
+                {freqVal && <div style={{ fontSize: 13, marginTop: 2 }}><strong>Frequency / Dose:</strong> {freqVal}</div>}
+                {med.notes && <div style={{ fontSize: 12.5, color: "#8a5a00", marginTop: 4 }}><strong>Notes:</strong> {med.notes}</div>}
               </div>
-              <p className="panel-hint" style={{ marginTop: 6, lineHeight: 1.65 }}>
-                <strong>الاستخدامات:</strong> {med.indications}
-              </p>
-              <p className="panel-hint" style={{ marginTop: 4, lineHeight: 1.65 }}>
-                <strong>الجرعات الشائعة:</strong> {med.keyDosing}
-              </p>
-              <p className="panel-hint" style={{ marginTop: 4, lineHeight: 1.65, color: "#7c2d12" }}>
-                <strong>تنبيهات وتداخلات:</strong> {med.cautionsAndPearls}
-              </p>
-            </div>
-          ))
+            );
+          })
         ) : (
           <div className="empty-state">
-            <strong>لا توجد أدوية مطابقة للبحث</strong>
-            جرّب كلمة بحث أخرى أو اختر جميع المجموعات الدوائية.
+            <strong>No matching medications</strong>
+            Try another search term or select All Categories / Sources.
           </div>
         )}
       </div>
@@ -705,11 +662,10 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
       >
         <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700 }}>
           <Pill size={17} />
-          <span>الأدوية · Medications</span>
-          <span style={{ fontSize: 12, opacity: 0.8 }}>(قسم مستقل)</span>
+          <span>Medications</span>
         </span>
         <span style={{ fontSize: 12.5 }}>
-          {medicationsOpen ? "إخفاء القسم" : `فتح المرجع (${MEDICATIONS_CATALOG.length})`}
+          {medicationsOpen ? "Hide" : `Open (${medicationsData.adults.length + medicationsData.pediatrics.length})`}
         </span>
       </button>
       {medicationsOpen && <MedicationsSection onClose={() => setMedicationsOpen(false)} />}
