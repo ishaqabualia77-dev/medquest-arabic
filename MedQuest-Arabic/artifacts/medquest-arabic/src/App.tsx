@@ -68,7 +68,7 @@ async function parseApiJson<T>(res: Response, fallbackError: string): Promise<T>
 
 
 
-type TrackId = 'internship' | 'specialty';
+type TrackId = 'internship' | 'specialty' | "usmle-step1" | "usmle-step2" | "mrcp" | "imle";
 type Difficulty = 'Basic' | 'Intermediate' | 'Advanced';
 type Question = {
   id: string; specialty: string; difficulty: Difficulty; question: string;
@@ -112,6 +112,46 @@ const specialtyQuestions: Question[] = [
 ];
 
 const trackInfo: Record<TrackId, { name: string; english: string; description: string; symbol: string; blueprint: BlueprintItem[] }> = {
+  "usmle-step1": {
+    name: "USMLE Step 1 · المزاولة الأمريكية",
+    english: "USMLE Step 1 · US Medical Licensing",
+    blueprint: [
+      { category: "Pathology & Pathophysiology", share: 35 },
+      { category: "Pharmacology & Microbiology", share: 30 },
+      { category: "Physiology & Organ Systems", share: 20 },
+      { category: "Biochemistry & Behavioral", share: 15 }
+    ]
+  },
+  "usmle-step2": {
+    name: "USMLE Step 2 CK · المزاولة الأمريكية",
+    english: "USMLE Step 2 CK · Clinical Knowledge",
+    blueprint: [
+      { category: "Internal Medicine", share: 40 },
+      { category: "Surgery & OB/GYN", share: 25 },
+      { category: "Pediatrics & Psychiatry", share: 20 },
+      { category: "Preventive & Ethics", share: 15 }
+    ]
+  },
+  "mrcp": {
+    name: "MRCP · المزاولة البريطانية",
+    english: "MRCP (UK) · Membership of the Royal Colleges of Physicians",
+    blueprint: [
+      { category: "Acute & General Medicine", share: 35 },
+      { category: "Cardiology, Resp & Renal", share: 30 },
+      { category: "Neurology, GI & Endo", share: 20 },
+      { category: "Haematology, ID & Rheumatology", share: 15 }
+    ]
+  },
+  "imle": {
+    name: "IMLE · المزاولة الإسرائيلية",
+    english: "IMLE · Israeli Medical Licensing Exam",
+    blueprint: [
+      { category: "Internal Medicine", share: 35 },
+      { category: "General Surgery", share: 25 },
+      { category: "Pediatrics & OB/GYN", share: 25 },
+      { category: "Emergency & Psychiatry", share: 15 }
+    ]
+  },
   internship: {
     name:'امتحان الامتياز الفلسطيني', english:'Palestinian Internship', description:'أساسيات سريرية ومواقف شائعة في بداية الممارسة', symbol:'01',
     blueprint:[
@@ -131,15 +171,15 @@ const categoriesByTrack: Record<TrackId, string[]> = {
 };
 const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: specialtyQuestions };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
-const emptyProgress: Progress = { answered:{internship:[],specialty:[]}, correct:{internship:[],specialty:[]}, streak:0, lastStudy:'' };
+const emptyProgress: Progress = { answered: {internship:[],specialty:[], "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []}, correct: {internship:[],specialty:[], "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []}, streak:0, lastStudy:'' };
 const readProgress = (): Progress => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return emptyProgress;
     const parsed = JSON.parse(stored) as Partial<Progress>;
     return {
-      answered:{ internship:Array.isArray(parsed.answered?.internship)?parsed.answered.internship:[], specialty:Array.isArray(parsed.answered?.specialty)?parsed.answered.specialty:[] },
-      correct:{ internship:Array.isArray(parsed.correct?.internship)?parsed.correct.internship:[], specialty:Array.isArray(parsed.correct?.specialty)?parsed.correct.specialty:[] },
+      answered: { internship:Array.isArray(parsed.answered?.internship)?parsed.answered.internship:[], specialty:Array.isArray(parsed.answered?.specialty)?parsed.answered.specialty:[] , "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []},
+      correct: { internship:Array.isArray(parsed.correct?.internship)?parsed.correct.internship:[], specialty:Array.isArray(parsed.correct?.specialty)?parsed.correct.specialty:[] , "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []},
       streak:typeof parsed.streak==='number'?parsed.streak:0, lastStudy:typeof parsed.lastStudy==='string'?parsed.lastStudy:'',
     };
   } catch { return emptyProgress; }
@@ -324,7 +364,7 @@ function AppHome() {
       const day=todayKey();
       const wasYesterday=prev.lastStudy && new Date(`${prev.lastStudy}T00:00:00`).getTime()===new Date(`${day}T00:00:00`).getTime()-86400000;
       const streak=prev.lastStudy===day?prev.streak:wasYesterday?prev.streak+1:1;
-      return {...prev,answered:{...prev.answered,[track]:answered},correct:{...prev.correct,[track]:correct},streak,lastStudy:day};
+      return {...prev,answered: {...prev.answered,[track]:answered, "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []},correct: {...prev.correct,[track]:correct, "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []},streak,lastStudy:day};
     });
   };
   const nextQuestion = () => { setQuestionIndex(index=>index+1); setSelectedAnswer(null); };
@@ -890,6 +930,27 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
     <div className="track-grid">
       {(Object.keys(trackInfo) as TrackId[]).map(id=><button key={id} className={`track-card ${track===id?'selected':''}`} onClick={()=>chooseTrack(id)} data-testid={`track-${id}`}>
         <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id]} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
+      {(["usmle-step1", "usmle-step2", "mrcp", "imle"] as const).map((extraId) => (
+        <button
+          key={extraId}
+          type="button"
+          className={`track-card ${track === extraId ? "selected" : ""}`}
+          onClick={() => chooseTrack(extraId)}
+          data-testid={`track-${extraId}`}
+        >
+          <span className="track-icon"><GraduationCap size={20} /></span>
+          <span className="track-info">
+            <span className="track-name">{trackInfo[extraId]?.name || extraId}</span>
+            <span className="track-desc" dir="ltr" style={{ display: "block", textAlign: "right" }}>
+              {trackInfo[extraId]?.english || ""}
+            </span>
+            <span className="track-meta">
+              {(counts?.[extraId] ?? 0)} QUESTIONS · {(progress?.answered?.[extraId]?.length ?? 0)} REVIEWED
+            </span>
+          </span>
+          <ArrowUpRight className="track-arrow" size={17} />
+        </button>
+      ))}
     </div>
 
     <div style={{ marginTop: 12 }}>
