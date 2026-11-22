@@ -195,7 +195,7 @@
     "id": "em-001",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Emergency Medicine",
+    "specialty": "Emergency",
     "difficulty": "easy",
     "question": "A patient presents minutes after a bee sting or new medication with generalized urticaria, angioedema, wheezing, and hypotension (BP 80/50 mmHg). What is the immediate first-line treatment?",
     "options": [
@@ -211,7 +211,7 @@
     "id": "em-002",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Emergency Medicine",
+    "specialty": "Emergency",
     "difficulty": "medium",
     "question": "A patient presents with confusion, headache, and cherry-red skin or normal appearance after exposure to faulty indoor heating in winter, with pulse oximetry reading falsely normal or high despite tissue hypoxia. Which diagnosis should be suspected?",
     "options": [
@@ -4723,7 +4723,7 @@
     "id": "g-anes-001",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient is scheduled for elective surgery and undergoes preoperative airway evaluation using the Mallampati classification while sitting upright with the head neutral and mouth maximally open. Which visual finding corresponds to Mallampati Class I?",
     "options": [
@@ -4739,7 +4739,7 @@
     "id": "g-anes-002",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "hard",
     "question": "Shortly after induction of general anesthesia using volatile anesthetics and/or succinylcholine, a patient develops rapidly rising end-tidal carbon dioxide (ETCO2), masseter spasm or generalized muscle rigidity, tachycardia, tachypnea, hyperthermia, and mixed metabolic and respiratory acidosis. What is the most likely diagnosis?",
     "options": [
@@ -4755,7 +4755,7 @@
     "id": "g-anes-003",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "hard",
     "question": "A patient experiences malignant hyperthermia during anesthesia. Which immediate pharmacologic and supportive interventions are essential once triggering agents are discontinued?",
     "options": [
@@ -4771,7 +4771,7 @@
     "id": "g-anes-004",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "Following endotracheal intubation, which confirmatory method is most reliable for verifying intratracheal tube placement alongside clinical inspection and auscultation?",
     "options": [
@@ -4787,7 +4787,7 @@
     "id": "g-anes-005",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient is scheduled for elective surgery and asks about preoperative fasting (NPO) guidelines for clear liquids in healthy adults without delayed gastric emptying. Which fasting interval for clear liquids is standard in contemporary anesthesia guidelines?",
     "options": [
@@ -4803,7 +4803,7 @@
     "id": "g-anes-006",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient with a history of pseudocholinesterase (butyrylcholinesterase) deficiency or atypical enzyme variant receives succinylcholine during induction. Which clinical effect should be anticipated?",
     "options": [
@@ -4819,7 +4819,7 @@
     "id": "g-anes-007",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "Which non-depolarizing neuromuscular blocking agent can have its blockade rapidly reversed by sugammadex (an aminosteroid-encapsulating agent)?",
     "options": [
@@ -4835,7 +4835,7 @@
     "id": "g-anes-008",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient receives a neuromuscular blocking agent and develops persistent weakness in the post-anesthesia care unit. When reversing a non-depolarizing neuromuscular blocker with an acetylcholinesterase inhibitor such as neostigmine, which co-administered agent is given to prevent muscarinic side effects such as bradycardia and excess secretions?",
     "options": [
@@ -4851,7 +4851,7 @@
     "id": "g-anes-009",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "hard",
     "question": "During peripheral nerve block or local anesthetic infiltration, a patient abruptly develops perioral numbness, metallic taste, tinnitus, agitation, seizures, or ventricular arrhythmias/cardiac arrest. Which condition is present, and what specific rescue therapy is used alongside standard resuscitation?",
     "options": [
@@ -4867,7 +4867,7 @@
     "id": "g-anes-010",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient develops hypotension shortly after induction of spinal or epidural anesthesia due to sympathetic blockade causing vasodilation and decreased venous return. Which physiological mechanism explains this hypotension?",
     "options": [
@@ -4883,7 +4883,7 @@
     "id": "g-anes-011",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient develops a positional headache after dural puncture (post-dural puncture headache) that worsens within minutes of sitting or standing and improves when lying supine, sometimes accompanied by neck stiffness, photophobia, or auditory symptoms. What is the characteristic feature of this headache?",
     "options": [
@@ -4899,7 +4899,7 @@
     "id": "g-anes-012",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "hard",
     "question": "A patient with severe acute hypoxemic respiratory failure (such as ARDS) is mechanically ventilated. Which lung-protective ventilation strategy is recommended to reduce ventilator-induced lung injury?",
     "options": [
@@ -4915,7 +4915,7 @@
     "id": "g-anes-013",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A mechanically ventilated patient suddenly develops acute hypoxemia, high peak airway pressures, hypotension, and absent breath sounds on the right side. What is the most appropriate immediate action?",
     "options": [
@@ -4931,7 +4931,7 @@
     "id": "g-anes-014",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient is in the post-anesthesia care unit after receiving intravenous fentanyl/morphine and exhibits somnolence, bradypnea (respiratory rate 6/min), and pinpoint pupils. Which intervention is indicated?",
     "options": [
@@ -4947,7 +4947,7 @@
     "id": "g-anes-015",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "easy",
     "question": "A patient is being evaluated preoperatively for anesthesia fitness. Which classification system is widely used to assess a patient's overall physical status and systemic disease burden prior to surgery?",
     "options": [
@@ -4963,7 +4963,7 @@
     "id": "g-anes-016",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient with significant trauma or major surgical hemorrhage requires massive transfusion. Which complication is associated with rapid transfusion of large volumes of stored red blood cells and citrated blood products?",
     "options": [
@@ -4979,7 +4979,7 @@
     "id": "g-anes-017",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient in the operating room under general anesthesia develops sudden hypotension, bronchospasm/wheezing, flushing, and urticaria shortly after exposure to a medication or latex. Which emergency diagnosis and first-line treatment apply?",
     "options": [
@@ -4995,7 +4995,7 @@
     "id": "g-anes-018",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient is at increased risk for postoperative nausea and vomiting (PONV) due to female sex, history of PONV or motion sickness, non-smoking status, and planned postoperative opioid use. Which preventive strategy is appropriate?",
     "options": [
@@ -5011,7 +5011,7 @@
     "id": "g-anes-019",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient undergoes neuraxial (spinal or epidural) anesthesia or deep peripheral nerve block and is receiving prophylactic or therapeutic anticoagulation. Which general principle governs timing of neuraxial needle/catheter placement and removal?",
     "options": [
@@ -5027,7 +5027,7 @@
     "id": "g-anes-020",
     "track": "medical",
     "subTrack": "non-surgical",
-    "specialty": "Anesthesiology",
+    "specialty": "Anesthesia",
     "difficulty": "medium",
     "question": "A patient presents with acute severe pain in the emergency department or postoperative setting. Which principle characterizes multimodal analgesia?",
     "options": [
@@ -8432,118 +8432,6 @@
     "explanation": "Unilateral dermatomal grouped vesicles on an erythematous base represent herpes zoster from VZV reactivation; antiviral therapy (such as valacyclovir, acyclovir, or famciclovir) is most effective when started early (within 72 hours or in complicated/ophthalmic/immunocompromised cases)."
   },
   {
-    "id": "g-id-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Infectious Diseases",
-    "difficulty": "medium",
-    "question": "A patient presents with fever, chills, malaise, and a painless indurated genital/anal chancre that heals spontaneously over several weeks, followed weeks later by a non-pruritic maculopapular rash involving the palms and soles. Which sexually transmitted infection is classically described?",
-    "options": [
-      "Syphilis (Treponema pallidum infection—primary chancre followed by secondary rash involving palms and soles)",
-      "Acute gouty arthritis",
-      "Gilbert syndrome",
-      "Benign prostatic hyperplasia"
-    ],
-    "answer": 0,
-    "explanation": "Primary syphilis classically presents with a painless chancre, and secondary syphilis often causes a diffuse rash characteristically involving the palms and soles, treated primarily with benzathine penicillin G."
-  },
-  {
-    "id": "g-neuro-015",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "hard",
-    "question": "A patient presents with sudden-onset right-sided hemiparesis and expressive (Broca) aphasia 90 minutes ago. Non-contrast head CT shows no acute intracranial hemorrhage or large established infarct. Which immediate reperfusion intervention should be evaluated urgently if the patient meets eligibility criteria?",
-    "options": [
-      "Intravenous thrombolysis (e.g., alteplase or tenecteplase) and/or endovascular mechanical thrombectomy if large-vessel occlusion is present within the appropriate treatment window",
-      "Immediate high-dose oral warfarin without imaging",
-      "Discharging home with aspirin only after delaying care for 24 hours",
-      "Oral ketoconazole"
-    ],
-    "answer": 0,
-    "explanation": "In acute ischemic stroke with no hemorrhage on non-contrast CT, eligible patients within established time windows should be evaluated immediately for IV thrombolysis and/or mechanical thrombectomy to restore cerebral perfusion rapidly."
-  },
-  {
-    "id": "g-neuro-016",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient experiences a 15-minute episode of transient left-arm weakness and slurred speech that resolves completely within 20 minutes, with normal initial brain imaging. Why is urgent evaluation critical after a transient ischemic attack (TIA)?",
-    "options": [
-      "TIA carries a substantial short-term risk of completed ischemic stroke (highest in the first days to weeks), warranting urgent vascular/cardiac workup and secondary stroke prevention",
-      "TIA means the patient can never have a stroke in the future",
-      "TIA is always caused by simple dehydration requiring no workup",
-      "TIA requires stopping all blood pressure and lipid management"
-    ],
-    "answer": 0,
-    "explanation": "A TIA is a neurological warning sign with high early stroke risk; urgent carotid/intracranial imaging, ECG/rhythm evaluation, antiplatelet or anticoagulation therapy (as indicated), and risk-factor control help prevent a disabling stroke."
-  },
-  {
-    "id": "g-neuro-017",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "hard",
-    "question": "A patient presents with the sudden onset of the 'worst headache of my life' ('thunderclap headache'), nausea, vomiting, photophobia, and neck stiffness. Non-contrast head CT is obtained urgently to evaluate for which neurosurgical/neurologic emergency?",
-    "options": [
-      "Subarachnoid hemorrhage (commonly from a ruptured intracranial aneurysm)",
-      "Simple tension-type headache",
-      "Chronic cluster headache with no acute bleeding",
-      "Benign paroxysmal positional vertigo"
-    ],
-    "answer": 0,
-    "explanation": "Sudden 'thunderclap' headache peaking within seconds to minutes suggests subarachnoid hemorrhage; urgent non-contrast CT is first-line, followed by lumbar puncture/xanthochromia or CTA/angiography if CT is negative and clinical suspicion remains high."
-  },
-  {
-    "id": "g-neuro-018",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient with generalized tonic-clonic status epilepticus has continuous seizure activity lasting more than 5 minutes (or recurrent seizures without return to baseline consciousness). Which medication class is first-line for immediate acute termination of status epilepticus?",
-    "options": [
-      "Intravenous benzodiazepines (such as lorazepam or diazepam; or IM midazolam if IV access is not immediately available)",
-      "Oral metformin",
-      "Routine daily oral acetaminophen",
-      "Subcutaneous insulin"
-    ],
-    "answer": 0,
-    "explanation": "Benzodiazepines (such as IV lorazepam) are first-line acute therapy for status epilepticus, followed promptly by second-line IV antiseizure medications (such as levetiracetam, fosphenytoin/phenytoin, or valproate) if seizures persist."
-  },
-  {
-    "id": "g-neuro-019",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "An older patient presents with resting pill-rolling tremor (worse at rest, improving with purposeful movement), bradykinesia, cogwheel/lead-pipe rigidity, and postural instability. Which neurodegenerative condition is most likely?",
-    "options": [
-      "Parkinson disease",
-      "Myasthenia gravis",
-      "Guillain-Barré syndrome",
-      "Multiple sclerosis"
-    ],
-    "answer": 0,
-    "explanation": "Resting tremor, bradykinesia, rigidity, and postural instability reflect dopaminergic neuron loss in the substantia nigra pars compacta characteristic of Parkinson disease, typically responding to levodopa/carbidopa."
-  },
-  {
-    "id": "g-neuro-020",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A young adult presents with subacute monocular vision loss with pain on eye movement (optic neuritis), followed months later by tingling/numbness in one leg and diplopia, with demyelinating lesions disseminated in time and space on brain/spinal MRI. What is the diagnosis?",
-    "options": [
-      "Multiple sclerosis (MS)",
-      "Simple calcium oxalate nephrolithiasis",
-      "Acute gouty arthritis",
-      "Hereditary hemochromatosis"
-    ],
-    "answer": 0,
-    "explanation": "Multiple sclerosis is an immune-mediated demyelinating central nervous system disorder characterized by episodes separated in time and space (such as optic neuritis, transverse myelitis, or brainstem/cerebellar syndromes) with characteristic MRI lesions."
-  },
-  {
     "id": "g-neuro-021",
     "track": "medical",
     "subTrack": "non-surgical",
@@ -8864,262 +8752,6 @@
     "explanation": "Subdural hematomas result from tearing of bridging veins and form a crescent-shaped extra-axial collection that can cross cranial sutures and present subacutely or chronically—especially in older adults, those on anticoagulants/antiplatelets, or after minor falls."
   },
   {
-    "id": "g-neuro-041",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient with longstanding hypertension and hyperlipidemia has a left-sided ischemic stroke affecting the left middle cerebral artery territory. Which combination of deficits is classically seen with a left MCA stroke?",
-    "options": [
-      "Right-sided face and arm (greater than leg) weakness/sensory loss and expressive (Broca) and/or receptive (Wernicke) aphasia in a left-hemisphere-dominant individual",
-      "Bilateral lower-extremity paraplegia with normal speech and arm strength",
-      "Isolated resting pill-rolling tremor without motor or speech deficits",
-      "Pure bilateral hearing loss"
-    ],
-    "answer": 0,
-    "explanation": "The middle cerebral artery supplies the lateral cerebral hemisphere (face/arm motor and sensory cortex and language areas in the dominant hemisphere), producing contralateral face/arm weakness and aphasia when the dominant hemisphere is involved."
-  },
-  {
-    "id": "g-neuro-042",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A young adult presents with progressive chorea (involuntary dance-like movements), personality/behavioral changes, cognitive decline, and a family history of similar symptoms in an autosomal dominant pattern with CAG trinucleotide repeat expansion. What is the diagnosis?",
-    "options": [
-      "Huntington disease",
-      "Bell palsy",
-      "Trigeminal neuralgia",
-      "Normal pressure hydrocephalus"
-    ],
-    "answer": 0,
-    "explanation": "Huntington disease is an autosomal dominant neurodegenerative disorder caused by CAG repeat expansion in the HTT gene, leading to striatal atrophy, chorea, psychiatric/behavioral changes, and progressive dementia."
-  },
-  {
-    "id": "g-neuro-043",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "An overweight woman of childbearing age presents with daily headaches, transient visual obscurations, pulsatile tinnitus, and papilledema on fundoscopy, with normal brain MRI/MRV (except signs of elevated intracranial pressure) and elevated CSF opening pressure (> 25 cm H2O) with normal CSF composition. What is the diagnosis?",
-    "options": [
-      "Idiopathic intracranial hypertension (pseudotumor cerebri)",
-      "Acute bacterial meningitis",
-      "Parkinson disease",
-      "Guillain-Barré syndrome"
-    ],
-    "answer": 0,
-    "explanation": "Idiopathic intracranial hypertension presents with elevated intracranial pressure symptoms, papilledema, and high CSF opening pressure without a mass lesion or hydrocephalus; weight management and acetazolamide are foundational alongside vision monitoring."
-  },
-  {
-    "id": "g-neuro-044",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient with a history of prior stroke or transient ischemic attack from non-valvular atrial fibrillation is evaluated for long-term secondary stroke prevention. Which anticoagulation approach is standard when there is no mechanical heart valve or moderate-to-severe mitral stenosis?",
-    "options": [
-      "Oral anticoagulation (such as a direct oral anticoagulant [DOAC] or warfarin) tailored to stroke/bleeding risk and renal/clinical factors",
-      "Discontinuing all antithrombotic therapy without reason",
-      "Oral ketoconazole",
-      "Routine daily oral acetaminophen alone"
-    ],
-    "answer": 0,
-    "explanation": "Patients with atrial fibrillation and prior stroke/TIA have high thromboembolic stroke risk and generally warrant long-term oral anticoagulation (typically a DOAC unless contraindicated or mechanical valve/moderate-severe rheumatic mitral stenosis dictates warfarin)."
-  },
-  {
-    "id": "g-neuro-045",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient develops foot drop (difficulty dorsiflexing the foot and toes, causing a 'steppage' gait) and numbness over the lateral lower leg and dorsum of the foot after prolonged leg crossing or a fibular neck injury. Which peripheral nerve is injured?",
-    "options": [
-      "Common peroneal (fibular) nerve",
-      "Median nerve",
-      "Facial nerve (CN VII)",
-      "Optic nerve (CN II)"
-    ],
-    "answer": 0,
-    "explanation": "The common peroneal nerve wraps superficially around the fibular neck and is vulnerable to compression or trauma, causing ankle/toe dorsiflexion weakness (foot drop) and sensory loss over the lateral calf and dorsum of the foot."
-  },
-  {
-    "id": "g-neuro-046",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "hard",
-    "question": "A patient presents with acute bilateral descending paralysis starting in the cranial nerves (diplopia, ptosis, dysarthria, dysphagia) followed by symmetric descending limb weakness and autonomic dysfunction, without sensory loss, after eating home-canned vegetables or contaminated food. Which toxin-mediated emergency is suspected?",
-    "options": [
-      "Botulism (Clostridium botulinum neurotoxin blocking acetylcholine release at the neuromuscular junction)",
-      "Multiple sclerosis",
-      "Simple essential tremor",
-      "Parkinson disease"
-    ],
-    "answer": 0,
-    "explanation": "Botulism causes acute, symmetric descending flaccid paralysis beginning with bulbar/cranial nerves and preserved sensation; airway/respiratory monitoring and prompt botulinum antitoxin administration are critical."
-  },
-  {
-    "id": "g-neuro-047",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient has a known seizure disorder well-controlled on an antiseizure medication and asks about pregnancy planning. Why is folic acid supplementation and reviewing antiseizure medication selection important prior to conception?",
-    "options": [
-      "Certain antiseizure medications (especially valproate) carry higher risks of major congenital malformations and neurodevelopmental effects, and folic acid supplementation helps reduce neural tube defect risk",
-      "Pregnancy completely cures all seizure disorders on day one",
-      "Antiseizure medications should always be stopped abruptly without medical supervision when planning pregnancy",
-      "Folic acid has no role in pregnancy planning"
-    ],
-    "answer": 0,
-    "explanation": "Preconception counseling in epilepsy optimizes seizure control using the safest effective regimen (avoiding valproate when possible in people who can become pregnant) and provides folic acid supplementation while maintaining seizure safety."
-  },
-  {
-    "id": "g-neuro-048",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient presents with diplopia, dysarthria, ataxia, and vertigo with crossed brainstem findings (ipsilateral cranial nerve deficit with contralateral limb motor/sensory deficit). Which vascular territory is classically involved in brainstem/cerebellar strokes?",
-    "options": [
-      "Vertebrobasilar / posterior circulation",
-      "Isolated anterior cerebral artery without brainstem involvement",
-      "Simple carpal tunnel",
-      "Primary hyperparathyroidism"
-    ],
-    "answer": 0,
-    "explanation": "The posterior (vertebrobasilar) circulation supplies the brainstem, cerebellum, and occipital lobes; brainstem lesions commonly cause cranial nerve deficits, ataxia, vertigo, diplopia, and crossed motor/sensory signs."
-  },
-  {
-    "id": "g-neuro-049",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient presents with pressing or tightening, non-pulsatile mild-to-moderate headache affecting both sides of the head ('band-like' pressure), without nausea, vomiting, or photophobia/phonophobia worsened by routine physical activity. What is the most likely diagnosis?",
-    "options": [
-      "Tension-type headache",
-      "Acute subarachnoid hemorrhage",
-      "Giant cell arteritis with jaw claudication and vision loss",
-      "Acute bacterial meningitis"
-    ],
-    "answer": 0,
-    "explanation": "Bilateral pressing/tightening mild-to-moderate pain lacking prominent migrainous features (like nausea or marked photophobia/phonophobia) is characteristic of tension-type headache."
-  },
-  {
-    "id": "g-neuro-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Neurology",
-    "difficulty": "medium",
-    "question": "A patient with Parkinson disease taking levodopa/carbidopa experiences gradual 'wearing-off' of medication benefit before the next scheduled dose and involuntary writhing/dyskinetic movements at peak dose. What is a common clinical strategy when adjusting Parkinson therapy?",
-    "options": [
-      "Adjusting dosing frequency/formulations or adding adjuncts (such as a MAO-B inhibitor, COMT inhibitor, or dopamine agonist as appropriate) in coordination with the treating clinician while monitoring dyskinesia and side effects",
-      "Stopping levodopa abruptly overnight in all patients",
-      "Prescribing high-dose oral warfarin",
-      "Ignoring worsening motor fluctuations indefinitely"
-    ],
-    "answer": 0,
-    "explanation": "Motor fluctuations ('wearing-off') and levodopa-induced dyskinesias are common with long-term levodopa therapy and are managed by tailoring dose timing/formulations and using appropriate adjunctive agents while avoiding abrupt levodopa withdrawal."
-  },
-  {
-    "id": "g-psych-015",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient presents with 5 weeks of persistent depressed mood, anhedonia, insomnia, fatigue, poor concentration, feelings of worthlessness, and passive thoughts of death without history of mania or hypomania. Which diagnosis is most likely?",
-    "options": [
-      "Major depressive disorder (MDD)",
-      "Bipolar I disorder (current manic episode)",
-      "Simple specific phobia",
-      "Obsessive-compulsive personality disorder"
-    ],
-    "answer": 0,
-    "explanation": "Five or more DSM-5 depressive symptoms lasting at least 2 weeks—including depressed mood or anhedonia—without a history of mania or hypomania characterize major depressive disorder."
-  },
-  {
-    "id": "g-psych-016",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient presents with a 9-day history of markedly elevated/expansive mood, decreased need for sleep (feeling rested after 2 hours of sleep), rapid pressured speech, grandiosity, racing thoughts, and impulsively spending large sums of money, requiring hospitalization for safety. What is the diagnosis?",
-    "options": [
-      "Manic episode (consistent with Bipolar I disorder)",
-      "Persistent depressive disorder (dysthymia)",
-      "Generalized anxiety disorder",
-      "Major neurocognitive disorder"
-    ],
-    "answer": 0,
-    "explanation": "A distinct period of abnormally elevated, expansive, or irritable mood and increased energy/activity lasting at least 7 days (or any duration if hospitalization is required or psychosis is present) defines a manic episode."
-  },
-  {
-    "id": "g-psych-017",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient has recurrent, unexpected episodes of abrupt intense fear or discomfort reaching a peak within minutes, accompanied by palpitations, sweating, trembling, shortness of breath, chest tightness, and fear of losing control or dying, followed by persistent worry about future attacks. What is the diagnosis?",
-    "options": [
-      "Panic disorder",
-      "Schizophrenia",
-      "Somatic symptom disorder",
-      "Anorexia nervosa"
-    ],
-    "answer": 0,
-    "explanation": "Recurrent unexpected panic attacks followed by at least 1 month of persistent concern about additional attacks or maladaptive behavioral changes characterize panic disorder."
-  },
-  {
-    "id": "g-psych-018",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient experiences intrusive, distressing thoughts about contamination and germs that they try to neutralize by washing their hands repeatedly for 45 minutes after touching door handles, recognizing the urges as excessive and time-consuming. What is the diagnosis?",
-    "options": [
-      "Obsessive-compulsive disorder (OCD)",
-      "Bipolar II disorder",
-      "Delirium",
-      "Antisocial personality disorder"
-    ],
-    "answer": 0,
-    "explanation": "OCD is characterized by recurrent intrusive obsessions (thoughts, urges, or images) and/or repetitive compulsions (behaviors or mental acts) aimed at reducing distress or preventing a feared outcome."
-  },
-  {
-    "id": "g-psych-019",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "Three months after surviving a severe motor vehicle collision, a patient has intrusive nightmares and flashbacks of the crash, avoids driving and highways, feels constantly on guard (hypervigilance), and has negative mood and detachment lasting over 1 month. What is the most likely diagnosis?",
-    "options": [
-      "Post-traumatic stress disorder (PTSD)",
-      "Adjustment disorder with uncomplicated resolution on day 1",
-      "Specific phobia of heights alone",
-      "Primary insomnia without trauma exposure"
-    ],
-    "answer": 0,
-    "explanation": "Intrusion symptoms, avoidance, negative alterations in cognitions/mood, and hyperarousal lasting more than 1 month following exposure to actual or threatened death, serious injury, or sexual violence define PTSD."
-  },
-  {
-    "id": "g-psych-020",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A young adult presents with 8 months of auditory hallucinations (hearing two voices conversing), persecutory delusions, disorganized speech, blunted affect, and social withdrawal, with medical/substance causes ruled out. Which diagnosis is most consistent?",
-    "options": [
-      "Schizophrenia",
-      "Acute delirium from urinary tract infection",
-      "Major depressive disorder without psychotic features",
-      "Panic disorder"
-    ],
-    "answer": 0,
-    "explanation": "Schizophrenia requires continuous signs of disturbance for at least 6 months, including at least 1 month of active-phase symptoms (such as hallucinations, delusions, or disorganized speech) plus impaired functioning, after excluding substance or general medical causes."
-  },
-  {
     "id": "g-psych-021",
     "track": "medical",
     "subTrack": "non-surgical",
@@ -9438,166 +9070,6 @@
     ],
     "answer": 0,
     "explanation": "While neurochemical changes begin immediately, clinical response to SSRIs/SNRIs typically emerges over 2–4 weeks and continues building over several weeks, making patient education and early follow-up important."
-  },
-  {
-    "id": "g-psych-041",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient taking an antipsychotic medication develops an acute, painful, involuntary sustained muscle contraction or spasm—such as torticollis (neck twisting), oculogyric crisis (upward eye deviation), or jaw/tongue spasm—within hours to days of starting or increasing the dose. What is this reaction and first-line acute treatment?",
-    "options": [
-      "Acute dystonia; treated promptly with an anticholinergic agent (such as benztropine) or diphenhydramine",
-      "Tardive dyskinesia requiring no treatment ever",
-      "Simple anxiety attack",
-      "Iron-deficiency anemia"
-    ],
-    "answer": 0,
-    "explanation": "Acute dystonia is an early extrapyramidal reaction to dopamine receptor blockade that responds rapidly to IV/IM/PO benztropine or diphenhydramine."
-  },
-  {
-    "id": "g-psych-042",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient taking an antipsychotic medication reports a distressing inner sense of restlessness and a compelling urge to keep moving—pacing, rocking, or shifting weight from foot to foot—that is often misdiagnosed as simple anxiety or agitation. What is this extrapyramidal symptom called?",
-    "options": [
-      "Akathisia",
-      "Acute dystonia",
-      "Cataplexy",
-      "Anorexia nervosa"
-    ],
-    "answer": 0,
-    "explanation": "Akathisia presents as subjective inner restlessness and motor restlessness (inability to sit still), which can worsen if mistaken for agitation and treated with higher antipsychotic doses; reducing dose, switching agents, or using a beta-blocker (such as propranolol) or low-dose mirtazapine/benzodiazepine may help."
-  },
-  {
-    "id": "g-psych-043",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient with years of antipsychotic exposure develops involuntary, repetitive, purposeless movements—such as lip-smacking, chewing/grimacing, tongue protrusion, or choreoathetoid finger movements—that persist even after antipsychotic reduction. Which late-onset movement disorder is described?",
-    "options": [
-      "Tardive dyskinesia",
-      "Acute dystonia",
-      "Panic disorder",
-      "Delirium"
-    ],
-    "answer": 0,
-    "explanation": "Tardive dyskinesia is a delayed-onset involuntary movement disorder associated with prolonged dopamine D2 receptor blockade, characterized by choreiform or rhythmic movements often involving the oral-buccal-lingual region and limbs."
-  },
-  {
-    "id": "g-psych-044",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A postpartum mother at 3 weeks after delivery presents with tearfulness, mood lability, insomnia, overwhelm, and mild anxiety that began a few days after childbirth and is gradually improving with support, without severe functional impairment, psychosis, or thoughts of harming herself or the baby. What is this condition?",
-    "options": [
-      "Postpartum blues ('baby blues')—distinct from postpartum depression (more persistent/severe mood/functioning impairment) and postpartum psychosis (psychiatric emergency with delusions/hallucinations/disorganization)",
-      "Schizophrenia",
-      "Anorexia nervosa",
-      "Parkinson disease"
-    ],
-    "answer": 0,
-    "explanation": "Postpartum blues are common, mild, transient mood fluctuations peaking in the first two weeks postpartum and resolving spontaneously, whereas postpartum depression persists/impairs function and postpartum psychosis requires urgent psychiatric evaluation for safety."
-  },
-  {
-    "id": "g-psych-045",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient has a long-standing history of difficulty falling asleep or staying asleep (or early morning awakening) at least 3 nights per week for over 4 months, causing daytime fatigue and impaired concentration despite adequate opportunity for sleep, without another primary sleep disorder or substance cause. What is the diagnosis?",
-    "options": [
-      "Insomnia disorder (chronic)",
-      "Narcolepsy",
-      "Bipolar I disorder",
-      "Delirium"
-    ],
-    "answer": 0,
-    "explanation": "Chronic insomnia disorder involves persistent difficulty initiating or maintaining sleep (>= 3 nights/week for >= 3 months) with daytime impairment; cognitive behavioral therapy for insomnia (CBT-I) is recommended as first-line treatment."
-  },
-  {
-    "id": "g-psych-046",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A young adult presents with excessive daytime sleepiness, sudden brief episodes of bilateral muscle weakness/buckling triggered by strong emotion such as laughter (cataplexy), sleep paralysis, and hypnagogic/hypnopompic hallucinations. Which sleep disorder is most likely?",
-    "options": [
-      "Narcolepsy",
-      "Chronic tension-type headache",
-      "Obsessive-compulsive disorder",
-      "Major depressive disorder"
-    ],
-    "answer": 0,
-    "explanation": "Narcolepsy (especially Type 1, linked to hypocretin/orexin deficiency) features excessive daytime sleepiness and REM intrusion phenomena including cataplexy, sleep paralysis, and vivid sleep-related hallucinations."
-  },
-  {
-    "id": "g-psych-047",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient with bipolar I disorder is stabilized on mood-stabilizing therapy. Which medication is a classic mood stabilizer for bipolar disorder with evidence for reducing both manic and depressive relapses as well as suicide risk, requiring periodic monitoring of serum levels, renal function, and thyroid function?",
-    "options": [
-      "Lithium",
-      "Oral ketoconazole",
-      "Routine daily oral acetaminophen",
-      "Topical hydrocortisone"
-    ],
-    "answer": 0,
-    "explanation": "Lithium is a foundational mood stabilizer in bipolar disorder with anti-suicidal properties, requiring monitoring of lithium levels, renal function (creatinine/eGFR), electrolytes, calcium, and thyroid function (TSH)."
-  },
-  {
-    "id": "g-psych-048",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient has a persistent, unreasonable fear and avoidance of a specific object or situation—such as flying, heights, spiders, or needles—lasting over 6 months, causing immediate anxiety upon exposure and out of proportion to actual danger. What is the diagnosis?",
-    "options": [
-      "Specific phobia",
-      "Schizophrenia",
-      "Delirium",
-      "Bulimia nervosa"
-    ],
-    "answer": 0,
-    "explanation": "Specific phobia involves marked fear or anxiety about a circumscribed object or situation lasting at least 6 months, typically leading to avoidance or endurance with intense distress; exposure-based cognitive behavioral therapy is highly effective."
-  },
-  {
-    "id": "g-psych-049",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient with major depressive disorder is taking a second-generation antipsychotic (such as olanzapine or quetiapine) for bipolar disorder or augmentation. Which metabolic monitoring panel is recommended at baseline and periodically during treatment?",
-    "options": [
-      "Body mass index/waist circumference, blood pressure, fasting plasma glucose or HbA1c, and fasting lipid profile",
-      "Serum amylase and lipase only",
-      "Sputum AFB smear",
-      "Plain X-ray of the wrist"
-    ],
-    "answer": 0,
-    "explanation": "Several second-generation antipsychotics carry risks of weight gain, dyslipidemia, and insulin resistance/diabetes, making baseline and periodic metabolic monitoring essential."
-  },
-  {
-    "id": "g-psych-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Psychiatry",
-    "difficulty": "medium",
-    "question": "A patient experiences emotional distress, depressed mood, and anxiety starting within 1 month of a major identifiable stressor (such as job loss or relationship breakup) that causes marked distress out of proportion to the stressor or impairment in social/occupational functioning, without meeting criteria for another major psychiatric disorder or uncomplicated bereavement. What is this diagnosis?",
-    "options": [
-      "Adjustment disorder",
-      "Schizophrenia",
-      "Bipolar I disorder",
-      "Alzheimer disease"
-    ],
-    "answer": 0,
-    "explanation": "Adjustment disorder involves emotional or behavioral symptoms developing within 3 months of an identifiable stressor and resolving within 6 months after the stressor or its consequences end."
   },
   {
     "id": "g-derm-026",
@@ -10000,102 +9472,6 @@
     "explanation": "Urticaria presents with transient, pruritic wheals (each lesion typically lasting under 24 hours) due to mast cell degranulation and histamine/mediator release, commonly managed with second-generation H1 antihistamines and trigger evaluation."
   },
   {
-    "id": "g-peds-015",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 6-month-old infant presents with 2 days of rhinorrhea and low-grade fever followed by cough, tachypnea, wheezing, and diffuse fine inspiratory crackles/rales, with mild subcostal retractions and oxygen saturation 94% on room air. Which viral etiology is most common in bronchiolitis?",
-    "options": [
-      "Respiratory syncytial virus (RSV)",
-      "Group A Streptococcus (Streptococcus pyogenes)",
-      "Plasmodium falciparum",
-      "Treponema pallidum"
-    ],
-    "answer": 0,
-    "explanation": "Acute bronchiolitis is primarily a viral lower respiratory tract illness in infants under 2 years (most commonly RSV), managed mainly with supportive care (hydration, nasal suctioning, and supplemental oxygen if hypoxemic) rather than routine bronchodilators, corticosteroids, or antibiotics."
-  },
-  {
-    "id": "g-peds-016",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 2-year-old child wakes at night with a sudden 'barking' (seal-like) cough, hoarseness, and inspiratory stridor at rest after mild upper respiratory symptoms. Which condition is most likely and what is standard initial therapy?",
-    "options": [
-      "Viral croup (acute laryngotracheobronchitis); single-dose systemic corticosteroid (such as oral dexamethasone), plus nebulized epinephrine if moderate-to-severe stridor/respiratory distress is present",
-      "Acute bacterial meningitis; oral ketoconazole",
-      "Simple iron-deficiency anemia; daily vitamin C alone",
-      "Pyloric stenosis; emergency pyloromyotomy without evaluation"
-    ],
-    "answer": 0,
-    "explanation": "Barking cough, hoarseness, and stridor in a toddler are classic for viral croup (most often parainfluenza virus); systemic corticosteroids reduce airway edema effectively, and nebulized epinephrine provides rapid short-term relief in moderate-to-severe distress."
-  },
-  {
-    "id": "g-peds-017",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "hard",
-    "question": "A 4-year-old unvaccinated child presents with abrupt onset of high fever, drooling, dysphagia, muffled ('hot potato') voice, anxiety, and sitting leaning forward ('tripod' position) with minimal or no cough. Why must aggressive throat examination with a tongue depressor in the clinic/ED be avoided before airway management is secured?",
-    "options": [
-      "It can trigger sudden complete upper airway obstruction/laryngospasm in suspected acute epiglottitis; airway stabilization in a controlled setting is top priority",
-      "Because throat examination causes immediate permanent deafness",
-      "Because epiglottitis is always cured by antacids",
-      "Because children never have airway compromise with drooling"
-    ],
-    "answer": 0,
-    "explanation": "Drooling, stridor/respiratory distress, anxiety, and forward leaning in acute epiglottitis signal impending airway compromise; agitating the child or probing the pharynx can precipitate complete airway closure before an airway team is ready."
-  },
-  {
-    "id": "g-peds-018",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 10-month-old infant with acute viral gastroenteritis and mild-to-moderate dehydration (dry mucous membranes, mildly sunken eyes, alert/irritable, drinking eagerly) is evaluated in clinic. Which rehydration approach is recommended first-line?",
-    "options": [
-      "Oral rehydration therapy (ORT) with low-osmolarity oral rehydration solution in small frequent volumes, alongside continued age-appropriate feeding/breastfeeding",
-      "Withholding all fluids and food for 48 hours",
-      "Giving plain high-sugar fruit juice or undiluted sports drinks exclusively",
-      "Routine antidiarrheal antimotility medications in young infants"
-    ],
-    "answer": 0,
-    "explanation": "Oral rehydration solution is first-line for mild-to-moderate dehydration in pediatric gastroenteritis, paired with early reintroduction of breast milk or regular diet once rehydrated."
-  },
-  {
-    "id": "g-peds-019",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 5-year-old child presents with fever for 6 days (39.3°C), bilateral non-exudative conjunctival injection, cracked red lips and 'strawberry tongue', polymorphous rash, cervical lymphadenopathy, and erythema/edema of the hands and feet with subsequent periungual desquamation. Which vasculitis must be diagnosed and treated promptly to prevent coronary artery aneurysms?",
-    "options": [
-      "Kawasaki disease",
-      "Simple allergic rhinitis",
-      "Henoch-Schönlein purpura (IgA vasculitis) without coronary screening",
-      "Atopic dermatitis"
-    ],
-    "answer": 0,
-    "explanation": "Kawasaki disease is an acute medium-vessel vasculitis of childhood associated with coronary artery aneurysms; prompt treatment with intravenous immunoglobulin (IVIG) and aspirin (per pediatric dosing guidelines) plus echocardiography is essential."
-  },
-  {
-    "id": "g-peds-020",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 6-year-old child presents after an upper respiratory infection with palpable purpura over the buttocks and lower extremities, colicky abdominal pain, arthralgias/arthritis of the knees and ankles, and normal platelet count. Which vasculitis is most likely?",
-    "options": [
-      "IgA vasculitis (Henoch-Schönlein purpura)",
-      "Immune thrombocytopenia (ITP)",
-      "Acute lymphoblastic leukemia",
-      "Kawasaki disease"
-    ],
-    "answer": 0,
-    "explanation": "Palpable purpura (typically lower extremities/buttocks), arthralgias/arthritis, abdominal pain, and potential kidney involvement (nephritis) with a normal platelet count characterize IgA vasculitis (HSP); urinalysis and blood pressure monitoring help detect renal involvement."
-  },
-  {
     "id": "g-peds-021",
     "track": "medical",
     "subTrack": "non-surgical",
@@ -10414,262 +9790,6 @@
     ],
     "answer": 0,
     "explanation": "Fifth disease (parvovirus B19) classically causes a 'slapped cheek' facial rash and lacy truncal/limb rash; pregnant contacts or patients with chronic hemolytic anemias (like sickle cell disease) warrant targeted assessment for fetal or hematologic complications."
-  },
-  {
-    "id": "g-peds-041",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 12-month-old infant is brought for a well-child visit and has not received routine vaccines. Which general principle governs childhood immunization schedules and catch-up vaccination?",
-    "options": [
-      "Follow evidence-based pediatric catch-up immunization schedules without restarting series from the beginning when doses are delayed, while respecting minimum intervals and live-vaccine precautions (such as immunosuppression or pregnancy)",
-      "Restart every vaccine series from dose 1 whenever a scheduled visit is late",
-      "Never administer multiple vaccines during the same well-child visit",
-      "Delay all childhood vaccines until age 18"
-    ],
-    "answer": 0,
-    "explanation": "Delayed immunization does not require restarting a series—clinicians give the next due dose using established minimum intervals and age-appropriate catch-up schedules, and can safely co-administer multiple vaccines at a single visit."
-  },
-  {
-    "id": "g-peds-042",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 15-month-old child presents with delayed expressive language (fewer than a few spoken words, limited pointing/gestures), reduced response to name, limited eye contact, and repetitive hand-flapping or lining up toys. Which developmental evaluation is appropriate?",
-    "options": [
-      "Comprehensive developmental and autism spectrum disorder screening/evaluation along with formal hearing assessment",
-      "Reassuring parents that hearing and speech evaluation are never needed before age 10",
-      "Starting oral ketoconazole",
-      "Immediate surgical pyloromyotomy"
-    ],
-    "answer": 0,
-    "explanation": "Speech/social communication differences and repetitive behaviors in a toddler warrant formal developmental/autism screening, hearing testing (to rule out conductive or sensorineural hearing loss), and early intervention services."
-  },
-  {
-    "id": "g-peds-043",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 2-year-old child presents with chronic diarrhea, foul-smelling bulky stools, abdominal distension, poor weight gain (failure to thrive), and irritability after solid foods containing wheat/gluten were introduced, with positive tissue transglutaminase IgA antibodies (and normal total IgA). What is the diagnosis?",
-    "options": [
-      "Celiac disease (gluten-sensitive enteropathy)",
-      "Hypertrophic pyloric stenosis",
-      "Acute post-streptococcal glomerulonephritis",
-      "Absence seizure"
-    ],
-    "answer": 0,
-    "explanation": "Celiac disease is an immune-mediated enteropathy triggered by dietary gluten in genetically susceptible individuals, causing malabsorption, growth faltering/weight loss, and GI symptoms; lifelong strict gluten-free diet is the mainstay of treatment."
-  },
-  {
-    "id": "g-peds-044",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "An 18-month-old child who is exclusively breastfed without vitamin D supplementation presents with wide anterior fontanelle, frontal bossing, rachitic rosary (costochondral enlargement), bowing of the legs (genu varum), and wrist widening, with low 25-hydroxyvitamin D and elevated alkaline phosphatase. What is the diagnosis?",
-    "options": [
-      "Nutritional rickets (vitamin D deficiency)",
-      "Kawasaki disease",
-      "Intussusception",
-      "Minimal change disease"
-    ],
-    "answer": 0,
-    "explanation": "Vitamin D deficiency impairs calcium/phosphate mineralization of growing bone growth plates, causing rickets; vitamin D and adequate calcium supplementation treat deficiency, and routine vitamin D supplementation is recommended for breastfed/partially breastfed infants."
-  },
-  {
-    "id": "g-peds-045",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 3-year-old child who had a recent viral upper respiratory infection 10 days ago suddenly develops generalized petechiae and purpura with bruising, without fever, bone pain, hepatosplenomegaly, or lymphadenopathy. CBC shows isolated severe thrombocytopenia (platelets 14,000/uL) with normal hemoglobin and WBC count. What is the most likely diagnosis?",
-    "options": [
-      "Immune thrombocytopenia (ITP)",
-      "Acute lymphoblastic leukemia (typically accompanied by anemia/leukopenia or blasts, bone pain, or organomegaly/lymphadenopathy)",
-      "Hemolytic uremic syndrome",
-      "Viral croup"
-    ],
-    "answer": 0,
-    "explanation": "Isolated thrombocytopenia in an otherwise well-appearing child with mucocutaneous bleeding (petechiae/bruising) and normal red/white cell lines is characteristic of ITP, which is often post-viral and frequently self-limited in children."
-  },
-  {
-    "id": "g-peds-046",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 6-year-old child with sickle cell disease presents with fever of 39.2°C, lethargy, and irritability. Why is fever in a child with sickle cell disease treated as a medical emergency requiring prompt evaluation, blood cultures, and empiric parenteral broad-spectrum antibiotics?",
-    "options": [
-      "Functional asplenia/hyposplenism in sickle cell disease markedly increases susceptibility to rapid, overwhelming invasive bacterial infection (especially encapsulated organisms like Streptococcus pneumoniae)",
-      "Because fever in sickle cell disease always means appendicitis",
-      "Because sickle cell disease makes children immune to all bacteria",
-      "Because antibiotics are contraindicated in fever"
-    ],
-    "answer": 0,
-    "explanation": "Early splenic infarction/functional asplenia impairs clearance of encapsulated bacteria, making prompt evaluation and empiric antibiotics critical for febrile children with sickle cell disease."
-  },
-  {
-    "id": "g-peds-047",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 2-week-old newborn presents with poor feeding, lethargy, temperature instability (35.8°C or 38.4°C), tachypnea, and irritability. Why is a full sepsis evaluation (including blood culture, urine culture, and lumbar puncture/CSF studies as indicated) and prompt empiric IV antibiotics essential in a febrile neonate (<= 28 days old)?",
-    "options": [
-      "Neonates have immature immune defenses and face a high risk of invasive bacterial infection (such as Group B Streptococcus, E. coli, or Listeria) even when initial clinical signs are subtle",
-      "Because neonates never have serious infections",
-      "Because oral acetaminophen cures neonatal sepsis alone",
-      "Because lumbar puncture is only done in adults"
-    ],
-    "answer": 0,
-    "explanation": "Neonates (<= 28 days) with fever or signs of sepsis require urgent evaluation and empiric parenteral antimicrobials given the risk of rapid progression to bacteremia or meningitis."
-  },
-  {
-    "id": "g-peds-048",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 4-month-old infant is brought for a routine checkup and parents ask about safe sleep practices to reduce the risk of sudden infant death syndrome (SIDS) and sleep-related infant deaths. Which recommendation aligns with safe infant sleep guidance?",
-    "options": [
-      "Place the infant supine (on their back) for every sleep on a firm, flat surface in the parents' room (separate sleep surface) without loose bedding, pillows, or plush toys",
-      "Place the infant prone (on their stomach) or side to sleep with soft pillows and blankets",
-      "Put the infant to sleep on a soft couch or armchair",
-      "Cover the infant's head with heavy blankets while sleeping"
-    ],
-    "answer": 0,
-    "explanation": "Supine sleeping on a firm, flat sleep surface, room-sharing without bed-sharing, avoiding soft bedding/pillows/bumpers, and avoiding overheating are key evidence-based safe sleep practices to reduce SIDS/sleep-related infant mortality."
-  },
-  {
-    "id": "g-peds-049",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 3-year-old child presents with a 2-week history of dry cough, low-grade fever, and localized decreased breath sounds and wheezing on the right side after playing with small nuts/toys, with chest radiograph showing hyperinflation ('air trapping') of the right lung on expiration. Which condition must be suspected?",
-    "options": [
-      "Foreign body aspiration (with ball-valve air trapping on the affected side)",
-      "Minimal change disease",
-      "Hypertrophic pyloric stenosis",
-      "Juvenile idiopathic arthritis"
-    ],
-    "answer": 0,
-    "explanation": "Sudden choking/coughing or asymmetric wheezing/decreased breath sounds and unilateral air trapping in a toddler suggest foreign body aspiration, requiring prompt evaluation and bronchoscopy."
-  },
-  {
-    "id": "g-peds-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Pediatrics",
-    "difficulty": "medium",
-    "question": "A 7-year-old child presents with swelling, warmth, and stiffness of the right knee lasting 8 weeks without trauma or infection, along with morning joint stiffness improving with activity. Which chronic pediatric rheumatologic condition is most common in children?",
-    "options": [
-      "Juvenile idiopathic arthritis (JIA)",
-      "Hypertrophic pyloric stenosis",
-      "Neonatal respiratory distress syndrome",
-      "Pityriasis rosea"
-    ],
-    "answer": 0,
-    "explanation": "Juvenile idiopathic arthritis is the most common chronic rheumatic disease of childhood, defined by persistent arthritis of unknown cause lasting at least 6 weeks with onset before age 16, and warrants monitoring for uveitis (especially in oligoarticular JIA with positive ANA)."
-  },
-  {
-    "id": "g-anes-015",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "A patient with a history of chronic obstructive pulmonary disease (COPD) and hypertension is scheduled for elective laparoscopic cholecystectomy. Which American Society of Anesthesiologists (ASA) physical status classification best fits a patient with mild-to-moderate systemic disease that is well-controlled without constant threat to life?",
-    "options": [
-      "ASA II (patient with mild systemic disease)",
-      "ASA I (healthy patient with no organic, physiologic, or psychiatric disturbance)",
-      "ASA IV (patient with severe systemic disease that is a constant threat to life)",
-      "ASA V (moribund patient not expected to survive without the operation)"
-    ],
-    "answer": 0,
-    "explanation": "ASA Physical Status II applies to patients with mild systemic disease (such as controlled hypertension, mild asthma/COPD, or obesity with BMI 30–40) without substantive functional limitation, whereas ASA III implies severe systemic disease with substantive functional limitation."
-  },
-  {
-    "id": "g-anes-016",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "During preoperative airway evaluation, a patient can open the mouth widely and shows visualization of the soft palate, fauces, and uvula, with only the base of the uvula partially obscured by the tongue base. Which Mallampati class is this?",
-    "options": [
-      "Mallampati Class II",
-      "Mallampati Class I (soft palate, fauces, uvula, and anterior/posterior pillars fully visible)",
-      "Mallampati Class IV (hard palate only visible)",
-      "Mallampati Grade 0"
-    ],
-    "answer": 0,
-    "explanation": "Mallampati classification assesses oral/pharyngeal visibility with the patient sitting upright and tongue protruded maximally without phonation: Class II shows the soft palate, fauces, and part/base of the uvula, whereas Class III shows soft palate and base of uvula only, and Class IV shows hard palate only."
-  },
-  {
-    "id": "g-anes-017",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "hard",
-    "question": "Thirty minutes after induction of general anesthesia with sevoflurane and succinylcholine, a patient develops unexplained rapidly rising end-tidal CO2 (ETCO2), masseter spasm/generalized muscle rigidity, sinus tachycardia, hyperthermia (rising temperature), and metabolic/respiratory acidosis. Which life-threatening anesthesia emergency is suspected?",
-    "options": [
-      "Malignant hyperthermia (MH)",
-      "Simple allergic rhinitis",
-      "Hypoglycemic tremor alone",
-      "Benign paroxysmal positional vertigo"
-    ],
-    "answer": 0,
-    "explanation": "Malignant hyperthermia is a pharmacogenetic hypermetabolic crisis triggered by volatile anesthetics and/or succinylcholine in susceptible individuals; immediate management stops triggering agents, hyperventilates with 100% oxygen, cools as needed, treats acidosis/hyperkalemia/arrhythmias, and administers dantrolene sodium promptly."
-  },
-  {
-    "id": "g-anes-018",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "Which neuromuscular blocking agent causes depolarizing block at the neuromuscular junction and carries a risk of hyperkalemia (especially in burns, crush injury, denervation/stroke, or neuromuscular disease), myalgias, and triggering malignant hyperthermia?",
-    "options": [
-      "Succinylcholine",
-      "Sugammadex",
-      "Flumazenil",
-      "Acetaminophen"
-    ],
-    "answer": 0,
-    "explanation": "Succinylcholine is a depolarizing neuromuscular blocker with rapid onset and short duration, but extrajunctional acetylcholine receptor upregulation in denervation/burns/trauma can cause life-threatening potassium release and cardiac arrest."
-  },
-  {
-    "id": "g-anes-019",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "A patient receives rocuronium (a non-depolarizing aminosteroid neuromuscular blocker) during surgery and requires rapid reversal of neuromuscular blockade at the end of the procedure. Which agent selectively encapsulates rocuronium (and vecuronium) to reverse blockade?",
-    "options": [
-      "Sugammadex",
-      "Succinylcholine",
-      "Atropine alone without cholinesterase inhibitor",
-      "Naloxone"
-    ],
-    "answer": 0,
-    "explanation": "Sugammadex is a modified gamma-cyclodextrin that binds steroidal neuromuscular blockers (rocuronium > vecuronium), reversing moderate or deep block rapidly without relying on acetylcholinesterase inhibition."
-  },
-  {
-    "id": "g-anes-020",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "A patient develops sudden hypotension, bradycardia, and lightheadedness shortly after placement of a spinal (subarachnoid) or high thoracic epidural anesthetic. What is the primary physiologic mechanism of hypotension after neuraxial anesthesia?",
-    "options": [
-      "Sympathetic blockade causing peripheral vasodilation/venous pooling and decreased venous return/cardiac output (and high block can also affect cardioaccelerator fibers T1–T4)",
-      "Direct coronary artery occlusion by local anesthetic",
-      "Acute hyperkalemic arrest from lidocaine",
-      "Immediate pulmonary embolism in every patient"
-    ],
-    "answer": 0,
-    "explanation": "Neuraxial blockade interrupts sympathetic outflow, reducing systemic vascular resistance and venous return; management includes IV fluids/vasopressors (such as phenylephrine or ephedrine per hemodynamics) and airway/oxygen support if high block occurs."
   },
   {
     "id": "g-anes-021",
@@ -11118,38 +10238,6 @@
     ],
     "answer": 0,
     "explanation": "Hypoxemia, hypercarbia, hypotension, hypoglycemia, pain, and bladder distension are reversible physiological triggers of post-anesthetic agitation and must be evaluated promptly."
-  },
-  {
-    "id": "g-anes-049",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "Which anatomical landmark or technique is commonly used when performing landmark-guided spinal (subarachnoid) anesthesia in the lumbar spine in adults?",
-    "options": [
-      "Inserting the needle below the termination of the spinal cord (typically at the L3–L4 or L4–L5 interspace, approximated by Tuffier's line across the iliac crests) into the subarachnoid space to obtain clear cerebrospinal fluid",
-      "Inserting through the foramen magnum into the brainstem",
-      "Inserting at the C1–C2 interspace in the neck",
-      "Inserting into the pleural cavity"
-    ],
-    "answer": 0,
-    "explanation": "In adults, the conus medullaris typically terminates around L1–L2; lumbar puncture/spinal anesthesia is performed at lower lumbar interspaces (such as L3–L4 or L4–L5) to minimize risk of direct spinal cord trauma."
-  },
-  {
-    "id": "g-anes-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Anesthesia",
-    "difficulty": "medium",
-    "question": "A patient has a history of severe reactions to volatile anesthetics or succinylcholine and a known susceptibility to malignant hyperthermia. How should an anesthetic plan be modified for this patient?",
-    "options": [
-      "Avoid all volatile inhalational anesthetics and succinylcholine ('trigger-free' anesthesia using non-triggering IV agents/regional techniques as appropriate) and prepare a malignant hyperthermia cart/dantrolene protocol",
-      "Use sevoflurane and succinylcholine at higher doses",
-      "Skip preoperative anesthesia evaluation",
-      "Treat with oral ketoconazole preoperatively"
-    ],
-    "answer": 0,
-    "explanation": "For malignant hyperthermia-susceptible patients, avoiding volatile anesthetics and depolarizing neuromuscular blockers (succinylcholine) prevents triggering a hypermetabolic crisis, while maintaining full monitoring and emergency readiness."
   },
   {
     "id": "g-emer-015",
@@ -11728,102 +10816,6 @@
     "explanation": "Point-of-care glucose testing is fast, inexpensive, and vital in any patient with altered mental status, seizure, or stroke-like symptoms so hypoglycemia can be recognized and corrected immediately."
   },
   {
-    "id": "g-rad-015",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "medium",
-    "question": "A patient presents with sudden pleuritic chest pain and shortness of breath. A portable anteroposterior (AP) chest radiograph shows a radiolucent area along the right lateral chest wall with absent lung markings peripherally, a visible visceral pleural line, and collapse of the right lung without mediastinal shift. What is the diagnosis?",
-    "options": [
-      "Pneumothorax (simple/non-tension)",
-      "Pleural effusion with meniscus sign",
-      "Lobar consolidation with air bronchograms",
-      "Pericardial tamponade"
-    ],
-    "answer": 0,
-    "explanation": "A visceral pleural line with absent peripheral lung markings (radiolucency) outside the lung margin indicates pneumothorax; upright/expiratory views or thoracic ultrasound can further assist when needed, while any tension signs require immediate decompression rather than waiting for imaging."
-  },
-  {
-    "id": "g-rad-016",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "medium",
-    "question": "An upright chest radiograph demonstrates blunting of the left costophrenic angle and a homogeneous dependent opacity curving upward laterally ('meniscus sign'), with tracheal/mediastinal shift to the right if the collection is large. Which pleural abnormality is most likely?",
-    "options": [
-      "Pleural effusion",
-      "Simple pneumothorax",
-      "Subdiaphragmatic free air under the right hemidiaphragm",
-      "Normal post-inspiratory lung expansion"
-    ],
-    "answer": 0,
-    "explanation": "Blunting of the costophrenic angle and dependent homogeneous opacity (meniscus on upright PA/AP films) are classic for pleural effusion; decubitus radiography or bedside ultrasound can confirm free-flowing fluid and guide thoracentesis."
-  },
-  {
-    "id": "g-rad-017",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "hard",
-    "question": "A patient presents with acute severe epigastric/abdominal pain after sudden onset or recent abdominal surgery, and an upright chest radiograph (or lateral decubitus film) shows a crescentic collection of gas beneath the right hemidiaphragm. What does pneumoperitoneum typically indicate?",
-    "options": [
-      "Free intraperitoneal air—commonly from hollow viscus perforation (such as a perforated peptic ulcer) or recent abdominal surgery/peritoneal dialysis—requiring urgent surgical evaluation when perforation is suspected",
-      "Simple constipation in the sigmoid colon",
-      "Normal gastric fundal gas bubble only",
-      "Benign renal cyst"
-    ],
-    "answer": 0,
-    "explanation": "Subdiaphragmatic free air on an upright chest film indicates pneumoperitoneum, most urgently raising concern for gastrointestinal perforation (such as perforated peptic ulcer) in an acute abdomen."
-  },
-  {
-    "id": "g-rad-018",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "medium",
-    "question": "A patient presents with fever, productive cough, and right-sided pleuritic chest pain. Chest radiograph shows a wedge-shaped or lobar homogeneous opacity in the right lower lobe with dark branching linear lucencies representing air-filled bronchi within consolidated alveoli. What are these dark branching lines called?",
-    "options": [
-      "Air bronchograms (characteristic of alveolar/parenchymal consolidation such as bacterial pneumonia)",
-      "Kerley B lines",
-      "Cannonball metastases",
-      "Rigler sign"
-    ],
-    "answer": 0,
-    "explanation": "Air bronchograms occur when fluid, pus, or exudate replaces alveolar air while larger conducting bronchi remain patent and air-filled, appearing as radiolucent branching tubes within consolidated lung tissue."
-  },
-  {
-    "id": "g-rad-019",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "medium",
-    "question": "A patient with acute decompensated heart failure presents with orthopnea and dyspnea. Chest radiograph shows cardiomegaly, cephalization of pulmonary vessels, peribronchial cuffing, bilateral perihilar ('bat-wing') opacities, and short horizontal lines perpendicular to the lateral pleural surface at the lung bases. What are those short horizontal basal lines?",
-    "options": [
-      "Kerley B lines (reflecting interlobular septal edema/thickening from elevated pulmonary venous pressure)",
-      "Air bronchograms",
-      "Chilaiditi sign",
-      "Osteophytes"
-    ],
-    "answer": 0,
-    "explanation": "Kerley B lines are short (1–2 cm), horizontal non-branching lines at the lung periphery/bases touching the pleural surface, classically seen with interstitial edema in congestive heart failure or lymphatic engorgement."
-  },
-  {
-    "id": "g-rad-020",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "hard",
-    "question": "In acute ischemic stroke evaluation, why is a non-contrast computed tomography (NCCT) scan of the head obtained immediately as the initial neuroimaging test?",
-    "options": [
-      "To rapidly rule out intracranial hemorrhage (which appears hyperdense/bright on NCCT) and exclude major mimics/large established infarction before deciding on reperfusion therapy such as IV thrombolysis or thrombectomy",
-      "To diagnose iron-deficiency anemia",
-      "Because non-contrast CT cannot detect acute blood",
-      "To replace neurological examination completely"
-    ],
-    "answer": 0,
-    "explanation": "Acute blood appears bright (hyperdense) on non-contrast head CT; ruling out hemorrhage quickly is essential before giving thrombolytics or antithrombotics in suspected acute stroke."
-  },
-  {
     "id": "g-rad-021",
     "track": "medical",
     "subTrack": "non-surgical",
@@ -12286,22 +11278,6 @@
     ],
     "answer": 0,
     "explanation": "RUQ ultrasound is a rapid initial test for biliary obstruction/stones, while MRCP or ERCP provides detailed biliary mapping and allows urgent biliary drainage in acute suppurative cholangitis alongside resuscitation and broad-spectrum antibiotics."
-  },
-  {
-    "id": "g-rad-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Radiology",
-    "difficulty": "medium",
-    "question": "What is the main advantage of diagnostic ultrasonography (including point-of-care ultrasound [POCUS]) in acute clinical settings?",
-    "options": [
-      "It provides real-time, portable bedside visualization without ionizing radiation, allowing rapid serial assessments and procedural guidance (such as vascular access, paracentesis, or thoracentesis)",
-      "It penetrates dense cortical bone better than CT",
-      "It requires no operator skill or clinical correlation",
-      "It replaces blood tests and physical examination in every case"
-    ],
-    "answer": 0,
-    "explanation": "Ultrasound is radiation-free, repeatable at the bedside, and useful both for rapid diagnostic evaluation (e.g., effusions, gallbladder, DVT, pregnancy/pelvis, eFAST) and for real-time procedural guidance."
   },
   {
     "id": "g-rheum-015",
@@ -12830,53 +11806,5 @@
     ],
     "answer": 0,
     "explanation": "IgA vasculitis is an immune-complex small-vessel vasculitis with IgA-dominant deposits, typically presenting with palpable purpura (especially lower extremities/buttocks), arthralgias/arthritis, abdominal pain, and renal involvement (nephritis)."
-  },
-  {
-    "id": "g-rheum-048",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Rheumatology",
-    "difficulty": "medium",
-    "question": "A 30-year-old woman with known systemic lupus erythematosus plans to become pregnant. Why is preconception planning and timing pregnancy during a period of quiet/low disease activity (typically >= 6 months of quiescent lupus) important?",
-    "options": [
-      "Active SLE—especially active lupus nephritis or antiphospholipid antibodies—increases risks of lupus flares, preeclampsia, miscarriage/fetal loss, preterm birth, and fetal growth restriction, and teratogenic medications (such as mycophenolate, methotrexate, or cyclophosphamide) must be stopped/switched safely well ahead of conception with specialist guidance",
-      "Pregnancy is completely risk-free regardless of active lupus nephritis or teratogenic drugs",
-      "Mycophenolate and methotrexate are safe throughout pregnancy",
-      "Lupus never flares during or after pregnancy"
-    ],
-    "answer": 0,
-    "explanation": "Quiescent disease for >= 6 months before conception, medication review to replace teratogens (such as mycophenolate or methotrexate) with pregnancy-compatible therapies (such as hydroxychloroquine and appropriate azathioprine/tacrolimus regimens if needed), and antiphospholipid/renal risk assessment improve maternal and fetal outcomes."
-  },
-  {
-    "id": "g-rheum-049",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Rheumatology",
-    "difficulty": "medium",
-    "question": "A 65-year-old man presents with asymmetric pulses/blood pressure between the left and right arms, claudication of the upper extremities, carotid/subclavian bruits, and constitutional symptoms, with CT/MR angiography showing large-vessel stenoses/wall thickening of the aorta and its major branches. Which large-vessel vasculitis is most likely in a patient older than 50?",
-    "options": [
-      "Giant cell arteritis (large-vessel GCA, whereas Takayasu arteritis classically presents in patients < 40 years of age)",
-      "Simple seasonal allergic rhinitis",
-      "Osteoarthritis of the knees",
-      "Pityriasis rosea"
-    ],
-    "answer": 0,
-    "explanation": "Both GCA and Takayasu arteritis are large-vessel vasculitides involving the aorta and major branches; onset age typically distinguishes them (commonly > 50 years in GCA vs. < 40 years in Takayasu arteritis)."
-  },
-  {
-    "id": "g-rheum-050",
-    "track": "medical",
-    "subTrack": "non-surgical",
-    "specialty": "Rheumatology",
-    "difficulty": "medium",
-    "question": "Why is distinguishing inflammatory arthritis from non-inflammatory mechanical joint pain (such as osteoarthritis or soft-tissue injury) a foundational first step in rheumatology evaluation?",
-    "options": [
-      "Inflammatory arthritis typically features prolonged morning stiffness (> 30–60 minutes), joint swelling/warmth/synovitis, improvement with movement rather than rest, and potential systemic or extra-articular organ involvement requiring targeted anti-inflammatory/DMARD therapy to prevent joint damage",
-      "Inflammatory arthritis and mechanical joint pain have identical treatments and zero difference in joint damage risk",
-      "Morning stiffness lasting 2 hours is normal in healthy joints",
-      "Non-inflammatory pain always requires systemic immunosuppression"
-    ],
-    "answer": 0,
-    "explanation": "Recognizing inflammatory synovitis (prolonged morning stiffness, true joint effusion/swelling, warmth, systemic features) guides timely rheumatologic workup and early DMARD therapy when indicated, whereas mechanical conditions prioritize biomechanical, rehabilitative, and symptom-targeted care."
   }
 ]

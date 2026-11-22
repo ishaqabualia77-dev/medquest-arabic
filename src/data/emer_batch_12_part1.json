@@ -1,0 +1,98 @@
+[
+  {
+    "id": "g-emer-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A 24-year-old man presents 30 minutes after eating peanuts with urticaria, lip/tongue swelling, stridor, wheezing, and BP 82/48 mmHg. What is the immediate first-line treatment?",
+    "options": [
+      "Intramuscular epinephrine into the anterolateral thigh immediately, with airway/oxygen support and IV crystalloids",
+      "Oral antihistamine tablets only while observing for 2 hours",
+      "Routine subcutaneous insulin",
+      "Nebulized ipratropium alone without epinephrine"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine is the immediate first-line lifesaving therapy for anaphylaxis; antihistamines and steroids are adjunctive only."
+  },
+  {
+    "id": "g-emer-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is found somnolent with pinpoint pupils, respiratory rate 6/min, and hypoventilation after suspected opioid overdose. Which immediate intervention reverses respiratory depression?",
+    "options": [
+      "Naloxone (IV, IM, or intranasal) with airway and oxygenation/ventilation support",
+      "Routine flumazenil in all undifferentiated sedative overdoses",
+      "Oral activated charcoal in an obtunded patient with an unprotected airway",
+      "High-dose IV dextrose alone when hypoventilation is severe"
+    ],
+    "answer": 0,
+    "explanation": "Naloxone rapidly reverses opioid-induced respiratory and CNS depression; monitor closely for recurrent sedation if opioid half-life exceeds naloxone duration."
+  },
+  {
+    "id": "g-emer-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with acute chest pain has a 12-lead ECG showing new ST-segment elevation in leads V1–V4 with reciprocal inferior ST depression. What is the priority reperfusion strategy?",
+    "options": [
+      "Emergent primary PCI within target door-to-balloon time (or fibrinolytic therapy if primary PCI is not timely available and no contraindications exist)",
+      "Benign early repolarization requiring no cardiac evaluation",
+      "Simple antacid therapy for suspected GERD",
+      "Outpatient oral antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "Anterior STEMI (V1–V4) requires urgent reperfusion via primary PCI (or timely fibrinolysis when indicated) alongside antithrombotic and supportive care."
+  },
+  {
+    "id": "g-emer-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with type 1 diabetes presents with Kussmaul respirations, fruity breath, vomiting, abdominal pain, glucose 460 mg/dL, pH 7.18, bicarbonate 10 mEq/L, and positive ketones. What is the standard initial DKA management sequence?",
+    "options": [
+      "Isotonic IV fluids, potassium check/replacement (holding insulin or correcting severe hypokalemia < 3.3 mEq/L first), and continuous IV regular insulin infusion with close electrolyte/glucose monitoring",
+      "Subcutaneous basal insulin alone without IV fluids or potassium checks",
+      "Routine sodium bicarbonate in every mild-to-moderate DKA case",
+      "Discharge home on oral metformin"
+    ],
+    "answer": 0,
+    "explanation": "DKA requires IV fluid resuscitation, potassium evaluation/repletion before or alongside insulin (never starting insulin if K+ < 3.3 mEq/L until repleted), and IV insulin until anion-gap closure."
+  },
+  {
+    "id": "g-emer-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden severe dyspnea, pleuritic chest pain, tachycardia, and hypoxemia after recent travel and immobilization, with high pretest probability for acute pulmonary embolism. What is the appropriate initial step?",
+    "options": [
+      "Start prompt empiric anticoagulation (unless contraindicated by active major bleeding) while pursuing CT pulmonary angiography (CTPA) and assessing hemodynamic stability",
+      "Delay evaluation and anticoagulation for 48 hours despite hypoxemia",
+      "Order a plain lumbar spine radiograph",
+      "Give oral antihistamines"
+    ],
+    "answer": 0,
+    "explanation": "High-probability acute PE warrants prompt anticoagulation if not contraindicated while obtaining CTPA; hemodynamically unstable PE may require reperfusion therapy."
+  },
+  {
+    "id": "g-emer-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute dyspnea, elevated JVP, hypotension (BP 76/48 mmHg), muffled heart sounds, and pulsus paradoxus, with bedside echo showing large pericardial effusion and chamber collapse. Which immediate intervention is indicated?",
+    "options": [
+      "Urgent pericardiocentesis (or surgical pericardial drainage) for cardiac tamponade with supportive hemodynamic care",
+      "Seasonal allergy nasal spray",
+      "Routine iron tablets for mild anemia",
+      "Canalith repositioning maneuvers"
+    ],
+    "answer": 0,
+    "explanation": "Cardiac tamponade causes obstructive shock from elevated intrapericardial pressure and requires urgent fluid drainage."
+  }
+]

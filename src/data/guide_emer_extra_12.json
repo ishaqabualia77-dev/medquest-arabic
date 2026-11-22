@@ -1,0 +1,194 @@
+[
+  {
+    "id": "g-emer-039",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A 24-year-old man presents 30 minutes after eating peanuts with urticaria, lip/tongue swelling, hoarseness/stridor, wheezing, and blood pressure 82/48 mmHg. What is the immediate first-line lifesaving intervention?",
+    "options": [
+      "Intramuscular epinephrine (adrenaline) immediately into the anterolateral thigh, alongside airway/oxygen support, supine positioning with leg elevation if tolerated, and IV crystalloid resuscitation",
+      "Oral antihistamine tablets only while waiting 2 hours to observe",
+      "Routine subcutaneous insulin",
+      "Nebulized ipratropium as the sole treatment without epinephrine"
+    ],
+    "answer": 0,
+    "explanation": "Epinephrine is the first-line treatment for anaphylaxis and should be given promptly intramuscularly (anterolateral thigh); antihistamines and glucocorticoids are adjunctive only and never replace epinephrine."
+  },
+  {
+    "id": "g-emer-040",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient is found somnolent with pinpoint (miotic) pupils, respiratory rate of 6 breaths/min, and hypoventilation after suspected opioid overdose. Which immediate intervention reverses respiratory depression?",
+    "options": [
+      "Naloxone (titrated IV, IM, or intranasal) with airway/bag-valve-mask oxygenation and ventilation support as needed",
+      "Flumazenil as routine first-line therapy in all undifferentiated sedative overdoses",
+      "Oral activated charcoal in an obtunded patient with an unprotected airway",
+      "High-dose intravenous dextrose alone when hypoventilation is severe"
+    ],
+    "answer": 0,
+    "explanation": "Naloxone is a competitive opioid antagonist that rapidly reverses opioid-induced respiratory and CNS depression; close monitoring is required because naloxone's duration may be shorter than long-acting opioids."
+  },
+  {
+    "id": "g-emer-041",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute chest pain, and a 12-lead ECG obtained within 10 minutes shows new ST-segment elevation in leads V1–V4 with reciprocal inferior ST depression. What is the diagnosis and priority reperfusion strategy?",
+    "options": [
+      "Anterior ST-elevation myocardial infarction (STEMI)—requiring emergent primary percutaneous coronary intervention (PCI) within target door-to-balloon time (or fibrinolytic therapy if primary PCI cannot be achieved within guideline timeframes and no contraindications exist)",
+      "Benign early repolarization requiring no ECG follow-up or cardiac evaluation",
+      "Simple gastroesophageal reflux disease",
+      "Acute uncomplicated bacterial cystitis"
+    ],
+    "answer": 0,
+    "explanation": "ST-elevation in V1–V4 indicates anterior wall myocardial ischemia/infarction; rapid reperfusion via primary PCI (or timely fibrinolysis when indicated) is essential alongside antiplatelet/anticoagulant and supportive care."
+  },
+  {
+    "id": "g-emer-042",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with type 1 diabetes mellitus presents with nausea, vomiting, abdominal pain, tachypnea with deep Kussmaul respirations, fruity odor on breath, blood glucose 460 mg/dL, arterial pH 7.18, bicarbonate 10 mEq/L, and positive serum/urine ketones. Which sequence of initial management is standard in diabetic ketoacidosis (DKA)?",
+    "options": [
+      "Isotonic intravenous fluid resuscitation, potassium assessment/replacement (holding insulin or correcting severe hypokalemia < 3.3 mEq/L first so potassium does not drop dangerously low), and continuous intravenous regular insulin infusion with close electrolyte and glucose monitoring until anion-gap closure",
+      "Subcutaneous long-acting insulin alone without IV fluids or potassium checks",
+      "Sodium bicarbonate infusion in every mild-to-moderate DKA case regardless of pH",
+      "Discharging home on oral metformin"
+    ],
+    "answer": 0,
+    "explanation": "DKA management centers on IV fluid resuscitation, monitoring/replacing potassium (avoiding starting insulin if K+ < 3.3 mEq/L until repleted), and IV insulin infusion with frequent glucose, potassium, and acid-base checks until resolution."
+  },
+  {
+    "id": "g-emer-043",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with sudden-onset severe dyspnea, pleuritic chest pain, tachycardia, and hypoxemia after a recent long-haul flight and immobilization. The Wells score indicates high pretest probability for acute pulmonary embolism. What is the appropriate initial approach?",
+    "options": [
+      "Initiate prompt empiric anticoagulation (unless contraindicated by active major bleeding) while obtaining definitive diagnostic imaging—typically CT pulmonary angiography (CTPA)—and assess hemodynamic stability",
+      "Wait 48 hours before any evaluation or anticoagulation even when hemodynamic status is unstable",
+      "Order a plain lumbar spine X-ray",
+      "Treat with oral antihistamines"
+    ],
+    "answer": 0,
+    "explanation": "In high clinical probability of acute PE, starting anticoagulation promptly (if no contraindication) while pursuing CTPA is standard; massive/high-risk PE with hemodynamic instability may require reperfusion therapy (such as systemic thrombolysis)."
+  },
+  {
+    "id": "g-emer-044",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute shortness of breath, jugular venous distension, hypotension (BP 76/48 mmHg), muffled heart sounds, and pulsus paradoxus, with bedside ultrasound showing a large pericardial effusion and right atrial/ventricular diastolic collapse. Which life-threatening emergency is present and requires immediate relief?",
+    "options": [
+      "Cardiac tamponade—requiring urgent pericardiocentesis (or surgical pericardial window/drainage) alongside supportive hemodynamic measures",
+      "Simple seasonal allergic rhinitis",
+      "Uncomplicated iron-deficiency anemia",
+      "Benign positional vertigo"
+    ],
+    "answer": 0,
+    "explanation": "Cardiac tamponade restricts ventricular filling due to elevated intrapericardial pressure, causing obstructive shock; urgent drainage of pericardial fluid relieves tamponade physiology."
+  },
+  {
+    "id": "g-emer-045",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents to the emergency department with fever, severe headache, neck stiffness (nuchal rigidity), and altered mental status. Why should blood cultures be drawn and empiric intravenous antimicrobials (plus dexamethasone when indicated) be initiated as quickly as possible rather than delaying treatment for imaging or lumbar puncture?",
+    "options": [
+      "Acute bacterial meningitis progresses rapidly and carries high mortality and neurologic morbidity; early empiric antibiotics (and adjunctive dexamethasone per guidelines) significantly improve survival, while head CT prior to lumbar puncture is reserved for specific focal/neurologic/immunocompromised/papilledema indications",
+      "Bacterial meningitis is a mild viral cold that never needs antibiotics",
+      "Antibiotics should be withheld for 24 hours until all viral panels return",
+      "Oral ibuprofen is the definitive cure for bacterial meningitis"
+    ],
+    "answer": 0,
+    "explanation": "Door-to-needle antibiotic timing is critical in suspected acute bacterial meningitis; if neuroimaging is indicated before lumbar puncture, blood cultures are obtained and empiric antimicrobials are started immediately without waiting."
+  },
+  {
+    "id": "g-emer-046",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient with known atrial fibrillation on warfarin presents with acute gastrointestinal bleeding and an INR of 5.8, or with active life-threatening hemorrhage on warfarin. Which reversal principles apply in acute bleeding/high-risk settings?",
+    "options": [
+      "Hold warfarin, assess bleeding severity and hemodynamic stability, and administer 4-factor prothrombin complex concentrate (4F-PCC) plus intravenous vitamin K for major/life-threatening bleeding (with vitamin K and holding warfarin tailored to non-bleeding elevated INR thresholds)",
+      "Give additional warfarin doses to stabilize the INR",
+      "Ignore the INR and discharge the patient immediately",
+      "Treat major bleeding solely with oral multivitamins"
+    ],
+    "answer": 0,
+    "explanation": "In major/life-threatening warfarin-associated bleeding, 4-factor PCC provides rapid factor replacement alongside vitamin K (which supports sustained endogenous synthesis), while non-bleeding elevated INR is managed according to specific INR thresholds and bleeding risk."
+  },
+  {
+    "id": "g-emer-047",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute onset of confusion, diaphoresis, tremor, palpitations, and slurred speech, and point-of-care capillary glucose reads 42 mg/dL. What is the immediate treatment in a patient with altered mental status or inability to swallow safely?",
+    "options": [
+      "Intravenous dextrose (e.g., D50W or D10W bolus per protocol)—or intramuscular/intranasal glucagon if IV access is unavailable—followed by repeat glucose checks and identifying the underlying cause (such as insulin or sulfonylurea use)",
+      "Forcing oral juice into an unconscious or obtunded patient",
+      "Administering subcutaneous insulin",
+      "Waiting 1 hour before rechecking blood glucose"
+    ],
+    "answer": 0,
+    "explanation": "Symptomatic hypoglycemia with impaired consciousness or aspiration risk requires IV dextrose (or glucagon) immediately rather than oral intake, with frequent glucose monitoring to prevent recurrent hypoglycemia."
+  },
+  {
+    "id": "g-emer-048",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with generalized tonic-clonic seizure activity lasting more than 5 minutes without full recovery of consciousness between seizures (status epilepticus). Which medication class is first-line for initial acute termination of status epilepticus?",
+    "options": [
+      "Intravenous benzodiazepines (such as lorazepam or diazepam; or IM midazolam if IV access is not yet established), followed by second-line antiseizure medications (such as levetiracetam, fosphenytoin/phenytoin, or valproate) if seizures persist",
+      "Oral acetaminophen",
+      "Routine daily topical hydrocortisone",
+      "Waiting 60 minutes before giving any medication while checking routine outpatient labs"
+    ],
+    "answer": 0,
+    "explanation": "Prompt benzodiazepine administration is first-line for acute status epilepticus alongside airway/oxygenation and glucose/electrolyte checks, escalating to second-line IV antiseizure therapy if seizures continue."
+  },
+  {
+    "id": "g-emer-049",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "A patient presents with acute severe right-sided flank pain radiating to the groin, nausea, and microscopic/gross hematuria from suspected obstructing ureteral stone, with normal vital signs and no fever or signs of infection. Which initial management steps are appropriate?",
+    "options": [
+      "Provide effective analgesia (such as NSAIDs—when renal function and bleeding/GI risk allow—and/or acetaminophen/opioids as needed), assess renal function and hydration without forced over-hydration, and evaluate for infection/obstruction red flags (such as fever/urosepsis, intractable vomiting, or acute kidney injury/solitary kidney)",
+      "Assume every flank pain with fever is simple uncomplicated stone pain and send home without antibiotics or urologic evaluation",
+      "Start long-term chemotherapy",
+      "Avoid all pain control until surgery"
+    ],
+    "answer": 0,
+    "explanation": "Uncomplicated renal colic is managed with prompt analgesia and selective imaging/medical expulsive therapy when appropriate, whereas an obstructing stone with fever/infection or acute kidney injury is a urologic emergency requiring urgent decompression and antibiotics."
+  },
+  {
+    "id": "g-emer-050",
+    "track": "medical",
+    "subTrack": "non-surgical",
+    "specialty": "Emergency",
+    "difficulty": "medium",
+    "question": "In the primary trauma survey (ABCDE approach), what is the correct initial sequence of priorities in an acutely injured trauma patient?",
+    "options": [
+      "Airway maintenance with cervical spine protection when indicated, Breathing and ventilation, Circulation with hemorrhage control, Disability (neurologic status / GCS / pupils), and Exposure/Environmental control (preventing hypothermia)",
+      "Exposure first, followed by discharge paperwork, then Airway",
+      "Neurologic exam only, skipping airway, breathing, and circulation",
+      "Routine outpatient vaccination review before checking airway or bleeding"
+    ],
+    "answer": 0,
+    "explanation": "The ABCDE primary survey prioritizes life-threatening problems in immediate order of lethality: Airway (with C-spine precautions when indicated), Breathing, Circulation/hemorrhage control, Disability, and Exposure/temperature control."
+  }
+]
