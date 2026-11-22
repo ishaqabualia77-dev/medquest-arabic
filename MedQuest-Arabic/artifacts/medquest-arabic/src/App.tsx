@@ -431,8 +431,19 @@ function AppHome() {
           <footer className="practice-strip">
             <div className="practice-copy"><div className="practice-icon"><ShieldCheck size={18}/></div><div><p className="practice-title">تعلّم بثقة، خطوة بخطوة</p><p className="practice-text">محتوى تدريبي تعليمي، وليس بديلاً عن المشورة الطبية.</p></div></div>
             <button className="btn-primary" onClick={startPractice} data-testid="button-footer-practice">تدريب سريع <ArrowLeft size={14}/></button>
+      <button
+        type="button"
+        className={aiOpen ? "btn-primary" : "btn-secondary"}
+        data-testid="button-ai-assistant"
+        onClick={() => setAiOpen((v) => !v)}
+        style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700 }}
+      >
+        <Sparkles size={17} />
+        <span>الذكاء الاصطناعي · AI</span>
+      </button>
           </footer>
         </div>
+    {aiOpen && <AiStudyAssistant trackName={info.name} onClose={() => setAiOpen(false)} />}
       </main>
       <nav className="mobile-bottom-nav" aria-label="التنقل الرئيسي للجوال">
         <button className={`mobile-nav-item ${screen==='dashboard'?'active':''}`} onClick={()=>setPage('dashboard')} aria-current={screen==='dashboard'?'page':undefined} data-testid="mobile-nav-dashboard">
@@ -1136,27 +1147,6 @@ function Dashboard({track,chooseTrack,progress,startPractice,openBank,questionsC
         </button>
         {calculatorOpen && <DoseCalculatorSection onClose={() => setCalculatorOpen(false)} />}
       </div>
-    </div>
-
-    
-    <div style={{ marginTop: 12 }}>
-      <button
-        type="button"
-        className={aiOpen ? "btn-primary" : "btn-secondary"}
-        data-testid="button-ai-assistant"
-        onClick={() => setAiOpen((v) => !v)}
-        style={{ width: "100%", justifyContent: "space-between", padding: "12px 16px" }}
-      >
-        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700 }}>
-          <Sparkles size={17} />
-          <span>الذكاء الاصطناعي · AI Study Assistant</span>
-          <span style={{ fontSize: 12, opacity: 0.8 }}>(شرح وتوليد أسئلة)</span>
-        </span>
-        <span style={{ fontSize: 12.5 }}>
-          {aiOpen ? "إخفاء المساعد" : "فتح المساعد"}
-        </span>
-      </button>
-      {aiOpen && <AiStudyAssistant trackName={info.name} onClose={() => setAiOpen(false)} />}
     </div>
 
     <div className="below-grid">
