@@ -421,6 +421,15 @@ function AppHome() {
 
 
           {screen==='practice'&&<>
+          <GuidedTrainingFlow
+            key={'guided-' + track + '-' + activeQuestionsByTrack[track].length}
+            track={track}
+            questions={activeQuestionsByTrack[track]}
+            categories={categoriesByTrack[track] || []}
+            progress={progress}
+            onAnswer={(q, idx) => { answerQuestion(idx); }}
+            onFinishExam={recordExam}
+          />
             {track==='specialty'&&<ClassificationBranchFilter compact selectedBranches={selectedBranches} onChangeBranches={(next)=>{setSelectedBranches(next);setQuestionIndex(0);setSelectedAnswer(null);}} questions={baseTrackQuestions} onEnterSelectedQuestions={()=>{setQuestionIndex(0);setSelectedAnswer(null);}} />}
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:8,marginBottom:10,padding:"8px 12px",borderRadius:10,background:mistakesOnly?"#fff5f4":"#f8faf9",border:mistakesOnly?"1px solid #f0c5c0":"1px solid #dfe7e2"}}>
               <span style={{fontSize:12.5,fontWeight:700,color:mistakesOnly?"#9e2d24":"#39473f"}}>
@@ -479,6 +488,193 @@ interface PracticeModeViewProps {
   progress: Progress;
   recordExam: (items: Question[], answers: Record<string, number>) => void;
 }
+function QuestionProtectionShield({ children }: { children: any }) {
+  return <div onCopy={(e) => e.preventDefault()}>{children}</div>;
+}
+
+function GuidedTrainingFlow({
+  track,
+  questions,
+  categories,
+  progress,
+  onAnswer,
+  onFinishExam,
+}: {
+  track: TrackId;
+  questions: Question[];
+  categories: string[];
+  progress: Progress;
+  onAnswer: (q: Question, optionIdx: number) => void;
+  onFinishExam: (items: Question[], answers: Record<string, number>) => void;
+}) {
+  const [step, setStep] = useState<'mode' | 'specialty' | 'session'>('mode');
+  const [mode, setMode] = useState<'study' | 'exam'>('study');
+  const [selectAllSpecs, setSelectAllSpecs] = useState<boolean>(true);
+  const [chosenSpecs, setChosenSpecs] = useState<string[]>([]);
+  const [qIdx, setQIdx] = useState<number>(0);
+  const [selectedOpt, setSelectedOpt] = useState<number | null>(null);
+  const [examAnswers, setExamAnswers] = useState<Record<string, number>>({});
+  const [examSubmitted, setExamSubmitted] = useState<boolean>(false);
+
+  const availableSpecs = useMemo(() => {
+    const fromQ = Array.from(new Set(questions.map((q) => q.specialty).filter(Boolean)));
+    const merged = Array.from(new Set([...(categories || []), ...fromQ]));
+    return merged.length ? merged : ['General'];
+  }, [questions, categories]);
+
+  const filteredQuestions = useMemo(() => {
+    if (selectAllSpecs || chosenSpecs.length === 0) return questions;
+    const set = new Set(chosenSpecs);
+    const matches = questions.filter((q) => set.has(q.specialty));
+    return matches.length ? matches : questions;
+  }, [questions, selectAllSpecs, chosenSpecs]);
+
+  const activeQ = filteredQuestions[qIdx];
+
+  const toggleSpec = (sp: string) => {
+    setSelectAllSpecs(false);
+    setChosenSpecs((prev) => prev.includes(sp) ? prev.filter((x) => x !== sp) : [...prev, sp]);
+  };
+
+  const handleChooseOption = (idx: number) => {
+    if (!activeQ) return;
+    if (mode === 'study') {
+      if (selectedOpt !== null) return;
+      setSelectedOpt(idx);
+      onAnswer(activeQ, idx);
+    } else {
+      setExamAnswers((prev) => ({ ...prev, [activeQ.id]: idx }));
+    }
+  };
+
+  const goNext = () => {
+    if (qIdx < filteredQuestions.length - 1) {
+      setQIdx(qIdx + 1);
+      setSelectedOpt(null);
+    } else if (mode === 'exam') {
+      setExamSubmitted(true);
+      onFinishExam(filteredQuestions, examAnswers);
+    }
+  };
+
+  const goPast = () => {
+    if (qIdx > 0) {
+      setQIdx(qIdx - 1);
+      setSelectedOpt(null);
+    }
+  };
+
+  if (step === 'mode') {
+    return (
+      <div className='panel' style={{ padding: 20, marginBottom: 16 }}>
+        <div className='eyebrow'>الخطوة 1 من 2 · أسلوب التدريب</div>
+        <h3 className='panel-title'>اختر أسلوب الدراسة أو الامتحان</h3>
+        <p className='panel-hint'>حدّد طريقة الجلسة قبل اختيار التخصصات والبدء بالسؤال الأول.</p>
+        <div style={{ display: 'flex', gap: 12, marginTop: 14, flexWrap: 'wrap' }}>
+          <button type='button' className={mode === 'study' ? 'btn-primary' : 'btn-secondary'} onClick={() => setMode('study')}>أسلوب الدراسة (إجابة فورية وشرح)</button>
+          <button type='button' className={mode === 'exam' ? 'btn-primary' : 'btn-secondary'} onClick={() => setMode('exam')}>أسلوب الامتحان (تقييم شامل في النهاية)</button>
+        </div>
+        <div style={{ marginTop: 18 }}>
+          <button type='button' className='btn-primary' onClick={() => setStep('specialty')}>التالي: اختيار التخصصات <ArrowLeft size={14} /></button>
+        </div>
+      </div>
+    );
+  }
+
+  if (step === 'specialty') {
+    return (
+      <div className='panel' style={{ padding: 20, marginBottom: 16 }}>
+        <div className='eyebrow'>الخطوة 2 من 2 · التخصصات</div>
+        <h3 className='panel-title'>اختر التخصصات أو 'الكل'</h3>
+        <p className='panel-hint'>الأسلوب المختار: {mode === 'study' ? 'أسلوب الدراسة' : 'أسلوب الامتحان'}</p>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 12 }}>
+          <button type='button' className={selectAllSpecs ? 'btn-primary' : 'btn-secondary'} onClick={() => { setSelectAllSpecs(true); setChosenSpecs([]); }}>الكل ({questions.length})</button>
+          {availableSpecs.map((sp) => {
+            const active = !selectAllSpecs && chosenSpecs.includes(sp);
+            return <button key={sp} type='button' className={active ? 'btn-primary' : 'btn-secondary'} onClick={() => toggleSpec(sp)}>{sp}</button>;
+          })}
+        </div>
+        <div style={{ display: 'flex', gap: 10, marginTop: 18, flexWrap: 'wrap' }}>
+          <button type='button' className='btn-secondary' onClick={() => setStep('mode')}>Past · السابق</button>
+          <button type='button' className='btn-primary' onClick={() => { setQIdx(0); setSelectedOpt(null); setExamAnswers({}); setExamSubmitted(false); setStep('session'); }}>بدء الأسئلة ({filteredQuestions.length}) <ArrowLeft size={14} /></button>
+        </div>
+      </div>
+    );
+  }
+
+  if (mode === 'exam' && examSubmitted) {
+    const score = filteredQuestions.filter((q) => examAnswers[q.id] === q.answer).length;
+    return (
+      <div className='panel' style={{ padding: 22, marginBottom: 16 }}>
+        <div className='eyebrow'>نتيجة الامتحان</div>
+        <h3 className='panel-title'>{score} / {filteredQuestions.length}</h3>
+        <p className='panel-hint'>النسبة: {filteredQuestions.length ? Math.round((score / filteredQuestions.length) * 100) : 0}%</p>
+        <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
+          <button type='button' className='btn-secondary' onClick={() => setStep('mode')}>تغيير الأسلوب والتخصصات</button>
+          <button type='button' className='btn-primary' onClick={() => { setQIdx(0); setExamAnswers({}); setExamSubmitted(false); }}>إعادة الامتحان</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!activeQ) {
+    return (
+      <div className='panel' style={{ padding: 20, marginBottom: 16 }}>
+        <p className='panel-hint'>لا توجد أسئلة متاحة في هذا الاختيار.</p>
+        <button type='button' className='btn-secondary' onClick={() => setStep('specialty')}>Past · العودة للتخصصات</button>
+      </div>
+    );
+  }
+
+  const chosenForExam = examAnswers[activeQ.id];
+  const currentChoice = mode === 'study' ? selectedOpt : (chosenForExam ?? null);
+
+  return (
+    <QuestionProtectionShield>
+      <div className='panel' style={{ padding: 20, marginBottom: 16 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <span className='eyebrow'>{mode === 'study' ? 'أسلوب الدراسة' : 'أسلوب الامتحان'} · {activeQ.specialty}</span>
+          <span className='result-count'>سؤال {qIdx + 1} من {filteredQuestions.length}</span>
+        </div>
+        <h3 className='panel-title' style={{ marginTop: 10, lineHeight: 1.7 }}>{activeQ.question}</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 14 }}>
+          {(activeQ.options || []).map((opt, idx) => {
+            const isSelected = currentChoice === idx;
+            const showResult = mode === 'study' && selectedOpt !== null;
+            const isCorrect = idx === activeQ.answer;
+            let bg = '#fff';
+            let border = '1px solid #dfe7e2';
+            if (showResult && isCorrect) { bg = '#eaf7ee'; border = '1px solid #2e8540'; }
+            else if (showResult && isSelected && !isCorrect) { bg = '#fdecea'; border = '1px solid #c53030'; }
+            else if (isSelected) { bg = '#eef4ff'; border = '1px solid #2b6cb0'; }
+            const label = String(idx + 1) + '. ';
+            return (
+              <button key={idx} type='button' onClick={() => handleChooseOption(idx)} style={{ textAlign: 'right', padding: '10px 14px', borderRadius: 10, background: bg, border, cursor: 'pointer', fontWeight: isSelected ? 700 : 500 }}>
+                {label}{opt}
+              </button>
+            );
+          })}
+        </div>
+        {mode === 'study' && selectedOpt !== null && activeQ.explanation && (
+          <div style={{ marginTop: 14, padding: 12, borderRadius: 10, background: '#f7faf8', border: '1px solid #dce5df' }}>
+            <strong>الشرح:</strong>
+            <p className='panel-hint' style={{ marginTop: 4, lineHeight: 1.8 }}>{activeQ.explanation}</p>
+          </div>
+        )}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginTop: 18, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button type='button' className='btn-secondary' onClick={() => setStep('mode')}>تغيير الأسلوب / التخصص</button>
+            <button type='button' className='btn-secondary' disabled={qIdx === 0} onClick={goPast}>Past</button>
+          </div>
+          <button type='button' className='btn-primary' onClick={goNext}>
+            {qIdx < filteredQuestions.length - 1 ? 'Next' : (mode === 'exam' ? 'تسليم الامتحان' : 'إنهاء')}
+          </button>
+        </div>
+      </div>
+    </QuestionProtectionShield>
+  );
+}
+
 function PracticeModeView(props: PracticeModeViewProps) {
   const {
     track, chooseTrack, subTrack, setSubTrack, questions, index,
