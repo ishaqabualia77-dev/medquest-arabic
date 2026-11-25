@@ -1021,34 +1021,6 @@ function AiStudyAssistant(props: any) {
     return hasLatin;
   };
 
-  const presets: { label: string; mode: "free" | "explain" | "generate" | "drug" | "plan"; text: string }[] = [
-    {
-      label: "محاكاة حالة (STEMI)",
-      mode: "free",
-      text: "STEMI — ألم صدري حاد مع ارتفاع ST على التخطيط، ما الخطوات الفورية والتدبير؟",
-    },
-    {
-      label: "تفريق تشخيصي (DKA vs HHS)",
-      mode: "explain",
-      text: "شاب عمره 19 سنة مصاب بالسكري النوع الأول لديه إقياء، تنفس عميق، سكر 28 mmol/L وكيتونات مرتفعة. كيف نبدأ التدبير وما التشخيص التفريقي؟",
-    },
-    {
-      label: "توليد سؤال سريري",
-      mode: "generate",
-      text: "Pediatric fever with rash and pharyngitis — 1 clinical MCQ with explanation",
-    },
-    {
-      label: "مراجعة دواء وجرعة",
-      mode: "drug",
-      text: "Amoxicillin suspension pediatric dosing, indications, and main precautions",
-    },
-    {
-      label: "خطة مراجعة مركّزة",
-      mode: "plan",
-      text: "مراجعة سريعة لأمراض الكلى والاضطرابات الشاردية لامتحان الامتياز",
-    },
-  ];
-
   const activeBtnStyle: React.CSSProperties = {
     background: "#176b55",
     color: "#ffffff",
@@ -1071,125 +1043,108 @@ function AiStudyAssistant(props: any) {
     cursor: "pointer",
   };
 
-  const presetBtnStyle: React.CSSProperties = {
-    background: "#ffffff",
-    color: "#0f172a",
-    border: "1px solid #cbd5e1",
-    borderRadius: 9,
-    padding: "6px 10px",
-    fontWeight: 600,
-    fontSize: 12,
-    cursor: "pointer",
-  };
-
-  const generateAutoResponse = (
+  const generateOpenResponse = (
     currentMode: "free" | "explain" | "generate" | "drug" | "plan",
     spec: string,
     text: string
   ) => {
     const clean = text.trim();
     const isEn = detectEnglish(clean);
-    const lower = clean.toLowerCase();
+
+    const clauses = clean
+      .split(/[،,.!?;:\n]+|\band\b|\bwith\b|\bfor\b|\bأو\b|\bو\b/i)
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0 && !/^(in\s+english|english|بالانجليزي|عربي)$/i.test(s));
+
+    const partsSummary = clauses.length > 1 ? clauses.join(" · ") : clean;
 
     if (isEn) {
-      if (lower.includes("stemi") || lower.includes("st elevation")) {
-        return [
-          "STEMI Clinical Simulation & Overview (" + spec + "):",
-          "• Immediate assessment: Evaluate ABCs and vitals, continuous rhythm monitoring, and obtain/interpret a 12-lead ECG promptly.",
-          "• Initial supportive care: Supplemental oxygen only if hypoxemic, analgesia, aspirin plus antiplatelet/anticoagulation per protocol and contraindications.",
-          "• Reperfusion strategy: Prioritize primary PCI within target window, or fibrinolytic therapy if timely PCI is not available.",
-          "• Key differentials: Pericarditis, early repolarization, aortic dissection, and pulmonary embolism.",
-        ].join("\n");
-      }
       if (currentMode === "generate") {
         return [
-          "Generated Clinical MCQ (" + spec + "):",
-          "Regarding (" + clean + "), a patient presents with relevant clinical features. What is the most appropriate next step in evaluation or management?",
-          "A) Perform focused clinical assessment, stabilize vitals, and order targeted work-up.",
-          "B) Delay evaluation without clinical justification.",
-          "C) Give unguided therapy without checking contraindications.",
-          "D) Observe without follow-up.",
-          "Correct answer: (A) — Safe clinical care starts with stabilizing the patient and guiding tests and treatment by presentation.",
-        ].join("\n");
-      }
-      if (currentMode === "drug") {
-        return [
-          "Medication Review (" + clean + "):",
-          "• Indications & role: Confirm exact indication, clinical setting, and therapeutic appropriateness.",
-          "• Dosing & frequency: Calculate weight/age-based (mg/kg) or renal/hepatic-adjusted dosing and verify maximum daily limits.",
-          "• Safety & precautions: Screen for drug allergies, interactions, adverse effects, and contraindications.",
+          "Open Question on "" + clean + "" (" + spec + "):",
+          "Given "" + partsSummary + "", how would you approach the core question or problem in practice?",
+          "• Key angle 1: Clarify the exact context, starting point, and primary objective.",
+          "• Key angle 2: Weigh the main options, trade-offs, and potential pitfalls.",
+          "• Key angle 3: Decide the concrete next step and what to verify or monitor.",
         ].join("\n");
       }
       if (currentMode === "plan") {
         return [
-          "Focused Study Plan (" + spec + " — " + clean + "):",
-          "1. Core pathophysiology and classic clinical presentations.",
-          "2. Differential diagnosis and high-yield initial work-up.",
-          "3. First-line management, red flags, and urgent referrals.",
-          "4. Practice clinical questions and review mistakes.",
+          "Open Breakdown & Plan for "" + clean + "" (" + spec + "):",
+          "1. Define the core concepts and scope of: " + partsSummary + ".",
+          "2. Break down the main components, comparisons, or steps.",
+          "3. Identify key edge cases, exceptions, or risks.",
+          "4. Apply it directly to a real prompt or question.",
+        ].join("\n");
+      }
+      if (currentMode === "drug") {
+        return [
+          "Open Medication & Therapy Perspective on "" + clean + "":",
+          "• Subject: " + partsSummary,
+          "• Core evaluation: Match the agent/option to the exact clinical goal, patient profile, and alternatives.",
+          "• Practical checks: Confirm appropriate dose/regimen, contraindications, interactions, and follow-up parameters.",
+        ].join("\n");
+      }
+      if (currentMode === "explain") {
+        return [
+          "Open Explanation of "" + clean + "" (" + spec + "):",
+          "• Core idea: " + partsSummary,
+          "• How it fits together: Connect the given details into a clear cause-and-effect or decision structure.",
+          "• Practical takeaway: Highlight what matters most first and what requires verification.",
         ].join("\n");
       }
       return [
-        "Clinical Response (" + spec + "):",
-        "Query: " + clean,
-        "• Key synthesis: Connect history, exam, and diagnostic findings to the underlying pathophysiology and most likely diagnosis.",
-        "• Differentials & next step: Rule out life-threatening differentials first, then choose the appropriate diagnostic or management step per protocol.",
-      ].join("\n");
-    }
-
-    if (lower.includes("stemi") || lower.includes("st elevation") || clean.includes("احتشاء") || clean.includes("ارتفاع st")) {
-      return [
-        "محاكاة وتحليل STEMI (" + spec + "):",
-        "• التعريف والتقييم الفوري: احتشاء عضلة قلبية مع ارتفاع ST — تقييم ABC والعلامات الحيوية، مراقبة النظم القلبي، وتخطيط قلب 12 قطباً خلال أسرع وقت.",
-        "• الإجراءات الأولية الداعمة: الأكسجين عند نقص الإشباع فقط، تسكين الألم، إعطاء الأسبرين ومضادات الصفيحات/التخثر حسب البروتوكول وموانع الاستعمال.",
-        "• إعادة التروية (Reperfusion): الأولوية للتدخل التاجي الأولي (Primary PCI) ضمن الإطار الزمني المعتمد، أو المعالجة الحالة للخثرة (Fibrinolysis) إذا لم يتوفر PCI في الوقت المناسب.",
-        "• التشخيص التفريقي المهم: Pericarditis، Early repolarization، Aortic dissection، أو Pulmonary embolism.",
+        "Open AI Response to "" + clean + "" (" + spec + "):",
+        "• Direct focus: " + partsSummary,
+        "• Structured answer: Address "" + clean + "" directly around its main meaning, key factors, and practical next steps without locking into a rigid preset.",
       ].join("\n");
     }
 
     if (currentMode === "generate") {
       return [
-        "سؤال سريري مولّد تلقائياً (" + spec + "):",
-        "حالة سريرية حول (" + clean + "): مريض راجع بأعراض سريرية متوافقة مع الحالة، ما الخطوة الأدق والأكثر أماناً في التقييم أو التدبير الفوري؟",
-        "أ) البدء بالتقييم السريري المبدئي، تثبيت العلامات الحيوية، وطلب الفحوصات الموجّهة.",
-        "ب) تأجيل أي تقييم دون مبرر سريري.",
-        "ج) إعطاء علاج غير موجّه دون مراجعة الموانع.",
-        "د) الاكتفاء بالملاحظة دون متابعة.",
-        "الإجابة الصحيحة: (أ) — يبدأ التدبير السريري بتقييم الاستقرار وتحديد الأولويات التشخيصية والعلاجية بدقة.",
+        "توليد سؤال مفتوح حول "" + clean + "" (" + spec + "):",
+        "بناءً على: " + partsSummary + " — ما المحور الأهم أو الخطوة العملية الأكثر ملاءمة في هذا السياق؟",
+        "• زاوية أولى: تحديد المعطيات الأساسية والهدف المباشر من السؤال.",
+        "• زاوية ثانية: مقارنة الخيارات أو الاحتمالات المطروحة والانتباه للاستثناءات.",
+        "• زاوية ثالثة: اختيار الخطوة الأنسب وتحديد ما يلزم التحقق منه.",
       ].join("\n");
     }
-
-    if (currentMode === "drug") {
-      return [
-        "مراجعة دوائية تلقائية (" + clean + "):",
-        "• الاستطباب والآلية: مراجعة الاستطباب الدقيق والمجال العلاجي وتطابقه مع التشخيص المؤكد.",
-        "• الجرعة والتكرار: احتساب الجرعة بدقة حسب الوزن/العمر أو التصفية الكلوية/الكبدية والالتزام بالحد الأقصى اليومي.",
-        "• السلامة والموانع: التحقق من الحساسية الدوائية، التداخلات الدوائية، والتأثيرات الجانبية أو الحالات التي تستوجب تعديل الجرعة.",
-      ].join("\n");
-    }
-
     if (currentMode === "plan") {
       return [
-        "خطة مراجعة تلقائية (" + spec + " — " + clean + "):",
-        "1. المفاهيم الأساسية والفيزيولوجيا المرضية والتظاهرات النموذجية.",
-        "2. التشخيص التفريقي والفحوصات الأولية المفتاحية.",
-        "3. خطوط العلاج الأولى وحالات الطوارئ أو التحويل.",
-        "4. حل أسئلة سريرية تطبيقية ومراجعة الأخطاء الشائعة.",
+        "تقسيم وخطة مفتوحة حول "" + clean + "" (" + spec + "):",
+        "1. تحديد الفكرة المحورية وعناصر الموضوع: " + partsSummary + ".",
+        "2. تفكيك المحاور الرئيسية أو المقارنات أو الخطوات المتتابعة.",
+        "3. مراجعة الحالات الخاصة، الاستثناءات، ونقاط الانتباه.",
+        "4. التطبيق العملي وطرح أسئلة اختبارية حول ما تم فهمه.",
       ].join("\n");
     }
-
+    if (currentMode === "drug") {
+      return [
+        "قراءة دوائية/علاجية مفتوحة حول "" + clean + "":",
+        "• المحور المدخل: " + partsSummary,
+        "• التقييم العملي: ربط الخيار العلاجي بالاستطباب الفعلي، وضع الحالة، والبدائل الممكنة.",
+        "• نقاط التحقق: مراجعة الجرعة أو طريقة الاستخدام، الموانع، التداخلات، ومعايير المتابعة.",
+      ].join("\n");
+    }
+    if (currentMode === "explain") {
+      return [
+        "شرح مفتوح حول "" + clean + "" (" + spec + "):",
+        "• الفكرة الأساسية: " + partsSummary,
+        "• الربط والتحليل: ترتيب العناصر المذكورة لفهم العلاقة بين السبب والنتيجة أو المعطيات والاحتمالات.",
+        "• الخلاصة العملية: إبراز الأولوية الأولى وما يحتاج إلى تدقيق أو متابعة.",
+      ].join("\n");
+    }
     return [
-      "توليد سريري تلقائي (" + spec + "):",
-      "الموضوع / المحادثة: " + clean,
-      "• النقاط المحورية: ربط الأعراض والعلامات السريرية والفحوصات بالآلية المرضية والاحتمالات التشخيصية الأهم.",
-      "• التشخيص التفريقي والخطوة التالية: مقارنة البدائل التشخيصية واستبعاد الحالات الإسعافية أولاً ثم تحديد الفحص أو التدبير التالي حسب البروتوكول.",
+      "رد مفتوح على "" + clean + "" (" + spec + "):",
+      "• مضمون كلامك: " + partsSummary,
+      "• المعالجة المباشرة: إجابة منفتحة على "" + clean + "" تركز على الفكرة الأساسية، العوامل المؤثرة، والخطوة التالية العملية دون حصر بقالب ثابت.",
     ].join("\n");
   };
 
   const handleRun = async () => {
     const trimmed = promptText.trim();
     if (!trimmed) {
-      setOutputText(generateAutoResponse(mode, specialty, "محاكاة سريرية عامة للمراجعة والتدريب"));
+      setOutputText(generateOpenResponse(mode, specialty, detectEnglish(specialty) ? "Open topic" : "موضوع مفتوح"));
       return;
     }
     setLoading(true);
@@ -1213,9 +1168,9 @@ function AiStudyAssistant(props: any) {
           return;
         }
       }
-      setOutputText(generateAutoResponse(mode, specialty, trimmed));
+      setOutputText(generateOpenResponse(mode, specialty, trimmed));
     } catch {
-      setOutputText(generateAutoResponse(mode, specialty, trimmed));
+      setOutputText(generateOpenResponse(mode, specialty, trimmed));
     } finally {
       setLoading(false);
     }
@@ -1223,12 +1178,14 @@ function AiStudyAssistant(props: any) {
 
   const placeholderText =
     mode === "generate"
-      ? "اكتب الموضوع أو التخصص لتوليد سؤال سريري تلقائياً..."
+      ? "اكتب أي فكرة أو موضوع لتوليد سؤال مفتوح..."
       : mode === "drug"
-      ? "اكتب اسم الدواء أو الجرعة أو التداخل..."
+      ? "اكتب أي دواء أو مادة أو تساؤل علاجي..."
       : mode === "plan"
-      ? "اكتب الموضوع أو المادة لإنشاء خطة مراجعة..."
-      : "اكتب أي سؤال أو حالة أو محادثة وسيتم التوليد تلقائياً...";
+      ? "اكتب أي موضوع أو هدف لتقسيمه وخطة عمل..."
+      : mode === "explain"
+      ? "اكتب أي فكرة أو حالة أو سؤال لشرحه..."
+      : "اكتب أي شيء يخطر ببالك بالعربي أو الإنجليزي...";
 
   const isOutputEnglish = detectEnglish(outputText || promptText);
 
@@ -1242,7 +1199,7 @@ function AiStudyAssistant(props: any) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div>
           <h3 className="panel-title" style={{ margin: 0, color: "#0f172a" }}>AI Study Assistant</h3>
-          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>توليد تلقائي لأي محادثة أو سؤال أو حالة أو دواء أو خطة دراسة.</p>
+          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>مساحة حوار مفتوحة لأي موضوع أو سؤال أو دواء أو خطة بالعربي أو الإنجليزي.</p>
         </div>
         <select
           aria-label="التخصص"
@@ -1268,27 +1225,10 @@ function AiStudyAssistant(props: any) {
 
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
         <button type="button" style={mode === "free" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("free")}>محادثة مفتوحة</button>
-        <button type="button" style={mode === "explain" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("explain")}>شرح حالة</button>
+        <button type="button" style={mode === "explain" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("explain")}>شرح</button>
         <button type="button" style={mode === "generate" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("generate")}>توليد سؤال</button>
-        <button type="button" style={mode === "drug" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("drug")}>مراجعة دواء</button>
-        <button type="button" style={mode === "plan" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("plan")}>خطة مراجعة</button>
-      </div>
-
-      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8 }}>
-        {presets.map((pItem) => (
-          <button
-            key={pItem.label}
-            type="button"
-            style={presetBtnStyle}
-            onClick={() => {
-              setMode(pItem.mode);
-              setPromptText(pItem.text);
-              setOutputText(generateAutoResponse(pItem.mode, specialty, pItem.text));
-            }}
-          >
-            {pItem.label}
-          </button>
-        ))}
+        <button type="button" style={mode === "drug" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("drug")}>استفسار دوائي</button>
+        <button type="button" style={mode === "plan" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("plan")}>خطة</button>
       </div>
 
       <textarea
@@ -1299,7 +1239,7 @@ function AiStudyAssistant(props: any) {
           const val = e.target.value;
           setPromptText(val);
           if (val.trim()) {
-            setOutputText(generateAutoResponse(mode, specialty, val));
+            setOutputText(generateOpenResponse(mode, specialty, val));
           } else {
             setOutputText("");
           }
