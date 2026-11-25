@@ -1005,12 +1005,6 @@ function AiStudyAssistant(props: any) {
   const [loading, setLoading] = useState<boolean>(false);
   const [outputText, setOutputText] = useState<string>("");
 
-  try {
-    localStorage.removeItem("medquest_gemini_api_key");
-  } catch {
-    // ignore storage errors
-  }
-
   const detectEnglish = (text: string): boolean => {
     const t = text.trim();
     if (!t) return false;
@@ -1043,264 +1037,198 @@ function AiStudyAssistant(props: any) {
     cursor: "pointer",
   };
 
-  const generateOpenResponse = (
+  const buildSystemInstruction = (
+    currentMode: "free" | "explain" | "generate" | "drug" | "plan",
+    spec: string,
+    isEn: boolean
+  ) => {
+    const langRule = isEn
+      ? "Respond clearly in English."
+      : "أجب بوضوح ودقة باللغة العربية مع الإبقاء على المصطلحات الطبية الإنجليزية عند الحاجة.";
+    const modeMap: Record<typeof currentMode, string> = {
+      free: "Open medical assistant response: answer directly, accurately, and concisely.",
+      explain: "Explain the concept clearly with pathophysiology/mechanism and practical clinical relevance.",
+      generate: "Generate a focused clinical/study question with key points to verify.",
+      drug: "Provide medication overview: indication, mechanism, dosing considerations, contraindications, and monitoring.",
+      plan: "Provide a structured step-by-step evaluation and management/study plan.",
+    };
+    return [
+      "You are a clinical & medical study assistant for MedQuest-Arabic.",
+      "Specialty / level context: " + spec + ".",
+      modeMap[currentMode],
+      langRule,
+    ].join(" ");
+  };
+
+  const callRealAi = async (
     currentMode: "free" | "explain" | "generate" | "drug" | "plan",
     spec: string,
     text: string
-  ) => {
+  ): Promise<string> => {
     const clean = text.trim();
     const isEn = detectEnglish(clean);
+    const apiKey = (import.meta as any)?.env?.VITE_GEMINI_API_KEY as string | undefined;
 
-    const clauses = clean
-      .split(/[،,.!?;:\n]+|\band\b|\bwith\b|\bfor\b|\bأو\b|\bو\b/i)
-      .map((s) => s.trim())
-      .filter((s) => s.length > 0 && !/^(in\s+english|english|بالانجليزي|عربي)$/i.test(s));
-
-    const partsSummary = clauses.length > 1 ? clauses.join(" · ") : clean;
-
-    if (isEn) {
-      if (currentMode === "generate") {
-        return [
-          "Open Question on '" + clean + "' (" + spec + "):",
-          "Given '" + partsSummary + "', how would you approach the core question or problem in practice?",
-          "• Key angle 1: Clarify the exact context, starting point, and primary objective.",
-          "• Key angle 2: Weigh the main options, trade-offs, and potential pitfalls.",
-          "• Key angle 3: Decide the concrete next step and what to verify or monitor.",
-        ].join("\n");
-      }
-      if (currentMode === "plan") {
-        return [
-          "Open Breakdown & Plan for '" + clean + "' (" + spec + "):",
-          "1. Define the core concepts and scope of: " + partsSummary + ".",
-          "2. Break down the main components, comparisons, or steps.",
-          "3. Identify key edge cases, exceptions, or risks.",
-          "4. Apply it directly to a real prompt or question.",
-        ].join("\n");
-      }
-      if (currentMode === "drug") {
-        return [
-          "Open Medication & Therapy Perspective on '" + clean + "':",
-          "• Subject: " + partsSummary,
-          "• Core evaluation: Match the agent/option to the exact clinical goal, patient profile, and alternatives.",
-          "• Practical checks: Confirm appropriate dose/regimen, contraindications, interactions, and follow-up parameters.",
-        ].join("\n");
-      }
-      if (currentMode === "explain") {
-        return [
-          "Open Explanation of '" + clean + "' (" + spec + "):",
-          "• Core idea: " + partsSummary,
-          "• How it fits together: Connect the given details into a clear cause-and-effect or decision structure.",
-          "• Practical takeaway: Highlight what matters most first and what requires verification.",
-        ].join("\n");
-      }
-      return [
-        "Open AI Response to '" + clean + "' (" + spec + "):",
-        "• Direct focus: " + partsSummary,
-        "• Structured answer: Address '" + clean + "' directly around its main meaning, key factors, and practical next steps without locking into a rigid preset.",
-      ].join("\n");
+    if (!apiKey) {
+      return isEn
+        ? "Missing VITE_GEMINI_API_KEY in environment variables. Add VITE_GEMINI_API_KEY and rebuild to get live AI responses."
+        : "مفتاح VITE_GEMINI_API_KEY غير مضبوط في متغيرات البيئة. أضف VITE_GEMINI_API_KEY ثم أعد البناء للحصول على رد حقيقي من الذكاء الاصطناعي.";
     }
 
-    if (currentMode === "generate") {
-      return [
-        "توليد سؤال مفتوح حول '" + clean + "' (" + spec + "):",
-        "بناءً على: " + partsSummary + " — ما المحور الأهم أو الخطوة العملية الأكثر ملاءمة في هذا السياق؟",
-        "• زاوية أولى: تحديد المعطيات الأساسية والهدف المباشر من السؤال.",
-        "• زاوية ثانية: مقارنة الخيارات أو الاحتمالات المطروحة والانتباه للاستثناءات.",
-        "• زاوية ثالثة: اختيار الخطوة الأنسب وتحديد ما يلزم التحقق منه.",
-      ].join("\n");
-    }
-    if (currentMode === "plan") {
-      return [
-        "تقسيم وخطة مفتوحة حول '" + clean + "' (" + spec + "):",
-        "1. تحديد الفكرة المحورية وعناصر الموضوع: " + partsSummary + ".",
-        "2. تفكيك المحاور الرئيسية أو المقارنات أو الخطوات المتتابعة.",
-        "3. مراجعة الحالات الخاصة، الاستثناءات، ونقاط الانتباه.",
-        "4. التطبيق العملي وطرح أسئلة اختبارية حول ما تم فهمه.",
-      ].join("\n");
-    }
-    if (currentMode === "drug") {
-      return [
-        "قراءة دوائية/علاجية مفتوحة حول '" + clean + "':",
-        "• المحور المدخل: " + partsSummary,
-        "• التقييم العملي: ربط الخيار العلاجي بالاستطباب الفعلي، وضع الحالة، والبدائل الممكنة.",
-        "• نقاط التحقق: مراجعة الجرعة أو طريقة الاستخدام، الموانع، التداخلات، ومعايير المتابعة.",
-      ].join("\n");
-    }
-    if (currentMode === "explain") {
-      return [
-        "شرح مفتوح حول '" + clean + "' (" + spec + "):",
-        "• الفكرة الأساسية: " + partsSummary,
-        "• الربط والتحليل: ترتيب العناصر المذكورة لفهم العلاقة بين السبب والنتيجة أو المعطيات والاحتمالات.",
-        "• الخلاصة العملية: إبراز الأولوية الأولى وما يحتاج إلى تدقيق أو متابعة.",
-      ].join("\n");
-    }
-    return [
-      "رد مفتوح على '" + clean + "' (" + spec + "):",
-      "• مضمون كلامك: " + partsSummary,
-      "• المعالجة المباشرة: إجابة منفتحة على '" + clean + "' تركز على الفكرة الأساسية، العوامل المؤثرة، والخطوة التالية العملية دون حصر بقالب ثابت.",
-    ].join("\n");
-  };
-
-  const handleRun = async () => {
-    const trimmed = promptText.trim();
-    if (!trimmed) {
-      setOutputText(generateOpenResponse(mode, specialty, detectEnglish(specialty) ? "Open topic" : "موضوع مفتوح"));
-      return;
-    }
-    setLoading(true);
-    try {
-      const lang = detectEnglish(trimmed) ? "en" : "ar";
-      const backendRes = await fetch("/api/ai/study", {
+    const res = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
+        encodeURIComponent(apiKey),
+      {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          mode,
-          specialty,
-          language: lang,
-          prompt: trimmed,
+          systemInstruction: {
+            parts: [{ text: buildSystemInstruction(currentMode, spec, isEn) }],
+          },
+          contents: [
+            {
+              role: "user",
+              parts: [{ text: clean }],
+            },
+          ],
         }),
-      });
-      if (backendRes.ok) {
-        const data = await backendRes.json().catch(() => null);
-        const reply = data?.result || data?.answer || data?.text || data?.output;
-        if (reply && typeof reply === "string" && reply.trim()) {
-          setOutputText(reply.trim());
-          return;
-        }
       }
-      setOutputText(generateOpenResponse(mode, specialty, trimmed));
-    } catch {
-      setOutputText(generateOpenResponse(mode, specialty, trimmed));
+    );
+
+    const data = await res.json().catch(() => null);
+    if (!res.ok) {
+      const errMsg = data?.error?.message || ("HTTP " + res.status);
+      throw new Error(errMsg);
+    }
+
+    const parts = data?.candidates?.[0]?.content?.parts;
+    const reply = Array.isArray(parts)
+      ? parts.map((p: any) => p?.text || "").join("").trim()
+      : "";
+
+    if (!reply) {
+      throw new Error(isEn ? "Empty response returned by Gemini API." : "لم يرجع نموذج Gemini أي نص.");
+    }
+    return reply;
+  };
+
+  const handleRun = async () => {
+    const clean = promptText.trim();
+    if (!clean) {
+      setOutputText(
+        detectEnglish(promptText)
+          ? "Please enter a topic, question, or clinical prompt first."
+          : "يرجى إدخال سؤال أو موضوع طبي أولاً."
+      );
+      return;
+    }
+    setLoading(true);
+    setOutputText("");
+    try {
+      const answer = await callRealAi(mode, specialty, clean);
+      setOutputText(answer);
+    } catch (err: any) {
+      const msg = err?.message || String(err);
+      setOutputText(
+        detectEnglish(clean)
+          ? "AI request failed: " + msg
+          : "تعذر الحصول على رد من الذكاء الاصطناعي: " + msg
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  const placeholderText =
-    mode === "generate"
-      ? "اكتب أي فكرة أو موضوع لتوليد سؤال مفتوح..."
-      : mode === "drug"
-      ? "اكتب أي دواء أو مادة أو تساؤل علاجي..."
-      : mode === "plan"
-      ? "اكتب أي موضوع أو هدف لتقسيمه وخطة عمل..."
-      : mode === "explain"
-      ? "اكتب أي فكرة أو حالة أو سؤال لشرحه..."
-      : "اكتب أي شيء يخطر ببالك بالعربي أو الإنجليزي...";
-
-  const isOutputEnglish = detectEnglish(outputText || promptText);
-
   return (
-    <div
-      className="panel"
-      style={{ marginTop: 14, textAlign: "right", color: "#0f172a", background: "#ffffff" }}
-      dir="rtl"
-      data-testid="ai-study-assistant-section"
-    >
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <div>
-          <h3 className="panel-title" style={{ margin: 0, color: "#0f172a" }}>AI Study Assistant</h3>
-          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>مساحة حوار مفتوحة لأي موضوع أو سؤال أو دواء أو خطة بالعربي أو الإنجليزي.</p>
-        </div>
-        <select
-          aria-label="التخصص"
+    <div data-testid="ai-study-assistant-section" style={{ marginTop: 16 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
+        {(
+          [
+            ["free", "محادثة مفتوحة"],
+            ["explain", "شرح"],
+            ["generate", "توليد سؤال"],
+            ["drug", "استفسار دوائي"],
+            ["plan", "خطة"],
+          ] as const
+        ).map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            onClick={() => setMode(key)}
+            style={mode === key ? activeBtnStyle : inactiveBtnStyle}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <div style={{ marginBottom: 10 }}>
+        <input
+          type="text"
           value={specialty}
           onChange={(e) => setSpecialty(e.target.value)}
+          placeholder="التخصص أو المستوى"
           style={{
-            padding: "7px 10px",
-            borderRadius: 9,
+            width: "100%",
+            padding: "8px 12px",
+            borderRadius: 10,
             border: "1px solid #cbd5e1",
-            background: "#ffffff",
-            color: "#0f172a",
-            fontSize: 13,
-            fontWeight: 600,
+            marginBottom: 8,
+            boxSizing: "border-box",
           }}
-        >
-          <option value="General / Internship">عام / امتياز</option>
-          <option value="Internal Medicine">باطنية</option>
-          <option value="Pediatrics">أطفال</option>
-          <option value="Emergency Medicine">طوارئ</option>
-          <option value="Surgery / OBGYN">جراحة / نسائية</option>
-        </select>
+        />
+        <textarea
+          value={promptText}
+          onChange={(e) => setPromptText(e.target.value)}
+          rows={4}
+          placeholder="اكتب سؤالك أو الحالة أو الدواء..."
+          style={{
+            width: "100%",
+            padding: "10px 12px",
+            borderRadius: 12,
+            border: "2px solid #eab308",
+            boxSizing: "border-box",
+          }}
+        />
       </div>
 
-      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
-        <button type="button" style={mode === "free" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("free")}>محادثة مفتوحة</button>
-        <button type="button" style={mode === "explain" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("explain")}>شرح</button>
-        <button type="button" style={mode === "generate" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("generate")}>توليد سؤال</button>
-        <button type="button" style={mode === "drug" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("drug")}>استفسار دوائي</button>
-        <button type="button" style={mode === "plan" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("plan")}>خطة</button>
-      </div>
-
-      <textarea
-        rows={3}
-        dir="auto"
-        value={promptText}
-        onChange={(e) => {
-          const val = e.target.value;
-          setPromptText(val);
-          if (val.trim()) {
-            setOutputText(generateOpenResponse(mode, specialty, val));
-          } else {
-            setOutputText("");
-          }
-        }}
-        placeholder={placeholderText}
-        aria-label="إدخال مساعد AI"
-        style={{
-          width: "100%",
-          boxSizing: "border-box",
-          marginTop: 10,
-          padding: 10,
-          borderRadius: 10,
-          border: "1px solid #94a3b8",
-          background: "#ffffff",
-          color: "#0f172a",
-          fontSize: 14,
-          lineHeight: 1.5,
-        }}
-      />
-
-      <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+      <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
         <button
           type="button"
-          style={activeBtnStyle}
-          disabled={loading}
           onClick={handleRun}
-          data-testid="button-run-ai-assistant"
+          disabled={loading}
+          style={{ ...activeBtnStyle, opacity: loading ? 0.7 : 1 }}
         >
           {loading ? "جاري التوليد..." : "تشغيل AI"}
         </button>
-        {outputText && (
-          <button
-            type="button"
-            style={inactiveBtnStyle}
-            onClick={() => setOutputText("")}
-          >
-            مسح النتيجة
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={() => {
+            setPromptText("");
+            setOutputText("");
+          }}
+          style={inactiveBtnStyle}
+        >
+          مسح النتيجة
+        </button>
       </div>
 
-      {outputText && (
+      {outputText ? (
         <div
-          dir={isOutputEnglish ? "ltr" : "rtl"}
-          data-testid="ai-assistant-output"
           style={{
-            marginTop: 12,
-            padding: 12,
-            borderRadius: 10,
-            background: "#f8fafc",
-            color: "#0f172a",
-            border: "1px solid #cbd5e1",
             whiteSpace: "pre-wrap",
-            textAlign: isOutputEnglish ? "left" : "right",
-            fontSize: 14,
+            background: "#f8fafc",
+            border: "1px solid #cbd5e1",
+            borderRadius: 12,
+            padding: 14,
             lineHeight: 1.6,
+            direction: detectEnglish(outputText) ? "ltr" : "rtl",
+            textAlign: detectEnglish(outputText) ? "left" : "right",
           }}
         >
           {outputText}
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
