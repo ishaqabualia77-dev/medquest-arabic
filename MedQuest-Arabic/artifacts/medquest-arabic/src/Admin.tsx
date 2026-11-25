@@ -558,15 +558,7 @@ export default function Admin({ questions }: Props) {
             </h1>
           </div>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <button
-              type="button"
-              className="admin-secondary"
-              disabled={loadingData}
-              onClick={() => void loadAdminData()}
-            >
-              <RefreshCw size={15} /> {loadingData ? 'تحديث...' : 'تحديث'}
-            </button>
-            <div className="admin-avatar">A</div>
+<div className="admin-avatar">A</div>
           </div>
         <button type="button" className="btn-secondary" onClick={()=>{if(confirm("تأكيد تسجيل الخروج؟"))location.reload();}}>تسجيل الخروج</button></header>
 
