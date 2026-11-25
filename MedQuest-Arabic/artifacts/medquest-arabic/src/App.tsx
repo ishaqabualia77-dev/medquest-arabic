@@ -402,7 +402,7 @@ function AppHome() {
         </header>
         <div className="content">
           {screen==='dashboard'&&<>
-  <Dashboard track={track} chooseTrack={(id)=>{chooseTrack(id);if(id==='specialty'){setSubTrack('all');}}} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length}} trackTitleOverride={currentTrack.name} />
+  <Dashboard track={track} chooseTrack={(id)=>{chooseTrack(id);if(id==='specialty'){setSubTrack('all');}}} progress={progress} startPractice={startPractice} openBank={()=>setScreen('bank')} questionsCountByTrack={{internship:activeQuestionsByTrack.internship.length,specialty:activeQuestionsByTrack.specialty.length,"usmle-step1":activeQuestionsByTrack["usmle-step1"]?.length??questionsByTrack["usmle-step1"]?.length??0,"usmle-step2":activeQuestionsByTrack["usmle-step2"]?.length??questionsByTrack["usmle-step2"]?.length??0,mrcp:activeQuestionsByTrack.mrcp?.length??questionsByTrack.mrcp?.length??0,imle:activeQuestionsByTrack.imle?.length??questionsByTrack.imle?.length??0}} trackTitleOverride={currentTrack.name} />
   {track==='specialty'&&<>
     <ClassificationBranchFilter selectedBranches={selectedBranches} onChangeBranches={(next)=>{setSelectedBranches(next);setQuestionIndex(0);setSelectedAnswer(null);}} questions={baseTrackQuestions} onEnterSelectedQuestions={()=>{setMistakesOnly(false);setQuestionIndex(0);setSelectedAnswer(null);setScreen('practice');}} />
     <div style={{display:"flex",gap:10,marginTop:8,flexWrap:"wrap"}}>
@@ -1244,8 +1244,8 @@ track,chooseTrack,progress,startPractice,openBank,questionsCountByTrack,trackTit
 const [calculatorOpen, setCalculatorOpen] = useState(false);
   const answered=progress.answered[track].length;
   const correct=progress.correct[track].length;
-  const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length};
-  const completion=Math.round(answered/Math.max(1,counts[track])*100);
+  const counts=questionsCountByTrack??{internship:questionsByTrack.internship.length,specialty:questionsByTrack.specialty.length,"usmle-step1":questionsByTrack["usmle-step1"]?.length??0,"usmle-step2":questionsByTrack["usmle-step2"]?.length??0,mrcp:questionsByTrack.mrcp?.length??0,imle:questionsByTrack.imle?.length??0};
+  const completion=Math.round(answered/Math.max(1,(counts[track] ?? 0))*100);
   const info={...trackInfo[track],...(trackTitleOverride?{name:trackTitleOverride}:{})};
   return <section aria-label="لوحة الدراسة">
     <div className="eyebrow">رفيقك في طريق التخصص</div>
@@ -1255,7 +1255,7 @@ const [calculatorOpen, setCalculatorOpen] = useState(false);
       <div className="hero-card">
         <div className="hero-top"><span className="hero-label">مسارك الدراسي الآن</span><span className="hero-pill">دراسة مركّزة</span></div>
         <div><h2 className="hero-title">{info.name}</h2><p className="hero-desc" dir="ltr" style={{textAlign:'right'}}>{info.english} · {info.description}</p></div>
-        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {counts[track]} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button>
+        <div className="hero-footer"><span className="hero-footnote"><BookOpen size={14}/> {(counts[track] ?? 0)} سؤالاً سريرياً</span><button className="btn-light" onClick={startPractice} data-testid="button-start-practice">ابدأ التدريب <ArrowLeft size={14}/></button>
       <button
         type="button"
         className={aiOpen ? "btn-primary" : "btn-secondary"}
@@ -1278,7 +1278,7 @@ const [calculatorOpen, setCalculatorOpen] = useState(false);
     <div className="section-head"><div><h2 className="section-title">اختر مسارك</h2><p className="section-sub">لكل امتحان بنك أسئلة وملخص دراسة مستقل.</p></div><button className="quiet-link" onClick={openBank} data-testid="link-view-bank">تصفّح الأسئلة <ArrowLeft size={12}/></button></div>
     <div className="track-grid">
       {(Object.keys(trackInfo) as TrackId[]).map(id=><button key={id} className={`track-card ${track===id?'selected':''}`} onClick={()=>chooseTrack(id)} data-testid={`track-${id}`}>
-        <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id]} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
+        <span className="track-icon">{id==='internship'?<HeartPulse size={20}/>:<GraduationCap size={20}/>}</span><span className="track-info"><span className="track-name">{trackInfo[id].name}</span><span className="track-desc" dir="ltr" style={{display:'block',textAlign:'right'}}>{trackInfo[id].english}</span><span className="track-meta">{counts[id] ?? 0} QUESTIONS · {progress.answered[id].length} REVIEWED</span></span><ArrowUpRight className="track-arrow" size={17}/></button>)}
 </div>
 
     <div style={{ marginTop: 12 }}>
@@ -1328,7 +1328,7 @@ const [calculatorOpen, setCalculatorOpen] = useState(false);
       </div>
       <div className="panel progress-panel">
         <div className="blueprint-head"><div><h3 className="panel-title">تقدّمك في هذا المسار</h3><p className="panel-hint">إجاباتك محفوظة على هذا الجهاز</p></div><Award size={18} color="#98754f"/></div>
-        <div className="progress-number">{answered}<span style={{fontSize:14,color:'#87928a',fontWeight:500}}> / {counts[track]}</span></div><div className="progress-caption">سؤال تمت مراجعته</div>
+        <div className="progress-number">{answered}<span style={{fontSize:14,color:'#87928a',fontWeight:500}}> / {(counts[track] ?? 0)}</span></div><div className="progress-caption">سؤال تمت مراجعته</div>
         <div className="progress-line"><i style={{width:`${completion}%`}}/></div><div className="progress-detail"><span>الإجابات الصحيحة</span><span>{correct} من {answered}</span></div>
       </div>
     </div>
