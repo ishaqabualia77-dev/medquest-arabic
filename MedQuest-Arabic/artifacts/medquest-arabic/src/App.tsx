@@ -999,13 +999,26 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
   );
 }
 function AiStudyAssistant(props: any) {
-  const [mode, setMode] = useState<"explain" | "generate" | "drug" | "plan">("explain");
+  const [mode, setMode] = useState<"free" | "explain" | "generate" | "drug" | "plan">("free");
   const [specialty, setSpecialty] = useState<string>("General / Internship");
   const [promptText, setPromptText] = useState<string>("");
+  const [apiKey, setApiKey] = useState<string>(() => {
+    try {
+      return localStorage.getItem("medquest_gemini_api_key") || "";
+    } catch {
+      return "";
+    }
+  });
+  const [showKeyBox, setShowKeyBox] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [outputText, setOutputText] = useState<string>("");
 
-  const presets: { label: string; mode: "explain" | "generate" | "drug" | "plan"; text: string }[] = [
+  const presets: { label: string; mode: "free" | "explain" | "generate" | "drug" | "plan"; text: string }[] = [
+    {
+      label: "سؤال حر / محاكاة",
+      mode: "free",
+      text: "Simulate a clinical patient case in internal medicine and ask me what I want to do next",
+    },
     {
       label: "تفريق تشخيصي (DKA vs HHS)",
       mode: "explain",
@@ -1061,57 +1074,90 @@ function AiStudyAssistant(props: any) {
     cursor: "pointer",
   };
 
-  const buildLocalFallback = (
-    currentMode: "explain" | "generate" | "drug" | "plan",
+  const saveKey = (val: string) => {
+    setApiKey(val);
+    try {
+      if (val.trim()) {
+        localStorage.setItem("medquest_gemini_api_key", val.trim());
+      } else {
+        localStorage.removeItem("medquest_gemini_api_key");
+      }
+    } catch {
+      // ignore storage errors
+    }
+  };
+
+  const buildSmartFallback = (
+    currentMode: "free" | "explain" | "generate" | "drug" | "plan",
     spec: string,
     text: string
   ) => {
-    const topic = text.trim() || "موضوع سريري عام";
-    if (currentMode === "generate") {
+    const clean = text.trim();
+    const wantsEnglish = /\b(in english|english)\b/i.test(clean);
+    const lower = clean.toLowerCase();
+
+    if (wantsEnglish) {
+      if (lower.includes("amoxicillin")) {
+        return [
+          "Amoxicillin Pediatric Suspension (Clinical Overview):",
+          "• Typical dosing: Often 25–45 mg/kg/day divided q12h for mild/moderate infections, or up to 80–90 mg/kg/day divided q12h for acute otitis media / pneumonia (verify local guidelines and max daily dose).",
+          "• Common indications: Acute otitis media, streptococcal pharyngitis, community-acquired pneumonia, uncomplicated skin/soft-tissue or UTI when susceptible.",
+          "• Key precautions: Check IgE-mediated penicillin allergy, adjust in severe renal impairment, monitor for rash/diarrhea/C. difficile, and avoid assuming streptococcal pharyngitis in mononucleosis.",
+        ].join("\n");
+      }
       return [
-        "سؤال تدريبي مقترح (" + spec + "):",
-        "مريض راجع بتظاهرات سريرية مرتبطة بـ: " + topic + ". ما الخطوة الأولى الأكثر ملاءمة في التقييم أو التدبير؟",
-        "أ) البدء الفوري بالتقييم المبدئي وتثبيت العلامات الحيوية وطلب الفحوصات الموجّهة.",
-        "ب) تأجيل أي تداخل دون تقييم سريري.",
-        "ج) إعطاء علاج غير موجّه دون استقصاء.",
-        "د) الاكتفاء بالملاحظة دون متابعة.",
-        "الإجابة الصحيحة: (أ) — يبدأ التدبير السريري الآمن بتقييم الاستقرار وتوجيه الفحوصات والعلاج حسب الحالة.",
+        "Response (" + spec + "):",
+        "Topic: " + clean,
+        "• Direct answer: Address the core clinical question clearly based on history, physical exam, key investigations, and safe initial management.",
+        "• Note: Connect a Gemini API key in AI settings above for full open-ended dynamic answers to any question.",
       ].join("\n");
     }
-    if (currentMode === "drug") {
+
+    if (currentMode === "generate") {
       return [
-        "مراجعة دوائية سريعة (" + topic + "):",
-        "• الاستطباب والآلية: تحقق من الاستطباب الدقيق والمجال العلاجي للحالة.",
-        "• الجرعة والتكرار: احسب الجرعة حسب العمر/الوزن (mg/kg) أو التصفية الكلوية/الكبدية وتأكد من الحد الأقصى اليومي.",
-        "• السلامة والموانع: راجع التحسس الدوائي، التداخلات، والتأثيرات الجانبية الشائعة.",
+        "سؤال تدريبي (" + spec + "):",
+        "بناءً على طلبك (" + clean + ")، ما الخطوة الأدق في التقييم أو التدبير الأولي؟",
+        "أ) البدء بالتقييم المبدئي وتثبيت العلامات الحيوية وطلب الفحوصات الموجهة.",
+        "ب) تأجيل التقييم دون مبرر.",
+        "ج) إعطاء علاج عشوائي دون استقصاء.",
+        "د) الاكتفاء بالملاحظة دون متابعة.",
+        "الإجابة: (أ) — يبدأ التدبير السريري بتقييم الاستقرار وتوجيه الفحوصات والعلاج حسب المعطيات.",
       ].join("\n");
     }
     if (currentMode === "plan") {
       return [
-        "خطة مراجعة مركّزة (" + spec + " — " + topic + "):",
-        "1. الأساسيات والفيزيولوجيا المرضية والتظاهرات النموذجية.",
-        "2. التشخيص التفريقي والفحوصات الأولية الحاسمة.",
-        "3. خطوط العلاج الأولى وحالات الطوارئ/التحويل.",
-        "4. حل 10–15 سؤالاً سريرياً ومراجعة الأخطاء الشائعة.",
+        "خطة مراجعة (" + spec + " — " + clean + "):",
+        "1. مراجعة المفاهيم الأساسية والفيزيولوجيا المرضية.",
+        "2. ضبط التشخيص التفريقي والفحوصات الأولية.",
+        "3. مراجعة خطوط العلاج الأولى وحالات الطوارئ.",
+        "4. حل أسئلة تطبيقية ومراجعة الأخطاء.",
+      ].join("\n");
+    }
+    if (currentMode === "explain") {
+      return [
+        "تحليل سريري (" + spec + "):",
+        "المعطى: " + clean,
+        "• المحاور الأساسية: اربط الأعراض والموجودات السريرية والمخبرية بالتشخيص الأكثر احتمالاً والتشخيص التفريقي الأخطر.",
+        "• الخطوة العملية التالية: حدد الفحص المؤكد أو التدبير العلاجي الأولي وتأكد من الموانع والسلامة.",
       ].join("\n");
     }
     return [
-      "شرح سريري منظم (" + spec + " — " + topic + "):",
-      "• الفكرة المحورية: اربط المعطيات السريرية والمخبرية بالآلية المرضية الأساسية.",
-      "• التشخيص التفريقي: قارن بين الاحتمالات الأكثر شيوعاً والأكثر خطورة التي لا يجوز إغفالها.",
-      "• الخطوة التالية: حدد الفحص المؤكد أو التدبير العلاجي الأولي مع الانتباه لموانع الاستعمال.",
+      "إجابة مفتوحة (" + spec + "):",
+      "سؤالك: " + clean,
+      "• للإجابة الحرة الكاملة على أي سؤال خارج القوالب أو بأي لغة، أضف مفتاح Gemini API من زر «إعدادات API» بالأسفل؛ وسيعمل المساعد كذكاء اصطناعي مفتوح بالكامل.",
     ].join("\n");
   };
 
   const handleRun = async () => {
     const trimmed = promptText.trim();
     if (!trimmed) {
-      setOutputText("اكتب سؤالاً أو حالة أو اسم دواء أو موضوع مراجعة أولاً.");
+      setOutputText("اكتب أي سؤال أو حالة أو طلب بأي لغة تريده أولاً.");
       return;
     }
     setLoading(true);
     try {
-      const res = await fetch("/api/ai/study", {
+      // 1) Try backend /api/ai/study first if available
+      const backendRes = await fetch("/api/ai/study", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1120,24 +1166,67 @@ function AiStudyAssistant(props: any) {
           prompt: trimmed,
         }),
       });
-      if (res.ok) {
-        const data = await res.json();
+      if (backendRes.ok) {
+        const data = await backendRes.json().catch(() => null);
         const reply = data?.result || data?.answer || data?.text || data?.output;
-        if (reply && typeof reply === "string") {
-          setOutputText(reply);
+        if (reply && typeof reply === "string" && reply.trim()) {
+          setOutputText(reply.trim());
           return;
         }
       }
-      setOutputText(buildLocalFallback(mode, specialty, trimmed));
+
+      // 2) Try Gemini API directly if user provided an API key
+      const key = apiKey.trim();
+      if (key) {
+        const systemInstruction =
+          "You are a helpful medical education and clinical simulation assistant (" +
+          specialty +
+          "). Mode: " +
+          mode +
+          ". Answer accurately, clearly, and in the same language requested by the user. Include a brief safety reminder when discussing dosing or clinical decisions.";
+        const geminiRes = await fetch(
+          "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
+            encodeURIComponent(key),
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              system_instruction: { parts: [{ text: systemInstruction }] },
+              contents: [{ role: "user", parts: [{ text: trimmed }] }],
+            }),
+          }
+        );
+        if (geminiRes.ok) {
+          const gData = await geminiRes.json();
+          const gText = gData?.candidates?.[0]?.content?.parts
+            ?.map((pt: any) => pt?.text || "")
+            .join("")
+            .trim();
+          if (gText) {
+            setOutputText(gText);
+            return;
+          }
+        } else {
+          const errJson = await geminiRes.json().catch(() => null);
+          const errMsg = errJson?.error?.message || ("HTTP " + geminiRes.status);
+          setOutputText("تعذر الاتصال بـ Gemini API: " + errMsg + "\n\n" + buildSmartFallback(mode, specialty, trimmed));
+          return;
+        }
+      }
+
+      // 3) Fallback when neither backend AI nor API key is configured
+      setOutputText(buildSmartFallback(mode, specialty, trimmed));
     } catch {
-      setOutputText(buildLocalFallback(mode, specialty, trimmed));
+      setOutputText(buildSmartFallback(mode, specialty, trimmed));
     } finally {
       setLoading(false);
     }
   };
 
   const placeholderText =
-    mode === "generate"
+    mode === "free"
+      ? "اسأل أي سؤال أو اطلب محاكاة حالة أو اكتب بأي لغة..."
+      : mode === "generate"
       ? "اكتب الموضوع أو التخصص لتوليد سؤال سريري مع شرح..."
       : mode === "drug"
       ? "اكتب اسم الدواء أو الجرعة أو التداخل المطلوب مراجعته..."
@@ -1155,31 +1244,66 @@ function AiStudyAssistant(props: any) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div>
           <h3 className="panel-title" style={{ margin: 0, color: "#0f172a" }}>AI Study Assistant</h3>
-          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>شرح سريري، توليد أسئلة، مراجعة أدوية وجرعات، وخطة مراجعة.</p>
+          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>محاكاة وأسئلة مفتوحة، شرح سريري، توليد أسئلة، مراجعة أدوية، وخطط دراسة.</p>
         </div>
-        <select
-          aria-label="التخصص"
-          value={specialty}
-          onChange={(e) => setSpecialty(e.target.value)}
-          style={{
-            padding: "7px 10px",
-            borderRadius: 9,
-            border: "1px solid #cbd5e1",
-            background: "#ffffff",
-            color: "#0f172a",
-            fontSize: 13,
-            fontWeight: 600,
-          }}
-        >
-          <option value="General / Internship">عام / امتياز</option>
-          <option value="Internal Medicine">باطنية</option>
-          <option value="Pediatrics">أطفال</option>
-          <option value="Emergency Medicine">طوارئ</option>
-          <option value="Surgery / OBGYN">جراحة / نسائية</option>
-        </select>
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+          <select
+            aria-label="التخصص"
+            value={specialty}
+            onChange={(e) => setSpecialty(e.target.value)}
+            style={{
+              padding: "7px 10px",
+              borderRadius: 9,
+              border: "1px solid #cbd5e1",
+              background: "#ffffff",
+              color: "#0f172a",
+              fontSize: 13,
+              fontWeight: 600,
+            }}
+          >
+            <option value="General / Internship">عام / امتياز</option>
+            <option value="Internal Medicine">باطنية</option>
+            <option value="Pediatrics">أطفال</option>
+            <option value="Emergency Medicine">طوارئ</option>
+            <option value="Surgery / OBGYN">جراحة / نسائية</option>
+          </select>
+          <button
+            type="button"
+            style={presetBtnStyle}
+            onClick={() => setShowKeyBox((v) => !v)}
+          >
+            {apiKey ? "API متصل ✓" : "إعدادات API"}
+          </button>
+        </div>
       </div>
 
+      {showKeyBox && (
+        <div style={{ marginTop: 10, padding: 10, borderRadius: 10, background: "#f8fafc", border: "1px solid #cbd5e1" }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "#0f172a", marginBottom: 6 }}>
+            مفتاح Gemini API لتفعيل الإجابات الحرة المفتوحة على أي سؤال:
+          </div>
+          <input
+            type="password"
+            dir="ltr"
+            value={apiKey}
+            onChange={(e) => saveKey(e.target.value)}
+            placeholder="AIza..."
+            style={{
+              width: "100%",
+              boxSizing: "border-box",
+              padding: "8px 10px",
+              borderRadius: 8,
+              border: "1px solid #94a3b8",
+              background: "#ffffff",
+              color: "#0f172a",
+              fontSize: 13,
+            }}
+          />
+        </div>
+      )}
+
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
+        <button type="button" style={mode === "free" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("free")}>سؤال حر / محاكاة</button>
         <button type="button" style={mode === "explain" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("explain")}>شرح حالة</button>
         <button type="button" style={mode === "generate" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("generate")}>توليد سؤال</button>
         <button type="button" style={mode === "drug" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("drug")}>مراجعة دواء</button>
