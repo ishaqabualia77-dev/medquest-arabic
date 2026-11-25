@@ -791,50 +791,126 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
   const singleDoseMl = singleDoseMg / mgPerActualMl;
   const totalDailyMl = totalDailyMg / mgPerActualMl;
 
+  const boxStyle: React.CSSProperties = {
+    width: "100%",
+    boxSizing: "border-box",
+    padding: "10px 12px",
+    borderRadius: 10,
+    border: "1px solid #cbd5e1",
+    background: "#ffffff",
+    fontSize: 14,
+    lineHeight: 1.4,
+    marginTop: 6,
+  };
+
   return (
-    <div className="panel-card" style={{ marginTop: 12 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+    <div dir="rtl" className="panel-card" style={{ marginTop: 12, textAlign: "right" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 12 }}>
         <div>
-          <h3 className="panel-title">حاسبة جرعات الأدوية · Dose Calculator</h3>
-          <p className="panel-hint">إدخال مباشر لاسم الدواء والتركيز والوزن بدون قائمة اختيار.</p>
+          <h3 className="panel-title" style={{ margin: 0 }}>حاسبة جرعات الأدوية · Dose Calculator</h3>
+          <p className="panel-hint" style={{ margin: "4px 0 0" }}>اكتب اسم الدواء والتركيز والوزن مباشرة بدون قائمة اختيار.</p>
         </div>
         <button type="button" className="btn-secondary" onClick={onClose}>إغلاق</button>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 10, marginTop: 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
         <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>اسم الدواء</label>
-          <input type="text" className="input-field" value={drugName} onChange={(e) => setDrugName(e.target.value)} placeholder="مثال: Amoxicillin / Paracetamol" />
+          <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>اسم الدواء</label>
+          <input
+            type="text"
+            dir="auto"
+            style={boxStyle}
+            value={drugName}
+            onChange={(e) => setDrugName(e.target.value)}
+            placeholder="مثال: Amoxicillin أو Paracetamol"
+          />
         </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الوزن (kg)</label>
-          <input type="number" step="any" className="input-field" value={weightKg} onChange={(e) => setWeightKg(e.target.value)} placeholder="مثال: 15" />
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>الوزن (kg)</label>
+            <input
+              type="number"
+              step="any"
+              dir="ltr"
+              style={boxStyle}
+              value={weightKg}
+              onChange={(e) => setWeightKg(e.target.value)}
+              placeholder="15"
+            />
+          </div>
+
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>الجرعة (mg/kg/day)</label>
+            <input
+              type="number"
+              step="any"
+              dir="ltr"
+              style={boxStyle}
+              value={dosePerKgDay}
+              onChange={(e) => setDosePerKgDay(e.target.value)}
+            />
+          </div>
         </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الجرعة (mg/kg/day)</label>
-          <input type="number" step="any" className="input-field" value={dosePerKgDay} onChange={(e) => setDosePerKgDay(e.target.value)} />
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>التركيز (mg)</label>
+            <input
+              type="number"
+              step="any"
+              dir="ltr"
+              style={boxStyle}
+              value={strengthMg}
+              onChange={(e) => setStrengthMg(e.target.value)}
+            />
+          </div>
+
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>لكل (ml)</label>
+            <input
+              type="number"
+              step="any"
+              dir="ltr"
+              style={boxStyle}
+              value={perMl}
+              onChange={(e) => setPerMl(e.target.value)}
+            />
+          </div>
         </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>التركيز (mg)</label>
-          <input type="number" step="any" className="input-field" value={strengthMg} onChange={(e) => setStrengthMg(e.target.value)} />
-        </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>لكل (ml)</label>
-          <input type="number" step="any" className="input-field" value={perMl} onChange={(e) => setPerMl(e.target.value)} />
-        </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>عدد الجرعات / اليوم</label>
-          <input type="number" min="1" step="1" className="input-field" value={dosesPerDay} onChange={(e) => setDosesPerDay(e.target.value)} />
-        </div>
-        <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>حد أقصى يومي (mg - اختياري)</label>
-          <input type="number" step="any" className="input-field" value={maxDailyMg} onChange={(e) => setMaxDailyMg(e.target.value)} placeholder="اختياري" />
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>عدد الجرعات / اليوم</label>
+            <input
+              type="number"
+              min="1"
+              step="1"
+              dir="ltr"
+              style={boxStyle}
+              value={dosesPerDay}
+              onChange={(e) => setDosesPerDay(e.target.value)}
+            />
+          </div>
+
+          <div>
+            <label className="panel-hint" style={{ fontWeight: 700, color: "#0f172a" }}>حد أقصى يومي (mg)</label>
+            <input
+              type="number"
+              step="any"
+              dir="ltr"
+              style={boxStyle}
+              value={maxDailyMg}
+              onChange={(e) => setMaxDailyMg(e.target.value)}
+              placeholder="اختياري"
+            />
+          </div>
         </div>
       </div>
 
-      <div style={{ marginTop: 14, padding: 12, borderRadius: 10, background: "#f2fbf8", border: "1px solid #bfe7da" }}>
-        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 4 }}>
-          {drugName.trim() ? `الدواء: ${drugName.trim()} (${strMg} mg / ${volMl} ml)` : `التركيز المدخل: ${strMg} mg / ${volMl} ml`}
+      <div style={{ marginTop: 14, padding: 12, borderRadius: 12, background: "#f2fbf8", border: "1px solid #bfe7da" }}>
+        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>
+          {drugName.trim() ? `الدواء: ${drugName.trim()} (${strMg || 0} mg / ${volMl || 0} ml)` : `التركيز: ${strMg || 0} mg / ${volMl || 0} ml`}
         </div>
         {valid ? (
           <>
@@ -846,7 +922,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
             </div>
           </>
         ) : (
-          <div className="panel-hint">أدخل الوزن والتركيز والجرعة لحساب الجرعة بدقة.</div>
+          <div className="panel-hint">أدخل الوزن (kg) والتركيز والجرعة لحساب الجرعة.</div>
         )}
       </div>
 
