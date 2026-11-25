@@ -1061,8 +1061,8 @@ function AiStudyAssistant(props: any) {
     if (isEn) {
       if (currentMode === "generate") {
         return [
-          "Open Question on "" + clean + "" (" + spec + "):",
-          "Given "" + partsSummary + "", how would you approach the core question or problem in practice?",
+          "Open Question on '" + clean + "' (" + spec + "):",
+          "Given '" + partsSummary + "', how would you approach the core question or problem in practice?",
           "• Key angle 1: Clarify the exact context, starting point, and primary objective.",
           "• Key angle 2: Weigh the main options, trade-offs, and potential pitfalls.",
           "• Key angle 3: Decide the concrete next step and what to verify or monitor.",
@@ -1070,7 +1070,7 @@ function AiStudyAssistant(props: any) {
       }
       if (currentMode === "plan") {
         return [
-          "Open Breakdown & Plan for "" + clean + "" (" + spec + "):",
+          "Open Breakdown & Plan for '" + clean + "' (" + spec + "):",
           "1. Define the core concepts and scope of: " + partsSummary + ".",
           "2. Break down the main components, comparisons, or steps.",
           "3. Identify key edge cases, exceptions, or risks.",
@@ -1079,7 +1079,7 @@ function AiStudyAssistant(props: any) {
       }
       if (currentMode === "drug") {
         return [
-          "Open Medication & Therapy Perspective on "" + clean + "":",
+          "Open Medication & Therapy Perspective on '" + clean + "':",
           "• Subject: " + partsSummary,
           "• Core evaluation: Match the agent/option to the exact clinical goal, patient profile, and alternatives.",
           "• Practical checks: Confirm appropriate dose/regimen, contraindications, interactions, and follow-up parameters.",
@@ -1087,22 +1087,22 @@ function AiStudyAssistant(props: any) {
       }
       if (currentMode === "explain") {
         return [
-          "Open Explanation of "" + clean + "" (" + spec + "):",
+          "Open Explanation of '" + clean + "' (" + spec + "):",
           "• Core idea: " + partsSummary,
           "• How it fits together: Connect the given details into a clear cause-and-effect or decision structure.",
           "• Practical takeaway: Highlight what matters most first and what requires verification.",
         ].join("\n");
       }
       return [
-        "Open AI Response to "" + clean + "" (" + spec + "):",
+        "Open AI Response to '" + clean + "' (" + spec + "):",
         "• Direct focus: " + partsSummary,
-        "• Structured answer: Address "" + clean + "" directly around its main meaning, key factors, and practical next steps without locking into a rigid preset.",
+        "• Structured answer: Address '" + clean + "' directly around its main meaning, key factors, and practical next steps without locking into a rigid preset.",
       ].join("\n");
     }
 
     if (currentMode === "generate") {
       return [
-        "توليد سؤال مفتوح حول "" + clean + "" (" + spec + "):",
+        "توليد سؤال مفتوح حول '" + clean + "' (" + spec + "):",
         "بناءً على: " + partsSummary + " — ما المحور الأهم أو الخطوة العملية الأكثر ملاءمة في هذا السياق؟",
         "• زاوية أولى: تحديد المعطيات الأساسية والهدف المباشر من السؤال.",
         "• زاوية ثانية: مقارنة الخيارات أو الاحتمالات المطروحة والانتباه للاستثناءات.",
@@ -1111,7 +1111,7 @@ function AiStudyAssistant(props: any) {
     }
     if (currentMode === "plan") {
       return [
-        "تقسيم وخطة مفتوحة حول "" + clean + "" (" + spec + "):",
+        "تقسيم وخطة مفتوحة حول '" + clean + "' (" + spec + "):",
         "1. تحديد الفكرة المحورية وعناصر الموضوع: " + partsSummary + ".",
         "2. تفكيك المحاور الرئيسية أو المقارنات أو الخطوات المتتابعة.",
         "3. مراجعة الحالات الخاصة، الاستثناءات، ونقاط الانتباه.",
@@ -1120,7 +1120,7 @@ function AiStudyAssistant(props: any) {
     }
     if (currentMode === "drug") {
       return [
-        "قراءة دوائية/علاجية مفتوحة حول "" + clean + "":",
+        "قراءة دوائية/علاجية مفتوحة حول '" + clean + "':",
         "• المحور المدخل: " + partsSummary,
         "• التقييم العملي: ربط الخيار العلاجي بالاستطباب الفعلي، وضع الحالة، والبدائل الممكنة.",
         "• نقاط التحقق: مراجعة الجرعة أو طريقة الاستخدام، الموانع، التداخلات، ومعايير المتابعة.",
@@ -1128,16 +1128,16 @@ function AiStudyAssistant(props: any) {
     }
     if (currentMode === "explain") {
       return [
-        "شرح مفتوح حول "" + clean + "" (" + spec + "):",
+        "شرح مفتوح حول '" + clean + "' (" + spec + "):",
         "• الفكرة الأساسية: " + partsSummary,
         "• الربط والتحليل: ترتيب العناصر المذكورة لفهم العلاقة بين السبب والنتيجة أو المعطيات والاحتمالات.",
         "• الخلاصة العملية: إبراز الأولوية الأولى وما يحتاج إلى تدقيق أو متابعة.",
       ].join("\n");
     }
     return [
-      "رد مفتوح على "" + clean + "" (" + spec + "):",
+      "رد مفتوح على '" + clean + "' (" + spec + "):",
       "• مضمون كلامك: " + partsSummary,
-      "• المعالجة المباشرة: إجابة منفتحة على "" + clean + "" تركز على الفكرة الأساسية، العوامل المؤثرة، والخطوة التالية العملية دون حصر بقالب ثابت.",
+      "• المعالجة المباشرة: إجابة منفتحة على '" + clean + "' تركز على الفكرة الأساسية، العوامل المؤثرة، والخطوة التالية العملية دون حصر بقالب ثابت.",
     ].join("\n");
   };
 
