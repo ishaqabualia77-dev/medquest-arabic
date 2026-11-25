@@ -168,7 +168,7 @@ const trackInfo: Record<TrackId, { name: string; english: string; description: s
 };
 const categoriesByTrack: Record<TrackId, string[]> = {
   internship:['Emergency Medicine','Internal Medicine','Pediatrics','Obstetrics & Gynecology','Surgery','Psychiatry'],
-  specialty:['Cardiology','Pulmonology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Hematology','Infectious Diseases','Infectious Disease','Rheumatology','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia','Emergency'],
+  specialty:['Cardiology','Pulmonology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Hematology','Infectious Diseases','Infectious Disease','Rheumatology','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia','Emergency','Internal Medicine','General Surgery & Trauma','Pediatrics','OB/GYN','Emergency & Psychiatry'],
 };
 const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: [...specialtyQuestions, ...(IMLE_200_QUESTIONS as unknown as Question[])] };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
@@ -318,15 +318,15 @@ function AppHome() {
   const baseTrackQuestions = activeQuestionsByTrack[track];
   const trackQuestions = track === 'specialty'
     ? baseTrackQuestions.filter((q) => {
-        const branch = classifyQuestionBranch(q.specialty, q.question);
-        const matchesBranch = selectedBranches.includes(branch);
+        const branch = classifyQuestionBranch(String(q && q.specialty ? q.specialty : ""), String(q && q.question ? q.question : ""));
+        const matchesBranch = Array.isArray(selectedBranches) && branch ? selectedBranches.includes(branch) : true;
         if (!matchesBranch) return false;
         if (subTrack === 'all') return true;
         const isSurg = SURGICAL_ALL_IDS.includes(branch as any);
         return subTrack === 'surgical' ? isSurg : !isSurg;
       })
     : baseTrackQuestions;
-  const visibleQuestions = useMemo(()=>trackQuestions.filter(q=>(difficulty==='All'||q.difficulty===difficulty)&&(category==='All'||q.specialty===category)),[trackQuestions,difficulty,category]);
+  const visibleQuestions = useMemo(()=>trackQuestions.filter(q=>q && typeof q === "object" && (difficulty==='All'||q.difficulty===difficulty)&&(category==='All'||q.specialty===category)),[trackQuestions,difficulty,category]);
   const mistakeIdsSet = useMemo(() => {
     const answeredList = progress.answered[track] || [];
     const correctSet = new Set(progress.correct[track] || []);
