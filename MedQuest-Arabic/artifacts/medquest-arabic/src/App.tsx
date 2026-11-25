@@ -1,4 +1,5 @@
 import medicationsData from "./data/medications.json";
+import { IMLE_200_QUESTIONS } from "./data/imleQuestions";
 import { palNonSurgicalQuestionsBatch3 } from "./palNonSurgicalQuestionsBatch3";
 import { nonSurgicalClassificationQuestions } from "./nonSurgicalClassificationQuestions";
 import { palNonSurgicalQuestionsBatch2 } from "./palNonSurgicalQuestionsBatch2";
@@ -169,7 +170,7 @@ const categoriesByTrack: Record<TrackId, string[]> = {
   internship:['Emergency Medicine','Internal Medicine','Pediatrics','Obstetrics & Gynecology','Surgery','Psychiatry'],
   specialty:['Cardiology','Pulmonology','Respiratory Medicine','Neurology','Nephrology','Endocrinology','Gastroenterology','Hematology','Infectious Diseases','Infectious Disease','Rheumatology','Pediatrics','Dermatology','Psychiatry','Radiology','Anesthesia','Emergency'],
 };
-const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: specialtyQuestions };
+const questionsByTrack: Record<TrackId, Question[]> = { internship: internshipQuestions, specialty: [...specialtyQuestions, ...(IMLE_200_QUESTIONS as unknown as Question[])] };
 const STORAGE_KEY = 'medquest-arabic-progress-v1';
 const emptyProgress: Progress = { answered: {internship:[],specialty:[], "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []}, correct: {internship:[],specialty:[], "usmle-step1": [], "usmle-step2": [], "mrcp": [], "imle": []}, streak:0, lastStudy:'' };
 const readProgress = (): Progress => {
