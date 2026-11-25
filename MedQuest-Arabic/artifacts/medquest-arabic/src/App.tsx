@@ -1011,6 +1011,16 @@ function AiStudyAssistant(props: any) {
     // ignore storage errors
   }
 
+  const detectEnglish = (text: string): boolean => {
+    const t = text.trim();
+    if (!t) return false;
+    const hasArabic = /[\u0600-\u06FF]/.test(t);
+    const hasLatin = /[A-Za-z]/.test(t);
+    if (/\b(in\s+english|english)\b/i.test(t) && hasLatin) return true;
+    if (hasArabic) return false;
+    return hasLatin;
+  };
+
   const presets: { label: string; mode: "free" | "explain" | "generate" | "drug" | "plan"; text: string }[] = [
     {
       label: "محاكاة حالة (STEMI)",
@@ -1078,7 +1088,54 @@ function AiStudyAssistant(props: any) {
     text: string
   ) => {
     const clean = text.trim();
+    const isEn = detectEnglish(clean);
     const lower = clean.toLowerCase();
+
+    if (isEn) {
+      if (lower.includes("stemi") || lower.includes("st elevation")) {
+        return [
+          "STEMI Clinical Simulation & Overview (" + spec + "):",
+          "• Immediate assessment: Evaluate ABCs and vitals, continuous rhythm monitoring, and obtain/interpret a 12-lead ECG promptly.",
+          "• Initial supportive care: Supplemental oxygen only if hypoxemic, analgesia, aspirin plus antiplatelet/anticoagulation per protocol and contraindications.",
+          "• Reperfusion strategy: Prioritize primary PCI within target window, or fibrinolytic therapy if timely PCI is not available.",
+          "• Key differentials: Pericarditis, early repolarization, aortic dissection, and pulmonary embolism.",
+        ].join("\n");
+      }
+      if (currentMode === "generate") {
+        return [
+          "Generated Clinical MCQ (" + spec + "):",
+          "Regarding (" + clean + "), a patient presents with relevant clinical features. What is the most appropriate next step in evaluation or management?",
+          "A) Perform focused clinical assessment, stabilize vitals, and order targeted work-up.",
+          "B) Delay evaluation without clinical justification.",
+          "C) Give unguided therapy without checking contraindications.",
+          "D) Observe without follow-up.",
+          "Correct answer: (A) — Safe clinical care starts with stabilizing the patient and guiding tests and treatment by presentation.",
+        ].join("\n");
+      }
+      if (currentMode === "drug") {
+        return [
+          "Medication Review (" + clean + "):",
+          "• Indications & role: Confirm exact indication, clinical setting, and therapeutic appropriateness.",
+          "• Dosing & frequency: Calculate weight/age-based (mg/kg) or renal/hepatic-adjusted dosing and verify maximum daily limits.",
+          "• Safety & precautions: Screen for drug allergies, interactions, adverse effects, and contraindications.",
+        ].join("\n");
+      }
+      if (currentMode === "plan") {
+        return [
+          "Focused Study Plan (" + spec + " — " + clean + "):",
+          "1. Core pathophysiology and classic clinical presentations.",
+          "2. Differential diagnosis and high-yield initial work-up.",
+          "3. First-line management, red flags, and urgent referrals.",
+          "4. Practice clinical questions and review mistakes.",
+        ].join("\n");
+      }
+      return [
+        "Clinical Response (" + spec + "):",
+        "Query: " + clean,
+        "• Key synthesis: Connect history, exam, and diagnostic findings to the underlying pathophysiology and most likely diagnosis.",
+        "• Differentials & next step: Rule out life-threatening differentials first, then choose the appropriate diagnostic or management step per protocol.",
+      ].join("\n");
+    }
 
     if (lower.includes("stemi") || lower.includes("st elevation") || clean.includes("احتشاء") || clean.includes("ارتفاع st")) {
       return [
@@ -1137,12 +1194,14 @@ function AiStudyAssistant(props: any) {
     }
     setLoading(true);
     try {
+      const lang = detectEnglish(trimmed) ? "en" : "ar";
       const backendRes = await fetch("/api/ai/study", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           mode,
           specialty,
+          language: lang,
           prompt: trimmed,
         }),
       });
@@ -1170,6 +1229,8 @@ function AiStudyAssistant(props: any) {
       : mode === "plan"
       ? "اكتب الموضوع أو المادة لإنشاء خطة مراجعة..."
       : "اكتب أي سؤال أو حالة أو محادثة وسيتم التوليد تلقائياً...";
+
+  const isOutputEnglish = detectEnglish(outputText || promptText);
 
   return (
     <div
@@ -1282,6 +1343,7 @@ function AiStudyAssistant(props: any) {
 
       {outputText && (
         <div
+          dir={isOutputEnglish ? "ltr" : "rtl"}
           data-testid="ai-assistant-output"
           style={{
             marginTop: 12,
@@ -1291,6 +1353,7 @@ function AiStudyAssistant(props: any) {
             color: "#0f172a",
             border: "1px solid #cbd5e1",
             whiteSpace: "pre-wrap",
+            textAlign: isOutputEnglish ? "left" : "right",
             fontSize: 14,
             lineHeight: 1.6,
           }}
