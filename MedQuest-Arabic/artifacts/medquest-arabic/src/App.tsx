@@ -440,7 +440,7 @@ function AppHome() {
         style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700 }}
       >
         <Sparkles size={17} />
-        <span>الذكاء الاصطناعي · AI</span>
+        <span>AI</span>
       </button>
           </footer>
         </div>
@@ -998,165 +998,220 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
     </div>
   );
 }
-function AiStudyAssistant({ trackName, onClose }: { trackName: string; onClose: () => void }) {
-  const [mode, setMode] = useState<"explain" | "generate" | "drug">("explain");
-  const [promptInput, setPromptInput] = useState("");
-  const [output, setOutput] = useState("");
-  const [loading, setLoading] = useState(false);
+function AiStudyAssistant(props: any) {
+  const [mode, setMode] = useState<"explain" | "generate" | "drug" | "plan">("explain");
+  const [specialty, setSpecialty] = useState<string>("General / Internship");
+  const [promptText, setPromptText] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [outputText, setOutputText] = useState<string>("");
 
-  const buildLocalFallback = (currentMode: "explain" | "generate" | "drug", text: string) => {
-    const clean = text.trim();
+  const presets: { label: string; mode: "explain" | "generate" | "drug" | "plan"; text: string }[] = [
+    {
+      label: "تفريق تشخيصي (DKA vs HHS)",
+      mode: "explain",
+      text: "شاب عمره 19 سنة مصاب بالسكري النوع الأول لديه إقياء، تنفس عميق، سكر 28 mmol/L وكيتونات مرتفعة. كيف نبدأ التدبير وما التشخيص التفريقي؟",
+    },
+    {
+      label: "توليد سؤال سريري",
+      mode: "generate",
+      text: "Pediatric fever with rash and pharyngitis — 1 clinical MCQ with explanation",
+    },
+    {
+      label: "مراجعة دواء وجرعة",
+      mode: "drug",
+      text: "Amoxicillin suspension pediatric dosing, indications, and main precautions",
+    },
+    {
+      label: "خطة مراجعة مركّزة",
+      mode: "plan",
+      text: "مراجعة سريعة لأمراض الكلى والاضطرابات الشاردية لامتحان الامتياز",
+    },
+  ];
+
+  const buildLocalFallback = (
+    currentMode: "explain" | "generate" | "drug" | "plan",
+    spec: string,
+    text: string
+  ) => {
+    const topic = text.trim() || "موضوع سريري عام";
     if (currentMode === "generate") {
       return [
-        `سؤال تدريبي مقترح (${trackName}):`,
-        "مريض يراجع بقصة سريرية تتطلب تحديد الخطوة التشخيصية أو العلاجية الأولى بدقة.",
-        "أ) إجراء استقصاء أولي سريع وتقييم العلامات الحيوية والمنذرات الخطرة.",
-        "ب) تأجيل التقييم لحين ظهور نتائج متأخرة دون تدخل فوري.",
-        "ج) البدء بعلاج غير موجه دون استبعاد الحالات الإسعافية.",
-        "د) الاكتفاء بالملاحظة المنزلية دون متابعة.",
-        "الإجابة الصحيحة: (أ) — البدء بالخطوة المنهجية الآمنة وتقييم الخطورة أولاً هو الأساس في الامتحانات السريرية."
+        "سؤال تدريبي مقترح (" + spec + "):",
+        "مريض راجع بتظاهرات سريرية مرتبطة بـ: " + topic + ". ما الخطوة الأولى الأكثر ملاءمة في التقييم أو التدبير؟",
+        "أ) البدء الفوري بالتقييم المبدئي وتثبيت العلامات الحيوية وطلب الفحوصات الموجّهة.",
+        "ب) تأجيل أي تداخل دون تقييم سريري.",
+        "ج) إعطاء علاج غير موجّه دون استقصاء.",
+        "د) الاكتفاء بالملاحظة دون متابعة.",
+        "الإجابة الصحيحة: (أ) — يبدأ التدبير السريري الآمن بتقييم الاستقرار وتوجيه الفحوصات والعلاج حسب الحالة.",
       ].join("\n");
     }
     if (currentMode === "drug") {
       return [
-        `ملخص مراجعة دوائية (${clean || "دواء عام"}):`,
-        "• تحقق من الاستطباب الدقيق، الجرعة حسب العمر/الوزن أو التصفية الكلوية، وطريق الإعطاء.",
-        "• راجع موانع الاستعمال، التداخلات الدوائية، والآثار الجانبية المهمة قبل التطبيق.",
-        "• ملاحظة: أداة تعليمية للمراجعة الطبية ولا تغني عن البروتوكولات المعتمدة أو التحقق السريري."
+        "مراجعة دوائية سريعة (" + topic + "):",
+        "• الاستطباب والآلية: تحقق من الاستطباب الدقيق والمجال العلاجي للحالة.",
+        "• الجرعة والتكرار: احسب الجرعة حسب العمر/الوزن (mg/kg) أو التصفية الكلوية/الكبدية وتأكد من الحد الأقصى اليومي.",
+        "• السلامة والموانع: راجع التحسس الدوائي، التداخلات، والتأثيرات الجانبية الشائعة.",
+      ].join("\n");
+    }
+    if (currentMode === "plan") {
+      return [
+        "خطة مراجعة مركّزة (" + spec + " — " + topic + "):",
+        "1. الأساسيات والفيزيولوجيا المرضية والتظاهرات النموذجية.",
+        "2. التشخيص التفريقي والفحوصات الأولية الحاسمة.",
+        "3. خطوط العلاج الأولى وحالات الطوارئ/التحويل.",
+        "4. حل 10–15 سؤالاً سريرياً ومراجعة الأخطاء الشائعة.",
       ].join("\n");
     }
     return [
-      `تحليل وشرح تعليمي (${trackName}):`,
-      clean
-        ? `النقطة المدخلة: "${clean}"`
-        : "لم يتم إدخال نص محدد؛ إليك منهجية الإجابة السريعة:",
-      "1. حدّد المعطيات المحورية في السؤال (العمر، المدة، الأعراض المرافقة، أو القيم المخبرية).",
-      "2. اربط المعطيات بالآلية المرضية أو الخطوة الأولى الأكثر أماناً وكفاءة.",
-      "3. استبعد الخيارات التي تخالف الأولوية السريرية أو تفتقر لمبرر مباشر.",
-      "• تنبيه: شرح تعليمي للمساعدة في الدراسة والمراجعة."
+      "شرح سريري منظم (" + spec + " — " + topic + "):",
+      "• الفكرة المحورية: اربط المعطيات السريرية والمخبرية بالآلية المرضية الأساسية.",
+      "• التشخيص التفريقي: قارن بين الاحتمالات الأكثر شيوعاً والأكثر خطورة التي لا يجوز إغفالها.",
+      "• الخطوة التالية: حدد الفحص المؤكد أو التدبير العلاجي الأولي مع الانتباه لموانع الاستعمال.",
     ].join("\n");
   };
 
-  const handleRunAi = async () => {
+  const handleRun = async () => {
+    const trimmed = promptText.trim();
+    if (!trimmed) {
+      setOutputText("اكتب سؤالاً أو حالة أو اسم دواء أو موضوع مراجعة أولاً.");
+      return;
+    }
     setLoading(true);
-    setOutput("");
     try {
       const res = await fetch("/api/ai/study", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           mode,
-          track: trackName,
-          prompt: promptInput.trim()
-        })
+          specialty,
+          prompt: trimmed,
+        }),
       });
       if (res.ok) {
         const data = await res.json();
-        if (data && typeof data.reply === "string" && data.reply.trim()) {
-          setOutput(data.reply.trim());
-          setLoading(false);
+        const reply = data?.result || data?.answer || data?.text || data?.output;
+        if (reply && typeof reply === "string") {
+          setOutputText(reply);
           return;
         }
       }
+      setOutputText(buildLocalFallback(mode, specialty, trimmed));
     } catch {
-      // Fallback to built-in study helper when /api/ai/study is not configured yet
+      setOutputText(buildLocalFallback(mode, specialty, trimmed));
+    } finally {
+      setLoading(false);
     }
-    setOutput(buildLocalFallback(mode, promptInput));
-    setLoading(false);
   };
 
+  const placeholderText =
+    mode === "generate"
+      ? "اكتب الموضوع أو التخصص لتوليد سؤال سريري مع شرح..."
+      : mode === "drug"
+      ? "اكتب اسم الدواء أو الجرعة أو التداخل المطلوب مراجعته..."
+      : mode === "plan"
+      ? "اكتب الموضوع أو المادة لإنشاء خطة مراجعة سريعة..."
+      : "اكتب حالة سريرية أو سؤالاً أو نقطة تحتاج شرحاً وتفريقاً تشخيصياً...";
+
   return (
-    <div className="panel" style={{ marginTop: 14 }} data-testid="ai-study-assistant-section">
-      <div className="blueprint-head" style={{ marginBottom: 12 }}>
+    <div className="panel" style={{ marginTop: 14, textAlign: "right" }} dir="rtl" data-testid="ai-study-assistant-section">
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div>
-          <h3 className="panel-title">مساعد الذكاء الاصطناعي · AI Study Assistant</h3>
-          <p className="panel-hint">شرح الحالات والأسئلة، توليد أسئلة تدريبية، ومراجعة دوائية سريعة لمسار {trackName}.</p>
+          <h3 className="panel-title" style={{ margin: 0 }}>AI Study Assistant</h3>
+          <p className="panel-hint" style={{ margin: "4px 0 0" }}>شرح سريري، توليد أسئلة، مراجعة أدوية وجرعات، وخطة مراجعة.</p>
         </div>
-        <button type="button" className="btn-secondary" style={{ padding: "6px 12px", fontSize: 12.5 }} onClick={onClose}>
-          إغلاق المساعد
-        </button>
+        <select
+          aria-label="التخصص"
+          value={specialty}
+          onChange={(e) => setSpecialty(e.target.value)}
+          style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", fontSize: 13 }}
+        >
+          <option value="General / Internship">عام / امتياز</option>
+          <option value="Internal Medicine">باطنية</option>
+          <option value="Pediatrics">أطفال</option>
+          <option value="Emergency Medicine">طوارئ</option>
+          <option value="Surgery / OBGYN">جراحة / نسائية</option>
+        </select>
       </div>
 
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
-        <button
-          type="button"
-          className={mode === "explain" ? "btn-primary" : "btn-secondary"}
-          style={{ padding: "7px 12px", fontSize: 12.5 }}
-          onClick={() => setMode("explain")}
-        >
-          شرح سؤال / حالة
-        </button>
-        <button
-          type="button"
-          className={mode === "generate" ? "btn-primary" : "btn-secondary"}
-          style={{ padding: "7px 12px", fontSize: 12.5 }}
-          onClick={() => setMode("generate")}
-        >
-          توليد سؤال تدريبي
-        </button>
-        <button
-          type="button"
-          className={mode === "drug" ? "btn-primary" : "btn-secondary"}
-          style={{ padding: "7px 12px", fontSize: 12.5 }}
-          onClick={() => setMode("drug")}
-        >
-          مراجعة دواء سريع
-        </button>
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
+        <button type="button" className={mode === "explain" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("explain")}>شرح حالة</button>
+        <button type="button" className={mode === "generate" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("generate")}>توليد سؤال</button>
+        <button type="button" className={mode === "drug" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("drug")}>مراجعة دواء</button>
+        <button type="button" className={mode === "plan" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("plan")}>خطة مراجعة</button>
+      </div>
+
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8 }}>
+        {presets.map((pItem) => (
+          <button
+            key={pItem.label}
+            type="button"
+            className="btn-secondary"
+            style={{ fontSize: 12, padding: "5px 9px" }}
+            onClick={() => {
+              setMode(pItem.mode);
+              setPromptText(pItem.text);
+            }}
+          >
+            {pItem.label}
+          </button>
+        ))}
       </div>
 
       <textarea
         rows={3}
-        value={promptInput}
-        onChange={(e) => setPromptInput(e.target.value)}
-        placeholder={
-          mode === "explain"
-            ? "اكتب فكرة السؤال أو الحالة السريرية أو موضوعاً تريد شرحه..."
-            : mode === "generate"
-            ? "اكتب التخصص أو الموضوع لتوليد سؤال تدريبي (مثال: Cardiology / Pediatrics / Step 1)..."
-            : "اكتب اسم الدواء أو سؤالك الدوائي السريع..."
-        }
-        aria-label="إدخال مساعد الذكاء الاصطناعي"
+        dir="auto"
+        value={promptText}
+        onChange={(e) => setPromptText(e.target.value)}
+        placeholder={placeholderText}
+        aria-label="إدخال مساعد AI"
         style={{
           width: "100%",
-          padding: "10px 12px",
+          boxSizing: "border-box",
+          marginTop: 10,
+          padding: 10,
           borderRadius: 10,
-          border: "1px solid #d5dfd9",
-          fontSize: 13.5,
-          marginBottom: 10,
-          resize: "vertical"
+          border: "1px solid #cbd5e1",
+          background: "#fff",
+          fontSize: 14,
         }}
       />
 
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-        <span className="panel-hint" style={{ fontSize: 12 }}>
-          لأغراض المراجعة التعليمية فقط؛ يُرجى التحقق من المصادر الطبية المعتمدة.
-        </span>
+      <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
         <button
           type="button"
           className="btn-primary"
           disabled={loading}
-          onClick={handleRunAi}
+          onClick={handleRun}
           data-testid="button-run-ai-assistant"
         >
-          {loading ? "جاري التحليل..." : "تشغيل المساعد الذكي"}
+          {loading ? "جاري المعالجة..." : "تشغيل AI"}
         </button>
+        {outputText && (
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => setOutputText("")}
+          >
+            مسح النتيجة
+          </button>
+        )}
       </div>
 
-      {output && (
+      {outputText && (
         <div
+          data-testid="ai-assistant-output"
           style={{
             marginTop: 12,
             padding: 12,
             borderRadius: 10,
-            background: "#f6f9f7",
-            border: "1px solid #dce6e0",
-            whiteSpace: "pre-line",
-            lineHeight: 1.75,
-            fontSize: 13.5
+            background: "#f8fafc",
+            border: "1px solid #cbd5e1",
+            whiteSpace: "pre-wrap",
+            fontSize: 14,
+            lineHeight: 1.6,
           }}
-          data-testid="ai-assistant-output"
         >
-          {output}
+          {outputText}
         </div>
       )}
     </div>
@@ -1190,7 +1245,7 @@ const [calculatorOpen, setCalculatorOpen] = useState(false);
         style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700 }}
       >
         <Sparkles size={17} />
-        <span>الذكاء الاصطناعي · AI</span>
+        <span>AI</span>
       </button></div>
     {aiOpen && <AiStudyAssistant trackName={info.name} onClose={() => setAiOpen(false)} />}
       </div>
