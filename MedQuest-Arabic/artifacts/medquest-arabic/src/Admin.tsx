@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 // __TEMP_AUTH_BYPASS__: import { useAuth } from '@clerk/react';
 import {
   Activity, BookOpen, ClipboardList, LayoutDashboard,
@@ -250,9 +250,12 @@ export default function Admin({ questions }: Props) {
     }
   }, [authHeaders]);
 
+  const didInitialLoadRef = useRef(false);
   useEffect(() => {
+    if (didInitialLoadRef.current) return;
+    didInitialLoadRef.current = true;
     void loadAdminData();
-  }, [loadAdminData]);
+  }, []);
 
   const filtered = useMemo(
     () =>

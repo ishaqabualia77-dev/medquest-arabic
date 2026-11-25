@@ -1977,7 +1977,8 @@ function AdminAccess() {
 
   // __TEMP_AUTH_BYPASS__: skipped adminState.authorized block
 
-  return <Admin questions={[...internshipQuestions, ...specialtyQuestions]} />;
+  const adminQuestions = useMemo(() => [...internshipQuestions, ...specialtyQuestions], []);
+  return <Admin questions={adminQuestions} />;
 }
 
 function PortalsFooterBar() {

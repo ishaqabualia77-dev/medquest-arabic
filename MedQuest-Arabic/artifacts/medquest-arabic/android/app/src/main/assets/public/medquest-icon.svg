@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f5132"/>
+      <stop offset="100%" stop-color="#198754"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect width="512" height="256" rx="116" fill="url(#shine)"/>
+  <!-- Medical Pulse + Cross Emblem -->
+  <circle cx="256" cy="240" r="132" fill="#ffffff" fill-opacity="0.12"/>
+  <path d="M120 256 H196 L228 176 L274 336 L308 220 L328 256 H392"
+        fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stethoscope / Clinical Badge Accent -->
+  <rect x="236" y="96" width="40" height="84" rx="14" fill="#d1fae5" opacity="0.9"/>
+  <rect x="214" y="118" width="84" height="40" rx="14" fill="#d1fae5" opacity="0.9"/>
+  <!-- Subtle MQ Monogram -->
+  <text x="256" y="424" text-anchor="middle" fill="#ecfdf5"
+        font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="4">MEDQUEST</text>
+</svg>
