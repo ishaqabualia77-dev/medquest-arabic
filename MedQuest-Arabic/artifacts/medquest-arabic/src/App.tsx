@@ -764,156 +764,98 @@ const DOSE_PRESETS: DosePreset[] = [
 ];
 
 function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
-  const [selectedId, setSelectedId] = useState<string>(DOSE_PRESETS[0].id);
-  const [weightKg, setWeightKg] = useState<string>("12");
-  const [mgPerKg, setMgPerKg] = useState<string>(String(DOSE_PRESETS[0].mgPerKg));
-  const [strengthMg, setStrengthMg] = useState<string>(String(DOSE_PRESETS[0].strengthMg));
-  const [perMl, setPerMl] = useState<string>(String(DOSE_PRESETS[0].perMl));
-  const [dosesPerDay, setDosesPerDay] = useState<string>(String(DOSE_PRESETS[0].defaultFreq));
+  const [drugName, setDrugName] = useState<string>("");
+  const [weightKg, setWeightKg] = useState<string>("");
+  const [dosePerKgDay, setDosePerKgDay] = useState<string>("40");
+  const [strengthMg, setStrengthMg] = useState<string>("250");
+  const [perMl, setPerMl] = useState<string>("5");
+  const [dosesPerDay, setDosesPerDay] = useState<string>("3");
+  const [maxDailyMg, setMaxDailyMg] = useState<string>("");
 
-  const activePreset = useMemo(
-    () => DOSE_PRESETS.find((p) => p.id === selectedId) || DOSE_PRESETS[0],
-    [selectedId]
-  );
+  const w = parseFloat(weightKg);
+  const mgKgDay = parseFloat(dosePerKgDay);
+  const strMg = parseFloat(strengthMg);
+  const volMl = parseFloat(perMl);
+  const freq = Math.max(1, parseInt(dosesPerDay || "1", 10) || 1);
+  const capDaily = parseFloat(maxDailyMg);
 
-  const handlePresetChange = (id: string) => {
-    setSelectedId(id);
-    const p = DOSE_PRESETS.find((item) => item.id === id);
-    if (p) {
-      setMgPerKg(String(p.mgPerKg));
-      setStrengthMg(String(p.strengthMg));
-      setPerMl(String(p.perMl));
-      setDosesPerDay(String(p.defaultFreq));
-    }
-  };
-
-  const w = Math.max(0, parseFloat(weightKg) || 0);
-  const doseRate = Math.max(0, parseFloat(mgPerKg) || 0);
-  const strMg = Math.max(0.0001, parseFloat(strengthMg) || 1);
-  const volMl = Math.max(0.0001, parseFloat(perMl) || 1);
-  const freq = Math.max(1, parseInt(dosesPerDay, 10) || 1);
-
-  const totalDailyMg = w * doseRate;
-  const singleDoseMg = totalDailyMg / freq;
+  const valid = w > 0 && mgKgDay > 0 && strMg > 0 && volMl > 0;
+  let totalDailyMg = valid ? w * mgKgDay : 0;
+  let capped = false;
+  if (valid && !isNaN(capDaily) && capDaily > 0 && totalDailyMg > capDaily) {
+    totalDailyMg = capDaily;
+    capped = true;
+  }
   const mgPerActualMl = strMg / volMl;
+  const singleDoseMg = totalDailyMg / freq;
   const singleDoseMl = singleDoseMg / mgPerActualMl;
   const totalDailyMl = totalDailyMg / mgPerActualMl;
 
   return (
-    <div className="panel" style={{ marginTop: 12 }} data-testid="dose-calculator-section">
-      <div className="blueprint-head" style={{ marginBottom: 12 }}>
+    <div className="panel-card" style={{ marginTop: 12 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
         <div>
           <h3 className="panel-title">حاسبة جرعات الأدوية · Dose Calculator</h3>
-          <p className="panel-hint">قسم مستقل لحساب الجرعات حسب الوزن (mg/kg) وتحويل التركيز إلى مل (ml).</p>
+          <p className="panel-hint">إدخال مباشر لاسم الدواء والتركيز والوزن بدون قائمة اختيار.</p>
         </div>
-        <button
-          type="button"
-          className="btn-secondary"
-          style={{ padding: "6px 12px", fontSize: 12.5 }}
-          onClick={onClose}
-        >
-          إغلاق الحاسبة
-        </button>
+        <button type="button" className="btn-secondary" onClick={onClose}>إغلاق</button>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: 10, marginBottom: 12 }}>
-        <div style={{ gridColumn: "1 / -1" }}>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>اختر مستحضراً جاهزاً أو عدّل القيم يدوياً</label>
-          <select
-            className="filter-select"
-            value={selectedId}
-            onChange={(e) => handlePresetChange(e.target.value)}
-            style={{ width: "100%" }}
-          >
-            {DOSE_PRESETS.map((p) => (
-              <option key={p.id} value={p.id}>{p.label}</option>
-            ))}
-          </select>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 10, marginTop: 12 }}>
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>اسم الدواء</label>
+          <input type="text" className="input-field" value={drugName} onChange={(e) => setDrugName(e.target.value)} placeholder="مثال: Amoxicillin / Paracetamol" />
         </div>
-
         <div>
           <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الوزن (kg)</label>
-          <input
-            type="number"
-            step="0.5"
-            min="0"
-            value={weightKg}
-            onChange={(e) => setWeightKg(e.target.value)}
-            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
-          />
+          <input type="number" step="any" className="input-field" value={weightKg} onChange={(e) => setWeightKg(e.target.value)} placeholder="مثال: 15" />
         </div>
-
         <div>
           <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>الجرعة (mg/kg/day)</label>
-          <input
-            type="number"
-            step="0.5"
-            min="0"
-            value={mgPerKg}
-            onChange={(e) => setMgPerKg(e.target.value)}
-            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
-          />
+          <input type="number" step="any" className="input-field" value={dosePerKgDay} onChange={(e) => setDosePerKgDay(e.target.value)} />
         </div>
-
         <div>
           <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>التركيز (mg)</label>
-          <input
-            type="number"
-            step="0.5"
-            min="0.1"
-            value={strengthMg}
-            onChange={(e) => setStrengthMg(e.target.value)}
-            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
-          />
+          <input type="number" step="any" className="input-field" value={strengthMg} onChange={(e) => setStrengthMg(e.target.value)} />
         </div>
-
         <div>
-          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>لكل حجم (ml)</label>
-          <input
-            type="number"
-            step="0.5"
-            min="0.1"
-            value={perMl}
-            onChange={(e) => setPerMl(e.target.value)}
-            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
-          />
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>لكل (ml)</label>
+          <input type="number" step="any" className="input-field" value={perMl} onChange={(e) => setPerMl(e.target.value)} />
         </div>
-
         <div>
           <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>عدد الجرعات / اليوم</label>
-          <input
-            type="number"
-            step="1"
-            min="1"
-            max="12"
-            value={dosesPerDay}
-            onChange={(e) => setDosesPerDay(e.target.value)}
-            style={{ width: "100%", padding: "8px 10px", borderRadius: 10, border: "1px solid #d5dfd9" }}
-          />
+          <input type="number" min="1" step="1" className="input-field" value={dosesPerDay} onChange={(e) => setDosesPerDay(e.target.value)} />
+        </div>
+        <div>
+          <label className="panel-hint" style={{ display: "block", marginBottom: 4 }}>حد أقصى يومي (mg - اختياري)</label>
+          <input type="number" step="any" className="input-field" value={maxDailyMg} onChange={(e) => setMaxDailyMg(e.target.value)} placeholder="اختياري" />
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10, padding: 12, borderRadius: 12, background: "#f5f8f6", border: "1px solid #e1e8e4" }}>
-        <div>
-          <div className="panel-hint">الجرعة الواحدة (ml)</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: "#176b55" }}>{singleDoseMl.toFixed(2)} ml</div>
-          <div className="panel-hint">{singleDoseMg.toFixed(1)} mg لكل جرعة</div>
+      <div style={{ marginTop: 14, padding: 12, borderRadius: 10, background: "#f2fbf8", border: "1px solid #bfe7da" }}>
+        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 4 }}>
+          {drugName.trim() ? `الدواء: ${drugName.trim()} (${strMg} mg / ${volMl} ml)` : `التركيز المدخل: ${strMg} mg / ${volMl} ml`}
         </div>
-        <div>
-          <div className="panel-hint">الإجمالي اليومي (ml)</div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: "#1f2933" }}>{totalDailyMl.toFixed(2)} ml / يوم</div>
-          <div className="panel-hint">{totalDailyMg.toFixed(1)} mg / يوم</div>
-        </div>
+        {valid ? (
+          <>
+            <div style={{ fontSize: 18, fontWeight: 800, color: "#176b55" }}>
+              الجرعة الواحدة: {singleDoseMl.toFixed(2)} ml ({singleDoseMg.toFixed(1)} mg)
+            </div>
+            <div className="panel-hint" style={{ marginTop: 4 }}>
+              الإجمالي اليومي: {totalDailyMl.toFixed(2)} ml ({totalDailyMg.toFixed(1)} mg/day ÷ {freq}){capped ? " — تم التقييد بالحد الأقصى اليومي" : ""}
+            </div>
+          </>
+        ) : (
+          <div className="panel-hint">أدخل الوزن والتركيز والجرعة لحساب الجرعة بدقة.</div>
+        )}
       </div>
 
-      <p className="panel-hint" style={{ marginTop: 10, lineHeight: 1.65 }}>
-        <strong>ملاحظة سريرية:</strong> {activePreset.note} — راجع دائماً العمر والقصور الكلوي/الكبدي والحد الأقصى اليومي قبل الصرف.
-      </p>
+      <div className="panel-hint" style={{ marginTop: 10 }}>
+        • تحقق من الاستطباب الدقيق، الجرعة حسب العمر/الوزن أو التصفية الكلوية، وطريق الإعطاء.
+      </div>
     </div>
   );
 }
-
-
 function AiStudyAssistant({ trackName, onClose }: { trackName: string; onClose: () => void }) {
   const [mode, setMode] = useState<"explain" | "generate" | "drug">("explain");
   const [promptInput, setPromptInput] = useState("");
