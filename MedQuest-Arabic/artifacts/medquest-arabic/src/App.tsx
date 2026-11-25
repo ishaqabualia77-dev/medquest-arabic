@@ -771,25 +771,69 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
   const [perMl, setPerMl] = useState<string>("5");
   const [dosesPerDay, setDosesPerDay] = useState<string>("3");
   const [maxDailyMg, setMaxDailyMg] = useState<string>("");
+  const [result, setResult] = useState<{
+    singleDoseMl: number;
+    singleDoseMg: number;
+    totalDailyMl: number;
+    totalDailyMg: number;
+    freq: number;
+    capped: boolean;
+    drug: string;
+    strMg: number;
+    volMl: number;
+  } | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
-  const w = parseFloat(weightKg);
-  const mgKgDay = parseFloat(dosePerKgDay);
-  const strMg = parseFloat(strengthMg);
-  const volMl = parseFloat(perMl);
-  const freq = Math.max(1, parseInt(dosesPerDay || "1", 10) || 1);
-  const capDaily = parseFloat(maxDailyMg);
+  const handleCalculate = () => {
+    setResult(null);
+    const w = parseFloat(weightKg);
+    const mgKgDay = parseFloat(dosePerKgDay);
+    const strMg = parseFloat(strengthMg);
+    const volMl = parseFloat(perMl);
+    const freq = Math.max(1, parseInt(dosesPerDay || "1", 10) || 1);
+    const capDaily = parseFloat(maxDailyMg);
 
-  const valid = w > 0 && mgKgDay > 0 && strMg > 0 && volMl > 0;
-  let totalDailyMg = valid ? w * mgKgDay : 0;
-  let capped = false;
-  if (valid && !isNaN(capDaily) && capDaily > 0 && totalDailyMg > capDaily) {
-    totalDailyMg = capDaily;
-    capped = true;
-  }
-  const mgPerActualMl = strMg / volMl;
-  const singleDoseMg = totalDailyMg / freq;
-  const singleDoseMl = singleDoseMg / mgPerActualMl;
-  const totalDailyMl = totalDailyMg / mgPerActualMl;
+    if (!(w > 0) || !(mgKgDay > 0) || !(strMg > 0) || !(volMl > 0)) {
+      setErrorMsg("تأكد من إدخال الوزن (kg) والجرعة والتركيز وحجم (ml) بأرقام أكبر من صفر.");
+      return;
+    }
+
+    setErrorMsg("");
+    let totalDailyMg = w * mgKgDay;
+    let capped = false;
+    if (!isNaN(capDaily) && capDaily > 0 && totalDailyMg > capDaily) {
+      totalDailyMg = capDaily;
+      capped = true;
+    }
+    const mgPerActualMl = strMg / volMl;
+    const singleDoseMg = totalDailyMg / freq;
+    const singleDoseMl = singleDoseMg / mgPerActualMl;
+    const totalDailyMl = totalDailyMg / mgPerActualMl;
+
+    setResult({
+      singleDoseMl,
+      singleDoseMg,
+      totalDailyMl,
+      totalDailyMg,
+      freq,
+      capped,
+      drug: drugName.trim(),
+      strMg,
+      volMl,
+    });
+  };
+
+  const handleReset = () => {
+    setDrugName("");
+    setWeightKg("");
+    setDosePerKgDay("40");
+    setStrengthMg("250");
+    setPerMl("5");
+    setDosesPerDay("3");
+    setMaxDailyMg("");
+    setResult(null);
+    setErrorMsg("");
+  };
 
   const boxStyle: React.CSSProperties = {
     width: "100%",
@@ -808,7 +852,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: 12 }}>
         <div>
           <h3 className="panel-title" style={{ margin: 0 }}>حاسبة جرعات الأدوية · Dose Calculator</h3>
-          <p className="panel-hint" style={{ margin: "4px 0 0" }}>اكتب اسم الدواء والتركيز والوزن مباشرة بدون قائمة اختيار.</p>
+          <p className="panel-hint" style={{ margin: "4px 0 0" }}>اكتب البيانات ثم اضغط احسب لعرض الجرعة.</p>
         </div>
         <button type="button" className="btn-secondary" onClick={onClose}>إغلاق</button>
       </div>
@@ -821,7 +865,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
             dir="auto"
             style={boxStyle}
             value={drugName}
-            onChange={(e) => setDrugName(e.target.value)}
+            onChange={(e) => { setDrugName(e.target.value); setResult(null); }}
             placeholder="مثال: Amoxicillin أو Paracetamol"
           />
         </div>
@@ -835,7 +879,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={weightKg}
-              onChange={(e) => setWeightKg(e.target.value)}
+              onChange={(e) => { setWeightKg(e.target.value); setResult(null); }}
               placeholder="15"
             />
           </div>
@@ -848,7 +892,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={dosePerKgDay}
-              onChange={(e) => setDosePerKgDay(e.target.value)}
+              onChange={(e) => { setDosePerKgDay(e.target.value); setResult(null); }}
             />
           </div>
         </div>
@@ -862,7 +906,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={strengthMg}
-              onChange={(e) => setStrengthMg(e.target.value)}
+              onChange={(e) => { setStrengthMg(e.target.value); setResult(null); }}
             />
           </div>
 
@@ -874,7 +918,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={perMl}
-              onChange={(e) => setPerMl(e.target.value)}
+              onChange={(e) => { setPerMl(e.target.value); setResult(null); }}
             />
           </div>
         </div>
@@ -889,7 +933,7 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={dosesPerDay}
-              onChange={(e) => setDosesPerDay(e.target.value)}
+              onChange={(e) => { setDosesPerDay(e.target.value); setResult(null); }}
             />
           </div>
 
@@ -901,30 +945,52 @@ function DoseCalculatorSection({ onClose }: { onClose: () => void }) {
               dir="ltr"
               style={boxStyle}
               value={maxDailyMg}
-              onChange={(e) => setMaxDailyMg(e.target.value)}
+              onChange={(e) => { setMaxDailyMg(e.target.value); setResult(null); }}
               placeholder="اختياري"
             />
           </div>
         </div>
+
+        <div style={{ display: "flex", gap: 10, marginTop: 4 }}>
+          <button
+            type="button"
+            className="btn-primary"
+            style={{ flex: 1, padding: "10px 14px", fontWeight: 700, borderRadius: 10 }}
+            onClick={handleCalculate}
+          >
+            احسب
+          </button>
+          <button
+            type="button"
+            className="btn-secondary"
+            style={{ padding: "10px 14px", borderRadius: 10 }}
+            onClick={handleReset}
+          >
+            إعادة ضبط
+          </button>
+        </div>
       </div>
 
-      <div style={{ marginTop: 14, padding: 12, borderRadius: 12, background: "#f2fbf8", border: "1px solid #bfe7da" }}>
-        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>
-          {drugName.trim() ? `الدواء: ${drugName.trim()} (${strMg || 0} mg / ${volMl || 0} ml)` : `التركيز: ${strMg || 0} mg / ${volMl || 0} ml`}
+      {errorMsg && (
+        <div style={{ marginTop: 12, padding: 10, borderRadius: 10, background: "#fef2f2", border: "1px solid #fecaca", color: "#991b1b", fontSize: 13 }}>
+          {errorMsg}
         </div>
-        {valid ? (
-          <>
-            <div style={{ fontSize: 18, fontWeight: 800, color: "#176b55" }}>
-              الجرعة الواحدة: {singleDoseMl.toFixed(2)} ml ({singleDoseMg.toFixed(1)} mg)
-            </div>
-            <div className="panel-hint" style={{ marginTop: 4 }}>
-              الإجمالي اليومي: {totalDailyMl.toFixed(2)} ml ({totalDailyMg.toFixed(1)} mg/day ÷ {freq}){capped ? " — تم التقييد بالحد الأقصى اليومي" : ""}
-            </div>
-          </>
-        ) : (
-          <div className="panel-hint">أدخل الوزن (kg) والتركيز والجرعة لحساب الجرعة.</div>
-        )}
-      </div>
+      )}
+
+      {result && (
+        <div style={{ marginTop: 14, padding: 12, borderRadius: 12, background: "#f2fbf8", border: "1px solid #bfe7da" }}>
+          <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>
+            {result.drug ? `الدواء: ${result.drug} (${result.strMg} mg / ${result.volMl} ml)` : `التركيز: ${result.strMg} mg / ${result.volMl} ml`}
+          </div>
+          <div style={{ fontSize: 18, fontWeight: 800, color: "#176b55" }}>
+            الجرعة الواحدة: {result.singleDoseMl.toFixed(2)} ml ({result.singleDoseMg.toFixed(1)} mg)
+          </div>
+          <div className="panel-hint" style={{ marginTop: 4 }}>
+            الإجمالي اليومي: {result.totalDailyMl.toFixed(2)} ml ({result.totalDailyMg.toFixed(1)} mg/day ÷ {result.freq})
+            {result.capped ? " — تم التقييد بالحد الأقصى اليومي" : ""}
+          </div>
+        </div>
+      )}
 
       <div className="panel-hint" style={{ marginTop: 10 }}>
         • تحقق من الاستطباب الدقيق، الجرعة حسب العمر/الوزن أو التصفية الكلوية، وطريق الإعطاء.
