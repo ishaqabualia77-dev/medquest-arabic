@@ -1221,6 +1221,7 @@ function AiStudyAssistant(props: any) {
             border: "1px solid #cbd5e1",
             borderRadius: 12,
             padding: 14,
+            color: "#0f172a",
             lineHeight: 1.6,
             direction: detectEnglish(outputText) ? "ltr" : "rtl",
             textAlign: detectEnglish(outputText) ? "left" : "right",
