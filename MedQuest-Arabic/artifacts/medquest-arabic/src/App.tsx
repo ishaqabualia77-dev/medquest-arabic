@@ -1028,6 +1028,39 @@ function AiStudyAssistant(props: any) {
     },
   ];
 
+  const activeBtnStyle: React.CSSProperties = {
+    background: "#176b55",
+    color: "#ffffff",
+    border: "1px solid #176b55",
+    borderRadius: 10,
+    padding: "8px 12px",
+    fontWeight: 700,
+    fontSize: 13,
+    cursor: "pointer",
+  };
+
+  const inactiveBtnStyle: React.CSSProperties = {
+    background: "#f1f5f9",
+    color: "#0f172a",
+    border: "1px solid #cbd5e1",
+    borderRadius: 10,
+    padding: "8px 12px",
+    fontWeight: 600,
+    fontSize: 13,
+    cursor: "pointer",
+  };
+
+  const presetBtnStyle: React.CSSProperties = {
+    background: "#ffffff",
+    color: "#0f172a",
+    border: "1px solid #cbd5e1",
+    borderRadius: 9,
+    padding: "6px 10px",
+    fontWeight: 600,
+    fontSize: 12,
+    cursor: "pointer",
+  };
+
   const buildLocalFallback = (
     currentMode: "explain" | "generate" | "drug" | "plan",
     spec: string,
@@ -1113,17 +1146,30 @@ function AiStudyAssistant(props: any) {
       : "اكتب حالة سريرية أو سؤالاً أو نقطة تحتاج شرحاً وتفريقاً تشخيصياً...";
 
   return (
-    <div className="panel" style={{ marginTop: 14, textAlign: "right" }} dir="rtl" data-testid="ai-study-assistant-section">
+    <div
+      className="panel"
+      style={{ marginTop: 14, textAlign: "right", color: "#0f172a", background: "#ffffff" }}
+      dir="rtl"
+      data-testid="ai-study-assistant-section"
+    >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div>
-          <h3 className="panel-title" style={{ margin: 0 }}>AI Study Assistant</h3>
-          <p className="panel-hint" style={{ margin: "4px 0 0" }}>شرح سريري، توليد أسئلة، مراجعة أدوية وجرعات، وخطة مراجعة.</p>
+          <h3 className="panel-title" style={{ margin: 0, color: "#0f172a" }}>AI Study Assistant</h3>
+          <p className="panel-hint" style={{ margin: "4px 0 0", color: "#475569" }}>شرح سريري، توليد أسئلة، مراجعة أدوية وجرعات، وخطة مراجعة.</p>
         </div>
         <select
           aria-label="التخصص"
           value={specialty}
           onChange={(e) => setSpecialty(e.target.value)}
-          style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", fontSize: 13 }}
+          style={{
+            padding: "7px 10px",
+            borderRadius: 9,
+            border: "1px solid #cbd5e1",
+            background: "#ffffff",
+            color: "#0f172a",
+            fontSize: 13,
+            fontWeight: 600,
+          }}
         >
           <option value="General / Internship">عام / امتياز</option>
           <option value="Internal Medicine">باطنية</option>
@@ -1134,10 +1180,10 @@ function AiStudyAssistant(props: any) {
       </div>
 
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
-        <button type="button" className={mode === "explain" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("explain")}>شرح حالة</button>
-        <button type="button" className={mode === "generate" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("generate")}>توليد سؤال</button>
-        <button type="button" className={mode === "drug" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("drug")}>مراجعة دواء</button>
-        <button type="button" className={mode === "plan" ? "btn-primary" : "btn-secondary"} onClick={() => setMode("plan")}>خطة مراجعة</button>
+        <button type="button" style={mode === "explain" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("explain")}>شرح حالة</button>
+        <button type="button" style={mode === "generate" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("generate")}>توليد سؤال</button>
+        <button type="button" style={mode === "drug" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("drug")}>مراجعة دواء</button>
+        <button type="button" style={mode === "plan" ? activeBtnStyle : inactiveBtnStyle} onClick={() => setMode("plan")}>خطة مراجعة</button>
       </div>
 
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8 }}>
@@ -1145,8 +1191,7 @@ function AiStudyAssistant(props: any) {
           <button
             key={pItem.label}
             type="button"
-            className="btn-secondary"
-            style={{ fontSize: 12, padding: "5px 9px" }}
+            style={presetBtnStyle}
             onClick={() => {
               setMode(pItem.mode);
               setPromptText(pItem.text);
@@ -1170,16 +1215,18 @@ function AiStudyAssistant(props: any) {
           marginTop: 10,
           padding: 10,
           borderRadius: 10,
-          border: "1px solid #cbd5e1",
-          background: "#fff",
+          border: "1px solid #94a3b8",
+          background: "#ffffff",
+          color: "#0f172a",
           fontSize: 14,
+          lineHeight: 1.5,
         }}
       />
 
       <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
         <button
           type="button"
-          className="btn-primary"
+          style={activeBtnStyle}
           disabled={loading}
           onClick={handleRun}
           data-testid="button-run-ai-assistant"
@@ -1189,7 +1236,7 @@ function AiStudyAssistant(props: any) {
         {outputText && (
           <button
             type="button"
-            className="btn-secondary"
+            style={inactiveBtnStyle}
             onClick={() => setOutputText("")}
           >
             مسح النتيجة
@@ -1205,6 +1252,7 @@ function AiStudyAssistant(props: any) {
             padding: 12,
             borderRadius: 10,
             background: "#f8fafc",
+            color: "#0f172a",
             border: "1px solid #cbd5e1",
             whiteSpace: "pre-wrap",
             fontSize: 14,
